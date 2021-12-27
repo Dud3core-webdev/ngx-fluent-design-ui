@@ -1,0 +1,46 @@
+@import "../../../variables";
+
+.fluent-input-field {
+    box-shadow: none;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: text;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    position: relative;
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    border-radius: 2px;
+    border-color: $input_primary-border;
+    color: rgb(32, 31, 30);
+    width: 100%;
+    min-width: 0;
+    margin: 0.35rem 0 0.85rem;
+    background: none transparent;
+
+    label {
+        -webkit-font-smoothing: antialiased;
+        font-size: 14px;
+        font-weight: 600;
+        color: rgb(50, 49, 48);
+        box-sizing: border-box;
+        box-shadow: none;
+        margin: 0;
+        display: block;
+        padding: 5px 0;
+        overflow-wrap: break-word;
+    }
+
+    &.is-required {
+
+        &:focus {
+            border-color: $primary-color;
+        }
+
+        &:focus-within {
+            border-color: $primary-color !important;
+        }
+    }
+}

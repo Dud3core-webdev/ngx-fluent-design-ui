@@ -1,0 +1,3 @@
+@function get_var($varName) {
+    @return (var(--#{$varName}));
+}

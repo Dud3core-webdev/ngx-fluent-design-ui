@@ -1,0 +1,23 @@
+@import "../shared/styles/input-styles";
+
+.fluent-input-field {
+
+    height: 32px;
+
+    input {
+        width: 100%;
+        -webkit-font-smoothing: antialiased;
+        font-size: 14px;
+        font-weight: 400;
+        box-shadow: none;
+        margin: 0;
+        padding: 0 8px;
+        text-overflow: ellipsis;
+        border: none;
+        font-family: inherit;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

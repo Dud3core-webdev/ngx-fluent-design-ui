@@ -1,0 +1,40 @@
+.document-card {
+    -webkit-font-smoothing: antialiased;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(237, 235, 233);
+    max-width: 480px;
+    min-width: 206px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 108px;
+    user-select: none;
+    flex-shrink: 1;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+    margin: 0.75rem 0;
+
+    &:hover {
+        cursor: pointer;
+        outline: -webkit-focus-ring-color auto 1px;
+    }
+
+    .document-card-image {
+        max-width: 40%;
+        height: 100%;
+        display: flex;
+        padding: 0 0.5rem;
+
+        .document-card-image-source {
+            max-height: 108px;
+            display: flex;
+        }
+    }
+
+    .content {
+        display: flex;
+        width: 75%;
+    }
+}
+

@@ -1,0 +1,47 @@
+@import "../../../variables";
+
+.ngx-fluent-design-cta {
+    outline: transparent;
+    position: relative;
+    font-family: inherit;
+    -webkit-font-smoothing: antialiased;
+    border-radius: 2px;
+    user-select: none;
+
+    &.standard {
+        border: 1px solid rgb(138, 136, 134);
+        background: rgb(255, 255, 255);
+
+        &:hover {
+            background-color: rgb(237, 235, 233);
+            color: rgb(50, 49, 48);
+        }
+
+        &:disabled {
+            background-color: rgb(243, 242, 241);
+            color: rgb(161, 159, 157);
+        }
+    }
+
+    &.primary {
+        p, small { color: $cta_primary-font-color }
+        color: $cta_primary-font-color;
+        border: 1px solid $primary-color;
+        background-color: $primary-color;
+
+        &:hover {
+            background-color: $cta_primary-hover-color;
+            border: 1px solid $cta_primary-hover-color;
+            color: rgb(255, 255, 255);
+        }
+
+        &:disabled {
+            p, small { color: $primary-disabled-font-color; }
+            background-color: $primary-disabled-background;
+            border: none;
+            pointer-events: none;
+            cursor: not-allowed;
+			user-select: none;
+        }
+    }
+}

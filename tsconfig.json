@@ -10,6 +10,12 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "paths": {
+      "ngx-fluent-design": [
+        "dist/ngx-fluent-design/ngx-fluent-design",
+        "dist/ngx-fluent-design"
+      ]
+    },
     "target": "es2015",
     "module": "es2020",
     "lib": [

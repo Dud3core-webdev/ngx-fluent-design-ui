@@ -1,0 +1,13 @@
+@import "./functions";
+
+/** Color */
+$primary-color: get_var(primary-color);
+$primary-disabled-background: get_var(primary-disabled-background-color);
+$primary-disabled-font-color: get_var(primary-disabled-font-color);
+
+/** Input */
+$input_primary-border: get_var(primary-input-border);
+
+/** CTA */
+$cta_primary-hover-color: get_var(primary-cta-hover-background-color);
+$cta_primary-font-color: get_var(primary-cta-font-color);
