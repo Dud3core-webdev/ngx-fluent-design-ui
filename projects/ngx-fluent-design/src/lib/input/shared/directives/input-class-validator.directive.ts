@@ -1,4 +1,4 @@
-import { Directive, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Directive, ElementRef, Host, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { AbstractControl, NG_VALIDATORS, ValidationErrors, Validator } from '@angular/forms';
 import { BehaviorSubject, Subscription } from 'rxjs';
 
@@ -14,35 +14,49 @@ import { BehaviorSubject, Subscription } from 'rxjs';
 })
 export class InputClassValidatorDirective implements Validator, OnInit, OnDestroy {
 
-
     @ViewChild('fluentInputField')
-    private readonly elementReference: ElementRef;
-    private readonly subscriptions: Subscription;
-    private readonly $formIsValidBehaviourSubject: BehaviorSubject<boolean>;
+    private readonly _elementReference: ElementRef;
+    private readonly _subscriptions: Subscription;
+    private readonly _$formHasErrorBehaviourSubject: BehaviorSubject<boolean>;
 
     constructor(elementReference: ElementRef) {
-        this.elementReference = elementReference;
-        this.subscriptions = new Subscription();
-        this.$formIsValidBehaviourSubject = new BehaviorSubject<boolean>(null);
+        this._elementReference = elementReference;
+        this._subscriptions = new Subscription();
+        this._$formHasErrorBehaviourSubject = new BehaviorSubject<boolean>(false);
     }
+
     public ngOnInit(): void {
-        this.subscriptions.add(
-            this.$formIsValidBehaviourSubject
+        console.log(this._elementReference.nativeElement.parentNode);
+        this._subscriptions.add(
+            this._$formHasErrorBehaviourSubject
                 .subscribe({
                     next: (value: boolean): void => {
-                        console.log(value);
+                        if (value === true) {
+                            this.setErrorClassOnInput();
+                        } else {
+                            this.removeErrorClassOnInput();
+                        }
                     }
                 })
         );
     }
 
     public ngOnDestroy(): void {
-        this.subscriptions.unsubscribe();
+        this._subscriptions.unsubscribe();
     }
 
     public validate(control: AbstractControl): ValidationErrors | null {
-        this.$formIsValidBehaviourSubject.next(control.valid);
-        return {};
+        this._$formHasErrorBehaviourSubject.next(control.errors !== null && control.touched);
+
+        return undefined;
+    }
+
+    private setErrorClassOnInput(): void {
+        this._elementReference.nativeElement.parentNode.classList.add('has-error');
+    }
+
+    private removeErrorClassOnInput(): void {
+        this._elementReference.nativeElement.parentNode.classList.remove('has-error');
     }
 
 }

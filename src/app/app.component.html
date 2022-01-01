@@ -2,12 +2,17 @@
     <form [formGroup]="testFormGroup">
         <ngx-fluent-design-standard-input
             [label]="'Test label'">
-            <input id="standard-input" ngxFluentDesignInput [formControlName]="'standardInput'">
+            <input ngxFluentDesignInput
+                   id="standard-input"
+                   [formControlName]="'standardInput'">
         </ngx-fluent-design-standard-input>
 
         <ngx-fluent-design-standard-input
             [label]="'Test label'">
-            <textarea id="standard-text-area"></textarea>
+            <textarea ngxFluentDesignInput
+                      [formControlName]="'standardTextArea'"
+                      id="standard-text-area">
+            </textarea>
         </ngx-fluent-design-standard-input>
 
         <ngx-fluent-design-compound-button
@@ -18,5 +23,6 @@
         </ngx-fluent-design-compound-button>
 
         {{testFormGroup.value | json}}
+        {{testFormGroup.valid | json}}
     </form>
 </div>

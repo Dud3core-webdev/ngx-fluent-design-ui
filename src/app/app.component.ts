@@ -2,14 +2,15 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
 
-  public testFormGroup: FormGroup = new FormGroup({
-    'standardInput': new FormControl(null, [Validators.required])
-  });
+    public testFormGroup: FormGroup = new FormGroup({
+        standardInput: new FormControl(null, [Validators.required, Validators.minLength(12)]),
+        standardTextArea: new FormControl(null, [Validators.required])
+    });
 
 }

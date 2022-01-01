@@ -32,15 +32,4 @@
         padding: 5px 0;
         overflow-wrap: break-word;
     }
-
-    &.is-required {
-
-        &:focus {
-            border-color: $primary-color;
-        }
-
-        &:focus-within {
-            border-color: $primary-color !important;
-        }
-    }
 }
