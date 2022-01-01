@@ -1,0 +1,21 @@
+<div class="container">
+    <form [formGroup]="testFormGroup">
+        <ngx-fluent-design-standard-input
+            [label]="'Test label'">
+            <input id="standard-input" [formControlName]="'standardInput'">
+        </ngx-fluent-design-standard-input>
+
+        <ngx-fluent-design-standard-input
+            [label]="'Test label'">
+            <textarea id="standard-text-area" ></textarea>
+        </ngx-fluent-design-standard-input>
+
+        <ngx-fluent-design-compound-button
+            type="primary"
+            (clicked)="testFormGroup.reset()">
+            Reset
+        </ngx-fluent-design-compound-button>
+
+        {{testFormGroup.value | json}}
+    </form>
+</div>
