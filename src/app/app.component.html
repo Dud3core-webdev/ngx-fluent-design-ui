@@ -2,16 +2,17 @@
     <form [formGroup]="testFormGroup">
         <ngx-fluent-design-standard-input
             [label]="'Test label'">
-            <input id="standard-input" [formControlName]="'standardInput'">
+            <input id="standard-input" ngxFluentDesignInput [formControlName]="'standardInput'">
         </ngx-fluent-design-standard-input>
 
         <ngx-fluent-design-standard-input
             [label]="'Test label'">
-            <textarea id="standard-text-area" ></textarea>
+            <textarea id="standard-text-area"></textarea>
         </ngx-fluent-design-standard-input>
 
         <ngx-fluent-design-compound-button
             type="primary"
+            [disabled]="testFormGroup.invalid"
             (clicked)="testFormGroup.reset()">
             Reset
         </ngx-fluent-design-compound-button>
