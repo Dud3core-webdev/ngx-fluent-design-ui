@@ -26,7 +26,6 @@ export class InputClassValidatorDirective implements Validator, OnInit, OnDestro
     }
 
     public ngOnInit(): void {
-        console.log(this._elementReference.nativeElement.parentNode);
         this._subscriptions.add(
             this._$formHasErrorBehaviourSubject
                 .subscribe({
