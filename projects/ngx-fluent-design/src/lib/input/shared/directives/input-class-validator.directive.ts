@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Host, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Directive, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { AbstractControl, NG_VALIDATORS, ValidationErrors, Validator } from '@angular/forms';
 import { BehaviorSubject, Subscription } from 'rxjs';
 
@@ -14,7 +14,7 @@ import { BehaviorSubject, Subscription } from 'rxjs';
 })
 export class InputClassValidatorDirective implements Validator, OnInit, OnDestroy {
 
-    @ViewChild('fluentInputField')
+    @ViewChild('fluentInputField', { static: false })
     private readonly _elementReference: ElementRef;
     private readonly _subscriptions: Subscription;
     private readonly _$formHasErrorBehaviourSubject: BehaviorSubject<boolean>;
@@ -45,7 +45,7 @@ export class InputClassValidatorDirective implements Validator, OnInit, OnDestro
     }
 
     public validate(control: AbstractControl): ValidationErrors | null {
-        this._$formHasErrorBehaviourSubject.next(control.errors !== null && control.touched);
+        this._$formHasErrorBehaviourSubject.next(control.errors !== null && control.dirty);
 
         return undefined;
     }
