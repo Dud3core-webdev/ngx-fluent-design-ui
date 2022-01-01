@@ -1,28 +1,27 @@
 <div class="container">
-    <form [formGroup]="testFormGroup">
-        <ngx-fluent-design-standard-input
-            [label]="'Test label'">
-            <input ngxFluentDesignInput
-                   id="standard-input"
-                   [formControlName]="'standardInput'">
-        </ngx-fluent-design-standard-input>
+    <ngx-fluent-design-card>
+        <form [formGroup]="testFormGroup">
+            <ngx-fluent-design-standard-input
+                [label]="'Test label'">
+                <input ngxFluentDesignInput
+                       id="standard-input"
+                       [formControlName]="'standardInput'">
+            </ngx-fluent-design-standard-input>
 
-        <ngx-fluent-design-standard-input
-            [label]="'Test label'">
+            <ngx-fluent-design-standard-input
+                [label]="'Test label'">
             <textarea ngxFluentDesignInput
                       [formControlName]="'standardTextArea'"
                       id="standard-text-area">
             </textarea>
-        </ngx-fluent-design-standard-input>
+            </ngx-fluent-design-standard-input>
 
-        <ngx-fluent-design-compound-button
-            type="primary"
-            [disabled]="testFormGroup.invalid"
-            (clicked)="testFormGroup.reset()">
-            Reset
-        </ngx-fluent-design-compound-button>
-
-        {{testFormGroup.value | json}}
-        {{testFormGroup.valid | json}}
-    </form>
+            <ngx-fluent-design-compound-button
+                type="primary"
+                [disabled]="testFormGroup.invalid"
+                (clicked)="testFormGroup.reset()">
+                Reset
+            </ngx-fluent-design-compound-button>
+        </form>
+    </ngx-fluent-design-card>
 </div>

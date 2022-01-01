@@ -7,7 +7,9 @@ I've only tested this library on Angular 11, I will be working on compatibility 
 ## UPDATES: 
 
 I realised that the text fields weren't actually binding to an abstract/formControl when declaring it
-`[formControlName]="'SomeControlName'"`. I don't even know how I didn't spot this. re-built standard-input so it supports text areas and inputs but still binds to a form control
+`[formControlName]="'SomeControlName'"`. I don't even know how I didn't spot this. re-built standard-input so it supports text areas and inputs but still binds to a form control.
+
+Added a directive that can be used in the standard `<input>` so text fields can be highlighted with red when the control isn't valid.
 
 ## Why does this package exist?
 
@@ -89,45 +91,32 @@ export class SomeModule {}
 #### Use in template:
 
 ``` html
-<!-- Create a contact form? -->
-<ngx-fluent-design-card>
-    <div class="w-100 d-flex flex-md-row flex-column">
-        <div class="contact-card-info w-md-25 w-100">
-            <h2 class="spec--card-header">Contact me</h2>
-            <p class="spec--card-sub-header">Fill in this form and I will get back to you</p>
-        </div>
-        <div class="contact-card-form w-md-75 w-100">
-            <form [formGroup]="contactFormGroup" class="d-flex flex-column w-100">
-                <section class="form-inputs">
-                    <ngx-fluent-design-standard-input
-                        [label]="'Test label'">
-                        <input id="standard-input" [formControlName]="'standardInput'">
-                    </ngx-fluent-design-standard-input>
+<div class="container">
+    <ngx-fluent-design-card>
+        <form [formGroup]="testFormGroup">
+            <ngx-fluent-design-standard-input
+                [label]="'Test label'">
+                <input ngxFluentDesignInput
+                       id="standard-input"
+                       [formControlName]="'standardInput'">
+            </ngx-fluent-design-standard-input>
 
-                    <ngx-fluent-design-standard-input
-                        [label]="'Test label'">
-                        <textarea id="standard-text-area" ></textarea>
-                    </ngx-fluent-design-standard-input>
-                </section>
+            <ngx-fluent-design-standard-input
+                [label]="'Test label'">
+            <textarea ngxFluentDesignInput
+                      [formControlName]="'standardTextArea'"
+                      id="standard-text-area">
+            </textarea>
+            </ngx-fluent-design-standard-input>
 
-                <div class="d-flex flex-row w-100 justify-content-between my-4">
-                    <ngx-fluent-design-compound-button
-                        class="font-white"
-                        type="primary"
-                        [secondaryText]="'This may take a while'"
-                        [disabled]="contactFormGroup.invalid"
-                        (clicked)="submitForm()">
-                        Submit
-                    </ngx-fluent-design-compound-button>
+            <ngx-fluent-design-compound-button
+                type="primary"
+                [disabled]="testFormGroup.invalid"
+                (clicked)="testFormGroup.reset()">
+                Reset
+            </ngx-fluent-design-compound-button>
+        </form>
+    </ngx-fluent-design-card>
+</div>
 
-                    <ngx-fluent-design-compound-button
-                        type="standard"
-                        (clicked)="closeForm()">
-                        Cancel
-                    </ngx-fluent-design-compound-button>
-                </div>
-            </form>
-        </div>
-    </div>
-</ngx-fluent-design-card>
 ```
