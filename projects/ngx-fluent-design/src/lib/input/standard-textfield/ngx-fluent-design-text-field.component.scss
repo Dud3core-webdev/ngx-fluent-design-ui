@@ -1,23 +1,52 @@
 @import "../shared/styles/input-styles";
 
 .fluent-input-field {
+  display: flex;
+  flex-direction: column;
 
-    height: 32px;
+  &:focus {
+    border-color: $primary-color;
+  }
 
+  &:focus-within {
+    border-color: $primary-color !important;
+  }
+
+  ::ng-deep {
     input {
-        width: 100%;
-        -webkit-font-smoothing: antialiased;
-        font-size: 14px;
-        font-weight: 400;
-        box-shadow: none;
-        margin: 0;
-        padding: 0 8px;
-        text-overflow: ellipsis;
-        border: none;
-        font-family: inherit;
+      width: 100%;
+      -webkit-font-smoothing: antialiased;
+      font-size: 14px;
+      font-weight: 400;
+      box-shadow: none;
+      margin: 0;
+      padding: 0 8px;
+      text-overflow: ellipsis;
+      border: none;
+      font-family: inherit;
+      min-height: 32px;
 
-        &:focus {
-            outline: none;
-        }
+      &:focus {
+        outline: $input_primary-border;
+      }
     }
+
+    textarea {
+      width: 100%;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 400;
+      box-shadow: none;
+      margin: 0;
+      padding: 8px;
+      box-sizing: border-box;
+      color: rgb(32, 31, 30);
+      border-radius: 0;
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
 }

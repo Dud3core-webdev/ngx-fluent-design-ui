@@ -4,6 +4,11 @@
 
 I've only tested this library on Angular 11, I will be working on compatibility at some point, but for now I'd probably only install it if Ivy is enabled in your project, just to be safe. 
 
+## UPDATES: 
+
+I realised that the text fields weren't actually binding to an abstract/formControl when declaring it
+`[formControlName]="'SomeControlName'"`. I don't even know how I didn't spot this. re-built standard-input so it supports text areas and inputs but still binds to a form control
+
 ## Why does this package exist?
 
 I think Microsoft's Fluent Design is a very nice UI design pattern. It's clean, it's simple and I haven't found a decent NGX package out there for this (not that I've looked).
@@ -95,35 +100,14 @@ export class SomeModule {}
             <form [formGroup]="contactFormGroup" class="d-flex flex-column w-100">
                 <section class="form-inputs">
                     <ngx-fluent-design-standard-input
-                        class="my-2"
-                        [placeholder]="'Enter Your Name'"
-                        [type]="'text'"
-                        [id]="'contact-name'"
-                        [label]="'Full Name'"
-                        [required]="true"
-                        [formControlName]="'name'">
+                        [label]="'Test label'">
+                        <input id="standard-input" [formControlName]="'standardInput'">
                     </ngx-fluent-design-standard-input>
 
                     <ngx-fluent-design-standard-input
-                        class="my-2"
-                        [placeholder]="'Enter Your Email'"
-                        [type]="'text'"
-                        [id]="'contact-email'"
-                        [label]="'Email Address'"
-                        [required]="true"
-                        [formControlName]="'email'">
+                        [label]="'Test label'">
+                        <textarea id="standard-text-area" ></textarea>
                     </ngx-fluent-design-standard-input>
-
-                    <ngx-fluent-design-multiline-input
-                        class="my-2"
-                        [rows]="5"
-                        [required]="true"
-                        [label]="'Message'"
-                        [id]="'contact-message'"
-                        [placeholder]="'Enter a message here'"
-                        [isFixed]="true"
-                        [formControlName]="'message'">
-                    </ngx-fluent-design-multiline-input>
                 </section>
 
                 <div class="d-flex flex-row w-100 justify-content-between my-4">

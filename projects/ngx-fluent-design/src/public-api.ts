@@ -16,6 +16,5 @@ export * from './lib/cta/ngx-fluent-design-cta.module';
 
 /** Input */
 export * from './lib/input/standard-textfield/ngx-fluent-design-text-field.component';
-export * from './lib/input/multiline-textfield/ngx-fluent-design-multiline-text-field.component';
 
 export * from './lib/input/ngx-fluent-design-input.module';

@@ -1,11 +1,6 @@
 <label [for]="id">{{label}}</label>
-<div class="fluent-input-field is-required">
-    <input #inputField
-			[ngClass]="{ 'error' : hasError }"
-			(keydown)="valueChanged()"
-			[value]="value"
-			[id]="id"
-			[type]="type"
-			[placeholder]="placeholder"
-			[required]="required"/>
+<div class="fluent-input-field">
+  <div class="fluent-input-field-content">
+    <ng-content></ng-content>
+  </div>
 </div>
