@@ -2,18 +2,22 @@
 
 ## WARNING
 
-I've only tested this library on Angular 11, I will be working on compatibility at some point, but for now I'd probably only install it if Ivy is enabled in your project, just to be safe. 
+I've only tested this library on Angular 11, I will be working on compatibility at some point, but for now I'd probably only install it if Ivy is enabled in your project, just to be safe.
 
 ## UPDATES: 
 
-I realised that the text fields weren't actually binding to an abstract/formControl when declaring it
+- I realised that the text fields weren't actually binding to an abstract/formControl when declaring it
 `[formControlName]="'SomeControlName'"`. I don't even know how I didn't spot this. re-built standard-input so it supports text areas and inputs but still binds to a form control.
 
-Added a directive that can be used in the standard `<input>` so text fields can be highlighted with red when the control isn't valid.
+- fixed margin on inputs that was causing an issue where the right most border wasn't appearing (`<input>` only) - v0.0.7
+
+- Refactored some styles to clean up SCSS in project. v0.0.7
+
+- Added a directive that can be used in the standard `<input>` so text fields can be highlighted with red when the control isn't valid. (v0.0.5)
 
 ## Why does this package exist?
 
-I think Microsoft's Fluent Design is a very nice UI design pattern. It's clean, it's simple and I haven't found a decent NGX package out there for this (not that I've looked).
+I think Microsoft's Fluent Design is a very nice UI design pattern. It's clean, it's simple and I haven't found a NGX package out there for this (not that I've looked).
 
 The aim is to create a full component library that is simple to use and integrate into a project. 
 
@@ -28,7 +32,7 @@ So far the library is very limited in components:
 - Card
 - Document Card (Basic implementation)
 - Input 
-- Multi-Line Input
+- Multi-Line Input (TextArea)
 
 ## Requests
 
@@ -104,19 +108,26 @@ export class SomeModule {}
             <ngx-fluent-design-standard-input
                 [label]="'Test label'">
             <textarea ngxFluentDesignInput
+                      rows="8"
                       [formControlName]="'standardTextArea'"
                       id="standard-text-area">
             </textarea>
             </ngx-fluent-design-standard-input>
 
-            <ngx-fluent-design-compound-button
-                type="primary"
-                [disabled]="testFormGroup.invalid"
-                (clicked)="testFormGroup.reset()">
-                Reset
-            </ngx-fluent-design-compound-button>
+            <div class="d-flex flex-row justify-content-between w-100">
+                <ngx-fluent-design-compound-button
+                    type="primary"
+                    [disabled]="testFormGroup.invalid">
+                    Submit
+                </ngx-fluent-design-compound-button>
+
+                <ngx-fluent-design-compound-button
+                    type="standard"
+                    (clicked)="testFormGroup.reset()">
+                    Reset
+                </ngx-fluent-design-compound-button>
+            </div>
         </form>
     </ngx-fluent-design-card>
 </div>
-
 ```

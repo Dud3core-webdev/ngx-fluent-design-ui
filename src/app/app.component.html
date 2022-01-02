@@ -17,12 +17,19 @@
             </textarea>
             </ngx-fluent-design-standard-input>
 
-            <ngx-fluent-design-compound-button
-                type="primary"
-                [disabled]="testFormGroup.invalid"
-                (clicked)="testFormGroup.reset()">
-                Reset
-            </ngx-fluent-design-compound-button>
+            <div class="d-flex flex-row justify-content-between w-100">
+                <ngx-fluent-design-compound-button
+                    type="primary"
+                    [disabled]="testFormGroup.invalid">
+                    Submit
+                </ngx-fluent-design-compound-button>
+
+                <ngx-fluent-design-compound-button
+                    type="standard"
+                    (clicked)="testFormGroup.reset()">
+                    Reset
+                </ngx-fluent-design-compound-button>
+            </div>
         </form>
     </ngx-fluent-design-card>
 </div>

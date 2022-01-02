@@ -1,6 +1,7 @@
 @import "../../../variables";
 
 .fluent-input-field {
+
     box-shadow: none;
     padding: 0;
     box-sizing: border-box;
@@ -19,6 +20,18 @@
     min-width: 0;
     margin: 0.35rem 0 0.85rem;
     background: none transparent;
+
+    &:focus {
+        border-color: $primary-color;
+    }
+
+    &:focus-within {
+        border-color: $primary-color;
+    }
+
+    &.has-error {
+        border-color: $primary-error-color;
+    }
 
     label {
         -webkit-font-smoothing: antialiased;
