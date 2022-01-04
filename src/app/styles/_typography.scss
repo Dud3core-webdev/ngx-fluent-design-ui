@@ -4,7 +4,7 @@
 
 body { font-family: "Ubuntu-Regular", Roboto, sans-serif; }
 
-h1, h2, h3, h4, h5 { margin: 0 0 0.5rem; }
+h1, h2, h3, h4, h5 { margin: 0 0 0.5rem; line-height: 2rem; }
 p, h1, h2, h3, h4, h5, li, ol, ul { color: $font-color; }
 
 h3, h4 {
@@ -15,11 +15,11 @@ h3, h4 {
 
 p, ul, li, ol, small {
     @include set-font-family("Ubuntu-Light");
-    line-height: 20px;
+    line-height: 1.5rem;
     margin: 6px 0;
 }
 
-p { font-size: $font-size-base; }
+p { font-size: $font-size-base; line-height: 1.75rem }
 
 h1 {
     @include set-font-family("Ubuntu-Bold");
