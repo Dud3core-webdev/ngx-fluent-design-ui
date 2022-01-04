@@ -11,9 +11,54 @@
 
     <ngx-fluent-design-card>
         <section class="usage">
-            <h3 class="mb-4">Usage (Reactive Forms):</h3>
+            <h3 class="mb-4">Basic Usage (Reactive Forms):</h3>
             <div class="code-example my-2">
                 <markdown lineNumbers src="./assets/docs/code-examples/inputs/reactive/reactive-forms-usage.example.ts"></markdown>
+            </div>
+        </section>
+
+        <section class="output mt-4">
+            <h3 class="mb-4">Output</h3>
+            <div class="code-example-output">
+                <ngx-fluent-design-standard-input [label]="'standard Input'">
+                    <input ngxFluentDesignInput placeholder="this is a standard input" [formControl]="standardInput">
+                </ngx-fluent-design-standard-input>
+            </div>
+        </section>
+    </ngx-fluent-design-card>
+
+    <ngx-fluent-design-card>
+        <section class="usage">
+            <h3 class="mb-4">TextArea Basic Usage (Reactive Forms):</h3>
+            <div class="code-example my-2">
+                <markdown lineNumbers src="./assets/docs/code-examples/inputs/reactive/reactive-forms-text-area-usage.example.ts"></markdown>
+            </div>
+        </section>
+
+        <section class="output mt-4">
+            <h3 class="mb-4">Output</h3>
+            <div class="code-example-output">
+                <ngx-fluent-design-standard-input [label]="'standard Input'">
+                    <textarea ngxFluentDesignInput placeholder="this is a standard text area" rows="5" [formControl]="textAreaInput"></textarea>
+                </ngx-fluent-design-standard-input>
+            </div>
+        </section>
+    </ngx-fluent-design-card>
+
+    <ngx-fluent-design-card>
+        <section class="usage">
+            <h3 class="mb-4">Validators</h3>
+            <div class="code-example my-2">
+                <markdown lineNumbers src="./assets/docs/code-examples/inputs/reactive/reactive-forms-usage-validators.example.ts"></markdown>
+            </div>
+        </section>
+
+        <section class="output mt-4">
+            <h3 class="mb-4">Output</h3>
+            <div class="code-example-output">
+                <ngx-fluent-design-standard-input [label]="'standard Input'">
+                    <input ngxFluentDesignInput placeholder="this is a standard text area with a validator" [formControl]="standardInputValidator">
+                </ngx-fluent-design-standard-input>
             </div>
         </section>
     </ngx-fluent-design-card>

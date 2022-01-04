@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
     template: `
         <form>
             <ngx-fluent-design-standard-input [label]="'Standard Input'">
-                <input ngxFluentDesignInput [formControl]="standardInput">
+                <input ngxFluentDesignInput [formControl]="standardInputValidator">
             </ngx-fluent-design-standard-input>
         </form>
     `,
 })
 export class ReactveFormsUsageExample {
-    public standardInput: FormControl = new FormControl(null);
+    public standardInputValidator: FormControl = new FormControl(null, [Validators.required, Validators.minLength(8)]);
 }
