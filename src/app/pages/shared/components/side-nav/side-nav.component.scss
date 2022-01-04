@@ -5,6 +5,10 @@
     height: 100%;
     position: static;
 
+    @media screen and (max-width: 568px) {
+        width: 228px;
+    }
+
     a {
         margin: 8px 0;
     }
