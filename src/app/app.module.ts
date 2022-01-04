@@ -6,6 +6,7 @@ import { HomePageModule } from './pages/home-page/home-page.module';
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpClientModule } from '@angular/common/http';
 import { InputsPageModule } from './pages/inputs-page/inputs-page.module';
+import { SharedComponentsModule } from './pages/shared/components/shared-components.module';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { InputsPageModule } from './pages/inputs-page/inputs-page.module';
         BrowserModule,
         AppRoutingModule,
         HomePageModule,
-        InputsPageModule
+        InputsPageModule,
+        SharedComponentsModule
     ],
     providers: [],
     bootstrap: [AppComponent]
