@@ -1,0 +1,9 @@
+@import "../variables";
+
+a {
+    color: $primary-color;
+    outline: none;
+    font-family: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
