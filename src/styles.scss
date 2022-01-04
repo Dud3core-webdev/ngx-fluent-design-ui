@@ -5,6 +5,7 @@
 @import '~bootstrap-scss/utilities';
 @import '~bootstrap-scss/functions';
 @import "projects/ngx-fluent-design/src/lib/styles";
+@import "projects/ngx-fluent-design/src/lib/cta/ngx-fluent-design-link.component";
 @import "app/styles/typography";
 
 html, body { height: 100%; }

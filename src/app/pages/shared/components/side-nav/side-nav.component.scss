@@ -5,11 +5,13 @@
     height: 100%;
     position: static;
 
-    @media screen and (max-width: 568px) {
-        width: 228px;
-    }
-
     a {
         margin: 8px 0;
+    }
+}
+
+@media screen and (max-width: 1015px) {
+    .sticky {
+        width: 228px;
     }
 }
