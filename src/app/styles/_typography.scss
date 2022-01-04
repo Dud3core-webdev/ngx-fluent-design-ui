@@ -4,6 +4,8 @@
 
 body { font-family: "Ubuntu-Regular", Roboto, sans-serif; }
 
+code { font-family: "Ubuntu-Light", Roboto, sans-serif !important; }
+
 h1, h2, h3, h4, h5 { margin: 0 0 0.5rem; line-height: 2rem; }
 p, h1, h2, h3, h4, h5, li, ol, ul { color: $font-color; }
 
