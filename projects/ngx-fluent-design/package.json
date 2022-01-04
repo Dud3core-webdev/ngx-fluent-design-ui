@@ -1,11 +1,27 @@
 {
-  "name": "ngx-fluent-design",
-  "version": "0.0.7",
-  "peerDependencies": {
-    "@angular/common": "^11.2.14",
-    "@angular/core": "^11.2.14"
-  },
-  "dependencies": {
-    "tslib": "^2.0.0"
-  }
+    "name": "ngx-fluent-design",
+    "description": "An ngx implementation of Microsoft's fluent design",
+    "version": "0.0.7",
+    "keywords": [
+        "Angular",
+        "Microsoft",
+        "Fluent Design",
+        "Component Library"
+    ],
+    "private": false,
+    "author": {
+        "email": "",
+        "name": "Marc Freeman",
+        "url": "mfwebdev.net"
+    },
+    "bugs": {
+        "url": "https://github.com/Dud3core-webdev/ngx-fluent-design-ui/issues"
+    },
+    "peerDependencies": {
+        "@angular/common": "^11.2.14",
+        "@angular/core": "^11.2.14"
+    },
+    "dependencies": {
+        "tslib": "^2.0.0"
+    }
 }
