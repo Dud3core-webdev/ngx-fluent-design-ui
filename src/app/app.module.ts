@@ -1,23 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { NgxFluentDesignCtaModule } from '../../projects/ngx-fluent-design/src/lib/cta/ngx-fluent-design-cta.module';
-import { NgxFluentDesignCardModule } from '../../projects/ngx-fluent-design/src/lib/card/ngx-fluent-design-card.module';
-import { NgxFluentDesignInputModule } from '../../projects/ngx-fluent-design/src/lib/input/ngx-fluent-design-input.module';
+import { AppRoutingModule } from './app-routing.module';
+import { HomePageModule } from './pages/home-page/home-page.module';
+import { MarkdownModule } from 'ngx-markdown';
+import { HttpClientModule } from '@angular/common/http';
+import { InputsPageModule } from './pages/inputs-page/inputs-page.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    NgxFluentDesignCtaModule,
-    NgxFluentDesignCardModule,
-    NgxFluentDesignInputModule,
-    ReactiveFormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        HttpClientModule,
+        MarkdownModule.forRoot(),
+        BrowserModule,
+        AppRoutingModule,
+        HomePageModule,
+        InputsPageModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

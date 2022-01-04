@@ -1,0 +1,54 @@
+@import "variables";
+@import "font-face";
+@import "mixins";
+
+body { font-family: "Ubuntu-Regular", Roboto, sans-serif; }
+
+h1, h2, h3, h4, h5 { margin: 0 0 0.5rem; }
+p, h1, h2, h3, h4, h5, li, ol, ul { color: $font-color; }
+
+h3, h4 {
+    @include set-font-family("Ubuntu-Light");
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+p, ul, li, ol, small {
+    @include set-font-family("Ubuntu-Light");
+    line-height: 20px;
+    margin: 6px 0;
+}
+
+p { font-size: $font-size-base; }
+
+h1 {
+    @include set-font-family("Ubuntu-Bold");
+    font-size: $h1-font-size;
+    line-height: 40px;
+}
+
+h2 {
+    @include set-font-family("Ubuntu-Regular");
+    font-size: $h2-font-size;
+    line-height: 35px;
+}
+
+h3 {
+    @include set-font-family("Ubuntu-Medium");
+    font-size: $h3-font-size;
+    line-height: 25px;
+}
+
+h4 {
+    @include set-font-family("Ubuntu-Light");
+    font-size: $h4-font-size;
+    line-height: 25px;
+}
+
+h5 {
+    @include set-font-family("Ubuntu-Light");
+    font-size: $h5-font-size;
+    line-height: 25px;
+}
+
+h6 {  }

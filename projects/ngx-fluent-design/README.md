@@ -17,7 +17,7 @@ I've only tested this library on Angular 11, I will be working on compatibility 
 
 ## Why does this package exist?
 
-I think Microsoft's Fluent Design is a very nice UI design pattern. It's clean, it's simple and I haven't found a NGX package out there for this (not that I've looked).
+I think Microsoft's Fluent Design is a very nice UI design pattern. It's clean, it's simple, and I haven't found a NGX package out there for this (not that I've looked).
 
 The aim is to create a full component library that is simple to use and integrate into a project. 
 
