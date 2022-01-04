@@ -16,7 +16,7 @@
 
     <ngx-fluent-design-card>
         <div class="welcome">
-            <h2><strong>NOTE!!</strong></h2>
+            <h3><strong>NOTE!!</strong></h3>
             <p>This library has only so far been tested with Angular 11. It may work with newer and some older versions of Angular however.</p>
         </div>
     </ngx-fluent-design-card>
@@ -35,11 +35,14 @@
     <ngx-fluent-design-card>
         <div class="welcome">
             <h2><strong>Setting the project up for usage</strong></h2>
-            <p>To get started with this library, run either:</p> <br>
-            <code>yarn add ngx-fluent-design</code><br>
-            <p>or</p>
-            <code>npm i ngx-fluent-design --save</code>
-            <p>to install the package locally.</p>
+            <p>You can either import the default stylesheet into your project: </p>
+            <code>@import "~ngx-fluent-design/src/lib/styles";</code>
+            <p>and this will set all components to the default color pallet. Alternatively, you can
+                create your own pallet by setting the following css variables:</p>
+
+            <markdown lineNumbers src="./assets/docs/code-examples/setup/root-styles.example.scss"></markdown>
+
+            <p class="mt-4"><strong>Note:</strong> the library will adhere to any typography rules that you set</p>
         </div>
     </ngx-fluent-design-card>
 </div>
