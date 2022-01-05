@@ -6,4 +6,8 @@
     font-family: inherit;
     text-decoration: underline;
     cursor: pointer;
+
+    &.active, &:hover {
+        filter: brightness(65%);
+    }
 }

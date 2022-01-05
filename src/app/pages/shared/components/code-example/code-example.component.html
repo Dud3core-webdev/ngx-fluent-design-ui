@@ -1,0 +1,14 @@
+<ngx-fluent-design-card>
+    <section class="usage">
+        <h3 class="mb-4">{{title}}</h3>
+        <div class="code-example my-2">
+            <markdown lineNumbers [src]="codeExampleUrl"></markdown>
+        </div>
+    </section>
+
+    <section class="output mt-4">
+        <div class="code-example-output">
+            <ng-content></ng-content>
+        </div>
+    </section>
+</ngx-fluent-design-card>

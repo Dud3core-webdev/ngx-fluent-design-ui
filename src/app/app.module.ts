@@ -7,6 +7,7 @@ import { MarkdownModule } from 'ngx-markdown';
 import { HttpClientModule } from '@angular/common/http';
 import { InputsPageModule } from './pages/inputs-page/inputs-page.module';
 import { SharedComponentsModule } from './pages/shared/components/shared-components.module';
+import { CallsToActionPageModule } from './pages/calls-to-action-page/calls-to-action-page.module';
 
 @NgModule({
     declarations: [
@@ -19,6 +20,7 @@ import { SharedComponentsModule } from './pages/shared/components/shared-compone
         AppRoutingModule,
         HomePageModule,
         InputsPageModule,
+        CallsToActionPageModule,
         SharedComponentsModule
     ],
     providers: [],

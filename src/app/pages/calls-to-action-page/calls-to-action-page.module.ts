@@ -1,23 +1,17 @@
 import { NgModule } from '@angular/core';
 import { MarkdownModule } from 'ngx-markdown';
-import { InputsPageComponent } from './inputs-page.component';
+import { CallsToActionPageComponent } from './calls-to-action-page.component';
 import { NgxFluentDesignCardModule } from '../../../../projects/ngx-fluent-design/src/lib/card/ngx-fluent-design-card.module';
-import { NgxFluentDesignInputModule } from '../../../../projects/ngx-fluent-design/src/lib/input/ngx-fluent-design-input.module';
 import { NgxFluentDesignCtaModule } from '../../../../projects/ngx-fluent-design/src/lib/cta/ngx-fluent-design-cta.module';
-import { ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 import { SharedComponentsModule } from '../shared/components/shared-components.module';
 
 @NgModule({
     imports: [
         MarkdownModule.forChild(),
         NgxFluentDesignCardModule,
-        NgxFluentDesignInputModule,
         NgxFluentDesignCtaModule,
-        ReactiveFormsModule,
-        CommonModule,
         SharedComponentsModule
     ],
-    declarations: [InputsPageComponent],
+    declarations: [CallsToActionPageComponent]
 })
-export class InputsPageModule { }
+export class CallsToActionPageModule {}
