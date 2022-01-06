@@ -12,18 +12,26 @@
         <div class="d-flex w-100 my-4 justify-content-between">
             <ngx-fluent-design-button
                 type="primary"
-                disabled="false">
+                [disabled]="standardButtonsDisabled">
                 This is a Primary Button
             </ngx-fluent-design-button>
 
             <ngx-fluent-design-button
                 type="standard"
-                disabled="false">
+                [disabled]="standardButtonsDisabled">
                 This is a standard Button
             </ngx-fluent-design-button>
         </div>
 
-        <div class="api">
+        <ngx-fluent-design-toggle
+            (changeEvent)="toggleStandardButtons()"
+            [toggled]="standardButtonsDisabled"
+            [inlineLabel]="false"
+            [label]="'Toggle Disabled'"
+            [disabled]="false">
+        </ngx-fluent-design-toggle>
+
+        <div class="api mt-4">
             <h5>Api:</h5>
             <markdown src="./assets/docs/code-examples/cta/standard-cta/standard-input-interface.example.ts"></markdown>
         </div>
@@ -36,19 +44,27 @@
             <ngx-fluent-design-compound-button
                 type="primary"
                 [secondaryText]="'And some secondary text'"
-                [disabled]="false">
+                [disabled]="compoundButtonsDisabled">
                 This is a Primary Button
             </ngx-fluent-design-compound-button>
 
             <ngx-fluent-design-compound-button
                 type="standard"
                 [secondaryText]="'And some secondary text'"
-                [disabled]="false">
+                [disabled]="compoundButtonsDisabled">
                 This is a standard Button
             </ngx-fluent-design-compound-button>
         </div>
 
-        <div class="api">
+        <ngx-fluent-design-toggle
+            (changeEvent)="toggleCompoundButtons()"
+            [toggled]="compoundButtonsDisabled"
+            [inlineLabel]="false"
+            [label]="'Toggle Disabled'"
+            [disabled]="false">
+        </ngx-fluent-design-toggle>
+
+        <div class="api mt-4">
             <h5>Api:</h5>
             <markdown src="./assets/docs/code-examples/cta/standard-cta/compound-input-interface.example.ts"></markdown>
         </div>
