@@ -20,6 +20,9 @@
         &:disabled {
             background-color: rgb(243, 242, 241);
             color: rgb(161, 159, 157);
+            pointer-events: none;
+            cursor: not-allowed;
+            user-select: none;
         }
     }
 

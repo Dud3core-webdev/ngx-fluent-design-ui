@@ -7,7 +7,7 @@
     </code-example>
 
     <code-example
-        codeExampleUrl="./assets/docs/code-examples/cta/module-import.example.ts"
+        codeExampleUrl="./assets/docs/code-examples/cta/standard-cta/standard-cta-usage.example.ts"
         title="Standard Button">
         <div class="d-flex w-100 my-4 justify-content-between">
             <ngx-fluent-design-button
@@ -27,5 +27,31 @@
             <h5>Api:</h5>
             <markdown src="./assets/docs/code-examples/cta/standard-cta/standard-input-interface.example.ts"></markdown>
         </div>
+    </code-example>
+
+    <code-example
+        codeExampleUrl="./assets/docs/code-examples/cta/standard-cta/compound-cta-usage.example.ts"
+        title="Compound Button">
+        <div class="d-flex w-100 my-4 justify-content-between">
+            <ngx-fluent-design-compound-button
+                type="primary"
+                [secondaryText]="'And some secondary text'"
+                [disabled]="false">
+                This is a Primary Button
+            </ngx-fluent-design-compound-button>
+
+            <ngx-fluent-design-compound-button
+                type="standard"
+                [secondaryText]="'And some secondary text'"
+                [disabled]="false">
+                This is a standard Button
+            </ngx-fluent-design-compound-button>
+        </div>
+
+        <div class="api">
+            <h5>Api:</h5>
+            <markdown src="./assets/docs/code-examples/cta/standard-cta/compound-input-interface.example.ts"></markdown>
+        </div>
+
     </code-example>
 </section>
