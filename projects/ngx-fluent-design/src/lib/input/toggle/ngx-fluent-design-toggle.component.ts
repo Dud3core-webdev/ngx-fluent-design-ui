@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { INgxFluentDesignToggle } from '../shared/types/ngx-fluent-design-toggle.interface';
 
 @Component({
     selector: 'ngx-fluent-design-toggle',
     templateUrl: './ngx-fluent-design-toggle.component.html',
     styleUrls: ['./ngx-fluent-design-toggle.component.scss']
 })
-export class NgxFluentDesignToggleComponent {
+export class NgxFluentDesignToggleComponent implements INgxFluentDesignToggle {
     @Input() public label: string;
     @Input() public inlineLabel: boolean = false;
     @Input() public toggled: boolean = false;

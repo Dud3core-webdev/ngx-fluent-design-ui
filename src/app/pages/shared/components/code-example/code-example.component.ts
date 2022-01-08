@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class CodeExampleComponent {
     @Input() public codeExampleUrl: string;
     @Input() public title: string;
+    @Input() public isUsageDocumentation: boolean = true;
 }

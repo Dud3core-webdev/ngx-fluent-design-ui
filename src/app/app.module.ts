@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { InputsPageModule } from './pages/inputs-page/inputs-page.module';
 import { SharedComponentsModule } from './pages/shared/components/shared-components.module';
 import { CallsToActionPageModule } from './pages/calls-to-action-page/calls-to-action-page.module';
+import { TogglePageModule } from './pages/toggle-page/toggle-page.module';
 
 @NgModule({
     declarations: [
@@ -21,6 +22,7 @@ import { CallsToActionPageModule } from './pages/calls-to-action-page/calls-to-a
         HomePageModule,
         InputsPageModule,
         CallsToActionPageModule,
+        TogglePageModule,
         SharedComponentsModule
     ],
     providers: [],

@@ -3,10 +3,12 @@ import { NgxFluentDesignTextFieldComponent } from './standard-textfield/ngx-flue
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputClassValidatorDirective } from './shared/directives/input-class-validator.directive';
+import { NgxFluentDesignToggleComponent } from './toggle/ngx-fluent-design-toggle.component';
 
 const DECLARATIONS = [
     NgxFluentDesignTextFieldComponent,
-    InputClassValidatorDirective
+    InputClassValidatorDirective,
+    NgxFluentDesignToggleComponent
 ];
 
 @NgModule({
