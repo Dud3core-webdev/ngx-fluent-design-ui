@@ -1,0 +1,37 @@
+@import "variables";
+
+.metadata-limited {
+    font-size: $theme-metadata-limited-font-size;
+}
+
+.metadata {
+    font-size: $theme-metadata-font-size;
+}
+
+.body-text {
+    font-size: $theme-body-text-font-size;
+}
+
+.subject-title {
+    font-size: $theme-subject-title-font-size;
+}
+
+.header {
+    font-size: $theme-header-font-size;
+}
+
+.pane-header {
+    font-size: $theme-pane-header-font-size;
+}
+
+.page-title {
+    font-size: $theme-page-title-font-size;
+}
+
+.greeting-title {
+    font-size: $theme-greeting-title-font-size;
+}
+
+.xl-numerics {
+    font-size: $theme-xl-numerics-font-size;
+}

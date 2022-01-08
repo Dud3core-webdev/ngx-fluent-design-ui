@@ -1,0 +1,67 @@
+@import "functions";
+
+/** Theme colors */
+$theme-primary: get_theme_var(primary);
+$theme-lighter-alt: get_theme_var(lighter-alt);
+$theme-lighter: get_theme_var(lighter);
+$theme-light: get_theme_var(light);
+$theme-dark-alt: get_theme_var(dark-alt);
+$theme-darker: get_theme_var(darker);
+$theme-dark: get_theme_var(dark);
+$theme-tertiary: get_theme_var(tertiary);
+
+/** Errors and status */
+$theme-error-background-fill: get_theme_var(error-background-fill);
+$theme-success-background-fill: get_theme_var(success-background-fill);
+$theme-severe-background-fill: get_theme_var(severe-background-fill);
+$theme-warning-background-fill: get_theme_var(waning-background-fill);
+
+$theme-status-error: get_theme_var(status-error);
+$theme-status-success: get_theme_var(status-success);
+$theme-status-severe-warning: get_theme_var(status-severe-warning);
+$theme-status-warning: get_theme_var(status-warning);
+
+/** overlays */
+$theme-overlay-light: get_theme_var(overlay-light);
+$theme-overlay-dark: get_theme_var(overlay-dark);
+
+/** Greys */
+$theme-colors-white: get_theme_var(colors-white);
+$theme-colors-grey10: get_theme_var(colors-grey10);
+$theme-colors-grey20: get_theme_var(colors-grey20);
+$theme-colors-grey30: get_theme_var(colors-grey30);
+$theme-colors-grey40: get_theme_var(colors-grey40);
+$theme-colors-grey50: get_theme_var(colors-grey50);
+$theme-colors-grey60: get_theme_var(colors-grey60);
+$theme-colors-grey90: get_theme_var(colors-grey90);
+$theme-colors-grey130: get_theme_var(colors-grey130);
+$theme-colors-grey150: get_theme_var(colors-grey150);
+$theme-colors-grey190: get_theme_var(colors-grey190);
+
+/** Type */
+$theme-type-primary: get_theme_var(type-primary);
+$theme-type-secondary: get_theme_var(type-secondary);
+$theme-type-disabled: get_theme_var(type-disabled);
+
+/** Fonts */
+$theme-metadata-limited-font-size: 10px;
+$theme-metadata-font-size: 12px;
+$theme-body-text-font-size: 14px;
+$theme-subject-title-font-size: 16px;
+$theme-header-font-size: 18px;
+$theme-pane-header-font-size: 20px;
+$theme-page-title-font-size: 28px;
+$theme-greeting-title-font-size: 32px;
+$theme-hero-title-font-size: 42px;
+$theme-xl-numerics-font-size: 68px;
+
+$primary-error-color: get_theme_var(primary-error-color);
+$primary-disabled-background: get_theme_var(primary-disabled-background-color);
+$primary-disabled-font-color: get_theme_var(primary-disabled-font-color);
+
+/** Input */
+$input_primary-border: get_theme_var(primary-input-border);
+
+/** CTA */
+$cta_primary-hover-color: get_theme_var(primary-cta-hover-background-color);
+$cta_primary-font-color: get_theme_var(primary-cta-font-color);

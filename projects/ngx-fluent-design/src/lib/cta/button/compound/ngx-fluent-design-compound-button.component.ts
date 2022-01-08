@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { INgxFluentDesignCta, NgxFluentDesignCtaType } from '../../shared/types/ngx-fluent-design-cta.interface';
+import { INgxFluentDesignCta } from '../../shared/types/ngx-fluent-design-cta.interface';
+import { NgxFluentDesignSlotNames } from '../../../shared/types/theme-names.type';
+import { NgxFluentDesignCtaType } from '../../../shared/types/cta.type';
 
 @Component({
     selector: 'ngx-fluent-design-compound-button',
@@ -7,8 +9,9 @@ import { INgxFluentDesignCta, NgxFluentDesignCtaType } from '../../shared/types/
     styleUrls: ['./ngx-fluent-design-compound-button.component.scss']
 })
 export class NgxFluentDesignCompoundButtonComponent implements INgxFluentDesignCta {
-    @Input() public disabled = false;
     @Input() public type: NgxFluentDesignCtaType = 'primary';
+    @Input() public slotName: NgxFluentDesignSlotNames = 'none';
+    @Input() public disabled = false;
     @Input() public secondaryText: string;
 
     @Output() public clicked: EventEmitter<void> = new EventEmitter<void>();
@@ -16,4 +19,5 @@ export class NgxFluentDesignCompoundButtonComponent implements INgxFluentDesignC
     public onClicked(): void {
         this.clicked.emit();
     }
+
 }

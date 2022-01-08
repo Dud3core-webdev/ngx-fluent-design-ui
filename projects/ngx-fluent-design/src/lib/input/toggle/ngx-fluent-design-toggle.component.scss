@@ -1,4 +1,4 @@
-@import "../../variables";
+@import "../../shared/styles/variables";
 
 .ngx-fluent-design-toggle {
 
@@ -65,7 +65,7 @@
         &:checked {
             + {
                 .slider {
-                    background-color: $primary-color;
+                    background-color: $theme-primary;
                     border: none;
 
                     &:before {

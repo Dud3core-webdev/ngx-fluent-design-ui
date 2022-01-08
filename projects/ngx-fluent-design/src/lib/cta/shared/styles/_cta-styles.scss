@@ -1,4 +1,4 @@
-@import "../../../variables";
+@import "../../../shared/styles/variables";
 
 .ngx-fluent-design-cta {
     outline: transparent;
@@ -9,17 +9,25 @@
     user-select: none;
 
     &.standard {
-        border: 1px solid rgb(138, 136, 134);
-        background: rgb(255, 255, 255);
+        color: $theme-type-primary;
 
-        &:hover {
-            background-color: rgb(237, 235, 233);
-            color: rgb(50, 49, 48);
+        &.none {
+            border: 1px solid $theme-colors-grey50;
+            background: $theme-colors-white;
+            &:hover {
+                background-color: $theme-colors-grey20;
+            }
+        }
+
+        &.neutral {
+            border: 1px solid $theme-colors-grey20;
+            background: $theme-colors-grey50;
         }
 
         &:disabled {
-            background-color: rgb(243, 242, 241);
-            color: rgb(161, 159, 157);
+            p, small { color: $theme-type-disabled; }
+            background-color: $theme-colors-grey20;
+            color: #d0d0d0;
             pointer-events: none;
             cursor: not-allowed;
             user-select: none;
@@ -28,23 +36,25 @@
 
     &.primary {
         p, small { color: $cta_primary-font-color }
-        color: $cta_primary-font-color;
-        border: 1px solid $primary-color;
-        background-color: $primary-color;
+        color: $theme-colors-white;
 
-        &:hover {
-            background-color: $cta_primary-hover-color;
-            border: 1px solid $cta_primary-hover-color;
-            color: rgb(255, 255, 255);
+        &.none {
+            border: 1px solid $theme-primary;
+            background-color: $theme-primary;
+
+            &:hover {
+                background-color: $theme-dark-alt;
+            }
         }
 
         &:disabled {
-            p, small { color: $primary-disabled-font-color; }
-            background-color: $primary-disabled-background;
+            p, small { color: $theme-type-disabled; }
+            background-color: $theme-colors-grey20;
             border: none;
             pointer-events: none;
             cursor: not-allowed;
 			user-select: none;
+            color: $theme-type-disabled;
         }
     }
 }

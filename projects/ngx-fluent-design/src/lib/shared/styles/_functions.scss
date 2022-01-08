@@ -1,0 +1,3 @@
+@function get_theme_var($varName) {
+    @return (var(--theme-#{$varName}));
+}

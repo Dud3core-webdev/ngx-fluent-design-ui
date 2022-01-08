@@ -1,6 +1,59 @@
 :root {
-    /** Primary, standard colors */
-    --primary-color: rgb(0, 120, 212);
+    /** Colors */
+    --theme-primary: #0078D4;
+
+    // light
+    --theme-lighter-alt: #EFF6FC;
+    --theme-lighter: #DEECF9;
+    --theme-light: #C7E0F4;
+
+    // dark
+    --theme-dark-alt: #106EBE;
+    --theme-darker: #004578;
+    --theme-dark: #005A9E;
+
+    //tertiary
+    --theme-tertiary: #2B88D8;
+
+    /** Error and status */
+    --theme-error-background-fill: #FDE7E9;
+    --theme-success-background-fill: #DFF6DD;
+    --theme-servere-background-fill: #FED9CC;
+    --theme-warning-background-fill: #FFF4CE;
+    --theme-status-error: #A80000;
+    --theme-status-success: #107C10;
+    --theme-status-severe-warning: #D83B01;
+    --theme-status-warning: #797775;
+
+    /** overlays */
+    --theme-overlay-light: #fff;
+    --theme-overlay-dark: #000;
+
+    /** Greys */
+    --theme-colors-white: #fff;
+    --theme-colors-grey10: #FAF9F8;
+    --theme-colors-grey20: #F3F2F1;
+    --theme-colors-grey30: #EDEBE9;
+    --theme-colors-grey40: #E1DFDD;
+    --theme-colors-grey50: #D2D0CE;
+    --theme-colors-grey60: #C8C6C4;
+    --theme-colors-grey90: #A19F9D;
+    --theme-colors-grey130: #605E5C;
+    --theme-colors-grey150: #3B3A39;
+    --theme-colors-grey190: #201F1E;
+
+    /** Type **/
+    --theme-type-primary: #323130;
+    --theme-type-secondary: #605E5C;
+    --theme-type-disabled: #A19F9D;
+
+    /** Dividers and borders */
+    --theme-body-divider: #EDEBE9;
+    --theme-input-border: #8A8886;
+    --theme-input-hover-border: #323130;
+
+    /** @Todo: remove these variables */
+
     --primary-error-color: rgb(164, 38, 44);
     --primary-disabled-background-color: rgb(243, 242, 241);
     --primary-disabled-font-color: rgb(210, 208, 206);

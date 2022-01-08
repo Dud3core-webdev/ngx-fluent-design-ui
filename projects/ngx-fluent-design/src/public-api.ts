@@ -2,6 +2,11 @@
  * Public API Surface of ngx-fluent-design
  */
 
+/** Shared types */
+export * from './lib/shared/types/cta.type';
+export * from './lib/shared/types/message-bar.type';
+export * from './lib/shared/types/theme-names.type';
+
 /** card */
 export * from './lib/card/standard/ngx-fluent-design-card.component';
 export * from './lib/card/document/ngx-fluent-design-document-card.component';

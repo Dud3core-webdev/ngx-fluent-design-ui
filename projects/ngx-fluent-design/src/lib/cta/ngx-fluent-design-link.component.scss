@@ -1,7 +1,7 @@
-@import "../variables";
+@import "../shared/styles/variables";
 
 .fluent-design-link {
-    color: $primary-color;
+    color: $theme-primary;
     outline: none;
     font-family: inherit;
     text-decoration: underline;

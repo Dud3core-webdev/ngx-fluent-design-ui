@@ -1,7 +1,7 @@
 <button class="ngx-fluent-design-button ngx-fluent-design-cta"
         (click)="onClicked()"
         [disabled]="disabled"
-        [ngClass]="[type]">
+        [ngClass]="[type, slotName]">
     <p class="text-content"><ng-content></ng-content></p>
     <small>{{secondaryText}}</small>
 </button>

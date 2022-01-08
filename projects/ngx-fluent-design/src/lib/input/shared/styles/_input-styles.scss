@@ -22,11 +22,11 @@
     background: none transparent;
 
     &:focus {
-        border-color: $primary-color;
+        border-color: $theme-primary;
     }
 
     &:focus-within {
-        border-color: $primary-color;
+        border-color: $theme-primary;
     }
 
     &.has-error {

@@ -1,4 +1,5 @@
 import { EventEmitter } from '@angular/core';
+import { MessageBarType } from '../../../shared/types/message-bar.type';
 
 export interface INgxFluentDesignMessageBar {
     messageBarType: MessageBarType;
@@ -9,5 +10,3 @@ export interface INgxFluentDesignMessageBar {
     actionClicked: EventEmitter<void>;
     closeClicked: EventEmitter<void>;
 }
-
-export declare type MessageBarType = 'info' | 'error' | 'blocked' | 'severe-warning' | 'success' | 'warning';
