@@ -16,7 +16,7 @@ const routes: Routes = [
         component: HomePageComponent
     },
     {
-        path: 'inputs',
+        path: 'form-field',
         component: InputsPageComponent
     },
     {
