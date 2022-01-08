@@ -7,6 +7,7 @@
     -webkit-font-smoothing: antialiased;
     border-radius: 2px;
     user-select: none;
+    font-size: $theme-body-text-font-size;
 
     &.standard {
         color: $theme-type-primary;

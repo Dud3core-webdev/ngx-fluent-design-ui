@@ -10,5 +10,6 @@ export class NgxFluentDesignTextFieldComponent implements INgxFluentDesignInput 
     @Input() public label: string;
     @Input() public disabled: boolean;
     @Input() public id: string;
+    @Input() public displayLabel: boolean = true;
 }
 

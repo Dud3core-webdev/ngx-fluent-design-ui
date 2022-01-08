@@ -15,7 +15,7 @@
     border-image: initial;
     border-radius: 2px;
     border-color: $input_primary-border;
-    color: rgb(32, 31, 30);
+    color: $theme-type-primary;
     width: 100%;
     min-width: 0;
     margin: 0.35rem 0 0.85rem;
@@ -30,14 +30,14 @@
     }
 
     &.has-error {
-        border-color: $primary-error-color;
+        border-color: $theme-status-error;
     }
 
     label {
         -webkit-font-smoothing: antialiased;
         font-size: 14px;
         font-weight: 600;
-        color: rgb(50, 49, 48);
+        color: $theme-primary;
         box-sizing: border-box;
         box-shadow: none;
         margin: 0;

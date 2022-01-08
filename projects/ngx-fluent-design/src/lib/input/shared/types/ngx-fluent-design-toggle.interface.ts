@@ -9,5 +9,6 @@ export interface INgxFluentDesignToggle {
     readonly changeEvent: EventEmitter<void>;
     readonly toggleOnEvent: EventEmitter<void>;
     readonly toggleOffEvent: EventEmitter<void>;
+    
     toggle(): void;
 }
