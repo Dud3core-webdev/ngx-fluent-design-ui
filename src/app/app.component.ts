@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AppStatusService } from './shared/services/app-status.service';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
+import { fromPromise } from 'rxjs/internal-compatibility';
 
 @Component({
     selector: 'app-root',
@@ -65,4 +66,5 @@ export class AppComponent implements OnInit, OnDestroy {
     public closeOfflineAlertMessage(): void {
         this._userClosedOfflineAlert = true;
     }
+
 }
