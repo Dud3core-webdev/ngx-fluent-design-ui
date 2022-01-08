@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
-    private _appIsOnline: boolean = false;
+    private _appIsOnline: boolean = true;
     private _appHasUpdates: boolean = false;
     private _userClosedUpdateAlert: boolean = false;
     private _userClosedOfflineAlert: boolean = false;
