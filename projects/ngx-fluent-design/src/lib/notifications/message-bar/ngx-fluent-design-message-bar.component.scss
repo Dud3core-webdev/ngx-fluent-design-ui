@@ -3,8 +3,24 @@
     display: flex;
     flex-direction: row;
 
-    &.warn {
+    &.info {
+        background-color: #F3F2F1;
+    }
+
+    &.warning {
         background-color: rgb(255, 200, 10, .2);
+    }
+
+    &.severe-warning {
+        background-color: rgb(250, 65, 0, .2);
+    }
+
+    &.error, &.blocked {
+        background-color: rgb(245, 135, 145, .2);
+    }
+
+    &.success {
+        background-color: rgb(95, 210, 85, .2);
     }
 
     .logo-container {
@@ -24,5 +40,25 @@
         line-height: normal;
         display: flex;
         align-items: center;
+        margin: 8px 12px 8px 8px;
+    }
+
+    .calls-to-action {
+        padding: 12px 6px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 25%;
+
+        .user-action {
+            align-self: flex-end;
+        }
+
+        .x-icon {
+            align-self: flex-start;
+            position: sticky;
+            max-width: 32px;
+            cursor: pointer;
+        }
     }
 }
