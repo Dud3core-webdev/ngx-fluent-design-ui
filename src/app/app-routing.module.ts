@@ -4,6 +4,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { InputsPageComponent } from './pages/inputs-page/inputs-page.component';
 import { CallsToActionPageComponent } from './pages/calls-to-action-page/calls-to-action-page.component';
 import { TogglePageComponent } from './pages/toggle-page/toggle-page.component';
+import { MessageBarPageComponent } from './pages/message-bar-page/message-bar-page.component';
 
 const routes: Routes = [
     {
@@ -26,6 +27,10 @@ const routes: Routes = [
     {
         path: 'toggle',
         component: TogglePageComponent
+    },
+    {
+        path: 'message-bar',
+        component: MessageBarPageComponent
     }
 ];
 

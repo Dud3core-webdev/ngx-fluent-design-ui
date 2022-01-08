@@ -11,6 +11,9 @@ import { CallsToActionPageModule } from './pages/calls-to-action-page/calls-to-a
 import { TogglePageModule } from './pages/toggle-page/toggle-page.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { WINDOW_PROVIDERS } from './shared/factories/window.factory';
+import { NgxFluentDesignNotificationModule } from '../../projects/ngx-fluent-design/src/lib/notifications/ngx-fluent-design-notification.module';
+import { MessageBarPageModule } from './pages/message-bar-page/message-bar-page.module';
 
 @NgModule({
     declarations: [
@@ -25,15 +28,15 @@ import { environment } from '../environments/environment';
         InputsPageModule,
         CallsToActionPageModule,
         TogglePageModule,
+        MessageBarPageModule,
         SharedComponentsModule,
+        NgxFluentDesignNotificationModule,
         ServiceWorkerModule.register('ngsw-worker.js', {
           enabled: environment.production,
-          // Register the ServiceWorker as soon as the app is stable
-          // or after 30 seconds (whichever comes first).
           registrationStrategy: 'registerWhenStable:30000'
         })
     ],
-    providers: [],
+    providers: [WINDOW_PROVIDERS],
     bootstrap: [AppComponent]
 })
 export class AppModule {

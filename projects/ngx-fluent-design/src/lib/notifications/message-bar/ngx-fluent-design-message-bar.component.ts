@@ -45,6 +45,7 @@ export class NgxFluentDesignMessageBarComponent implements INgxFluentDesignMessa
 
     constructor() {
         this.actionClicked = new EventEmitter<void>();
+        this.closeClicked = new EventEmitter<void>();
     }
 
     public onCloseClicked(): void {

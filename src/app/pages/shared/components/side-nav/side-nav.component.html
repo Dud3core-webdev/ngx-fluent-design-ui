@@ -1,13 +1,16 @@
 <div class="sticky">
-    <div class="p-4 h-100">
-        <a class="fluent-design-link" routerLinkActive="active" [routerLink]="['', 'home']">Home</a>
+    <div class="px-4 pt-5 h-100">
+        <section class="mt-2">
+            <a class="fluent-design-link mt-3" routerLinkActive="active" [routerLink]="['', 'home']">Home</a>
+        </section>
         <div class="components my-4">
             <h4 class="mb-4">Components</h4>
             <hr>
             <div class="components-links d-flex flex-column">
                 <a class="fluent-design-link" routerLinkActive="active" [routerLink]="['', 'form-field']">Form Field</a>
                 <a class="fluent-design-link" routerLinkActive="active" [routerLink]="['', 'calls-to-action']">Calls To Action</a>
-                <a class="fluent-design-link" routerLinkActive="active" [routerLink]="['', 'toggle']">Toggle</a>
+                <a class="fluent-design-link" *ngIf="!environment.production" routerLinkActive="active" [routerLink]="['', 'toggle']">Toggle</a>
+                <a class="fluent-design-link" *ngIf="!environment.production" routerLinkActive="active" [routerLink]="['', 'message-bar']">Message Bar</a>
             </div>
         </div>
     </div>

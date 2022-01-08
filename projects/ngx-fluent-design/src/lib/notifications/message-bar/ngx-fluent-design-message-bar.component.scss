@@ -2,6 +2,7 @@
 
     display: flex;
     flex-direction: row;
+    width: 100%;
 
     &.info {
         background-color: #F3F2F1;
@@ -28,6 +29,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        max-width: 16px;
 
         .logo {
             width: 12px;
@@ -41,14 +43,17 @@
         display: flex;
         align-items: center;
         margin: 8px 12px 8px 8px;
+        width: 75%;
     }
 
     .calls-to-action {
         padding: 12px 6px;
         display: flex;
+        align-items: flex-end;
         flex-direction: row;
         justify-content: space-between;
-        width: 25%;
+        min-width: 25%;
+        max-width: 35%;
 
         .user-action {
             align-self: flex-end;

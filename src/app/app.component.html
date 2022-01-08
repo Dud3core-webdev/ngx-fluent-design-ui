@@ -1,3 +1,26 @@
+<section class="top-alert">
+    <ngx-fluent-design-message-bar
+        *ngIf="shouldDisplayUpdateAlert"
+        class="alert-component"
+        [canDismiss]="true"
+        [displayActions]="true"
+        [actionName]="'Reload'"
+        (actionClicked)="reloadWindow()"
+        (closeClicked)="closeUpdateMessage()"
+        messageBarType="success">
+            It looks like there might be an update for this application, reload the page to get the latest updates
+    </ngx-fluent-design-message-bar>
+
+    <ngx-fluent-design-message-bar
+        *ngIf="shouldDisplayOfflineAlert"
+        class="alert-component"
+        [canDismiss]="true"
+        (closeClicked)="closeOfflineAlertMessage()"
+        messageBarType="blocked">
+            Application is currently offline. This might affect Asset fetching
+    </ngx-fluent-design-message-bar>
+</section>
+
 <div class="w-100 h-100 d-flex flex-row">
     <side-navigation></side-navigation>
     <div class="w-100 p-4">
