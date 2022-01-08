@@ -1,23 +1,26 @@
 <div class="w-100 container-fluid py-4">
-    <ngx-fluent-design-card>
-        <div class="welcome">
-            <h1><code>ngx-fluent-design</code></h1>
-            <p>An open-source, Angular implementation of Microsoft's Fluent Design Library</p>
+    <div class="welcome mb-4">
+        <div class="introduction-container d-flex w-100 flex-column">
+            <div class="w-100 justify-content-center d-flex">
+                <img alt="ngx-fluent-design logo" class="fluent-design-logo img-fluid" src="./assets/ngx-fluent-design-logo.svg" />
+            </div>
+            <h1 class="text-center"><code>ngx-fluent-design</code></h1>
+            <p class="text-center">An open-source, Angular implementation of Microsoft's Fluent Design Library</p>
         </div>
-
-        <div class="note mt-2">
-            <p>View More:</p>
-            <ul>
-                <li><a class="fluent-design-link" rel="noreferrer" target="_blank" href="https://www.npmjs.com/package/ngx-fluent-design">NPM</a></li>
-                <li><a class="fluent-design-link" rel="noreferrer" target="_blank" href="https://github.com/Dud3core-webdev/ngx-fluent-design-ui">Github</a></li>
-            </ul>
-        </div>
-    </ngx-fluent-design-card>
+    </div>
 
     <ngx-fluent-design-card>
         <div class="welcome">
-            <h3><strong>NOTE!!</strong></h3>
-            <p>This library has only so far been tested with Angular 11. It may work with newer and some older versions of Angular however.</p>
+            <div class="note mb-3">
+                <ngx-fluent-design-message-bar messageBarType="warn">
+                    This library has only so far been tested with Angular 11. It may work with newer and some older versions of Angular however.
+                </ngx-fluent-design-message-bar>
+                <p>View More:</p>
+                <ul>
+                    <li><a class="fluent-design-link" rel="noreferrer" target="_blank" href="https://www.npmjs.com/package/ngx-fluent-design">NPM</a></li>
+                    <li><a class="fluent-design-link" rel="noreferrer" target="_blank" href="https://github.com/Dud3core-webdev/ngx-fluent-design-ui">Github</a></li>
+                </ul>
+            </div>
         </div>
     </ngx-fluent-design-card>
 

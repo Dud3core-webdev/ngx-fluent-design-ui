@@ -65,7 +65,13 @@
                         "aot": true,
                         "assets": [
                             "src/favicon.ico",
-                            "src/assets"
+                            "src/assets",
+                            "src/manifest.webmanifest",
+                            {
+                                "glob": "**/*",
+                                "input": "./projects/ngx-fluent-design/assets",
+                                "output": "/assets/"
+                            }
                         ],
                         "styles": [
                             "src/styles.scss",
@@ -76,7 +82,9 @@
                             "node_modules/prismjs/prism.js",
                             "node_modules/prismjs/components/prism-csharp.min.js",
                             "node_modules/prismjs/components/prism-typescript.min.js"
-                        ]
+                        ],
+                        "serviceWorker": true,
+                        "ngswConfigPath": "ngsw-config.json"
                     },
                     "configurations": {
                         "production": {
@@ -117,7 +125,17 @@
                         "production": {
                             "browserTarget": "ngx-fluent-design-testbed:build:production"
                         }
-                    }
+                    },
+                    "assets": [
+                        "src/favicon.ico",
+                        "src/assets",
+                        "src/manifest.webmanifest",
+                        {
+                            "glob": "**/*",
+                            "input": "./projects/ngx-fluent-design/assets/**",
+                            "output": "/src/assets/"
+                        }
+                    ]
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -134,7 +152,8 @@
                         "karmaConfig": "karma.conf.js",
                         "assets": [
                             "src/favicon.ico",
-                            "src/assets"
+                            "src/assets",
+                            "src/manifest.webmanifest"
                         ],
                         "styles": [
                             "src/styles.scss"
@@ -170,5 +189,5 @@
             }
         }
     },
-    "defaultProject": "ngx-fluent-design"
+    "defaultProject": "ngx-fluent-design-testbed"
 }

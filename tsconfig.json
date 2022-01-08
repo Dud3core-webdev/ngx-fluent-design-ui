@@ -1,29 +1,30 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "paths": {
-      "ngx-fluent-design": [
-        "dist/ngx-fluent-design/ngx-fluent-design",
-        "dist/ngx-fluent-design"
-      ]
+    "compileOnSave": false,
+    "compilerOptions": {
+        "baseUrl": "./",
+        "outDir": "./dist/out-tsc",
+        "sourceMap": true,
+        "declaration": false,
+        "downlevelIteration": true,
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "importHelpers": true,
+        "paths": {
+            "ngx-fluent-design": [
+                "dist/ngx-fluent-design/ngx-fluent-design",
+                "dist/ngx-fluent-design",
+                "dist/ngx-fluent-design/assets"
+            ]
+        },
+        "target": "es2015",
+        "module": "es2020",
+        "lib": [
+            "es2018",
+            "dom"
+        ]
     },
-    "target": "es2015",
-    "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ]
-  },
-  "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false
-  }
+    "angularCompilerOptions": {
+        "enableI18nLegacyMessageIdFormat": false
+    }
 }

@@ -4,11 +4,13 @@ import { NgxFluentDesignCardModule } from '../../../../projects/ngx-fluent-desig
 import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './home-page.component';
 import { MarkdownModule } from 'ngx-markdown';
+import { NgxFluentDesignNotificationModule } from '../../../../projects/ngx-fluent-design/src/lib/notifications/ngx-fluent-design-notification.module';
 
 @NgModule({
     imports: [
         FormsModule,
         NgxFluentDesignCardModule,
+        NgxFluentDesignNotificationModule,
         CommonModule,
         MarkdownModule.forChild()
     ],

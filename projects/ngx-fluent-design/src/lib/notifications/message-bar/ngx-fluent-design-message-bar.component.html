@@ -1,0 +1,8 @@
+<section class="ngx-fluent-design-message-bar" [ngClass]="[messageBarType]">
+    <span class="logo-container" [ngSwitch]="messageBarType">
+        <img *ngSwitchCase="'warn'" class="logo" src="./assets/img/string-icon-info-warn.svg" />
+
+        <div *ngSwitchCase="'info'">Hell yeah</div>
+    </span>
+    <p class="message"><ng-content></ng-content></p>
+</section>

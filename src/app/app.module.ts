@@ -9,6 +9,8 @@ import { InputsPageModule } from './pages/inputs-page/inputs-page.module';
 import { SharedComponentsModule } from './pages/shared/components/shared-components.module';
 import { CallsToActionPageModule } from './pages/calls-to-action-page/calls-to-action-page.module';
 import { TogglePageModule } from './pages/toggle-page/toggle-page.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
     declarations: [
@@ -23,7 +25,13 @@ import { TogglePageModule } from './pages/toggle-page/toggle-page.module';
         InputsPageModule,
         CallsToActionPageModule,
         TogglePageModule,
-        SharedComponentsModule
+        SharedComponentsModule,
+        ServiceWorkerModule.register('ngsw-worker.js', {
+          enabled: environment.production,
+          // Register the ServiceWorker as soon as the app is stable
+          // or after 30 seconds (whichever comes first).
+          registrationStrategy: 'registerWhenStable:30000'
+        })
     ],
     providers: [],
     bootstrap: [AppComponent]
