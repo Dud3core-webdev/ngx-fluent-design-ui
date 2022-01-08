@@ -27,7 +27,8 @@
         &:disabled {
             p, small { color: $theme-type-disabled; }
             background-color: $theme-colors-grey20;
-            color: #d0d0d0;
+            border: 1px solid $theme-colors-grey20;
+            color: $theme-type-disabled;
             pointer-events: none;
             cursor: not-allowed;
             user-select: none;
@@ -54,7 +55,7 @@
             pointer-events: none;
             cursor: not-allowed;
 			user-select: none;
-            color: $theme-type-disabled;
+            color: #d0d0d0;
         }
     }
 }
