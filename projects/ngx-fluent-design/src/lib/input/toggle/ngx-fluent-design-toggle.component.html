@@ -1,7 +1,7 @@
 <div class="ngx-fluent-design-toggle" [ngClass]="{ 'stack': !inlineLabel }">
     <small class="toggle-label">{{label}}</small>
     <label class="switch">
-        <input type="checkbox" (click)="toggle()" [checked]="toggled">
+        <input [disabled]="false" type="checkbox" (click)="toggle()" [checked]="toggled">
         <span class="slider round"></span>
     </label>
 </div>
