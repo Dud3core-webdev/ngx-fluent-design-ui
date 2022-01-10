@@ -1,10 +1,13 @@
 import { RouterModule, Routes } from '@angular/router';
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { InputsPageComponent } from './pages/inputs-page/inputs-page.component';
 import { CallsToActionPageComponent } from './pages/calls-to-action-page/calls-to-action-page.component';
-import { TogglePageComponent } from './pages/toggle-page/toggle-page.component';
 import { MessageBarPageComponent } from './pages/message-bar-page/message-bar-page.component';
+import { CompoundCtaPageComponent } from './pages/calls-to-action-page/pages/compound-cta/compound-cta.page.component';
+import { StandardCtaPageComponent } from './pages/calls-to-action-page/pages/standard-cta/standard-cta-page.component';
+import { FormFieldPageComponent } from './pages/inputs-page/pages/form-field/form-field-page.component';
+import { TogglePageComponent } from './pages/inputs-page/pages/toggle/toggle-page.component';
 
 const routes: Routes = [
     {
@@ -17,16 +20,32 @@ const routes: Routes = [
         component: HomePageComponent
     },
     {
-        path: 'form-field',
-        component: InputsPageComponent
+        path: 'inputs',
+        component: InputsPageComponent,
+        children: [
+            {
+                path: 'form-field',
+                component: FormFieldPageComponent
+            },
+            {
+                path: 'toggle',
+                component: TogglePageComponent
+            }
+        ]
     },
     {
         path: 'calls-to-action',
-        component: CallsToActionPageComponent
-    },
-    {
-        path: 'toggle',
-        component: TogglePageComponent
+        component: CallsToActionPageComponent,
+        children: [
+            {
+                path: 'compound',
+                component: CompoundCtaPageComponent
+            },
+            {
+                path: 'standard',
+                component: StandardCtaPageComponent
+            }
+        ]
     },
     {
         path: 'message-bar',

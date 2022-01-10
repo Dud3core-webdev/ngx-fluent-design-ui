@@ -1,7 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AppStatusService } from './shared/services/app-status.service';
-import { Observable, Subscription } from 'rxjs';
-import { fromPromise } from 'rxjs/internal-compatibility';
+import { Subscription } from 'rxjs';
+import { sideNavLinks } from './pages/shared/components/side-nav/side-nav-links.class';
+import { SideNavLinks } from './pages/shared/components/side-nav/side-nav-links.interface';
 
 @Component({
     selector: 'app-root',
@@ -17,6 +18,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
     private readonly _appStatusService: AppStatusService;
     private readonly _subscriptions: Subscription = new Subscription();
+    private readonly _navItems: SideNavLinks = sideNavLinks();
 
     public get shouldDisplayUpdateAlert(): boolean {
         return this._appHasUpdates && !this._userClosedUpdateAlert;
@@ -24,6 +26,10 @@ export class AppComponent implements OnInit, OnDestroy {
 
     public get shouldDisplayOfflineAlert(): boolean {
         return !this._appIsOnline && !this._userClosedOfflineAlert;
+    }
+
+    public get navItems(): SideNavLinks {
+        return this._navItems;
     }
 
     constructor(appStatusService: AppStatusService) {

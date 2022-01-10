@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { NgxFluentDesignTextFieldComponent } from './standard-textfield/ngx-fluent-design-text-field.component';
+import { NgxFluentDesignFormFieldComponent } from './standard-textfield/ngx-fluent-design-form-field.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputClassValidatorDirective } from './shared/directives/input-class-validator.directive';
 import { NgxFluentDesignToggleComponent } from './toggle/ngx-fluent-design-toggle.component';
 
 const DECLARATIONS = [
-    NgxFluentDesignTextFieldComponent,
+    NgxFluentDesignFormFieldComponent,
     InputClassValidatorDirective,
     NgxFluentDesignToggleComponent
 ];

@@ -4,9 +4,9 @@ import { FormControl } from '@angular/forms';
 @Component({
     template: `
         <form>
-            <ngx-fluent-design-standard-input [label]="'Standard Input'">
+            <ngx-fluent-design-form-field [label]="'Standard Input'">
                 <input ngxFluentDesignInput [formControl]="standardInput">
-            </ngx-fluent-design-standard-input>
+            </ngx-fluent-design-form-field>
         </form>
     `,
 })

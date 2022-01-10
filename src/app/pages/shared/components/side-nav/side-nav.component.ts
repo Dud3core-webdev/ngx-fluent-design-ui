@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { SideNavLinks } from './side-nav-links.interface';
 
 @Component({
     selector: 'side-navigation',
@@ -8,4 +9,5 @@ import { environment } from 'src/environments/environment';
 })
 export class SideNavComponent {
     public environment = environment;
+    @Input() public readonly sideNavLinks: SideNavLinks = [];
 }

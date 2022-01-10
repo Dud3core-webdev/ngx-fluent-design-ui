@@ -8,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { InputsPageModule } from './pages/inputs-page/inputs-page.module';
 import { SharedComponentsModule } from './pages/shared/components/shared-components.module';
 import { CallsToActionPageModule } from './pages/calls-to-action-page/calls-to-action-page.module';
-import { TogglePageModule } from './pages/toggle-page/toggle-page.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { WINDOW_PROVIDERS } from './shared/factories/window.factory';
@@ -27,7 +26,6 @@ import { MessageBarPageModule } from './pages/message-bar-page/message-bar-page.
         HomePageModule,
         InputsPageModule,
         CallsToActionPageModule,
-        TogglePageModule,
         MessageBarPageModule,
         SharedComponentsModule,
         NgxFluentDesignNotificationModule,

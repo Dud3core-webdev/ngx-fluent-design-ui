@@ -7,6 +7,15 @@ import { NgxFluentDesignCtaModule } from '../../../../projects/ngx-fluent-design
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { SharedComponentsModule } from '../shared/components/shared-components.module';
+import { RouterModule } from '@angular/router';
+import { FormFieldPageComponent } from './pages/form-field/form-field-page.component';
+import { TogglePageComponent } from './pages/toggle/toggle-page.component';
+
+const DECLARATIONS: Array<any> = [
+    InputsPageComponent,
+    FormFieldPageComponent,
+    TogglePageComponent
+];
 
 @NgModule({
     imports: [
@@ -16,8 +25,9 @@ import { SharedComponentsModule } from '../shared/components/shared-components.m
         NgxFluentDesignCtaModule,
         ReactiveFormsModule,
         CommonModule,
-        SharedComponentsModule
+        SharedComponentsModule,
+        RouterModule
     ],
-    declarations: [InputsPageComponent],
+    declarations: [...DECLARATIONS],
 })
 export class InputsPageModule { }

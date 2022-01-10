@@ -1,16 +1,29 @@
-.sticky {
+.sticky-navigation {
     top: 0;
     background: white;
     width: 328px;
+    min-height: 100vh;
     height: 100%;
 
-    a {
-        margin: 8px 0;
+    .components {
+        .components-links {
+            .component-section {
+                display: flex;
+                flex-direction: column;
+                h5 {
+                    margin: 12px 0;
+                    font-weight: lighter;
+                }
+                a {
+                    margin: 5px 0;
+                }
+            }
+        };
     }
 }
 
 @media screen and (max-width: 1015px) {
-    .sticky {
+    .sticky-navigation {
         width: 174px;
     }
 }

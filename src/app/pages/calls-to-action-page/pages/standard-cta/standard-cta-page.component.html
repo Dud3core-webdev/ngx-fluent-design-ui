@@ -1,0 +1,25 @@
+<code-example
+    codeExampleUrl="./assets/docs/code-examples/cta/standard-cta/standard-cta-usage.example.ts"
+    title="Standard Button">
+    <div class="d-flex w-100 my-4 justify-content-between">
+        <ngx-fluent-design-button
+            type="primary"
+            [disabled]="standardButtonsDisabled">
+            This is a Primary Button
+        </ngx-fluent-design-button>
+
+        <ngx-fluent-design-button
+            type="standard"
+            [disabled]="standardButtonsDisabled">
+            This is a standard Button
+        </ngx-fluent-design-button>
+    </div>
+
+    <ngx-fluent-design-toggle
+        (changeEvent)="toggleStandardButtons()"
+        [toggled]="standardButtonsDisabled"
+        [inlineLabel]="false"
+        [label]="'Toggle Disabled'"
+        [disabled]="false">
+    </ngx-fluent-design-toggle>
+</code-example>

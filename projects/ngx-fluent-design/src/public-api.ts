@@ -12,7 +12,7 @@ export * from './lib/card/standard/ngx-fluent-design-card.component';
 export * from './lib/card/document/ngx-fluent-design-document-card.component';
 
 /** Input */
-export * from './lib/input/standard-textfield/ngx-fluent-design-text-field.component';
+export * from './lib/input/standard-textfield/ngx-fluent-design-form-field.component';
 export * from './lib/input/toggle/ngx-fluent-design-toggle.component';
 export * from './lib/input/shared/directives/input-class-validator.directive';
 
