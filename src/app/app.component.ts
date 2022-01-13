@@ -41,8 +41,7 @@ export class AppComponent implements OnInit, OnDestroy {
             this._appStatusService.onlineStatus
                 .subscribe({
                     next: (value): void => {
-                        console.log(value);
-                        this._appIsOnline = value;
+                        this._appIsOnline = value.windowOnline;
                     }
                 })
         );
