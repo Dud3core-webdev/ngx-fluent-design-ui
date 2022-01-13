@@ -3,11 +3,12 @@ import { Component, NgModule } from '@angular/core';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { InputsPageComponent } from './pages/inputs-page/inputs-page.component';
 import { CallsToActionPageComponent } from './pages/calls-to-action-page/calls-to-action-page.component';
-import { MessageBarPageComponent } from './pages/message-bar-page/message-bar-page.component';
+import { NotificationsPageComponent } from './pages/notifications-page/notifications-page.component';
 import { CompoundCtaPageComponent } from './pages/calls-to-action-page/pages/compound-cta/compound-cta.page.component';
 import { StandardCtaPageComponent } from './pages/calls-to-action-page/pages/standard-cta/standard-cta-page.component';
 import { FormFieldPageComponent } from './pages/inputs-page/pages/form-field/form-field-page.component';
 import { TogglePageComponent } from './pages/inputs-page/pages/toggle/toggle-page.component';
+import { MessageBarPageComponent } from './pages/notifications-page/pages/message-bar/message-bar-page.component';
 
 const routes: Routes = [
     {
@@ -48,8 +49,14 @@ const routes: Routes = [
         ]
     },
     {
-        path: 'message-bar',
-        component: MessageBarPageComponent
+        path: 'notifications',
+        component: NotificationsPageComponent,
+        children: [
+            {
+                path: 'message-bar',
+                component: MessageBarPageComponent
+            }
+        ]
     }
 ];
 

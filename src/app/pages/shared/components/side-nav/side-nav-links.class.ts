@@ -35,12 +35,12 @@ export const sideNavLinks = (): SideNavLinks => [
     },
     {
         title: 'Alerts And Notifications',
-        shouldDisplayOnLive: false,
+        shouldDisplayOnLive: true,
         subNavItems: [
             {
                 title: 'Message Bar',
-                routerLink: ['', 'alerts-and-notifications', 'message-bar'],
-                shouldDisplayOnLive: false
+                routerLink: ['', 'notifications', 'message-bar'],
+                shouldDisplayOnLive: true
             }
         ]
     }

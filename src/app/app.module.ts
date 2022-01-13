@@ -12,7 +12,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { WINDOW_PROVIDERS } from './shared/factories/window.factory';
 import { NgxFluentDesignNotificationModule } from '../../projects/ngx-fluent-design/src/lib/notifications/ngx-fluent-design-notification.module';
-import { MessageBarPageModule } from './pages/message-bar-page/message-bar-page.module';
+import { NotificationsPageModule } from './pages/notifications-page/notifications-page.module';
 
 @NgModule({
     declarations: [
@@ -26,7 +26,7 @@ import { MessageBarPageModule } from './pages/message-bar-page/message-bar-page.
         HomePageModule,
         InputsPageModule,
         CallsToActionPageModule,
-        MessageBarPageModule,
+        NotificationsPageModule,
         SharedComponentsModule,
         NgxFluentDesignNotificationModule,
         ServiceWorkerModule.register('ngsw-worker.js', {
