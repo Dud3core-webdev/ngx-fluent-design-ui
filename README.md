@@ -1,44 +1,19 @@
 # NGXFluentDesign UI
 
-## WARNING
+### An open source implementation of the Microsoft Fluent Design system written in Angular.
 
-I've only tested this library on Angular 11, I will be working on compatibility at some point, but for now I'd probably only install it if Ivy is enabled in your project, just to be safe.
+The aim of this project is to provide a full suite of Angular components that closely match the official Microsoft Design System
 
-## UPDATES:
+### Development
 
-- I realised that the text fields weren't actually binding to an abstract/formControl when declaring it
-  `[formControlName]="'SomeControlName'"`. I don't even know how I didn't spot this. re-built standard-input so it supports text areas and inputs but still binds to a form control.
+No special configuration is required to develop this app, simply install from package.json using `yarn`, and run the usual Angular serve command `ng s --o`
 
-- fixed margin on inputs that was causing an issue where the right most border wasn't appearing (`<input>` only) - v0.0.7
+The Fluent Design System can be found [here](https://aka.ms/FluentToolkits/Web/Figma) (Figma File).
 
-- Refactored some styles to clean up SCSS in project. v0.0.7
+#### NOTE! This package can only be deployed if you are a contributor to this repository.
 
-- Added a directive that can be used in the standard `<input>` so text fields can be highlighted with red when the control isn't valid. (v0.0.5)
+### Important Links: 
 
-## Components:
-
-So far the library is very limited in components:
-
-- Action Button
-- Compound Action Button
-- Card
-- Document Card (Basic implementation)
-- Input
-- Multi-Line Input (TextArea)
-
-## Requests
-
-This is an open source library so go ahead and open some requests if you need a component. I want to actively work on this.
-
-If you find any issues, then feel free to report them on [Github](https://github.com/Dud3core-webdev/ngx-fluent-design-ui)
-
-## Getting started:
-
-`yarn add ngx-fluent-design`\
-`npm i ngx-fluent-design`
-
-## Usage
-
-(I will be adding more documentation for this library, I just need to really get my head down and work on it.)
-
-You can view the [docs](https://ngx-fluent-design.mfwebdev.net/home) for this library for more information.
+- [Microsoft Fluent Design Web Components](https://developer.microsoft.com/en-us/fluentui#/controls/web)
+- [ngx-fluent-design-docs (Live)](https://ngx-fluent-design.mfwebdev.net/home)
+- [Npm](https://www.npmjs.com/package/ngx-fluent-design)

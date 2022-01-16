@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@angular/core';
 import { BehaviorSubject, combineLatest, fromEvent, Observable, ObservedValueOf, of } from 'rxjs';
 import { SwUpdate, UpdateActivatedEvent, UpdateAvailableEvent } from '@angular/service-worker';
 import { WINDOW } from '../types/window-ref.clss';
-import { mapTo, tap } from 'rxjs/operators';
+import { map, mapTo, switchMap, tap } from 'rxjs/operators';
 import { IApplicationStatus } from '../types/application-status.interface';
 
 @Injectable({
@@ -34,13 +34,15 @@ export class AppStatusService {
             of(navigator.onLine),
             fromEvent(this._window, 'online').pipe(mapTo(true)),
             fromEvent(this._window, 'offline').pipe(mapTo(false)),
-        ], (NavigatorOnline: ObservedValueOf<boolean>, WindowOnline: ObservedValueOf<boolean>, WindowOffline: ObservedValueOf<boolean>) => {
-            return {
-                navigatorOnline: NavigatorOnline,
-                windowOnline: WindowOnline,
-                windowOffline: WindowOffline
-            };
-        });
+        ]).pipe(
+            map(([NavigatorOnline, WindowOnline, WindowOffline]: Array<boolean>): IApplicationStatus => {
+                return {
+                    windowOnline: WindowOnline,
+                    navigatorOnline: NavigatorOnline,
+                    windowOffline: WindowOffline
+                };
+            })
+        );
     }
 
     private setUpdates(): void {
