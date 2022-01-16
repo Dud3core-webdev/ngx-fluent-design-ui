@@ -9,6 +9,7 @@ import { StandardCtaPageComponent } from './pages/calls-to-action-page/pages/sta
 import { FormFieldPageComponent } from './pages/inputs-page/pages/form-field/form-field-page.component';
 import { TogglePageComponent } from './pages/inputs-page/pages/toggle/toggle-page.component';
 import { MessageBarPageComponent } from './pages/notifications-page/pages/message-bar/message-bar-page.component';
+import { CheckboxPageComponent } from './pages/inputs-page/pages/checkbox/checkbox-page.component';
 
 const routes: Routes = [
     {
@@ -24,6 +25,10 @@ const routes: Routes = [
         path: 'inputs',
         component: InputsPageComponent,
         children: [
+            {
+                path: 'checkbox',
+                component: CheckboxPageComponent
+            },
             {
                 path: 'form-field',
                 component: FormFieldPageComponent
@@ -66,4 +71,5 @@ const routes: Routes = [
     ],
     exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}

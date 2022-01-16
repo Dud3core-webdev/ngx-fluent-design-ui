@@ -10,11 +10,13 @@ import { SharedComponentsModule } from '../shared/components/shared-components.m
 import { RouterModule } from '@angular/router';
 import { FormFieldPageComponent } from './pages/form-field/form-field-page.component';
 import { TogglePageComponent } from './pages/toggle/toggle-page.component';
+import {CheckboxPageComponent} from './pages/checkbox/checkbox-page.component';
 
 const DECLARATIONS: Array<any> = [
     InputsPageComponent,
     FormFieldPageComponent,
-    TogglePageComponent
+    TogglePageComponent,
+    CheckboxPageComponent
 ];
 
 @NgModule({

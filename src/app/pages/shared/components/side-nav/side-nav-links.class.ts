@@ -6,6 +6,11 @@ export const sideNavLinks = (): SideNavLinks => [
         shouldDisplayOnLive: true,
         subNavItems: [
             {
+                title: 'Checkbox',
+                routerLink: ['', 'inputs', 'checkbox'],
+                shouldDisplayOnLive: false
+            },
+            {
                 title: 'Form Field',
                 routerLink: ['', 'inputs', 'form-field'],
                 shouldDisplayOnLive: true
