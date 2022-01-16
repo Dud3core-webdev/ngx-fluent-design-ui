@@ -10,10 +10,13 @@
                 <section *ngFor="let item of sideNavLinks">
                     <section class="component-section" *ngIf="item.shouldDisplayOnLive || !environment.production">
                         <h5>{{item.title}}</h5>
-                        <a class="fluent-design-link" *ngFor="let link of item.subNavItems"
-                           routerLinkActive="active"
-                           [routerLink]="link.routerLink">{{link.title}}
-                        </a>
+                        <ng-container *ngFor="let link of item.subNavItems">
+                            <a *ngIf="link.shouldDisplayOnLive || !environment.production"
+                               class="fluent-design-link"
+                               routerLinkActive="active"
+                               [routerLink]="link.routerLink">{{link.title}}
+                            </a>
+                        </ng-container>
                     </section>
                 </section>
             </div>
