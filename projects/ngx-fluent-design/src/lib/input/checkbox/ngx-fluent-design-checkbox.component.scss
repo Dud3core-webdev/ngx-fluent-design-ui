@@ -1,18 +1,52 @@
 @import "../../shared/styles/variables";
 
-.container {
+.checkbox-container {
     position: relative;
     padding-left: 30px;
     user-select: none;
-    cursor: pointer;
-}
 
-.container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+    input {
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+
+        &:not(:checked):disabled ~ .checkmark {
+            border-color: $theme-type-disabled;
+        }
+
+        &:checked {
+            ~ .checkmark {
+                background-color: $theme-primary;
+                border: none;
+
+                &:after {
+                    display: block;
+                }
+            }
+
+            &:disabled {
+                ~ .checkmark {
+                    background-color: $theme-type-disabled;
+                    border: none;
+
+                    &:after {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    .checkmark:after {
+        left: 7px;
+        top: 2px;
+        width: 6px;
+        height: 12px;
+        border: solid white;
+        border-width: 0 1px 1px 0;
+        transform: rotate(45deg);
+    }
 }
 
 .checkmark {
@@ -23,45 +57,28 @@
     width: 20px;
     border: 1px solid $theme-colors-grey130;
     border-radius: 2px;
+
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
 }
 
-.container:hover input:not(:checked) ~ .checkmark:after {
-    display: block;
-    left: 6px;
-    top: 1px;
-    width: 6px;
-    height: 12px;
-    border: solid $theme-colors-grey130;
-    border-width: 0 1px 1px 0;
-    transform: rotate(45deg);
-}
+.checkbox-container:hover {
+    input:not(:checked):not(:disabled) ~ .checkmark:after {
+        display: block;
+        left: 6px;
+        top: 1px;
+        width: 6px;
+        height: 12px;
+        border: solid $theme-colors-grey130;
+        border-width: 0 1px 1px 0;
+        transform: rotate(45deg);
+    }
 
-.container input:checked ~ .checkmark {
-    background-color: $theme-primary;
-    border: none;
-}
-
-.container:hover input:checked ~ .checkmark {
-    background-color: $theme-dark-alt;
-    border: none;
-}
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.container input:checked ~ .checkmark:after {
-    display: block;
-}
-
-.container .checkmark:after {
-    left: 7px;
-    top: 2px;
-    width: 6px;
-    height: 12px;
-    border: solid white;
-    border-width: 0 1px 1px 0;
-    transform: rotate(45deg);
+    input:checked:not(:disabled) ~ .checkmark {
+        background-color: $theme-dark-alt;
+        border: none;
+    }
 }

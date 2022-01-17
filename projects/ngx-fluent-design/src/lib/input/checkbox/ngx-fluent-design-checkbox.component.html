@@ -1,4 +1,4 @@
-<label class="container">{{label}}
+<label class="checkbox-container" [ngClass]="{'c-pointer': !disabled, 'text-black-50': disabled}">{{label}}
     <input class="checkbox" type="checkbox" [checked]="checked" [disabled]="disabled"/>
     <span class="checkmark"></span>
 </label>
