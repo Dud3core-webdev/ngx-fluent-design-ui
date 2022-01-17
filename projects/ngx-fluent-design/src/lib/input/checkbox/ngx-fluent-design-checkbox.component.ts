@@ -1,5 +1,6 @@
 import { Component, forwardRef, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { INgxFluentDesignCheckbox } from '../shared/types/ngx-fluent-design-checkbox.interface';
 
 @Component({
     selector: 'ngx-fluent-design-checkbox',
@@ -14,27 +15,27 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     ]
 })
 
-export class NgxFluentDesignCheckboxComponent implements ControlValueAccessor {
+export class NgxFluentDesignCheckboxComponent implements ControlValueAccessor, INgxFluentDesignCheckbox {
     @Input() label: string;
     @Input() checked: boolean = false;
     @Input() disabled: boolean = false;
 
     private _controlValueAccessorChangeFn = new Function();
 
-    onChecked(): void {
+    public onChecked(): void {
         this.checked = !this.checked;
         this._controlValueAccessorChangeFn(this.checked);
     }
 
-    registerOnChange(fn: any): void {
+    public registerOnChange(fn: any): void {
         this._controlValueAccessorChangeFn = fn;
     }
 
-    registerOnTouched(fn: any): void {
+    public registerOnTouched(fn: any): void {
         return;
     }
 
-    writeValue(value: boolean): void {
+    public writeValue(value: boolean): void {
         this.checked = value;
     }
 }
