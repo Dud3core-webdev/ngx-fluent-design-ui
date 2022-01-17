@@ -25,8 +25,15 @@
     border-radius: 2px;
 }
 
-.container:hover input ~ .checkmark {
-    background-color: #ccc;
+.container:hover input:not(:checked) ~ .checkmark:after {
+    display: block;
+    left: 6px;
+    top: 1px;
+    width: 6px;
+    height: 12px;
+    border: solid $theme-colors-grey130;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
 }
 
 .container input:checked ~ .checkmark {
