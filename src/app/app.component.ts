@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AppStatusService } from './shared/services/app-status.service';
 import { Subscription } from 'rxjs';
-import { sideNavLinks } from './pages/shared/components/side-nav/side-nav-links.class';
-import { SideNavLinks } from './pages/shared/components/side-nav/side-nav-links.interface';
+import { sideNavLinks } from './shared/components/side-nav/side-nav-links.class';
+import { SideNavLinks } from './shared/components/side-nav/side-nav-links.interface';
 
 @Component({
     selector: 'app-root',

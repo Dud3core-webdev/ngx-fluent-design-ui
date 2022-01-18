@@ -6,7 +6,7 @@ import { NgxFluentDesignInputModule } from '../../../../projects/ngx-fluent-desi
 import { NgxFluentDesignCtaModule } from '../../../../projects/ngx-fluent-design/src/lib/cta/ngx-fluent-design-cta.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { SharedComponentsModule } from '../shared/components/shared-components.module';
+import { SharedComponentsModule } from '../../shared/components/shared-components.module';
 import { RouterModule } from '@angular/router';
 import { FormFieldPageComponent } from './pages/form-field/form-field-page.component';
 import { TogglePageComponent } from './pages/toggle/toggle-page.component';
