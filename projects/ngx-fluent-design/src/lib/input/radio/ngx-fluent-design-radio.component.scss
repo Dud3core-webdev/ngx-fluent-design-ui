@@ -1,0 +1,68 @@
+@import "../../shared/styles/variables";
+
+.container {
+    position: relative;
+    padding-left: 30px;
+    user-select: none;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+
+        &:checked ~ .checkmark {
+            background-color: white;
+            border-color: $theme-primary;
+
+            &:after {
+                display: block;
+            }
+        }
+    }
+
+    .checkmark:after {
+        top: 4px;
+        left: 4px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $theme-primary;
+    }
+
+    &:hover {
+        input:not(:checked):not(:disabled) ~ .checkmark:after {
+            display: block;
+            top: 4px;
+            left: 4px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $theme-colors-grey130;
+        }
+
+        input:checked:not(:disabled) ~ .checkmark:after {
+            background: $theme-dark-alt;
+        }
+
+        input:checked:not(:disabled) ~ .checkmark {
+            border-color: $theme-dark-alt;
+        }
+    }
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: 1px solid $theme-colors-grey150;
+    border-radius: 50%;
+
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+}

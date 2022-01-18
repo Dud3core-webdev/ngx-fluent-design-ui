@@ -10,6 +10,7 @@ import { FormFieldPageComponent } from './pages/inputs-page/pages/form-field/for
 import { TogglePageComponent } from './pages/inputs-page/pages/toggle/toggle-page.component';
 import { MessageBarPageComponent } from './pages/notifications-page/pages/message-bar/message-bar-page.component';
 import { CheckboxPageComponent } from './pages/inputs-page/pages/checkbox/checkbox-page.component';
+import { RadioPageComponent } from './pages/inputs-page/pages/radio/radio-page.component';
 
 const routes: Routes = [
     {
@@ -32,6 +33,10 @@ const routes: Routes = [
             {
                 path: 'form-field',
                 component: FormFieldPageComponent
+            },
+            {
+                path: 'radio',
+                component: RadioPageComponent
             },
             {
                 path: 'toggle',
