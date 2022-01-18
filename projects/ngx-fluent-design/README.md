@@ -4,14 +4,8 @@
 
 I've only tested this library on Angular 11, I will be working on compatibility at some point, but for now I'd probably only install it if Ivy is enabled in your project, just to be safe.
 
-## UPDATES:
-- v0.0.8
-  - Added an Alert module, so far contains the fluent-design message bar
-  - Cleaned up styles
-  - refactored code to be a little more clean
-  - Added new icon assets
-  - Fixed CTA primary CSS 
-  - Fixed CTA Disabled styles
+## UPDATES (V 0.0.9):
+- Added new checkbox component
 
 ## Getting started:
 

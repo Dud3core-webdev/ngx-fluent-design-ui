@@ -15,6 +15,7 @@ export * from './lib/card/document/ngx-fluent-design-document-card.component';
 export * from './lib/input/standard-textfield/ngx-fluent-design-form-field.component';
 export * from './lib/input/toggle/ngx-fluent-design-toggle.component';
 export * from './lib/input/shared/directives/input-class-validator.directive';
+export * from './lib/input/checkbox/ngx-fluent-design-checkbox.component';
 
 /** CTA */
 export * from './lib/cta/button/standard/ngx-fluent-design-button.component';

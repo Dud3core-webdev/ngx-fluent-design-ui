@@ -6,7 +6,7 @@ import { HomePageModule } from './pages/home-page/home-page.module';
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpClientModule } from '@angular/common/http';
 import { InputsPageModule } from './pages/inputs-page/inputs-page.module';
-import { SharedComponentsModule } from './pages/shared/components/shared-components.module';
+import { SharedComponentsModule } from './shared/components/shared-components.module';
 import { CallsToActionPageModule } from './pages/calls-to-action-page/calls-to-action-page.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
