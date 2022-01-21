@@ -20,11 +20,12 @@ export class NgxFluentDesignRadioComponent implements ControlValueAccessor, INgx
     @Input() label: string;
     @Input() checked: boolean = false;
     @Input() disabled: boolean = false;
+    @Input() value: any;
 
     private _controlValueAccessorChangeFn = new Function();
 
     public onChecked(): void {
-        this._controlValueAccessorChangeFn(this.checked);
+        this._controlValueAccessorChangeFn(this.value);
     }
 
     public registerOnChange(fn: any): void {
@@ -36,6 +37,6 @@ export class NgxFluentDesignRadioComponent implements ControlValueAccessor, INgx
     }
 
     public writeValue(value: boolean): void {
-        this.checked = value;
+        this.checked = this.value === value;
     }
 }
