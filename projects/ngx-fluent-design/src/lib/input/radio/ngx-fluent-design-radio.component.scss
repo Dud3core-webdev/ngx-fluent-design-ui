@@ -1,6 +1,6 @@
 @import "../../shared/styles/variables";
 
-.container {
+.radio-container {
     position: relative;
     padding-left: 30px;
     user-select: none;
@@ -8,6 +8,8 @@
     input {
         position: absolute;
         opacity: 0;
+        height: 0;
+        width: 0;
         cursor: pointer;
 
         &:checked ~ .checkmark {
@@ -16,6 +18,16 @@
 
             &:after {
                 display: block;
+            }
+        }
+
+        &:disabled {
+            ~ .checkmark {
+                border-color: $theme-type-disabled;
+            }
+
+            ~ .checkmark:after {
+                background-color: $theme-type-disabled;
             }
         }
     }
