@@ -12,4 +12,8 @@ export class AppComponent {
         checkboxDisabled: new FormControl(true),
         radio: new FormControl('Radio disabled value'),
     });
+
+    public exampleAlert(componentType: string): void {
+        window.alert(`This is a ${componentType} click event`);
+    }
 }
