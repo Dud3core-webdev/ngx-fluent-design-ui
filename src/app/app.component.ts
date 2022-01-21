@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
     selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
+    testForm = new FormGroup({
+        checkboxEnabled: new FormControl(''),
+        checkboxDisabled: new FormControl(true),
+        radio: new FormControl('Radio disabled value'),
+    });
 }
