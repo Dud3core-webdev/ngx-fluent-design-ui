@@ -14,6 +14,12 @@
         "name": "Marc Freeman",
         "url": "mfwebdev.net"
     },
+    "contributors": [
+        {
+            "name": "Michal Hajdo",
+            "email": "smephey@gmail.com"
+        }
+    ],
     "bugs": {
         "url": "https://github.com/Dud3core-webdev/ngx-fluent-design-ui/issues"
     },
