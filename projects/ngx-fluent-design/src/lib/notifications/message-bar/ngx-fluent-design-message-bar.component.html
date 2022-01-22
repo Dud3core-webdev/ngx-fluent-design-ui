@@ -6,6 +6,6 @@
 
     <section class="calls-to-action" *ngIf="canDisplayActionBar">
         <ngx-fluent-design-button class="user-action" *ngIf="displayActions" (clicked)="onActionClicked()" type="standard">{{actionName}}</ngx-fluent-design-button>
-        <img class="x-icon" src="assets/img/icon/string-icon-clear-close.svg" *ngIf="canDismiss" (click)="onCloseClicked()">
+        <img class="x-icon" src="./assets/img/icon/string-icon-clear-close.svg" *ngIf="canDismiss" (click)="onCloseClicked()">
     </section>
 </section>

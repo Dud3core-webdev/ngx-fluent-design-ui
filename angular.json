@@ -69,7 +69,7 @@
                             "src/manifest.webmanifest",
                             {
                                 "glob": "**/*",
-                                "input": "./projects/ngx-fluent-design/assets",
+                                "input": "./projects/ngx-fluent-design/src/assets",
                                 "output": "/assets/"
                             }
                         ],
