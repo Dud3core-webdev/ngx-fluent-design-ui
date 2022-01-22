@@ -33,7 +33,7 @@ if(($isPatch -eq $false) -and ($isMinorUpdate -eq $true)) {
     git push -u origin master
     ng b ngx-fluent-design --prod
 
-    cd dist/ngx-fluent-design
+    cd .\dist\ngx-fluent-design
     npm publish
 
     # cd back to root
