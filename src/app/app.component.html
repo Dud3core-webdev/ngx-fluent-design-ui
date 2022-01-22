@@ -1,36 +1,94 @@
-<ngx-fluent-design-message-bar messageBarType="warning">Use this page to develop new components. Don't worry if you
+<ngx-fluent-design-message-bar [fixed]="true" messageBarType="warning">Use this page to develop new components. Don't worry if you
     leave it in a mess :D
 </ngx-fluent-design-message-bar>
 
+<div class="container mt-4">
+    <ngx-fluent-design-card>
+        <div class="pt-5">
+            <form class="d-flex flex-column" [formGroup]="testForm">
+                <div class="pb-3">
+                    <h3>Checkbox</h3>
+                    <div class="d-flex justify-content-between col-6 px-0">
+                        <ngx-fluent-design-checkbox [label]="'Checkbox Enabled'" formControlName="checkboxEnabled">
+                        </ngx-fluent-design-checkbox>
+                        <ngx-fluent-design-checkbox [label]="'Checkbox Disabled'" [disabled]="true"
+                                                    formControlName="checkboxDisabled">
+                        </ngx-fluent-design-checkbox>
+                    </div>
+                </div>
 
-<div class="container pt-5">
-    <form class="d-flex flex-column" [formGroup]="testForm">
-        <div class="pb-3">
-            <h3>Checkbox</h3>
-            <div class="d-flex justify-content-between col-6 px-0">
-                <ngx-fluent-design-checkbox [label]="'Checkbox Enabled'" formControlName="checkboxEnabled">
-                </ngx-fluent-design-checkbox>
-                <ngx-fluent-design-checkbox [label]="'Checkbox Disabled'" [disabled]="true"
-                                            formControlName="checkboxDisabled">
-                </ngx-fluent-design-checkbox>
-            </div>
+                <div class="pb-3">
+                    <h3>Radio</h3>
+                    <div class="d-flex justify-content-between col-8 px-0">
+                        <ngx-fluent-design-radio [name]="'radio'" formControlName="radio"
+                                                 [label]="'Radio Enabled 1 Label'"
+                                                 [value]="'Radio Enabled 1 Value'"></ngx-fluent-design-radio>
+                        <ngx-fluent-design-radio [name]="'radio'" formControlName="radio"
+                                                 [label]="'Radio Enabled 2 Label'"
+                                                 [value]="'Radio Enabled 2 Value'"></ngx-fluent-design-radio>
+                        <ngx-fluent-design-radio [name]="'radio'" formControlName="radio"
+                                                 [label]="'Radio Disabled Label'" [value]="'Radio disabled value'"
+                                                 [disabled]="true"></ngx-fluent-design-radio>
+                    </div>
+                </div>
+            </form>
+
+            <div *ngIf="testForm" class="pt-3">{{testForm.value | json}}</div>
         </div>
 
-        <div class="pb-3">
-            <h3>Radio</h3>
-            <div class="d-flex justify-content-between col-8 px-0">
-                <ngx-fluent-design-radio [name]="'radio'" formControlName="radio"
-                                         [label]="'Radio Enabled 1 Label'"
-                                         [value]="'Radio Enabled 1 Value'"></ngx-fluent-design-radio>
-                <ngx-fluent-design-radio [name]="'radio'" formControlName="radio"
-                                         [label]="'Radio Enabled 2 Label'"
-                                         [value]="'Radio Enabled 2 Value'"></ngx-fluent-design-radio>
-                <ngx-fluent-design-radio [name]="'radio'" formControlName="radio"
-                                         [label]="'Radio Disabled Label'" [value]="'Radio disabled value'"
-                                         [disabled]="true"></ngx-fluent-design-radio>
-            </div>
-        </div>
-    </form>
+    </ngx-fluent-design-card>
 
-    <div *ngIf="testForm" class="pt-3">{{testForm.value | json}}</div>
+    <ngx-fluent-design-card>
+        <h1 class="mb-4">Links</h1>
+
+        <h2>Button link</h2>
+        <button ngxFluentDesignLinkButton (click)="exampleAlert('button link')">This is something huh?</button>
+    </ngx-fluent-design-card>
+
+    <ngx-fluent-design-card>
+        <h1 class="mb-3">Buttons</h1>
+
+        <h2>Standard button</h2>
+        <div class="d-flex flex-row w-100 mb-3">
+            <ngx-fluent-design-button class="mr-3">
+                Primary (Default)
+            </ngx-fluent-design-button>
+
+            <ngx-fluent-design-button type="standard">
+                Primary (Standard)
+            </ngx-fluent-design-button>
+        </div>
+
+        <div class="d-flex flex-row w-100">
+            <ngx-fluent-design-button [disabled]="true" class="mr-3">
+                Primary (Default) Disabled
+            </ngx-fluent-design-button>
+
+            <ngx-fluent-design-button [disabled]="true" type="standard">
+                Primary (Standard) Disabled
+            </ngx-fluent-design-button>
+        </div>
+
+        <h2 class="my-3">compound button</h2>
+        <div class="d-flex flex-row w-100 mb-3">
+            <ngx-fluent-design-compound-button class="mr-3">
+                Primary (Default)
+            </ngx-fluent-design-compound-button>
+
+            <ngx-fluent-design-compound-button type="standard">
+                Primary (Standard)
+            </ngx-fluent-design-compound-button>
+        </div>
+
+        <div class="d-flex flex-row w-100">
+            <ngx-fluent-design-compound-button [disabled]="true" class="mr-3">
+                Primary (Default) Disabled
+            </ngx-fluent-design-compound-button>
+
+            <ngx-fluent-design-compound-button [disabled]="true" type="standard">
+                Primary (Standard) Disabled
+            </ngx-fluent-design-compound-button>
+        </div>
+    </ngx-fluent-design-card>
+
 </div>

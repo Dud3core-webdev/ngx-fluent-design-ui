@@ -1,7 +1,7 @@
 {
     "name": "ngx-fluent-design",
     "description": "An ngx implementation of Microsoft's fluent design",
-    "version": "0.0.10",
+    "version": "0.0.11",
     "keywords": [
         "Angular",
         "Microsoft",
@@ -14,6 +14,12 @@
         "name": "Marc Freeman",
         "url": "mfwebdev.net"
     },
+    "contributors": [
+        {
+            "name": "Michal Hajdo",
+            "email": "smephey@gmail.com"
+        }
+    ],
     "bugs": {
         "url": "https://github.com/Dud3core-webdev/ngx-fluent-design-ui/issues"
     },

@@ -10,4 +10,9 @@
     &.active, &:hover {
         filter: brightness(65%);
     }
+
+    &.link-button {
+        border: none;
+        background: inherit;
+    }
 }

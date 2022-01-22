@@ -13,6 +13,7 @@ export class NgxFluentDesignMessageBarComponent implements INgxFluentDesignMessa
     @Input() public multiLine: boolean;
     @Input() public canDismiss: boolean;
     @Input() public actionName: string;
+    @Input() public fixed: boolean = false;
 
     @Output() public readonly actionClicked: EventEmitter<void>;
     @Output() public readonly closeClicked: EventEmitter<void>;
