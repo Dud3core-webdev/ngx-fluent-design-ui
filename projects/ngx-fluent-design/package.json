@@ -1,7 +1,7 @@
 {
     "name": "ngx-fluent-design",
     "description": "An ngx implementation of Microsoft's fluent design",
-    "version": "0.0.11",
+    "version": "0.0.12",
     "keywords": [
         "Angular",
         "Microsoft",
