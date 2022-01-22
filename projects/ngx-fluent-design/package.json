@@ -5,7 +5,7 @@
     "sideEffects": false,
     "exports": {
         ".": {
-            "assets": "./src/assets/**"
+            "assets": "./assets"
         }
     },
     "keywords": [
