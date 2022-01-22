@@ -1,0 +1,38 @@
+@import "../../shared/styles/variables";
+
+.spinner {
+    border: 1px solid $theme-light;
+    border-top: 1px solid $theme-primary;
+    border-radius: 50%;
+    animation: spin 1.3s ease infinite;
+    animation-timing-function: cubic-bezier(.53, .2, .26, .73);
+}
+
+.size-xs {
+    width: 12px;
+    height: 12px;
+}
+
+.size-s {
+    width: 16px;
+    height: 16px;
+}
+
+.size-m {
+    width: 20px;
+    height: 20px;
+}
+
+.size-l {
+    width: 28px;
+    height: 28px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
