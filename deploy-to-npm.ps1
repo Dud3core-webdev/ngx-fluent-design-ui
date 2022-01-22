@@ -25,10 +25,10 @@ if(($isPatch -eq $false) -and ($isMinorUpdate -eq $true)) {
     git add .
     git commit -m "Upgraded package version to ${newVersion}"
 
-#     git push -u origin master
-#     ng b ngx-fluent-design --prod
-#
-#     cd .\dist\ngx-fluent-design
-#     Get-Location
-#     npm publish
+    git push -u origin master
+    ng b ngx-fluent-design --prod
+
+    cd .\dist\ngx-fluent-design
+    Get-Location
+    npm publish
 
