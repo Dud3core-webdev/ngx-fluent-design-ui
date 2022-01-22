@@ -70,7 +70,7 @@
                             {
                                 "glob": "**/*",
                                 "input": "./projects/ngx-fluent-design/src/assets",
-                                "output": "/assets/"
+                                "output": "/src/assets/"
                             }
                         ],
                         "styles": [
