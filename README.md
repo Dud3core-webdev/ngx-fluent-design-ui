@@ -21,10 +21,10 @@ The Fluent Design System can be found [here](https://aka.ms/FluentToolkits/Web/F
 ## Deployment
 To deploy a patch for ngx-fluent-design, run  
 
-```yarn deploy:patch```
+```npm run deploy:patch```
 
 to deploy a minor feature:
 
-```yarn deploy:minor-upgrade```
+```npm run deploy:minor-upgrade```
 
-####NOTE: THIS FEATURE IS STILL BEING WORKED ON. FOR NOW RUN ```ng b ngx-fluent-design --prod; cd dist/ngx-fluent-design; npm publish``` AFTER UPDATING THE PACKAGE.JSON VERSION
+## WARNING - Running the above commands with yarn will cause the publishing task to fail. No idea why
