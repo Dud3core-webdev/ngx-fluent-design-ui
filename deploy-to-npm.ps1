@@ -7,12 +7,13 @@ Set-Location .\
 if(($isPatch -eq $true) -and ($isMinorUpdate -eq $false)) {
     Set-Location .\projects\ngx-fluent-design
     npm version patch -m "Upgrade to %s"
+    $newVersion = npm view ngx-fluent-design version
 
     Set-Location ..\..
     Get-Location
 
     git add .
-    git commit -m "Upgraded package version"
+    git commit -m "Upgraded package version to ${newVersion}"
 }
 
 if(($isPatch -eq $false) -and ($isMinorUpdate -eq $true)) {
