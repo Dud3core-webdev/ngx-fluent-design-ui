@@ -5,27 +5,25 @@ Write-Host -BackgroundColor "Red" "Warming! Make sure you have committed all you
 Set-Location .\
 
 if(($isPatch -eq $true) -and ($isMinorUpdate -eq $false)) {
+    Write-Host "Running patch update";
     Set-Location .\projects\ngx-fluent-design
     npm version patch -m "Upgrade to %s"
+}
+
+if(($isPatch -eq $false) -and ($isMinorUpdate -eq $true)) {
+    Write-Host "Running minor update";
+    Set-Location .\projects\ngx-fluent-design
+    npm version minor -m "Upgrade to %s"
+}
+
     $newVersion = npm view ngx-fluent-design version
+    npm view ngx-fluent-design version
 
     Set-Location ..\..
     Get-Location
 
     git add .
     git commit -m "Upgraded package version to ${newVersion}"
-}
-
-if(($isPatch -eq $false) -and ($isMinorUpdate -eq $true)) {
-    Write-Host "Is a minor update"
-
-    # cd into projects/ngx-fluent-design
-    # npm version command to upgrade minor version
-
-    # cd back to root
-    # git add .
-    # git commit -m "new minor version: {{versionNumber}}"
-}
 
 #     git push -u origin master
 #     ng b ngx-fluent-design --prod
