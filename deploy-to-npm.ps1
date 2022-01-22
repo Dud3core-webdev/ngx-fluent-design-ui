@@ -30,11 +30,12 @@ if(($isPatch -eq $false) -and ($isMinorUpdate -eq $true)) {
 }
 
     # git push -u origin master <-- We might need to pass a branch name in, will see.
-    git push -u origin master
+    #git push -u origin master
     ng b ngx-fluent-design --prod
 
     cd .\dist\ngx-fluent-design
-    npm publish
+    Get-Location
+    #npm publish
 
     # cd back to root
     # ng b ngx-fluent-design --prod
