@@ -16,6 +16,16 @@ if(($isPatch -eq $false) -and ($isMinorUpdate -eq $true)) {
     npm version minor -m "Upgrade to %s"
 }
 
+Write-Host -BackgroundColor "Green" "Running build";
+ng b ngx-fluent-design --prod
+
+Set-Location .\
+Set-Location .\dist\ngx-fluent-design
+
+Write-Host -BackgroundColor "Green" "Publishing version $newVersionNumber";
+npm publish
+
+
 Write-Host -BackgroundColor "Green" "Committing and pushing package.json file";
 Set-Location ..\..
 Get-Location
@@ -27,12 +37,3 @@ git add .
 git commit -m "Upgraded package version to $newVersionNumber"
 
 git push -u origin master
-
-Write-Host -BackgroundColor "Green" "Running build";
-ng b ngx-fluent-design --prod
-
-cd .\dist\ngx-fluent-design
-
-Write-Host -BackgroundColor "Green" "Publishing version $newVersionNumber";
-npm publish
-
