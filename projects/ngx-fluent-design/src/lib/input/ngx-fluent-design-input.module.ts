@@ -6,7 +6,6 @@ import { InputClassValidatorDirective } from './shared/directives/input-class-va
 import { NgxFluentDesignToggleComponent } from './toggle/ngx-fluent-design-toggle.component';
 import { NgxFluentDesignCheckboxComponent } from './checkbox/ngx-fluent-design-checkbox.component';
 import { NgxFluentDesignRadioComponent } from './radio/ngx-fluent-design-radio.component';
-import { TestComponent } from './checkbox/test/test.component';
 
 const DECLARATIONS = [
     NgxFluentDesignFormFieldComponent,
@@ -22,7 +21,7 @@ const DECLARATIONS = [
         FormsModule,
         ReactiveFormsModule
     ],
-    declarations: [...DECLARATIONS, TestComponent],
+    declarations: [...DECLARATIONS],
     exports: [...DECLARATIONS]
 })
 export class NgxFluentDesignInputModule {
