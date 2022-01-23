@@ -1,11 +1,11 @@
 <section class="ngx-fluent-design-message-bar" [ngClass]="[messageBarType]" [hidden]="shouldBeHidden">
     <span class="logo-container">
-        <img class="logo" [src]="logoUrl" />
+        <ngx-fluent-design-icon [icon]="logoUrl"></ngx-fluent-design-icon>
     </span>
     <p class="message"><ng-content></ng-content></p>
 
     <section class="calls-to-action" *ngIf="canDisplayActionBar">
         <ngx-fluent-design-button class="user-action" *ngIf="displayActions" (clicked)="onActionClicked()" type="standard">{{actionName}}</ngx-fluent-design-button>
-        <img class="x-icon" src="../../../assets/img/icon/string-icon-clear-close.svg" *ngIf="canDismiss" (click)="onCloseClicked()">
+        <ngx-fluent-design-icon class="x-icon" (click)="onCloseClicked()" [icon]="closeLogo"></ngx-fluent-design-icon>
     </section>
 </section>

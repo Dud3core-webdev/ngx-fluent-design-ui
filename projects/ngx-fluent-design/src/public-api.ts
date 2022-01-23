@@ -25,9 +25,15 @@ export { NgxFluentDesignMessageBarComponent } from './lib/notifications/message-
 /** Progress */
 export { NgxFluentDesignSpinnerComponent } from './lib/progress/spinner/ngx-fluent-design-spinner.component';
 
+/** Icons */
+export * from './lib/icons/shared/constants/ngx-fluent-design-icons-list';
+export { INgxFluentDesignIcon } from './lib/icons/shared/types/ngx-fluent-design-icon.interface';
+export { NgxFluentDesignIconComponent } from './lib/icons/icon-component/icon.component';
+
 /** Modules */
 export { NgxFluentDesignCardModule } from './lib/card/ngx-fluent-design-card.module';
 export { NgxFluentDesignCtaModule } from './lib/cta/ngx-fluent-design-cta.module';
 export { NgxFluentDesignInputModule } from './lib/input/ngx-fluent-design-input.module';
 export { NgxFluentDesignNotificationModule } from './lib/notifications/ngx-fluent-design-notification.module';
 export { NgxFluentDesignProgressModule } from './lib/progress/ngx-fluent-design-progress.module';
+export { NgxFluentDesignIconModule } from './lib/icons/ngx-fluent-design-icon.module';

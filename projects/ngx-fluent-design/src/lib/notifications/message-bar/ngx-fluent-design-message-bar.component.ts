@@ -1,6 +1,14 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { INgxFluentDesignMessageBar } from '../shared/types/ngx-fluent-design-message-bar.interface';
 import { MessageBarType } from '../../shared/types/message-bar.type';
+import {
+    NgxFluentDesignIconClearClose,
+    NgxFluentDesignIconInfoBlocked,
+    NgxFluentDesignIconInfoError,
+    NgxFluentDesignIconInfoSevereWarn, NgxFluentDesignIconInfoSuccess,
+    NgxFluentDesignIconInfoWarn
+} from '../../icons/shared/constants/ngx-fluent-design-icons-list';
+import { INgxFluentDesignIcon } from '../../icons/shared/types/ngx-fluent-design-icon.interface';
 
 @Component({
     selector: 'ngx-fluent-design-message-bar',
@@ -28,22 +36,25 @@ export class NgxFluentDesignMessageBarComponent implements INgxFluentDesignMessa
         return this.canDismiss || this.displayActions;
     }
 
-    public get logoUrl(): string {
+    public get closeLogo(): INgxFluentDesignIcon {
+        return NgxFluentDesignIconClearClose;
+    }
+
+    public get logoUrl(): INgxFluentDesignIcon {
         switch (this.messageBarType) {
             case 'warning':
-                return './assets/img/message-bar/string-icons-info-warn.svg';
+                return NgxFluentDesignIconInfoWarn;
             case 'severe-warning':
-                return './assets/img/message-bar/string-icons-info-severe-warn.svg';
+                return NgxFluentDesignIconInfoSevereWarn;
             case 'error':
-                return './assets/img/message-bar/string-icons-info-error.svg';
+                return NgxFluentDesignIconInfoError;
             case 'blocked':
-                return './assets/img/message-bar/string-icons-info-blocked.svg';
+                return NgxFluentDesignIconInfoBlocked;
             case 'success':
-                return './assets/img/message-bar/string-icons-info-success.svg';
+                return NgxFluentDesignIconInfoSuccess;
             case 'info':
-                return './assets/img/message-bar/string-icons-info-warn.svg';
+                return NgxFluentDesignIconInfoWarn;
         }
-
     }
 
     constructor() {
