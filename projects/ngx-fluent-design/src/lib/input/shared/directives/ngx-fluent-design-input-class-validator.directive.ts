@@ -6,12 +6,12 @@ import { AbstractControl, NG_VALIDATORS, ValidationErrors, Validator } from '@an
     providers: [
         {
             provide: NG_VALIDATORS,
-            useExisting: InputClassValidatorDirective,
+            useExisting: NgxFluentDesignInputClassValidatorDirective,
             multi: true
         }
     ]
 })
-export class InputClassValidatorDirective implements Validator {
+export class NgxFluentDesignInputClassValidatorDirective implements Validator {
 
     @ViewChild('fluentInputField', { static: false })
     private readonly _elementReference: ElementRef;

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ProgressSizeType } from '../../shared/types/progress-size.type';
+import { NgxFluentDesignProgressSizeType } from '../../shared/types/ngx-fluent-design-progress-size.type';
 
 @Component({
     selector: 'ngx-fluent-design-spinner',
@@ -8,5 +8,5 @@ import { ProgressSizeType } from '../../shared/types/progress-size.type';
 })
 
 export class NgxFluentDesignSpinnerComponent {
-    @Input() public size: ProgressSizeType = 'medium';
+    @Input() public size: NgxFluentDesignProgressSizeType = 'medium';
 }

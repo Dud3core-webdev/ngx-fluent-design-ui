@@ -2,7 +2,7 @@
 export { NgxFluentDesignCtaType } from './lib/shared/types/cta.type';
 export { MessageBarType } from './lib/shared/types/message-bar.type';
 export { NgxFluentDesignSlotNames } from './lib/shared/types/theme-names.type';
-export { ProgressSizeType } from './lib/shared/types/progress-size.type';
+export { NgxFluentDesignProgressSizeType } from './lib/shared/types/ngx-fluent-design-progress-size.type';
 
 /** card */
 export { NgxFluentDesignCardComponent } from './lib/card/standard/ngx-fluent-design-card.component';
@@ -11,7 +11,7 @@ export { NgxFluentDesignDocumentCardComponent } from './lib/card/document/ngx-fl
 /** Input */
 export { NgxFluentDesignFormFieldComponent } from './lib/input/standard-textfield/ngx-fluent-design-form-field.component';
 export { NgxFluentDesignToggleComponent } from './lib/input/toggle/ngx-fluent-design-toggle.component';
-export { InputClassValidatorDirective } from './lib/input/shared/directives/input-class-validator.directive';
+export { NgxFluentDesignInputClassValidatorDirective } from './lib/input/shared/directives/ngx-fluent-design-input-class-validator.directive';
 export { NgxFluentDesignCheckboxComponent } from './lib/input/checkbox/ngx-fluent-design-checkbox.component';
 
 /** CTA */
