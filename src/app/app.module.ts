@@ -9,6 +9,7 @@ import { NgxFluentDesignInputModule } from 'projects/ngx-fluent-design/src/lib/i
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxFluentDesignProgressModule } from '../../projects/ngx-fluent-design/src/lib/progress/ngx-fluent-design-progress.module';
 import { NgxFluentDesignNotificationModule } from 'ngx-fluent-design';
+import { NgxFluentDesignIconModule } from '../../projects/ngx-fluent-design/src/lib/icons/ngx-fluent-design-icon.module';
 
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import { NgxFluentDesignNotificationModule } from 'ngx-fluent-design';
         NgxFluentDesignCtaModule,
         NgxFluentDesignInputModule,
         NgxFluentDesignProgressModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        NgxFluentDesignIconModule
     ],
     bootstrap: [AppComponent]
 })

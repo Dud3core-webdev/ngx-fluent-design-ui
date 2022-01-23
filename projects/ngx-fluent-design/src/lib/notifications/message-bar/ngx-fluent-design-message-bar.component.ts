@@ -31,17 +31,17 @@ export class NgxFluentDesignMessageBarComponent implements INgxFluentDesignMessa
     public get logoUrl(): string {
         switch (this.messageBarType) {
             case 'warning':
-                return './assets/img/message-bar/string-icon-info-warn.svg';
+                return './assets/img/message-bar/string-icons-info-warn.svg';
             case 'severe-warning':
-                return './assets/img/message-bar/string-icon-info-severe-warn.svg';
+                return './assets/img/message-bar/string-icons-info-severe-warn.svg';
             case 'error':
-                return './assets/img/message-bar/string-icon-info-error.svg';
+                return './assets/img/message-bar/string-icons-info-error.svg';
             case 'blocked':
-                return './assets/img/message-bar/string-icon-info-blocked.svg';
+                return './assets/img/message-bar/string-icons-info-blocked.svg';
             case 'success':
-                return './assets/img/message-bar/string-icon-info-success.svg';
+                return './assets/img/message-bar/string-icons-info-success.svg';
             case 'info':
-                return './assets/img/message-bar/string-icon-info-warn.svg';
+                return './assets/img/message-bar/string-icons-info-warn.svg';
         }
 
     }
