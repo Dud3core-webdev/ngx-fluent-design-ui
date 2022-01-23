@@ -20,11 +20,10 @@ Write-Host -BackgroundColor "Green" "Running build";
 ng b ngx-fluent-design --prod
 
 Set-Location .\
-Set-Location .\dist\ngx-fluent-design
+Set-Location ..\..\dist\ngx-fluent-design
 
-Write-Host -BackgroundColor "Green" "Publishing version $newVersionNumber";
+Write-Host -BackgroundColor "Green" "Publishing version";
 npm publish
-
 
 Write-Host -BackgroundColor "Green" "Committing and pushing package.json file";
 Set-Location ..\..
