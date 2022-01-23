@@ -6,6 +6,6 @@
     },
     "assets": [
         "./src/lib/**/*.scss",
-        "./assets"
+        "./src/assets"
     ]
 }
