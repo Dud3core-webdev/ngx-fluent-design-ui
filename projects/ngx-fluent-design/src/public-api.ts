@@ -28,6 +28,7 @@ export { NgxFluentDesignSpinnerComponent } from './lib/progress/spinner/ngx-flue
 /** Icons */
 export * from './lib/icons/shared/constants/ngx-fluent-design-icons-list';
 export { INgxFluentDesignIcon } from './lib/icons/shared/types/ngx-fluent-design-icon.interface';
+export { INgxFluentDesignIconComponent } from './lib/icons/shared/types/ngx-fluent-design-icon-component.interface';
 export { NgxFluentDesignIconComponent } from './lib/icons/icon-component/icon.component';
 
 /** Modules */
