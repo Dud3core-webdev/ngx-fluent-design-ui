@@ -5,7 +5,7 @@ import { INgxFluentDesignIconComponent } from '../shared/types/ngx-fluent-design
 @Component({
     selector: 'ngx-fluent-design-icon',
     templateUrl: './icon.component.html',
-    styleUrls: ['./icon.component.html']
+    styleUrls: ['./icon.component.scss']
 })
 export class NgxFluentDesignIconComponent implements INgxFluentDesignIconComponent {
     @Input() public icon: INgxFluentDesignIcon;

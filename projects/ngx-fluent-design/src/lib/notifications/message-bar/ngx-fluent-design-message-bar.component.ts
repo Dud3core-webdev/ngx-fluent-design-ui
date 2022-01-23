@@ -40,7 +40,7 @@ export class NgxFluentDesignMessageBarComponent implements INgxFluentDesignMessa
         return NgxFluentDesignIconClearClose;
     }
 
-    public get logoUrl(): INgxFluentDesignIcon {
+    public get icon(): INgxFluentDesignIcon {
         switch (this.messageBarType) {
             case 'warning':
                 return NgxFluentDesignIconInfoWarn;

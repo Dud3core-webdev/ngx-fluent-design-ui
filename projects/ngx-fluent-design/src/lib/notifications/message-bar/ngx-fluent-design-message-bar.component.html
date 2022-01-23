@@ -1,7 +1,5 @@
 <section class="ngx-fluent-design-message-bar" [ngClass]="[messageBarType]" [hidden]="shouldBeHidden">
-    <span class="logo-container">
-        <ngx-fluent-design-icon [icon]="logoUrl"></ngx-fluent-design-icon>
-    </span>
+    <ngx-fluent-design-icon class="icon" [icon]="icon"></ngx-fluent-design-icon>
     <p class="message"><ng-content></ng-content></p>
 
     <section class="calls-to-action" *ngIf="canDisplayActionBar">

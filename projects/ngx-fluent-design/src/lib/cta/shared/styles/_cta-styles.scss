@@ -37,7 +37,7 @@
     }
 
     &.primary {
-        p, small { color: $cta_primary-font-color }
+        p, small { color: $theme-colors-white }
         color: $theme-colors-white;
 
         &.none {

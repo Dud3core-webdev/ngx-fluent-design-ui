@@ -28,17 +28,8 @@
         background-color: rgb(95, 210, 85, .2);
     }
 
-    .logo-container {
+    .icon {
         margin: 0 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-width: 16px;
-
-        .logo {
-            width: 12px;
-            height: 12px;
-        }
     }
 
     .message {
@@ -51,7 +42,7 @@
     }
 
     .calls-to-action {
-        padding: 12px 6px;
+        padding: 12px 20px;
         display: flex;
         align-items: flex-end;
         flex-direction: row;
