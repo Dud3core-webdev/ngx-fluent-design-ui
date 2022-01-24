@@ -1,6 +1,8 @@
-<button (click)="onClicked()"
-        [disabled]="disabled"
-        class="ngx-fluent-design-button ngx-fluent-design-cta"
-        [ngClass]="[type, slotName]">
+<button
+    data-spec="fluent-design-standard-button"
+    (click)="onClicked()"
+    [disabled]="disabled"
+    class="ngx-fluent-design-button ngx-fluent-design-cta"
+    [ngClass]="[type, slotName]">
     <ng-content></ng-content>
 </button>
