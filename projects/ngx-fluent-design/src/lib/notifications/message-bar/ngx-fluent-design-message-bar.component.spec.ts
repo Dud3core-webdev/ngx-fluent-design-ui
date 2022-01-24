@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { bySpecAttribute } from '../../../testing/test-helper';
 import { NgxFluentDesignMessageBarComponent } from './ngx-fluent-design-message-bar.component';
 import { NgxFluentDesignCtaModule } from '../../cta/ngx-fluent-design-cta.module';
+import { NgxFluentDesignIconModule } from '../../icons/ngx-fluent-design-icon.module';
 import SpyInstance = jest.SpyInstance;
 
 describe('NgxFluentDesignMessageBarComponent', () => {
@@ -14,7 +15,10 @@ describe('NgxFluentDesignMessageBarComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             declarations: [NgxFluentDesignMessageBarComponent],
-            imports: [NgxFluentDesignCtaModule]
+            imports: [
+                NgxFluentDesignCtaModule,
+                NgxFluentDesignIconModule
+            ]
         })
             .compileComponents();
     });
