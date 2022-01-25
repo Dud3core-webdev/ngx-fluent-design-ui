@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 
 export class NgxFluentDesignProgressIndicatorComponent {
-    @Input() public currentValue: number = 33;
+    @Input() public currentValue: number = 0;
     @Input() public label: string = '';
     @Input() public description: string = '';
 }
