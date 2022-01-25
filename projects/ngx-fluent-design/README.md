@@ -1,11 +1,25 @@
 # NGXFluentDesign UI
 
+An open-source, Angular implementation of Microsoft's Fluent Design system. Based off designs found in the official [Figma File](https://aka.ms/FluentToolkits/Web/Figma)
+
 ## WARNING
+We've only tested this package with Angular 11. We are working out a plan to support multiple versions of Angular, but for now use at your own risk!
 
-I've only tested this library on Angular 11, I will be working on compatibility at some point, but for now I'd probably only install it if Ivy is enabled in your project, just to be safe.
+## UPDATES (V: 0.1.14):
+This is an absolute monster patch boi 3000. 
+- Added a tonne of new components including progress indicators, spinners. 
+- started implementing an Icon library,
+- fixed bad CSS, 
+- added link buttons, 
+- made some adjustments to pre-existing components so that they fall inline with official MS Fluent Design Figma file.
+- Working on tooling to make sure we can get changes out as quickly (easily) as possible.
+- Unit tested components to make sure everything behaves correctly.
 
-## UPDATES (V 0.0.9):
-- Added new checkbox component
+Massive shout out to [Smephey](https://github.com/Smephey) for helping with all this and making everything look great!
+
+We're pretty stoked on this library so far, and there's definitely more updates to come! We're aiming for a V1 release as soon as possible. 
+
+You can view the Git repository (linked below) to see what we're working on, or raise any issues.
 
 ## Getting started:
 
@@ -13,13 +27,11 @@ I've only tested this library on Angular 11, I will be working on compatibility 
 `npm i ngx-fluent-design`
 
 ## Usage
-(I will be adding more documentation for this library, I just need to really get my head down and work on it.)
-
 You can view the [docs](https://ngx-fluent-design.mfwebdev.net/home) for this library for more information.
 
-## Components:
-So far the library is very limited in components:
+We are working on documentation alongside the actual library, so bare with us if every component isn't documented.
 
+## Components:
 - Action Button
 - Compound Action Button
 - Card
@@ -27,6 +39,9 @@ So far the library is very limited in components:
 - Input 
 - Multi-Line Input (TextArea)
 - Message bar
+- Dialog
+- progress/spinners
+- Icons
 
 ## Requests
 
