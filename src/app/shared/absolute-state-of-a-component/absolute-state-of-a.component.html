@@ -26,6 +26,14 @@
                                          [disabled]="true"></ngx-fluent-design-radio>
             </div>
         </div>
+
+        <div class="pb-3">
+            <h3>Toggle</h3>
+            <div class="d-flex justify-content-between px-0">
+                <ngx-fluent-design-toggle [label]="'Toggle'"
+                                         [disabled]="false"></ngx-fluent-design-toggle>
+            </div>
+        </div>
     </form>
     <div *ngIf="testForm" class="pt-3">{{testForm.value | json}}</div>
 </ngx-fluent-design-card>
@@ -84,14 +92,21 @@
 </ngx-fluent-design-card>
 <ngx-fluent-design-card>
     <div class="pb-3">
-        <h1 class="mb-3">Progress</h1>
+        <h1 class="pb-3">Progress</h1>
         <h2>Spinner</h2>
         <div class="d-flex justify-content-around align-items-center">
-            <ngx-fluent-design-spinner [size]="'extra-small'"></ngx-fluent-design-spinner>
+            <ngx-fluent-design-spinner [size]="'extra-small'" [label]="'Loading...'"></ngx-fluent-design-spinner>
             <ngx-fluent-design-spinner [size]="'small'"></ngx-fluent-design-spinner>
             <ngx-fluent-design-spinner [size]="'medium'"></ngx-fluent-design-spinner>
             <ngx-fluent-design-spinner [size]="'large'"></ngx-fluent-design-spinner>
+            <ngx-fluent-design-spinner [size]="'large'" [label]="'Loading...'"></ngx-fluent-design-spinner>
         </div>
+
+        <h2 class="py-3">Progress Indicator</h2>
+        <ngx-fluent-design-progress-indicator [label]="'Label'" [description]="'Description'" [currentValue]="progressIndicatorCurrentValue"></ngx-fluent-design-progress-indicator>
+
+        <h2 class="py-3">Indeterminate Progress Indicator</h2>
+        <ngx-fluent-design-progress-indicator-indeterminate [label]="'Label'" [description]="'Description'"></ngx-fluent-design-progress-indicator-indeterminate>
     </div>
 </ngx-fluent-design-card>
 
@@ -107,7 +122,9 @@
 <ngx-fluent-design-card>
     <div class="pb-3">
         <h1 class="mb-3">Dialog</h1>
-        <ngx-fluent-design-dialog></ngx-fluent-design-dialog>
+        <ngx-fluent-design-dialog>
+            <p>This is some content</p>
+        </ngx-fluent-design-dialog>
     </div>
 </ngx-fluent-design-card>
 

@@ -1,5 +1,17 @@
 @import "../../shared/styles/variables";
 
+label {
+    font-size: $theme-metadata-font-size;
+    line-height: 16px;
+    color: $theme-colors-grey190;
+}
+
+p {
+    color: $theme-colors-grey130;
+    line-height: 16px;
+    font-size: $theme-metadata-font-size;
+}
+
 .progress-background {
     background: $theme-colors-grey30;
     width: 100%;
