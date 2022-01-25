@@ -1,0 +1,42 @@
+@import "../../shared/styles/variables";
+
+.ngx-fluent-design-alert {
+    max-width: 560px;
+    width: 560px;
+
+    background: #FFFFFF;
+    box-shadow: $depth-64;
+    border-radius: 2px;
+    padding: 24px;
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .header-content {
+            font-size: $theme-pane-header-font-size;
+            margin: 0;
+        }
+
+        .close-icon {
+            cursor: pointer;
+        }
+    }
+
+    .content {
+        p, h1, h2, h3, h4, h5, span, {
+            font-size: $theme-body-text-font-size;
+        }
+    }
+
+    .actions {
+        width: 100%;
+
+        .actions-content {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+        }
+    }
+}

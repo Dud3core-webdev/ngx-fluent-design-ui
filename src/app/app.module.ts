@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgxFluentDesignProgressModule } from '../../projects/ngx-fluent-design/src/lib/progress/ngx-fluent-design-progress.module';
 import { NgxFluentDesignIconModule } from '../../projects/ngx-fluent-design/src/lib/icons/ngx-fluent-design-icon.module';
 import { NgxFluentDesignNotificationModule } from '../../projects/ngx-fluent-design/src/lib/notifications/ngx-fluent-design-notification.module';
+import { NgxFluentDesignAlertModule } from '../../projects/ngx-fluent-design/src/lib/alerts/ngx-fluent-design-alert.module';
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import { NgxFluentDesignNotificationModule } from '../../projects/ngx-fluent-des
         NgxFluentDesignInputModule,
         NgxFluentDesignProgressModule,
         ReactiveFormsModule,
-        NgxFluentDesignIconModule
+        NgxFluentDesignIconModule,
+        NgxFluentDesignAlertModule
     ],
     bootstrap: [AppComponent]
 })
