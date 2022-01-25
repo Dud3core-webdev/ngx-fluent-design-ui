@@ -1,0 +1,15 @@
+@import "../../shared/styles/variables";
+
+.progress-bar {
+    -webkit-appearance: none;
+    height: 2px;
+    width: 100%;
+}
+
+.progress-bar::-webkit-progress-bar {
+    background: $theme-colors-grey30;
+}
+
+.progress-bar::-webkit-progress-value {
+    background: $theme-primary;
+}

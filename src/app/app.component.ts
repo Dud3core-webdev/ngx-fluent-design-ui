@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { INgxFluentDesignIcon } from '../../projects/ngx-fluent-design/src/lib/icons/shared/types/ngx-fluent-design-icon.interface';
 import { NgxFluentDesignIconInfoWarn } from '../../projects/ngx-fluent-design/src/lib/icons/shared/constants/ngx-fluent-design-icons-list';
 
 @Component({
@@ -8,7 +7,9 @@ import { NgxFluentDesignIconInfoWarn } from '../../projects/ngx-fluent-design/sr
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
+    public progressIndicatorCurrentValue: number = 0;
+
     testForm = new FormGroup({
         checkboxEnabled: new FormControl(''),
         checkboxDisabled: new FormControl(true),
@@ -19,7 +20,19 @@ export class AppComponent {
         warningIcon: NgxFluentDesignIconInfoWarn
     };
 
+    ngAfterViewInit(): void {
+        this.exampleProgressLoad();
+    }
+
     public exampleAlert(componentType: string): void {
         window.alert(`This is a ${componentType} click event`);
+    }
+
+    public exampleProgressLoad(percentage = 0): void {
+        if (percentage >= 100) {
+            return;
+        }
+        this.progressIndicatorCurrentValue = percentage;
+        requestAnimationFrame(() => this.exampleProgressLoad(this.progressIndicatorCurrentValue + 0.05));
     }
 }
