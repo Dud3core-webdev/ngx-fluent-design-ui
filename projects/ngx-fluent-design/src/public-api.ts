@@ -24,12 +24,17 @@ export { NgxFluentDesignMessageBarComponent } from './lib/notifications/message-
 
 /** Progress */
 export { NgxFluentDesignSpinnerComponent } from './lib/progress/spinner/ngx-fluent-design-spinner.component';
+export { NgxFluentDesignProgressIndicatorComponent } from './lib/progress/progress-indicator/ngx-fluent-design-progress-indicator.component';
+export { NgxFluentDesignProgressIndicatorIndeterminateComponent } from './lib/progress/progress-indicator-indeterminate/ngx-fluent-design-progress-indicator-indeterminate.component';
 
 /** Icons */
 export * from './lib/icons/shared/constants/ngx-fluent-design-icons-list';
 export { INgxFluentDesignIcon } from './lib/icons/shared/types/ngx-fluent-design-icon.interface';
 export { INgxFluentDesignIconComponent } from './lib/icons/shared/types/ngx-fluent-design-icon-component.interface';
 export { NgxFluentDesignIconComponent } from './lib/icons/icon-component/icon.component';
+
+/** Alerts */
+export { NgxFluentDesignDialogComponent } from './lib/alerts/dialog/ngx-fluent-design-dialog.component';
 
 /** Modules */
 export { NgxFluentDesignCardModule } from './lib/card/ngx-fluent-design-card.module';
@@ -38,3 +43,4 @@ export { NgxFluentDesignInputModule } from './lib/input/ngx-fluent-design-input.
 export { NgxFluentDesignNotificationModule } from './lib/notifications/ngx-fluent-design-notification.module';
 export { NgxFluentDesignProgressModule } from './lib/progress/ngx-fluent-design-progress.module';
 export { NgxFluentDesignIconModule } from './lib/icons/ngx-fluent-design-icon.module';
+export { NgxFluentDesignAlertModule } from './lib/alerts/ngx-fluent-design-alert.module';
