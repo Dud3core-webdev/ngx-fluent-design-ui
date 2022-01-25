@@ -1,0 +1,46 @@
+@import "../../shared/styles/variables";
+
+.progress-background {
+    background: $theme-colors-grey30;
+    width: 100%;
+    position: relative;
+    padding: 1px;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.progress-background:before {
+    content: '';
+    position: absolute;
+}
+
+.progress-background .progress-bar {
+    background: linear-gradient(to right, $theme-colors-grey30, $theme-primary, $theme-colors-grey30);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    animation: fadeawayBar 3s linear infinite;
+}
+
+@keyframes fadeawayBar {
+    10% {
+        left: 0;
+        right: 100%;
+        width: 0;
+    }
+    35% {
+        left: 0;
+        right: 65%;
+        width: 35%;
+    }
+    65% {
+        right: 0;
+        left: 65%;
+        width: 35%;
+    }
+    90% {
+        left: 100%;
+        right: 0;
+        width: 35%;
+    }
+}
