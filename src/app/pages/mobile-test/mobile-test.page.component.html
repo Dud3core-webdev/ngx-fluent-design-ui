@@ -6,7 +6,7 @@
                     <h1>Form</h1>
                     <div class="pb-3">
                         <h3>Checkbox</h3>
-                        <div class="d-flex justify-content-between col-6 px-0">
+                        <div class="d-flex justify-content-between px-0">
                             <ngx-fluent-design-checkbox [label]="'Checkbox Enabled'" formControlName="checkboxEnabled">
                             </ngx-fluent-design-checkbox>
                             <ngx-fluent-design-checkbox [label]="'Checkbox Disabled'" [disabled]="true"
@@ -17,15 +17,15 @@
 
                     <div class="pb-3">
                         <h3>Radio</h3>
-                        <div class="d-flex justify-content-between col-8 px-0">
+                        <div class="d-flex justify-content-between px-0">
                             <ngx-fluent-design-radio [name]="'radio'" formControlName="radio"
-                                                     [label]="'Radio Enabled 1 Label'"
-                                                     [value]="'Radio Enabled 1 Value'"></ngx-fluent-design-radio>
+                                                     [label]="'Radio Enabled'"
+                                                     [value]="'Some value'"></ngx-fluent-design-radio>
                             <ngx-fluent-design-radio [name]="'radio'" formControlName="radio"
-                                                     [label]="'Radio Enabled 2 Label'"
-                                                     [value]="'Radio Enabled 2 Value'"></ngx-fluent-design-radio>
+                                                     [label]="'Radio Enabled'"
+                                                     [value]="'some value 2'"></ngx-fluent-design-radio>
                             <ngx-fluent-design-radio [name]="'radio'" formControlName="radio"
-                                                     [label]="'Radio Disabled Label'" [value]="'Radio disabled value'"
+                                                     [label]="'Disabled'" [value]="'Radio disabled value'"
                                                      [disabled]="true"></ngx-fluent-design-radio>
                         </div>
                     </div>
