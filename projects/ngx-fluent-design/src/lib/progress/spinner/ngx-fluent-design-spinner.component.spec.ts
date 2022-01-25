@@ -55,5 +55,26 @@ describe('NgxFluentDesignSpinnerComponent', () => {
                 expect(spinner.nativeElement.classList).toContain('size-l');
             });
         });
+        describe('When the user does not specify a size for the spinner', () => {
+            it('Then the size should default to: medium', () => {
+                const spinner = fixture.debugElement.query(bySpecAttribute('fluent-design-spinner'));
+                expect(spinner.nativeElement.classList).toContain('size-m');
+            });
+        });
+        describe('And the user passes in a custom label', () => {
+            it('Then the label should display', () => {
+                component.label = 'Loading...';
+                fixture.detectChanges();
+
+                const spinnerLabel = fixture.debugElement.query(bySpecAttribute('fluent-design-spinner-label')).nativeElement;
+                expect(spinnerLabel.innerHTML).toEqual('Loading...');
+            });
+        });
+        describe('And the user does not specify a label for the spinner', () => {
+            it('Then the label should not display', () => {
+                const spinnerLabel = fixture.debugElement.query(bySpecAttribute('fluent-design-spinner-label'));
+                expect(spinnerLabel).toBeNull();
+            });
+        });
     });
 });
