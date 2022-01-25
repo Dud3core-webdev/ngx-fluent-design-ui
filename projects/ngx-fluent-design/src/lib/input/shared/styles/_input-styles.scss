@@ -13,13 +13,17 @@
     border-width: 1px;
     border-style: solid;
     border-image: initial;
-    border-radius: 2px;
-    border-color: $theme-type-primary;
+    border-radius: $theme-border-radius-base;
+    border-color: $theme-input-border;
     color: $theme-type-primary;
     width: 100%;
     min-width: 0;
     margin: 0.35rem 0 0.85rem;
     background: none transparent;
+
+    &:hover {
+        border-color: $theme-input-hover-border;
+    }
 
     &:focus {
         border-color: $theme-primary;

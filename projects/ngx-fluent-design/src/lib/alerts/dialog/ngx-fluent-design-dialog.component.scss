@@ -4,10 +4,10 @@
     max-width: 560px;
     width: 560px;
 
-    background: #FFFFFF;
+    background: $theme-colors-white;
     box-shadow: $depth-64;
-    border-radius: 2px;
-    padding: 24px;
+    border-radius: $theme-border-radius-base;
+    padding: $theme-padding-base;
 
     .header {
         display: flex;
@@ -35,7 +35,7 @@
         .actions-content {
             display: flex;
             flex-direction: row;
-            justify-content: end;
+            justify-content: flex-end;
 
             .action-cta {
                 margin: 0 4px;

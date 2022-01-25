@@ -1,3 +1,5 @@
+@import "../../styles";
+
 .ngx-fluent-design-message-bar {
 
     display: flex;
@@ -9,23 +11,23 @@
     }
 
     &.info {
-        background-color: #F3F2F1;
+        background-color: $theme-colors-grey20;
     }
 
     &.warning {
-        background-color: rgb(255, 200, 10, .2);
+        background-color: $theme-warning-background-fill;
     }
 
     &.severe-warning {
-        background-color: rgb(250, 65, 0, .2);
+        background-color: $theme-severe-background-fill;
     }
 
     &.error, &.blocked {
-        background-color: rgb(245, 135, 145, .2);
+        background-color: $theme-error-background-fill;
     }
 
     &.success {
-        background-color: rgb(95, 210, 85, .2);
+        background-color: $theme-success-background-fill;
     }
 
     .icon {
@@ -33,7 +35,7 @@
     }
 
     .message {
-        font-size: 12px !important;
+        font-size: $theme-metadata-font-size !important;
         line-height: normal;
         display: flex;
         align-items: center;
@@ -42,7 +44,7 @@
     }
 
     .calls-to-action {
-        padding: 12px 20px;
+        padding: ($theme-padding-base / 2) $theme-padding-base;
         display: flex;
         align-items: flex-end;
         flex-direction: row;
@@ -57,7 +59,6 @@
         .x-icon {
             align-self: flex-start;
             position: sticky;
-            max-width: 32px;
             cursor: pointer;
         }
     }

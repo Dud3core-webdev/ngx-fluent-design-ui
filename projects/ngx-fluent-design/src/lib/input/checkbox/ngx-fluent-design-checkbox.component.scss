@@ -43,7 +43,7 @@
         top: 2px;
         width: 6px;
         height: 12px;
-        border: solid white;
+        border: solid $theme-colors-white;
         border-width: 0 1px 1px 0;
         transform: rotate(45deg);
     }
@@ -56,7 +56,7 @@
     height: 20px;
     width: 20px;
     border: 1px solid $theme-colors-grey130;
-    border-radius: 2px;
+    border-radius: $theme-border-radius-base;
 
     &:after {
         content: "";

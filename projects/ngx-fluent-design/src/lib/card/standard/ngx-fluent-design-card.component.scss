@@ -1,10 +1,12 @@
+@import "../../shared/styles/variables";
+
 .ngx-fluent-design-card {
-    background: #ffffff;
-    padding: 28px;
-    margin-bottom: 15px;
-    border-radius: 2px;
+    background: $theme-colors-white;
+    padding: $theme-padding-base * 2;
+    margin-bottom: 24px;
+    border-radius: $theme-border-radius-base;
     background-clip: padding-box;
-    -webkit-box-shadow: 0 1.6px 3.6px 0 rgb(0 0 0 / 13%), 0 0.3px 0.9px 0 rgb(0 0 0 / 11%);
-    box-shadow: 0 1.6px 3.6px 0 rgb(0 0 0 / 13%), 0 0.3px 0.9px 0 rgb(0 0 0 / 11%);
+    -webkit-box-shadow: $depth-16;
+    box-shadow: $depth-16;
     position: relative;
 }

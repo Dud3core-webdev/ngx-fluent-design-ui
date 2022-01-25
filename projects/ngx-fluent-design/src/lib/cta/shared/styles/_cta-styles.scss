@@ -5,7 +5,7 @@
     position: relative;
     font-family: inherit;
     -webkit-font-smoothing: antialiased;
-    border-radius: 2px;
+    border-radius: $theme-border-radius-base;
     user-select: none;
     font-size: $theme-body-text-font-size;
 
@@ -56,7 +56,7 @@
             pointer-events: none;
             cursor: not-allowed;
 			user-select: none;
-            color: #d0d0d0;
+            color: $theme-type-disabled;
         }
     }
 }
