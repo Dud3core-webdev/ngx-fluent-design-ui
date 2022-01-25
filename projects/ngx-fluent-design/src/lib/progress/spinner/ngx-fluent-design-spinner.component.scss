@@ -1,5 +1,9 @@
 @import "../../shared/styles/variables";
 
+label {
+    color: $theme-primary;
+}
+
 .spinner {
     border: 1px solid $theme-light;
     border-top: 1px solid $theme-primary;
