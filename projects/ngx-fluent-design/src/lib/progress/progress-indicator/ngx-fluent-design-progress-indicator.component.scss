@@ -1,0 +1,15 @@
+@import "../../shared/styles/variables";
+
+.progress-indicator {
+    -webkit-appearance: none;
+    height: 2px;
+    width: 100%;
+}
+
+.progress-indicator::-webkit-progress-bar {
+    background: $theme-colors-grey30;
+}
+
+.progress-indicator::-webkit-progress-value {
+    background: $theme-primary;
+}

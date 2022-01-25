@@ -9,4 +9,5 @@ import { NgxFluentDesignProgressSizeType } from '../../shared/types/ngx-fluent-d
 
 export class NgxFluentDesignSpinnerComponent {
     @Input() public size: NgxFluentDesignProgressSizeType = 'medium';
+    @Input() public label: string = '';
 }
