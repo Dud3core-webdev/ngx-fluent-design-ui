@@ -4,6 +4,8 @@
     position: relative;
     padding-left: 30px;
     user-select: none;
+    display: flex;
+    align-items: center;
     font-size: $theme-body-text-font-size;
     color: $theme-colors-grey190;
 

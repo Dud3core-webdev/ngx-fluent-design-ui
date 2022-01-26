@@ -6,6 +6,8 @@
     user-select: none;
     font-size: $theme-body-text-font-size;
     color: $theme-colors-grey190;
+    display: flex;
+    align-items: center;
 
     input {
         position: absolute;

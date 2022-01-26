@@ -1,6 +1,6 @@
-<div class="d-flex flex-column align-items-center">
+<div class="spinner-container">
     <div data-spec="fluent-design-spinner"
          [ngClass]="{'size-xs': size === 'extra-small','size-s': size === 'small','size-m': size === 'medium','size-l': size === 'large'}"
          class="spinner" id="loading-spinner"></div>
-    <label *ngIf="label" data-spec="fluent-design-spinner-label" class="pt-2" for="loading-spinner">{{label}}</label>
+    <label *ngIf="label" data-spec="fluent-design-spinner-label" for="loading-spinner">{{label}}</label>
 </div>
