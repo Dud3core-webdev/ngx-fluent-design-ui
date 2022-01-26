@@ -1,63 +1,43 @@
-@import "variables";
+@import "mixins";
 
 .metadata-limited {
-    font-size: $theme-metadata-limited-font-size;
-    font-weight: normal;
-    line-height: 12px;
+   @include metadata-limited;
 }
 
 .metadata {
-    font-size: $theme-metadata-font-size;
-    font-weight: normal;
-    line-height: 16px;
+    @include metadata;
 }
 
 .body-text {
-    font-size: $theme-body-text-font-size;
-    font-weight: normal;
-    line-height: 20px;
+    @include body-text;
 }
 
 .subject-title {
-    font-size: $theme-subject-title-font-size;
-    font-weight: normal;
-    line-height: 22px;
+    @include subject-title;
 }
 
 .header {
-    font-size: $theme-header-font-size;
-    font-weight: normal;
-    line-height: 24px;
+    @include header;
 }
 
 .pane-header {
-    font-size: $theme-pane-header-font-size;
-    font-weight: normal;
-    line-height: 28px;
+    @include pane-header;
 }
 
 .page-title {
-    font-size: $theme-page-title-font-size;
-    font-weight: normal;
-    line-height: 36px;
+    @include page-title;
 }
 
 .greeting-title {
-    font-size: $theme-greeting-title-font-size;
-    font-weight: normal;
-    line-height: 40px;
+    @include greeting-title;
 }
 
 .hero-title {
-    font-size: $theme-hero-title-font-size;
-    font-weight: normal;
-    line-height: 52px;
+    @include hero-title;
 }
 
 .xl-numerics {
-    font-size: $theme-xl-numerics-font-size;
-    font-weight: normal;
-    line-height: 76px;
+    @include xl-numerics;
 }
 
 .fluent-design-link {
@@ -71,20 +51,5 @@
         filter: $theme-dark-alt;
         border: none;
         background: inherit;
-    }
-}
-
-.metadata-limited,
-.metadata,
-.body-text,
-.subject-title,
-.header,
-.pane-header,
-.page-title,
-.greeting-title,
-.hero-title,
-.xl-numerics {
-    &.bold {
-        font-weight: 600;
     }
 }
