@@ -1,4 +1,4 @@
-<label class="radio-container" [ngClass]="{'c-pointer': !disabled, 'text-black-50': disabled}">{{label}}
+<label class="radio-container d-flex align-items-center" [ngClass]="{'c-pointer': !disabled, 'text-black-50': disabled}">{{label}}
     <input data-spec="fluent-design-radio" type="radio" [disabled]="disabled" [checked]="checked" [name]="name" (change)="onChecked()">
     <span class="checkmark"></span>
 </label>

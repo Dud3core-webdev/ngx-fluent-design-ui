@@ -1,4 +1,4 @@
-<label class="checkbox-container" [ngClass]="{'c-pointer': !disabled, 'text-black-50': disabled}">{{label}}
+<label class="checkbox-container d-flex align-items-center" [ngClass]="{'c-pointer': !disabled, 'text-black-50': disabled}">{{label}}
     <input data-spec="fluent-design-checkbox" class="checkbox" type="checkbox" (change)="onChecked()" [checked]="checked"
            [disabled]="disabled"/>
     <span class="checkmark"></span>
