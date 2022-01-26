@@ -2,17 +2,42 @@
 @import "mixins";
 
 small {
-    font-size: $theme-metadata-font-size;
+    @include metadata;
 
     &.metadata-limited {
-        font: $theme-metadata-limited-font-size;
+        @include metadata-limited;
     }
 }
 
 p, label, a, button {
-    font-size: $theme-body-text-font-size;
+    @include body-text;
 }
 
-p, label, a, button, h1, h2, h3, h4, h5, h6 {
-    color: $theme-colors-grey190;
+
+h1 {
+    @include hero-title;
+
+    &.xl-numerics {
+        @include xl-numerics;
+    }
+}
+
+h2 {
+    @include page-title;
+
+    &.greeting-title {
+        @include greeting-title;
+    }
+}
+
+h3 {
+    @include header;
+
+    &.pane-header {
+        @include pane-header;
+    }
+}
+
+h4, h5, h6 {
+    @include subject-title;
 }

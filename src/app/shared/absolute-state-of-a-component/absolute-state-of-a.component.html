@@ -31,7 +31,12 @@
             <h3 class="header">Toggle</h3>
             <div class="d-flex justify-content-between px-0">
                 <ngx-fluent-design-toggle [label]="'Toggle'"
-                                          [disabled]="false"></ngx-fluent-design-toggle>
+                                          [toggled]="isToggled"
+                                          (toggleOffEvent)="isToggled = false"
+                                          (toggleOnEvent)="isToggled = true"
+                                          [disabled]="false">
+                </ngx-fluent-design-toggle>
+                <p>toggle is {{isToggled ? 'on' : 'off'}}</p>
             </div>
         </div>
     </form>
@@ -127,7 +132,11 @@
 <ngx-fluent-design-card>
     <div class="pb-3">
         <h1 class="mb-3 pane-header bold">Dialog</h1>
-        <ngx-fluent-design-dialog>
+        <ngx-fluent-design-dialog
+            [header]="'Hello there'"
+            (closeIconClicked)="exampleAlert('Alert close icon')"
+            (primaryActionClicked)="exampleAlert('Alert primary action')"
+            (secondaryActionClicked)="exampleAlert('Alert secondary Action')">
             <p>This is some content and this dialog component really needs more work!</p>
         </ngx-fluent-design-dialog>
     </div>
@@ -140,5 +149,52 @@
         <ngx-fluent-design-form-field>
             <input ngxFluentDesignInput placeholder="Hello thereS">
         </ngx-fluent-design-form-field>
+    </div>
+</ngx-fluent-design-card>
+
+<ngx-fluent-design-card>
+
+    <div class="">
+        <section class="standard mb-5">
+            <h1 class="mb-3 pane-header bold">Typography Standard</h1>
+            <h1 class="xl-numerics">XL Numerics</h1>
+            <h1>Hero Title</h1>
+
+            <h2 class="greeting-title">Greeting Title</h2>
+            <h2>Page Title</h2>
+
+            <h3 class="pane-header">Pane Header</h3>
+            <h3>header</h3>
+
+            <h4>subject title</h4>
+
+            <p>Body text</p>
+
+            <section>
+                <small>Metadata</small>
+            </section>
+            <small class="metadata-limited">Metadata Limited</small>
+        </section>
+
+        <section class="bold">
+            <h1 class="mb-3 pane-header bold">Typography Bold</h1>
+            <h1 class="xl-numerics bold">XL Numerics</h1>
+            <h1 class="bold">Hero Title</h1>
+
+            <h2 class="greeting-title bold">Greeting Title</h2>
+            <h2 class="bold">Page Title</h2>
+
+            <h3 class="pane-header bold">Pane Header</h3>
+            <h3 class="bold">header</h3>
+
+            <h4 class="bold">subject title</h4>
+
+            <p class="bold">Body text</p>
+
+            <section>
+                <small class="bold">Metadata</small>
+            </section>
+            <small class="metadata-limited bold">Metadata Limited</small>
+        </section>
     </div>
 </ngx-fluent-design-card>
