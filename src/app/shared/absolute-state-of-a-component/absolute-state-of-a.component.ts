@@ -9,6 +9,7 @@ import { NgxFluentDesignIconInfoWarn } from '../../../../projects/ngx-fluent-des
 })
 export class AbsoluteStateOfAComponent implements AfterViewInit {
     public progressIndicatorCurrentValue: number = 0;
+    public isToggled: boolean = false;
 
     testForm = new FormGroup({
         checkboxEnabled: new FormControl(''),

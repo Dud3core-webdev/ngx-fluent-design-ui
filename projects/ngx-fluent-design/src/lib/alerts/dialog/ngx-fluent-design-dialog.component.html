@@ -1,15 +1,33 @@
 <section class="ngx-fluent-design-alert">
     <section class="header">
-        <h1 class="header-content">Header</h1>
-        <ngx-fluent-design-icon class="close-icon" [icon]="closeIcon"></ngx-fluent-design-icon>
+        <h1 class="header-content">{{header}}</h1>
+        <ngx-fluent-design-icon data-spec="ngx-fluent-design-close-icon" (click)="closeIconClicked.emit()" class="close-icon" [icon]="closeIcon"></ngx-fluent-design-icon>
     </section>
+
     <section class="content">
         <ng-content></ng-content>
     </section>
+
     <section class="actions">
         <section class="actions-content">
-            <ngx-fluent-design-button class="action-cta" type="primary">{{primaryActionName}}</ngx-fluent-design-button>
-            <ngx-fluent-design-button class="action-cta" type="standard">{{secondaryActionName}}</ngx-fluent-design-button>
+
+            <ngx-fluent-design-button
+                data-spec="fluent-design-message-bar-action-primary"
+                (clicked)="primaryActionClicked.emit()"
+                class="action-cta"
+                type="primary">
+                    {{primaryActionName}}
+            </ngx-fluent-design-button>
+
+            <ngx-fluent-design-button
+                *ngIf="displaySecondaryAction"
+                data-spec="fluent-design-message-bar-action-secondary"
+                (clicked)="secondaryActionClicked.emit()"
+                class="action-cta"
+                type="standard">
+                    {{secondaryActionName}}
+            </ngx-fluent-design-button>
+
         </section>
     </section>
 </section>

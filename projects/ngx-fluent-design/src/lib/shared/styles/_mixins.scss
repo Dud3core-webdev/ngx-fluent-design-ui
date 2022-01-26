@@ -1,0 +1,91 @@
+@import "variables";
+
+@mixin default-font-color {
+    color: $theme-colors-grey190;
+}
+
+@mixin metadata-limited {
+    @include bold-font-weight;
+    @include default-font-color;
+    font-size: $theme-metadata-limited-font-size;
+    font-weight: normal;
+    line-height: 12px;
+}
+
+@mixin metadata {
+    @include bold-font-weight;
+    @include default-font-color;
+    font-size: $theme-metadata-font-size;
+    font-weight: normal;
+    line-height: 16px;
+}
+
+@mixin body-text {
+    @include bold-font-weight;
+    @include default-font-color;
+    font-size: $theme-body-text-font-size;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+@mixin subject-title {
+    @include bold-font-weight;
+    @include default-font-color;
+    font-size: $theme-subject-title-font-size;
+    font-weight: normal;
+    line-height: 22px;
+}
+
+@mixin header {
+    @include bold-font-weight;
+    @include default-font-color;
+    font-size: $theme-header-font-size;
+    font-weight: normal;
+    line-height: 24px;
+}
+
+@mixin pane-header {
+    @include bold-font-weight;
+    @include default-font-color;
+    font-size: $theme-pane-header-font-size;
+    font-weight: normal;
+    line-height: 28px;
+}
+
+@mixin page-title {
+    @include bold-font-weight;
+    @include default-font-color;
+    font-size: $theme-page-title-font-size;
+    font-weight: normal;
+    line-height: 36px;
+}
+
+@mixin greeting-title {
+    @include bold-font-weight;
+    @include default-font-color;
+    font-size: $theme-greeting-title-font-size;
+    font-weight: normal;
+    line-height: 40px;
+}
+
+@mixin hero-title {
+    @include bold-font-weight;
+    @include default-font-color;
+    font-size: $theme-hero-title-font-size;
+    font-weight: normal;
+    line-height: 52px;
+}
+
+@mixin xl-numerics {
+    @include bold-font-weight;
+    @include default-font-color;
+    font-size: $theme-xl-numerics-font-size;
+    font-weight: normal;
+    line-height: 76px;
+}
+
+@mixin bold-font-weight {
+    &.bold {
+        font-weight: 600;
+    }
+}
