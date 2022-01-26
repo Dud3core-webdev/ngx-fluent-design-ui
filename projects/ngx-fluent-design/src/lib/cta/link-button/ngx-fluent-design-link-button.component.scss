@@ -1,0 +1,13 @@
+@import "../../shared/styles/variables";
+
+.ngx-fluent-design-link-button {
+    border: none;
+    background: inherit;
+    color: $theme-primary;
+    cursor: pointer;
+    text-decoration: underline;
+
+    &.active, &:hover {
+        color: $theme-dark-alt;
+    }
+}

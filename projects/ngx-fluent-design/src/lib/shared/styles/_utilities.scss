@@ -2,36 +2,89 @@
 
 .metadata-limited {
     font-size: $theme-metadata-limited-font-size;
+    font-weight: normal;
+    line-height: 12px;
 }
 
 .metadata {
     font-size: $theme-metadata-font-size;
+    font-weight: normal;
+    line-height: 16px;
 }
 
 .body-text {
     font-size: $theme-body-text-font-size;
+    font-weight: normal;
+    line-height: 20px;
 }
 
 .subject-title {
     font-size: $theme-subject-title-font-size;
+    font-weight: normal;
+    line-height: 22px;
 }
 
 .header {
     font-size: $theme-header-font-size;
+    font-weight: normal;
+    line-height: 24px;
 }
 
 .pane-header {
     font-size: $theme-pane-header-font-size;
+    font-weight: normal;
+    line-height: 28px;
 }
 
 .page-title {
     font-size: $theme-page-title-font-size;
+    font-weight: normal;
+    line-height: 36px;
 }
 
 .greeting-title {
     font-size: $theme-greeting-title-font-size;
+    font-weight: normal;
+    line-height: 40px;
+}
+
+.hero-title {
+    font-size: $theme-hero-title-font-size;
+    font-weight: normal;
+    line-height: 52px;
 }
 
 .xl-numerics {
     font-size: $theme-xl-numerics-font-size;
+    font-weight: normal;
+    line-height: 76px;
+}
+
+.fluent-design-link {
+    color: $theme-primary;
+    outline: none;
+    font-family: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &.active, &:hover {
+        filter: $theme-dark-alt;
+        border: none;
+        background: inherit;
+    }
+}
+
+.metadata-limited,
+.metadata,
+.body-text,
+.subject-title,
+.header,
+.pane-header,
+.page-title,
+.greeting-title,
+.hero-title,
+.xl-numerics {
+    &.bold {
+        font-weight: 600;
+    }
 }

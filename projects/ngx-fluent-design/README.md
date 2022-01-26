@@ -14,6 +14,7 @@ This is an absolute monster patch boi 3000.
 - made some adjustments to pre-existing components so that they fall inline with official MS Fluent Design Figma file.
 - Working on tooling to make sure we can get changes out as quickly (easily) as possible.
 - Unit tested components to make sure everything behaves correctly.
+- Implemented global typography rules
 
 Massive shout out to [Smephey](https://github.com/Smephey) for helping with all this and making everything look great!
 

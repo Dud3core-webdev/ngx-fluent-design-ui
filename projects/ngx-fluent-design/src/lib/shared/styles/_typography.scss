@@ -1,0 +1,19 @@
+@import "variables";
+
+small {
+    font-size: $theme-metadata-font-size;
+    color: $theme-colors-grey190;
+
+    &.metadata-limited {
+        font: $theme-metadata-limited-font-size;
+    }
+}
+
+p, label, a, button {
+    font-size: $theme-body-text-font-size;
+    color: $theme-colors-grey190;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $theme-colors-grey190;
+}

@@ -18,7 +18,6 @@ export class NgxFluentDesignButtonLinkDirective {
     }
 
     constructor() {
-        this._elementClass = this._elementClass.concat('fluent-design-link');
-        this._elementClass = this._elementClass.concat('link-button');
+        this._elementClass = this._elementClass.concat('ngx-fluent-design-link-button');
     }
 }
