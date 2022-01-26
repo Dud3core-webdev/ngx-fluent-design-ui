@@ -4,6 +4,13 @@ label {
     color: $theme-primary;
     font-size: $theme-metadata-font-size;
     line-height: 16px;
+    padding-top: 0.5rem;
+}
+
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .spinner {

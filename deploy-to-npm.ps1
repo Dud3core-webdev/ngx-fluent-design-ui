@@ -1,6 +1,6 @@
 param( [bool]$isPatch = $true, [bool]$isMinorUpdate = $false )
 
-Write-Host -BackgroundColor "Red" "Warming! Make sure you have committed all your changes before running this script"
+Write-Host -BackgroundColor "Red" "Warning! Make sure you have committed all your changes before running this script"
 
 Set-Location .\
 

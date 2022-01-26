@@ -31,7 +31,7 @@
             <h3 class="header">Toggle</h3>
             <div class="d-flex justify-content-between px-0">
                 <ngx-fluent-design-toggle [label]="'Toggle'"
-                                         [disabled]="false"></ngx-fluent-design-toggle>
+                                          [disabled]="false"></ngx-fluent-design-toggle>
             </div>
         </div>
     </form>
@@ -94,12 +94,17 @@
     <div class="pb-3">
         <h1 class="pane-header bold">Progress</h1>
         <h3 class="header">Spinner</h3>
+        <div class="d-flex align-items-center pb-3">
+            <ngx-fluent-design-spinner class="col-3" [size]="'extra-small'" [label]="'Loading...'"></ngx-fluent-design-spinner>
+            <ngx-fluent-design-spinner class="col-3" [size]="'small'" [label]="'Loading...'"></ngx-fluent-design-spinner>
+            <ngx-fluent-design-spinner class="col-3" [size]="'medium'" [label]="'Loading...'"></ngx-fluent-design-spinner>
+            <ngx-fluent-design-spinner class="col-3" [size]="'large'" [label]="'Loading...'"></ngx-fluent-design-spinner>
+        </div>
         <div class="d-flex justify-content-around align-items-center">
-            <ngx-fluent-design-spinner [size]="'extra-small'" [label]="'Loading...'"></ngx-fluent-design-spinner>
-            <ngx-fluent-design-spinner [size]="'small'"></ngx-fluent-design-spinner>
-            <ngx-fluent-design-spinner [size]="'medium'"></ngx-fluent-design-spinner>
-            <ngx-fluent-design-spinner [size]="'large'"></ngx-fluent-design-spinner>
-            <ngx-fluent-design-spinner [size]="'large'" [label]="'Loading...'"></ngx-fluent-design-spinner>
+            <ngx-fluent-design-spinner class="col-3" [size]="'extra-small'"></ngx-fluent-design-spinner>
+            <ngx-fluent-design-spinner class="col-3" [size]="'small'"></ngx-fluent-design-spinner>
+            <ngx-fluent-design-spinner class="col-3" [size]="'medium'"></ngx-fluent-design-spinner>
+            <ngx-fluent-design-spinner class="col-3" [size]="'large'"></ngx-fluent-design-spinner>
         </div>
 
         <h3 class="header">Progress Indicator</h3>
@@ -127,7 +132,6 @@
         </ngx-fluent-design-dialog>
     </div>
 </ngx-fluent-design-card>
-
 
 
 <ngx-fluent-design-card>
