@@ -3,14 +3,10 @@
     "extends": "../../tsconfig.json",
     "compilerOptions": {
         "outDir": "../../out-tsc/spec",
-        "module": "CommonJS",
-        "types": [
-            "jest",
-            "node"
-        ]
+        "module": "CommonJS"
     },
     "include": [
-        "**/*.spec.ts",
-        "**/*.d.ts"
+        "../ngx-fluent-design/src/*.spec.ts",
+        "../ngx-fluent-design/src/*.d.ts"
     ]
 }
