@@ -10,7 +10,9 @@
         "build-docs": "ng b ngx-fluent-design-testbed --prod",
         "build-ngx-fluent-design:prod": "ng b ngx-fluent-design --prod",
         "deploy:patch": "powershell ./deploy-to-npm.ps1 -isPatch 1 -isMinorUpdate 0",
-        "deploy:minor-version": "powershell ./deploy-to-npm.ps1 -isPatch 0 -isMinorUpdate 1"
+        "deploy:minor-version": "powershell ./deploy-to-npm.ps1 -isPatch 0 -isMinorUpdate 1",
+        "cypress:run": "cypress run",
+        "cypress:open": "cypress open"
     },
     "private": true,
     "dependencies": {
