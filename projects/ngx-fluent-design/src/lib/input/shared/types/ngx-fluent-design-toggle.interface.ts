@@ -2,7 +2,7 @@ import { EventEmitter } from '@angular/core';
 
 export interface INgxFluentDesignToggle {
     label: string;
-    inline: boolean;
+    inlineLabel: boolean;
     toggled: boolean;
     disabled: boolean;
 
