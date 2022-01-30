@@ -1,5 +1,5 @@
 <label class="checkbox-container" [ngClass]="{'c-pointer': !disabled, 'text-black-50': disabled}">{{label}}
     <input data-spec="fluent-design-checkbox" class="checkbox" type="checkbox" (change)="onChecked()" [checked]="checked"
-           [disabled]="disabled"/>
+           [disabled]="disabled" [attr.data-e2e]="'@ngx-fluent-design-checkbox/' + e2eSuffix"/>
     <span class="checkmark"></span>
 </label>

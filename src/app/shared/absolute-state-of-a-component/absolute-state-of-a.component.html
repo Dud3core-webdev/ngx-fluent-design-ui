@@ -4,9 +4,9 @@
         <div>
             <h3 class="header">Checkbox</h3>
             <div class="d-flex justify-content-between px-0">
-                <ngx-fluent-design-checkbox [label]="'Checkbox Enabled'" formControlName="checkboxEnabled">
+                <ngx-fluent-design-checkbox [label]="'Checkbox Enabled'" formControlName="checkboxEnabled" [e2eSuffix]="'form-section-enabled'">
                 </ngx-fluent-design-checkbox>
-                <ngx-fluent-design-checkbox [label]="'Checkbox Disabled'" [disabled]="true"
+                <ngx-fluent-design-checkbox [label]="'Checkbox Disabled'" [disabled]="true" [e2eSuffix]="'form-section-disabled'"
                                             formControlName="checkboxDisabled">
                 </ngx-fluent-design-checkbox>
             </div>
@@ -22,6 +22,7 @@
                                          [label]="'Radio Enabled'"
                                          [value]="'some value 2'"></ngx-fluent-design-radio>
                 <ngx-fluent-design-radio [name]="'radio'" formControlName="radio"
+                                         [e2eSuffix]="'form-section-disabled'"
                                          [label]="'Disabled'" [value]="'Radio disabled value'"
                                          [disabled]="true"></ngx-fluent-design-radio>
             </div>
@@ -133,10 +134,10 @@
     <div class="pb-3">
         <h1 class="mb-3 pane-header bold">Dialog</h1>
         <ngx-fluent-design-dialog
-            [header]="'Hello there'"
-            (closeIconClicked)="exampleAlert('Alert close icon')"
-            (primaryActionClicked)="exampleAlert('Alert primary action')"
-            (secondaryActionClicked)="exampleAlert('Alert secondary Action')">
+                [header]="'Hello there'"
+                (closeIconClicked)="exampleAlert('Alert close icon')"
+                (primaryActionClicked)="exampleAlert('Alert primary action')"
+                (secondaryActionClicked)="exampleAlert('Alert secondary Action')">
             <p>This is some content and this dialog component really needs more work!</p>
         </ngx-fluent-design-dialog>
     </div>

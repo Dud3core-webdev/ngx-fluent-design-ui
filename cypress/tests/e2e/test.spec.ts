@@ -5,13 +5,16 @@ describe('Mess Page', () => {
         cy.visit('/desktop');
     });
 
-    describe('Given the form section initially loads', () => {
-        it('Then the enabled checkbox should not be checked', () => {
-
+    describe('Given the form section loads', () => {
+        describe('When the Checkbox section loads', () => {
+            it('Then the checkbox labeled as "disabled" should be disabled', () => {
+                cy.get(Selector.attrE2E('@ngx-fluent-design-checkbox/form-section-disabled')).should('be.disabled');
+            });
         });
-
-        it('Then the disabled checkbox should be disabled', () => {
-            cy.get(Selector.attrE2E('@checkbox-disabled')).should('be.disabled');
+        describe('When the Radio section loads', () => {
+            it('Then the radio button labeled as "disabled" should be disabled', () => {
+                cy.get(Selector.attrE2E('@ngx-fluent-design-radio/form-section-disabled')).should('be.disabled');
+            });
         });
     });
 });
