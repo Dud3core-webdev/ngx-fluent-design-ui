@@ -1,6 +1,8 @@
 {
+    "baseUrl": "http://localhost:8080",
     "fixturesFolder": "false",
     "integrationFolder": "cypress/tests",
     "video": false,
-    "screenshotOnRunFailure": false
+    "screenshotOnRunFailure": false,
+    "supportFile": "cypress/support/selector.ts"
 }
