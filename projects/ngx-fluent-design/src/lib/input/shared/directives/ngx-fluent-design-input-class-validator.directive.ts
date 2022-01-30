@@ -1,4 +1,4 @@
-import { Directive, ElementRef, ViewChild } from '@angular/core';
+import { Directive, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { AbstractControl, NG_VALIDATORS, ValidationErrors, Validator } from '@angular/forms';
 
 @Directive({
@@ -21,7 +21,7 @@ export class NgxFluentDesignInputClassValidatorDirective implements Validator {
     }
 
     public validate(control: AbstractControl): ValidationErrors | null {
-        if (control.errors && (control.dirty || control.touched)) {
+        if (control.errors && control.value?.length > 0) {
             this.setErrorClassOnInput();
         } else {
             this.removeErrorClassOnInput();

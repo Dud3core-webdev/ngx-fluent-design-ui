@@ -1,5 +1,5 @@
 import { AfterViewInit, Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgxFluentDesignIconInfoWarn } from '../../../../projects/ngx-fluent-design/src/lib/icons/shared/constants/ngx-fluent-design-icons-list';
 
 @Component({
@@ -16,6 +16,12 @@ export class AbsoluteStateOfAComponent implements AfterViewInit {
         checkboxEnabled: new FormControl(''),
         checkboxDisabled: new FormControl(true),
         radio: new FormControl('Radio disabled value'),
+    });
+
+    testFormFieldForm = new FormGroup({
+        bordered: new FormControl(null, [Validators.required, Validators.minLength(12)]),
+        bottomBorder: new FormControl(null, [Validators.required, Validators.minLength(1), Validators.maxLength(12)]),
+        borderless: new FormControl(null, [Validators.required])
     });
 
     tesIconList = {

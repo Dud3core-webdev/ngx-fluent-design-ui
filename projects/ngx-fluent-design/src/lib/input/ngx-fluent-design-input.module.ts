@@ -7,6 +7,7 @@ import { NgxFluentDesignToggleComponent } from './toggle/ngx-fluent-design-toggl
 import { NgxFluentDesignCheckboxComponent } from './checkbox/ngx-fluent-design-checkbox.component';
 import { NgxFluentDesignRadioComponent } from './radio/ngx-fluent-design-radio.component';
 import { NgxFluentDesignFormFieldUnderlinedComponent } from './text-field-underlined/ngx-fluent-design-text-field-underlined.component';
+import { NgxFluentDesignTextFieldBorderlessComponent } from './text-field-borderless/ngx-fluent-design-text-field-borderless.component';
 
 const DECLARATIONS = [
     NgxFluentDesignFormFieldComponent,
@@ -14,7 +15,8 @@ const DECLARATIONS = [
     NgxFluentDesignToggleComponent,
     NgxFluentDesignCheckboxComponent,
     NgxFluentDesignRadioComponent,
-    NgxFluentDesignFormFieldUnderlinedComponent
+    NgxFluentDesignFormFieldUnderlinedComponent,
+    NgxFluentDesignTextFieldBorderlessComponent
 ];
 
 @NgModule({

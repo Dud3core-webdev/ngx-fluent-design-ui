@@ -156,13 +156,19 @@
             </ngx-fluent-design-toggle>
         </section>
 
-        <ngx-fluent-design-form-field [disabled]="inputsDisabled">
-            <input ngxFluentDesignInput placeholder="Hello there">
-        </ngx-fluent-design-form-field>
+        <form [formGroup]="testFormFieldForm">
+            <ngx-fluent-design-form-field [disabled]="inputsDisabled">
+                <input ngxFluentDesignInput formControlName="bordered" placeholder="Hello there">
+            </ngx-fluent-design-form-field>
 
-        <ngx-fluent-design-form-field-underlined [disabled]="inputsDisabled">
-            <input ngxFluentDesignInput placeholder="Borderless">
-        </ngx-fluent-design-form-field-underlined>
+            <ngx-fluent-design-form-field-underlined [disabled]="inputsDisabled">
+                <input ngxFluentDesignInput formControlName="bottomBorder" placeholder="Bottom Border">
+            </ngx-fluent-design-form-field-underlined>
+
+            <ngx-fluent-design-form-field-borderless [disabled]="inputsDisabled">
+                <input ngxFluentDesignInput formControlName="borderless" placeholder="Borderless">
+            </ngx-fluent-design-form-field-borderless>
+        </form>
     </div>
 </ngx-fluent-design-card>
 
