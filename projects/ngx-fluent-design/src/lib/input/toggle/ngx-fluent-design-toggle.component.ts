@@ -8,7 +8,7 @@ import { INgxFluentDesignToggle } from '../shared/types/ngx-fluent-design-toggle
 })
 export class NgxFluentDesignToggleComponent implements INgxFluentDesignToggle {
     @Input() public label: string;
-    @Input() public inlineLabel: boolean = false;
+    @Input() public inline: boolean = false;
     @Input() public toggled: boolean = false;
     @Input() public disabled: boolean = false;
 
