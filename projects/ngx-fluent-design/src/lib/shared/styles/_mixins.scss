@@ -89,3 +89,21 @@
         font-weight: 600;
     }
 }
+
+@mixin action-link {
+    color: $theme-primary;
+    outline: none;
+    font-family: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &.active, &:hover {
+        filter: $theme-dark-alt;
+        border: none;
+        background: inherit;
+    }
+
+    &:focus {
+        border: 1px solid $theme-colors-grey190;
+    }
+}

@@ -1,14 +1,8 @@
-@import "../../shared/styles/variables";
+@import "../../shared/styles/mixins";
 
 .ngx-fluent-design-link-button {
+    padding: 0;
     border: none;
     background: inherit;
-    color: $theme-primary;
-    cursor: pointer;
-    text-decoration: underline;
-    padding: 0;
-
-    &.active, &:hover {
-        color: $theme-dark-alt;
-    }
+    @include action-link;
 }
