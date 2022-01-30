@@ -101,6 +101,7 @@
     &.active, &:hover {
         filter: $theme-dark-alt;
         background: inherit;
+        border: 1px solid transparent;
     }
 
     &:focus {
