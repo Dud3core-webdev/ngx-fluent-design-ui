@@ -21,6 +21,43 @@
     margin: 0.35rem 0 0.85rem;
     background: none transparent;
 
+    ::ng-deep {
+        input {
+            -webkit-font-smoothing: antialiased;
+            font-size: $theme-body-text-font-size;
+            font-weight: 400;
+            box-shadow: none;
+            margin: 0;
+            text-overflow: ellipsis;
+            border: none;
+            font-family: inherit;
+            min-height: 32px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            font: inherit;
+            font-size: $theme-body-text-font-size;
+            font-weight: 400;
+            box-shadow: none;
+            margin: 0;
+            padding: 8px 0;
+            box-sizing: border-box;
+            color: $theme-input-border;
+            border-radius: 0;
+            border: none;
+            resize: vertical;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
     &:hover {
         border-color: $theme-input-hover-border;
     }
@@ -35,6 +72,27 @@
 
     &.has-error {
         border-color: $theme-status-error;
+    }
+
+    &.disabled {
+        background-color: $theme-colors-grey30;
+        pointer-events: none;
+        border: none;
+
+        label {
+            color: $theme-type-disabled;
+        }
+
+        ::ng-deep {
+            input {
+                background-color: inherit;
+                pointer-events: none;
+
+                &:hover {
+                    border: none !important;
+                }
+            }
+        }
     }
 
     label {

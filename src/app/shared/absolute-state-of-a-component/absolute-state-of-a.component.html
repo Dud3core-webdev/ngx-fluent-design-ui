@@ -145,10 +145,23 @@
 
 <ngx-fluent-design-card>
     <div>
-        <h1 class="mb-3 pane-header bold">Input</h1>
-        <ngx-fluent-design-form-field>
-            <input ngxFluentDesignInput placeholder="Hello thereS">
+        <h1 class="mb-3 pane-header bold">Inputs</h1>
+
+        <section class="mb-3">
+            <ngx-fluent-design-toggle [label]="'Disable Inputs'"
+                                      [toggled]="inputsDisabled"
+                                      (changeEvent)="toggleInputDisabled()"
+                                      [disabled]="false">
+            </ngx-fluent-design-toggle>
+        </section>
+
+        <ngx-fluent-design-form-field [disabled]="inputsDisabled">
+            <input ngxFluentDesignInput placeholder="Hello there">
         </ngx-fluent-design-form-field>
+
+        <ngx-fluent-design-form-field-underlined [disabled]="inputsDisabled">
+            <input ngxFluentDesignInput placeholder="Borderless">
+        </ngx-fluent-design-form-field-underlined>
     </div>
 </ngx-fluent-design-card>
 

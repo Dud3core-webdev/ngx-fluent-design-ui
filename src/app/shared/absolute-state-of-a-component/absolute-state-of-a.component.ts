@@ -10,6 +10,7 @@ import { NgxFluentDesignIconInfoWarn } from '../../../../projects/ngx-fluent-des
 export class AbsoluteStateOfAComponent implements AfterViewInit {
     public progressIndicatorCurrentValue: number = 0;
     public isToggled: boolean = false;
+    public inputsDisabled: boolean = false;
 
     testForm = new FormGroup({
         checkboxEnabled: new FormControl(''),
@@ -36,5 +37,9 @@ export class AbsoluteStateOfAComponent implements AfterViewInit {
 
     public exampleAlert(componentType: string): void {
         window.alert(`This is a ${componentType} click event`);
+    }
+
+    public toggleInputDisabled(): void {
+        this.inputsDisabled = !this.inputsDisabled;
     }
 }

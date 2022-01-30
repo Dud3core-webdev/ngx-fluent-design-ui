@@ -6,13 +6,15 @@ import { NgxFluentDesignInputClassValidatorDirective } from './shared/directives
 import { NgxFluentDesignToggleComponent } from './toggle/ngx-fluent-design-toggle.component';
 import { NgxFluentDesignCheckboxComponent } from './checkbox/ngx-fluent-design-checkbox.component';
 import { NgxFluentDesignRadioComponent } from './radio/ngx-fluent-design-radio.component';
+import { NgxFluentDesignFormFieldUnderlinedComponent } from './text-field-underlined/ngx-fluent-design-text-field-underlined.component';
 
 const DECLARATIONS = [
     NgxFluentDesignFormFieldComponent,
     NgxFluentDesignInputClassValidatorDirective,
     NgxFluentDesignToggleComponent,
     NgxFluentDesignCheckboxComponent,
-    NgxFluentDesignRadioComponent
+    NgxFluentDesignRadioComponent,
+    NgxFluentDesignFormFieldUnderlinedComponent
 ];
 
 @NgModule({
