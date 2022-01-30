@@ -77,7 +77,7 @@
     &.disabled {
         background-color: $theme-colors-grey30;
         pointer-events: none;
-        border: none;
+        border-color: transparent;
 
         label {
             color: $theme-type-disabled;

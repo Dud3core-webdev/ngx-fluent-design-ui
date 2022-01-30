@@ -96,10 +96,10 @@
     font-family: inherit;
     text-decoration: underline;
     cursor: pointer;
+    border: 1px solid transparent;
 
     &.active, &:hover {
         filter: $theme-dark-alt;
-        border: none;
         background: inherit;
     }
 
