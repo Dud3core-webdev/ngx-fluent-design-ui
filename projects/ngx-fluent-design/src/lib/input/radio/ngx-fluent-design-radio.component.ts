@@ -21,6 +21,7 @@ export class NgxFluentDesignRadioComponent implements ControlValueAccessor, INgx
     @Input() checked: boolean = false;
     @Input() disabled: boolean = false;
     @Input() value: any;
+    @Input() e2eSuffix: string = 'unspecified-radio';
 
     private _controlValueAccessorChangeFn = new Function();
 

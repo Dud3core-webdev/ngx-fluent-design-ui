@@ -4,8 +4,7 @@ import { NgxFluentDesignIconInfoWarn } from '../../../../projects/ngx-fluent-des
 
 @Component({
     selector: 'absolute-mess',
-    templateUrl: './absolute-state-of-a.component.html',
-    styleUrls: ['./absolute-state-of-a.component.scss']
+    templateUrl: './absolute-state-of-a.component.html'
 })
 export class AbsoluteStateOfAComponent implements AfterViewInit {
     public progressIndicatorCurrentValue: number = 0;
@@ -15,7 +14,7 @@ export class AbsoluteStateOfAComponent implements AfterViewInit {
     testForm = new FormGroup({
         checkboxEnabled: new FormControl(''),
         checkboxDisabled: new FormControl(true),
-        radio: new FormControl('Radio disabled value'),
+        radio: new FormControl('Radio disabled value')
     });
 
     testFormFieldForm = new FormGroup({

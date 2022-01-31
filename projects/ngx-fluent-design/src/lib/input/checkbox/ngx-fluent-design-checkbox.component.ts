@@ -19,6 +19,7 @@ export class NgxFluentDesignCheckboxComponent implements ControlValueAccessor, I
     @Input() label: string;
     @Input() checked: boolean = false;
     @Input() disabled: boolean = false;
+    @Input() e2eSuffix: string = 'unspecified-checkbox';
 
     private _controlValueAccessorChangeFn = new Function();
 

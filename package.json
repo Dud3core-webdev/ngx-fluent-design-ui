@@ -3,14 +3,16 @@
     "version": "0.0.3",
     "scripts": {
         "ng": "ng",
-        "start": "ng serve",
+        "start": "ng serve --port 8080",
         "build": "ng build",
         "test": "jest",
         "lint": "ng lint",
         "build-docs": "ng b ngx-fluent-design-testbed --prod",
         "build-ngx-fluent-design:prod": "ng b ngx-fluent-design --prod",
         "deploy:patch": "powershell ./deploy-to-npm.ps1 -isPatch 1 -isMinorUpdate 0",
-        "deploy:minor-version": "powershell ./deploy-to-npm.ps1 -isPatch 0 -isMinorUpdate 1"
+        "deploy:minor-version": "powershell ./deploy-to-npm.ps1 -isPatch 0 -isMinorUpdate 1",
+        "cypress:run": "cypress run",
+        "cypress:open": "cypress open"
     },
     "private": true,
     "dependencies": {
@@ -37,6 +39,7 @@
         "@types/jest": "^27.4.0",
         "@types/node": "^12.11.1",
         "codelyzer": "^6.0.0",
+        "cypress": "^9.3.1",
         "jest": "^27.4.7",
         "jest-preset-angular": "^11.1.0",
         "ng-packagr": "^11.0.0",
