@@ -1,20 +1,25 @@
 import { Selector } from '../../support/selector';
 
-describe('Mess Page', () => {
-    it('It loads', () => {
-        cy.visit('/desktop');
-    });
+const views = ['desktop', 'mobile'];
 
-    describe('Given the form section loads', () => {
-        describe('When the Checkbox section loads', () => {
-            it('Then the checkbox labeled as "disabled" should be disabled', () => {
-                cy.get(Selector.attrE2E('@ngx-fluent-design-checkbox/form-section-disabled')).should('be.disabled');
-            });
+views.forEach((view) => {
+    describe(`Mess Page in ${view} view`, () => {
+        it('It loads', () => {
+            cy.visit(`/${view}`);
         });
-        describe('When the Radio section loads', () => {
-            it('Then the radio button labeled as "disabled" should be disabled', () => {
-                cy.get(Selector.attrE2E('@ngx-fluent-design-radio/form-section-disabled')).should('be.disabled');
+
+        describe('Given the form section loads', () => {
+            describe('When the Checkbox section loads', () => {
+                it('Then the checkbox labeled as "disabled" should be disabled', () => {
+                    cy.get(Selector.attrE2E('@ngx-fluent-design-checkbox/form-section-disabled')).should('be.disabled');
+                });
+            });
+            describe('When the Radio section loads', () => {
+                it('Then the radio button labeled as "disabled" should be disabled', () => {
+                    cy.get(Selector.attrE2E('@ngx-fluent-design-radio/form-section-disabled')).should('be.disabled');
+                });
             });
         });
     });
 });
+
