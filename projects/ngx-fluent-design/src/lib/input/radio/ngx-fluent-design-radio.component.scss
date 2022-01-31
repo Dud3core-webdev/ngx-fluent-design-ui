@@ -2,6 +2,7 @@
 
 .radio-container {
     position: relative;
+    display: inline-block;
     padding-left: 30px;
     user-select: none;
     font-size: $theme-body-text-font-size;
