@@ -9,4 +9,8 @@
     -webkit-box-shadow: $depth-16;
     box-shadow: $depth-16;
     position: relative;
+
+    @media screen and (max-width: 420px) {
+        padding: $theme-padding-base;
+    }
 }
