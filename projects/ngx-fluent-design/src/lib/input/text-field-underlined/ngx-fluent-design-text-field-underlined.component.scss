@@ -3,7 +3,7 @@
 .fluent-input-field {
     display: flex;
     flex-direction: column;
-    padding: 0 $theme-padding-base / 3;
+    padding: 0 calc($theme-padding-base / 3);
     border-top: none;
     border-left: none;
     border-right: none;

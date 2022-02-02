@@ -16,6 +16,6 @@
     }
 
     @include ngx-fluent-design-small-breakpoint {
-        padding: $theme-padding-base / 2;
+        padding: calc($theme-padding-base / 2);
     }
 }
