@@ -69,3 +69,10 @@ $depth-64:  0px 4.8px 14.4px rgba(0, 0, 0, 0.18), 0px 25.6px 57.6px rgba(0, 0, 0
 
 /** Padding & Margin */
 $theme-padding-base: 24px;
+
+/** Breakpoints */
+$theme-small-breakpoint: 576px;
+$theme-medium-breakpoint: 768px;
+$theme-large-breakpoint: 992px;
+$theme-xl-breakpoint: 1200px;
+$theme-xxl-breakpoint: 1400px;

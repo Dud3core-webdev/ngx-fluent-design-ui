@@ -108,3 +108,11 @@
         border: 1px solid $theme-colors-grey190;
     }
 }
+
+@mixin ngx-fluent-design-small-breakpoint {
+    @media (max-width: $theme-small-breakpoint) { @content; }
+}
+
+@mixin ngx-fluent-design-medium-breakpoint {
+    @media (max-width: $theme-medium-breakpoint) { @content; }
+}

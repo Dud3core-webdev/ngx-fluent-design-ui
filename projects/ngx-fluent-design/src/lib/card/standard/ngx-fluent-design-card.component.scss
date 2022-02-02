@@ -1,4 +1,5 @@
 @import "../../shared/styles/variables";
+@import "../../shared/styles/mixins";
 
 .ngx-fluent-design-card {
     background: $theme-colors-white;
@@ -10,7 +11,11 @@
     box-shadow: $depth-16;
     position: relative;
 
-    @media screen and (max-width: 420px) {
+    @include ngx-fluent-design-medium-breakpoint {
         padding: $theme-padding-base;
+    }
+
+    @include ngx-fluent-design-small-breakpoint {
+        padding: $theme-padding-base / 2;
     }
 }
