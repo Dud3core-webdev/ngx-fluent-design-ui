@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { INgxFluentDesignCta } from '../../shared/types/ngx-fluent-design-cta.interface';
-import { NgxFluentDesignSlotNames } from '../../../shared/types/theme-names.type';
-import { NgxFluentDesignCtaType } from '../../../shared/types/cta.type';
+import { NgxFluentDesignSlotNames } from '../../../common/types/theme-names.type';
+import { NgxFluentDesignCtaType } from '../../../common/types/cta.type';
 
 @Component({
     selector: 'ngx-fluent-design-button',

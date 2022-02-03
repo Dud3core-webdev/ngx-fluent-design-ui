@@ -9,6 +9,7 @@ import { NgxFluentDesignProgressModule } from '../../../projects/ngx-fluent-desi
 import { NgxFluentDesignIconModule } from '../../../projects/ngx-fluent-design/src/lib/icons/ngx-fluent-design-icon.module';
 import { NgxFluentDesignAlertModule } from '../../../projects/ngx-fluent-design/src/lib/alerts/ngx-fluent-design-alert.module';
 import { AbsoluteStateOfAComponent } from './absolute-state-of-a-component/absolute-state-of-a.component';
+import { NgxFluentDesignCommonComponentsModule } from '../../../projects/ngx-fluent-design/src/lib/common/components/ngx-fluent-design-common-components.module';
 
 @NgModule({
     imports: [
@@ -21,6 +22,7 @@ import { AbsoluteStateOfAComponent } from './absolute-state-of-a-component/absol
         NgxFluentDesignProgressModule,
         NgxFluentDesignIconModule,
         NgxFluentDesignAlertModule,
+        NgxFluentDesignCommonComponentsModule
     ],
     declarations: [AbsoluteStateOfAComponent],
     exports: [AbsoluteStateOfAComponent]

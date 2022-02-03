@@ -227,3 +227,27 @@
         </section>
     </div>
 </ngx-fluent-design-card>
+
+<ngx-fluent-design-card>
+    <h1 class="mb-3 pane-header bold">Sheets</h1>
+
+    <div>
+        <p>Click the button below to see a sheet with an alert inside it.</p>
+        <ngx-fluent-design-button (clicked)="displaySheet = !displaySheet" >
+            Toggle alert
+        </ngx-fluent-design-button>
+    </div>
+</ngx-fluent-design-card>
+
+<ngx-fluent-design-sheet *ngIf="displaySheet">
+    <ngx-fluent-design-dialog
+        [primaryActionName]="'Okay'"
+        [displaySecondaryAction]="true"
+        [secondaryActionName]="'Close'"
+        [displayCloseIcon]="false"
+        (closeIconClicked)="exampleAlert('Alert close icon')"
+        (primaryActionClicked)="exampleAlert('Alert primary action')"
+        (secondaryActionClicked)="displaySheet = !displaySheet">
+        <p>This is an alert inside a "Sheet"</p>
+    </ngx-fluent-design-dialog>
+</ngx-fluent-design-sheet>

@@ -1,7 +1,7 @@
 @import "./cta/ngx-fluent-design-link.component";
 @import "./cta/link-button/ngx-fluent-design-link-button.component";
-@import "./shared/styles/typography";
-@import "./shared/styles/utilities";
+@import "common/styles/typography";
+@import "common/styles/utilities";
 
 :root {
     /** Colors */

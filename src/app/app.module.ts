@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { NgxFluentDesignNotificationModule } from 'projects/ngx-fluent-design/src/lib/notifications/ngx-fluent-design-notification.module';
 import { NgxFluentDesignCtaModule } from 'projects/ngx-fluent-design/src/lib/cta/ngx-fluent-design-cta.module';
 import { MobileTestPageModule } from './pages/mobile-test/mobile-test.page.module';
+import { NgxFluentDesignCommonComponentsModule } from '../../projects/ngx-fluent-design/src/lib/common/components/ngx-fluent-design-common-components.module';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import { MobileTestPageModule } from './pages/mobile-test/mobile-test.page.modul
         MarkdownModule.forRoot(),
         BrowserModule,
         NgxFluentDesignNotificationModule,
-        NgxFluentDesignCtaModule
+        NgxFluentDesignCtaModule,
+        NgxFluentDesignCommonComponentsModule
     ],
     bootstrap: [AppComponent]
 })

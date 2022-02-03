@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { INgxFluentDesignMessageBar } from '../shared/types/ngx-fluent-design-message-bar.interface';
-import { MessageBarType } from '../../shared/types/message-bar.type';
+import { MessageBarType } from '../../common/types/message-bar.type';
 import {
     NgxFluentDesignIconClearClose,
     NgxFluentDesignIconInfoBlocked,

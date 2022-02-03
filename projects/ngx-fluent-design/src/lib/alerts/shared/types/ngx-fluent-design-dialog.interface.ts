@@ -3,6 +3,7 @@ import { INgxFluentDesignIcon } from '../../../icons/shared/types/ngx-fluent-des
 
 export interface INgxFluentDesignDialog {
     displaySecondaryAction: boolean;
+    displayCloseIcon: boolean;
     primaryActionName: string;
     secondaryActionName: string;
     header: string;

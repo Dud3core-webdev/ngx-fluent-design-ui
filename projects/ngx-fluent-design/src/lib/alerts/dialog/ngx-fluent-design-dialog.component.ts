@@ -13,6 +13,7 @@ export class NgxFluentDesignDialogComponent implements INgxFluentDesignDialog {
     @Input() public primaryActionName: string = 'Primary Action';
     @Input() public secondaryActionName: string = 'Secondary Action';
     @Input() public header: string = '';
+    @Input() public displayCloseIcon: boolean = false;
 
     @Output() public readonly primaryActionClicked: EventEmitter<void> = new EventEmitter<void>();
     @Output() public readonly secondaryActionClicked: EventEmitter<void> = new EventEmitter<void>();

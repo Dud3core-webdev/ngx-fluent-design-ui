@@ -1,7 +1,7 @@
 <section class="ngx-fluent-design-alert">
     <section class="header">
         <h1 class="header-content">{{header}}</h1>
-        <ngx-fluent-design-icon data-spec="ngx-fluent-design-close-icon" (click)="closeIconClicked.emit()" class="close-icon" [icon]="closeIcon"></ngx-fluent-design-icon>
+        <ngx-fluent-design-icon *ngIf="displayCloseIcon" data-spec="ngx-fluent-design-close-icon" (click)="closeIconClicked.emit()" class="close-icon" [icon]="closeIcon"></ngx-fluent-design-icon>
     </section>
 
     <section class="content">

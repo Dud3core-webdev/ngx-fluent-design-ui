@@ -5,17 +5,6 @@ An open-source, Angular implementation of Microsoft's Fluent Design system. Base
 ## WARNING
 We've only tested this package with Angular 11. We are working out a plan to support multiple versions of Angular, but for now use at your own risk!
 
-## UPDATES (V: 0.1.14):
-This is an absolute monster patch boi 3000. 
-- Added a tonne of new components including progress indicators, spinners. 
-- started implementing an Icon library,
-- fixed bad CSS, 
-- added link buttons, 
-- made some adjustments to pre-existing components so that they fall inline with official MS Fluent Design Figma file.
-- Working on tooling to make sure we can get changes out as quickly (easily) as possible.
-- Unit tested components to make sure everything behaves correctly.
-- Implemented global typography rules
-
 Massive shout out to [Smephey](https://github.com/Smephey) for helping with all this and making everything look great!
 
 We're pretty stoked on this library so far, and there's definitely more updates to come! We're aiming for a V1 release as soon as possible. 
