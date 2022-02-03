@@ -48,7 +48,9 @@
     <h1 class="mb-4 pane-header bold">Links</h1>
 
     <h3 class="header">Button link</h3>
-    <p>But we need to make sure <button ngxFluentDesignLinkButton (click)="exampleAlert('button link')">Mar babies oss ay urtin no one!</button></p>
+    <p>But we need to make sure
+        <button ngxFluentDesignLinkButton (click)="exampleAlert('button link')">Mar babies oss ay urtin no one!</button>
+    </p>
 </ngx-fluent-design-card>
 
 <ngx-fluent-design-card>
@@ -101,23 +103,24 @@
         <h1 class="pane-header bold">Progress</h1>
         <h3 class="header">Spinner</h3>
         <div class="d-flex align-items-center pb-3">
-            <ngx-fluent-design-spinner class="col-3" [size]="'extra-small'" [label]="'Loading...'"></ngx-fluent-design-spinner>
-            <ngx-fluent-design-spinner class="col-3" [size]="'small'" [label]="'Loading...'"></ngx-fluent-design-spinner>
-            <ngx-fluent-design-spinner class="col-3" [size]="'medium'" [label]="'Loading...'"></ngx-fluent-design-spinner>
-            <ngx-fluent-design-spinner class="col-3" [size]="'large'" [label]="'Loading...'"></ngx-fluent-design-spinner>
+            <ngx-fluent-design-spinner [e2eSuffix]="'xs-with-label'" class="col-3" [size]="'extra-small'" [label]="'Loading...'"></ngx-fluent-design-spinner>
+            <ngx-fluent-design-spinner [e2eSuffix]="'s-with-label'" class="col-3" [size]="'small'" [label]="'Loading...'"></ngx-fluent-design-spinner>
+            <ngx-fluent-design-spinner [e2eSuffix]="'m-with-label'" class="col-3" [size]="'medium'" [label]="'Loading...'"></ngx-fluent-design-spinner>
+            <ngx-fluent-design-spinner [e2eSuffix]="'l-with-label'" class="col-3" [size]="'large'" [label]="'Loading...'"></ngx-fluent-design-spinner>
         </div>
         <div class="d-flex justify-content-around align-items-center">
-            <ngx-fluent-design-spinner class="col-3" [size]="'extra-small'"></ngx-fluent-design-spinner>
-            <ngx-fluent-design-spinner class="col-3" [size]="'small'"></ngx-fluent-design-spinner>
-            <ngx-fluent-design-spinner class="col-3" [size]="'medium'"></ngx-fluent-design-spinner>
-            <ngx-fluent-design-spinner class="col-3" [size]="'large'"></ngx-fluent-design-spinner>
+            <ngx-fluent-design-spinner [e2eSuffix]="'xs-no-label'" class="col-3" [size]="'extra-small'"></ngx-fluent-design-spinner>
+            <ngx-fluent-design-spinner [e2eSuffix]="'s-no-label'" class="col-3" [size]="'small'"></ngx-fluent-design-spinner>
+            <ngx-fluent-design-spinner [e2eSuffix]="'m-no-label'" class="col-3" [size]="'medium'"></ngx-fluent-design-spinner>
+            <ngx-fluent-design-spinner [e2eSuffix]="'l-no-label'" class="col-3" [size]="'large'"></ngx-fluent-design-spinner>
         </div>
 
         <h3 class="header">Progress Indicator</h3>
-        <ngx-fluent-design-progress-indicator [label]="'Label'" [description]="'Description'" [currentValue]="progressIndicatorCurrentValue"></ngx-fluent-design-progress-indicator>
+        <ngx-fluent-design-progress-indicator [e2eSuffix]="'label-and-description'" [label]="'Label'" [description]="'Description'"
+                                              [currentValue]="progressIndicatorCurrentValue"></ngx-fluent-design-progress-indicator>
 
         <h3 class="header">Indeterminate Progress Indicator</h3>
-        <ngx-fluent-design-progress-indicator-indeterminate [label]="'Label'" [description]="'Description'"></ngx-fluent-design-progress-indicator-indeterminate>
+        <ngx-fluent-design-progress-indicator-indeterminate [e2eSuffix]="'label-and-description'" [label]="'Label'" [description]="'Description'"></ngx-fluent-design-progress-indicator-indeterminate>
     </div>
 </ngx-fluent-design-card>
 

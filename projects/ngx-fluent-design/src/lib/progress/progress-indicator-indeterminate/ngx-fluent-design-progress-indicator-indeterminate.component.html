@@ -1,7 +1,14 @@
 <ng-container>
-    <label *ngIf="label" data-spec="fluent-design-progress-indicator-indeterminate-label" for="progress-bar-indeterminate">{{label}}</label>
-    <div class="progress-background" id="progress-bar-indeterminate">
+    <label *ngIf="label"
+           [attr.data-e2e]="'@ngx-fluent-design-progress-indicator-indeterminate-label/' + e2eSuffix"
+           data-spec="fluent-design-progress-indicator-indeterminate-label"
+           for="progress-bar-indeterminate">{{label}}</label>
+    <div [attr.data-e2e]="'@ngx-fluent-design-progress-indicator-indeterminate/' + e2eSuffix"
+         class="progress-background"
+         id="progress-bar-indeterminate">
         <div class="progress-bar"></div>
     </div>
-    <p *ngIf="description" data-spec="fluent-design-progress-indicator-indeterminate-description">{{description}}</p>
+    <p *ngIf="description"
+       [attr.data-e2e]="'@ngx-fluent-design-progress-indicator-indeterminate-description/' + e2eSuffix"
+       data-spec="fluent-design-progress-indicator-indeterminate-description">{{description}}</p>
 </ng-container>
