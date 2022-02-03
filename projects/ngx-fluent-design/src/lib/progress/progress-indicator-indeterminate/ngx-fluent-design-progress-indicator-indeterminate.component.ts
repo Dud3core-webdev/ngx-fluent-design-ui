@@ -9,4 +9,5 @@ import { Component, Input } from '@angular/core';
 export class NgxFluentDesignProgressIndicatorIndeterminateComponent {
     @Input() public label: string = '';
     @Input() public description: string = '';
+    @Input() public e2eSuffix: string = 'unspecified-progress-indicator-indeterminate';
 }

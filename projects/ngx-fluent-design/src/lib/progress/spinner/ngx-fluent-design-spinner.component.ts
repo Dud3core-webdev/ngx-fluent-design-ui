@@ -10,4 +10,5 @@ import { NgxFluentDesignProgressSizeType } from '../../common/types/ngx-fluent-d
 export class NgxFluentDesignSpinnerComponent {
     @Input() public size: NgxFluentDesignProgressSizeType = 'medium';
     @Input() public label: string = '';
+    @Input() public e2eSuffix: string = 'unspecified-spinner';
 }

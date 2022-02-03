@@ -10,4 +10,5 @@ export class NgxFluentDesignProgressIndicatorComponent {
     @Input() public currentValue: number = 0;
     @Input() public label: string = '';
     @Input() public description: string = '';
+    @Input() public e2eSuffix: string = 'unspecified-progress-indicator';
 }
