@@ -8,7 +8,7 @@
         flex-direction: row;
 
         .toggle-label {
-            margin-right: calc($theme-padding-base / 2);
+            margin-right: $theme-padding-base / 2;
         }
     }
 

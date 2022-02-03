@@ -44,7 +44,7 @@
     }
 
     .calls-to-action {
-        padding: calc($theme-padding-base / 2) $theme-padding-base;
+        padding: $theme-padding-base / 2 $theme-padding-base;
         display: flex;
         align-items: flex-end;
         flex-direction: row;
