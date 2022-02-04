@@ -1,5 +1,13 @@
 @import "../../styles/variables";
 
+::ng-deep {
+    body, html {
+        .no-scroll {
+            overflow: hidden;
+        }
+    }
+}
+
 .overlay {
     position: fixed;
     width: 100%;

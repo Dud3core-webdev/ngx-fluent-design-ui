@@ -1,4 +1,4 @@
-<div class="overlay">
+<div class="overlay" [@fadeIn]="hidden ? 'hide' : 'show'">
     <div class="overlay-content">
         <ng-content></ng-content>
     </div>

@@ -242,7 +242,7 @@
     </div>
 </ngx-fluent-design-card>
 
-<ngx-fluent-design-sheet *ngIf="displaySheet">
+<ngx-fluent-design-sheet [hidden]="!displaySheet">
     <section class="w-100 h-100 d-flex align-items-center justify-content-center">
         <ngx-fluent-design-dialog
             [header]="'YOOOOOO'"
