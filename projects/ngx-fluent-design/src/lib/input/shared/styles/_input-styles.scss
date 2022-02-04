@@ -47,7 +47,6 @@
             margin: 0;
             padding: 8px 0;
             box-sizing: border-box;
-            color: $theme-input-border;
             border-radius: 0;
             border: none;
             resize: vertical;
@@ -92,19 +91,15 @@
                     border: none !important;
                 }
             }
-        }
-    }
 
-    label {
-        -webkit-font-smoothing: antialiased;
-        font-size: 14px;
-        font-weight: 600;
-        color: $theme-primary;
-        box-sizing: border-box;
-        box-shadow: none;
-        margin: 0;
-        display: block;
-        padding: 5px 0;
-        overflow-wrap: break-word;
+            textarea {
+                background-color: inherit;
+                pointer-events: none;
+
+                &:hover {
+                    border: none !important;
+                }
+            }
+        }
     }
 }

@@ -168,17 +168,33 @@
             </ngx-fluent-design-toggle>
         </section>
 
-        <form [formGroup]="testFormFieldForm">
-            <ngx-fluent-design-form-field [disabled]="inputsDisabled">
+        <form [formGroup]="testFormTextAreaForm">
+            <h4 class="subject-title">Standard inputs</h4>
+            <ngx-fluent-design-form-field [label]="'A Label'" [disabled]="inputsDisabled">
                 <input ngxFluentDesignInput formControlName="bordered" placeholder="Hello there">
             </ngx-fluent-design-form-field>
 
-            <ngx-fluent-design-form-field-underlined [label]="'Test Label'" [disabled]="inputsDisabled">
+            <ngx-fluent-design-form-field-underlined [label]="'A Label'" [disabled]="inputsDisabled">
                 <input ngxFluentDesignInput formControlName="bottomBorder" placeholder="Bottom Border">
             </ngx-fluent-design-form-field-underlined>
 
             <ngx-fluent-design-form-field-borderless [label]="'Test Label'" [disabled]="inputsDisabled">
                 <input ngxFluentDesignInput formControlName="borderless" placeholder="Borderless">
+            </ngx-fluent-design-form-field-borderless>
+        </form>
+
+        <form [formGroup]="testFormTextAreaForm">
+            <h4 class="subject-title">Standard inputs</h4>
+            <ngx-fluent-design-form-field [label]="'A Label'" [disabled]="inputsDisabled">
+                <textarea ngxFluentDesignInput formControlName="bordered" placeholder="Hello there"></textarea>
+            </ngx-fluent-design-form-field>
+
+            <ngx-fluent-design-form-field-underlined [label]="'A Label'" [disabled]="inputsDisabled">
+                <textarea ngxFluentDesignInput formControlName="bottomBorder" placeholder="Bottom Border"></textarea>
+            </ngx-fluent-design-form-field-underlined>
+
+            <ngx-fluent-design-form-field-borderless [label]="'Test Label'" [disabled]="inputsDisabled">
+                <textarea ngxFluentDesignInput formControlName="borderless" placeholder="Borderless"></textarea>
             </ngx-fluent-design-form-field-borderless>
         </form>
     </div>

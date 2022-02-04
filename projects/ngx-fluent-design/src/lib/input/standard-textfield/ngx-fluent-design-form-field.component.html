@@ -1,4 +1,7 @@
-<label *ngIf="displayLabel" [for]="id">{{label}}</label>
-<div class="fluent-input-field" [ngClass]="{ 'disabled' : disabled }">
-    <ng-content></ng-content>
-</div>
+<section class="fluent-input-field-container">
+    <label *ngIf="displayLabel" [for]="id">{{label}}</label>
+    <div class="fluent-input-field" [ngClass]="{ 'disabled' : disabled }">
+        <ng-content></ng-content>
+    </div>
+
+</section>

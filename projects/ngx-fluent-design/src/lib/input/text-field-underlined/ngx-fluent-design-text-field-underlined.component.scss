@@ -12,11 +12,21 @@
     &.underlined {
         display: flex;
         flex-direction: row;
+        align-items: baseline;
+        justify-content: normal;
         height: 100%;
+
+        ::ng-deep {
+            input {
+                min-width: 75%;
+            }
+        }
 
         label {
             color: $theme-colors-grey190;
             padding: 6px 0;
+            text-overflow: ellipsis;
+            max-width: 25%;
         }
     }
 }
