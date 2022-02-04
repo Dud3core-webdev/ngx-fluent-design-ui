@@ -10,6 +10,7 @@ import { NgxFluentDesignIconModule } from '../../../projects/ngx-fluent-design/s
 import { NgxFluentDesignAlertModule } from '../../../projects/ngx-fluent-design/src/lib/alerts/ngx-fluent-design-alert.module';
 import { AbsoluteStateOfAComponent } from './absolute-state-of-a-component/absolute-state-of-a.component';
 import { NgxFluentDesignCommonComponentsModule } from '../../../projects/ngx-fluent-design/src/lib/common/components/ngx-fluent-design-common-components.module';
+import { NgxFluentDesignPanelModule } from '../../../projects/ngx-fluent-design/src/lib/surface/ngx-fluent-design-surface.module';
 
 @NgModule({
     imports: [
@@ -22,9 +23,11 @@ import { NgxFluentDesignCommonComponentsModule } from '../../../projects/ngx-flu
         NgxFluentDesignProgressModule,
         NgxFluentDesignIconModule,
         NgxFluentDesignAlertModule,
-        NgxFluentDesignCommonComponentsModule
+        NgxFluentDesignCommonComponentsModule,
+        NgxFluentDesignPanelModule
     ],
     declarations: [AbsoluteStateOfAComponent],
     exports: [AbsoluteStateOfAComponent]
 })
-export class SharedModule {}
+export class SharedModule {
+}

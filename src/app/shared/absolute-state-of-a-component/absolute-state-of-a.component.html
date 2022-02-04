@@ -145,10 +145,10 @@
     <div class="pb-3">
         <h1 class="mb-3 pane-header bold">Dialog</h1>
         <ngx-fluent-design-dialog
-                [header]="'Hello there'"
-                (closeIconClicked)="exampleAlert('Alert close icon')"
-                (primaryActionClicked)="exampleAlert('Alert primary action')"
-                (secondaryActionClicked)="exampleAlert('Alert secondary Action')">
+            [header]="'Hello there'"
+            (closeIconClicked)="exampleAlert('Alert close icon')"
+            (primaryActionClicked)="exampleAlert('Alert primary action')"
+            (secondaryActionClicked)="exampleAlert('Alert secondary Action')">
             <p>This is some content and this dialog component really needs more work!</p>
         </ngx-fluent-design-dialog>
     </div>
@@ -244,8 +244,20 @@
 
     <div>
         <p>Click the button below to see a sheet with an alert inside it.</p>
-        <ngx-fluent-design-button (clicked)="displaySheet = !displaySheet" >
+        <ngx-fluent-design-button (clicked)="displaySheet = !displaySheet">
             Toggle alert
+        </ngx-fluent-design-button>
+    </div>
+</ngx-fluent-design-card>
+
+<ngx-fluent-design-card>
+    <h1 class="mb-3 pane-header bold">Surfaces</h1>
+
+    <h3>Basic Panel</h3>
+    <hr>
+    <div class="pt-3">
+        <ngx-fluent-design-button (clicked)="isPanelOpen = !isPanelOpen">
+            Open Panel
         </ngx-fluent-design-button>
     </div>
 </ngx-fluent-design-card>
@@ -263,5 +275,11 @@
             (secondaryActionClicked)="displaySheet = !displaySheet">
             <p>This is an alert inside a "Sheet"</p>
         </ngx-fluent-design-dialog>
+    </section>
+</ngx-fluent-design-sheet>
+
+<ngx-fluent-design-sheet *ngIf="isPanelOpen">
+    <section class="w-100 h-100 d-flex align-items-center justify-content-center">
+        <ngx-fluent-design-panel></ngx-fluent-design-panel>
     </section>
 </ngx-fluent-design-sheet>
