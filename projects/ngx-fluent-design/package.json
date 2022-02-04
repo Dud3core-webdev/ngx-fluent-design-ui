@@ -1,7 +1,7 @@
 {
     "name": "ngx-fluent-design",
     "description": "An ngx implementation of Microsoft's fluent design",
-    "version": "0.2.4",
+    "version": "0.3.0",
     "sideEffects": false,
     "exports": {
         ".": {
