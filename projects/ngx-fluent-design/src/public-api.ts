@@ -6,9 +6,9 @@ export { NgxFluentDesignProgressSizeType } from './lib/common/types/ngx-fluent-d
 
 /** Common Components */
 export { NgxFluentDesignSheetComponent } from './lib/common/components/sheet/ngx-fluent-design-sheet.component';
+export { NgxFluentDesignCardComponent } from './lib/common/components/card/ngx-fluent-design-card.component';
 
 /** card */
-export { NgxFluentDesignCardComponent } from './lib/card/standard/ngx-fluent-design-card.component';
 export { NgxFluentDesignDocumentCardComponent } from './lib/card/document/ngx-fluent-design-document-card.component';
 
 /** Input */

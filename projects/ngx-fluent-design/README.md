@@ -5,6 +5,15 @@ An open-source, Angular implementation of Microsoft's Fluent Design system. Base
 ## WARNING
 We've only tested this package with Angular 11. We are working out a plan to support multiple versions of Angular, but for now use at your own risk!
 
+## VERSIONS 0.3.2 -> 0.3.4 of this library are broken, please do not install these versions. 
+
+This was due to including `BrowserAnimationsModule` at the library level, and would cause a multiple imports error. Please include `BrowserAnimationsModule` in your `app.module.ts` file.
+
+## Breaking Changes
+Cards have been moved from `NgxFluentDesignCardModule` to `NgxFluentDesignCommomComponentsModule`
+
+
+## Notes
 Massive shout out to [Smephey](https://github.com/Smephey) for helping with all this and making everything look great!
 
 We're pretty stoked on this library so far, and there's definitely more updates to come! We're aiming for a V1 release as soon as possible. 
