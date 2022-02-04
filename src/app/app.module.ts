@@ -9,6 +9,7 @@ import { NgxFluentDesignNotificationModule } from 'projects/ngx-fluent-design/sr
 import { NgxFluentDesignCtaModule } from 'projects/ngx-fluent-design/src/lib/cta/ngx-fluent-design-cta.module';
 import { MobileTestPageModule } from './pages/mobile-test/mobile-test.page.module';
 import { NgxFluentDesignCommonComponentsModule } from '../../projects/ngx-fluent-design/src/lib/common/components/ngx-fluent-design-common-components.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
@@ -18,6 +19,7 @@ import { NgxFluentDesignCommonComponentsModule } from '../../projects/ngx-fluent
         AppRoutingModule,
         DesktopTestPageModule,
         MobileTestPageModule,
+        BrowserAnimationsModule,
         HttpClientModule,
         MarkdownModule.forRoot(),
         BrowserModule,
