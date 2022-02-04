@@ -49,8 +49,16 @@
 
     <h3 class="header">Button link</h3>
     <p>But we need to make sure
-        <button ngxFluentDesignLinkButton (click)="exampleAlert('button link')">Mar babies oss ay urtin no one!</button>
+        <button [disabled]="buttonLinkDisabled" ngxFluentDesignLinkButton (click)="exampleAlert('button link')">Mar babies oss ay urtin no one!</button>
     </p>
+
+    <ngx-fluent-design-toggle [label]="'Toggle link disabled'"
+                              [toggled]="buttonLinkDisabled"
+                              (changeEvent)="buttonLinkDisabled = !buttonLinkDisabled"
+                              [disabled]="false">
+    </ngx-fluent-design-toggle>
+
+    {{buttonLinkDisabled}}
 </ngx-fluent-design-card>
 
 <ngx-fluent-design-card>

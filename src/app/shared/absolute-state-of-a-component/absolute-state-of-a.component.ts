@@ -11,6 +11,7 @@ export class AbsoluteStateOfAComponent implements AfterViewInit {
     public isToggled: boolean = false;
     public inputsDisabled: boolean = false;
     public displaySheet: boolean = false;
+    public buttonLinkDisabled: boolean = false;
 
     testForm = new FormGroup({
         checkboxEnabled: new FormControl(''),

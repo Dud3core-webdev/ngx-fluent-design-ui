@@ -107,6 +107,11 @@
     &:focus {
         border: 1px solid $theme-colors-grey190;
     }
+
+    &:disabled, [disabled] {
+        color: $theme-type-disabled;
+        cursor: not-allowed;
+    }
 }
 
 @mixin ngx-fluent-design-small-breakpoint {
