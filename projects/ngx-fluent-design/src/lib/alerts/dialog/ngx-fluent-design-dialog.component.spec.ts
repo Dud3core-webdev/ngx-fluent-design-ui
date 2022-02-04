@@ -2,8 +2,8 @@ import { NgxFluentDesignDialogComponent } from './ngx-fluent-design-dialog.compo
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NgxFluentDesignCtaModule } from '../../cta/ngx-fluent-design-cta.module';
 import { NgxFluentDesignIconModule } from '../../icons/ngx-fluent-design-icon.module';
-import SpyInstance = jest.SpyInstance;
 import { bySpecAttribute } from '../../../testing/test-helper';
+import SpyInstance = jest.SpyInstance;
 
 const spyOn = jest.spyOn;
 
@@ -55,7 +55,8 @@ describe('NgxFluentDesignDialogComponent', () => {
 
             describe('When the Secondary Action CTA is clicked', () => {
                 beforeEach(() => {
-                    const secondaryActionCta = fixture.debugElement.query(bySpecAttribute('fluent-design-message-bar-action-secondary')).componentInstance;
+                    const secondaryActionCta = fixture.debugElement.query(bySpecAttribute('fluent-design-message-bar-action-secondary'))
+                        .componentInstance;
 
                     component.displaySecondaryAction = true;
                     secondaryActionCta.clicked.emit();
@@ -69,24 +70,33 @@ describe('NgxFluentDesignDialogComponent', () => {
             });
         });
 
-        describe('When the Close Icon is clicked', () => {
+        describe('When the Close Icon is enabled', () => {
 
             beforeEach(() => {
-
-                const closedIcon = fixture.debugElement.query(bySpecAttribute('ngx-fluent-design-close-icon'));
-                closedIcon.nativeElement.click();
-
+                component.displayCloseIcon = true;
                 fixture.detectChanges();
             });
 
-            it('Then the closeIconClicked event is emitted', () => {
-                expect(closedIconClickedEventSpy).toHaveBeenCalledWith();
+            describe('When the Close Icon is clicked', () => {
+
+                beforeEach(() => {
+                    const closedIcon = fixture.debugElement.query(bySpecAttribute('ngx-fluent-design-close-icon'));
+                    closedIcon.nativeElement.click();
+
+                    fixture.detectChanges();
+                });
+
+                it('Then the closeIconClicked event is emitted', () => {
+                    expect(closedIconClickedEventSpy).toHaveBeenCalledWith();
+                });
             });
         });
 
         describe('When the Primary Action is clicked', () => {
+
             beforeEach(() => {
-                const primaryActionCta = fixture.debugElement.query(bySpecAttribute('fluent-design-message-bar-action-primary')).componentInstance;
+                const primaryActionCta = fixture.debugElement.query(bySpecAttribute('fluent-design-message-bar-action-primary'))
+                    .componentInstance;
                 primaryActionCta.clicked.emit();
 
                 fixture.detectChanges();
