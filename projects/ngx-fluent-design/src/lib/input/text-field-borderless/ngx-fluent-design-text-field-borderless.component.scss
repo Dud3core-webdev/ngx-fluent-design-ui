@@ -9,4 +9,16 @@
     border-right: none;
     border-bottom: none;
     border-radius: 0;
+
+    &.borderless {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+
+        label {
+            color: $theme-colors-grey190;
+            padding: 6px 0;
+            font-weight: 600;
+        }
+    }
 }

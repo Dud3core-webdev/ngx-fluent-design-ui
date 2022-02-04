@@ -1,4 +1,4 @@
-<label [for]="id">{{label}}</label>
-<div class="fluent-input-field" [ngClass]="{ 'disabled' : disabled }">
+<div class="fluent-input-field underlined" [ngClass]="{ 'disabled' : disabled }">
+    <label class="bold" [for]="id">{{label}}: </label>
     <ng-content></ng-content>
 </div>
