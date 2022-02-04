@@ -98,7 +98,7 @@
     cursor: pointer;
     border: 1px solid transparent;
 
-    &:active, &:hover {
+    &.active, &:hover {
         filter: $theme-dark-alt;
         background: inherit;
         border: 1px solid transparent;
