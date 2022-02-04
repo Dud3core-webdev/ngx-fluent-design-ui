@@ -42,4 +42,8 @@
 
 .fluent-design-link {
     @include action-link;
+
+    &:visited {
+        background-color: $theme-dark-alt;
+    }
 }
