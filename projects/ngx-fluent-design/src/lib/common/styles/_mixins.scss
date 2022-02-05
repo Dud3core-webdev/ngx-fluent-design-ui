@@ -99,7 +99,7 @@
     border: 1px solid transparent;
 
     &.active, &:hover {
-        filter: $theme-dark-alt;
+        color: $theme-dark-alt;
         background: inherit;
         border: 1px solid transparent;
     }
