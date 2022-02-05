@@ -12,6 +12,7 @@ This was due to including `BrowserAnimationsModule` at the library level, and wo
 ## Breaking Changes
 Cards have been moved from `NgxFluentDesignCardModule` to `NgxFluentDesignCommomComponentsModule`
 
+Dropped support for custom SCSS variables, mostly the grey palette. (V 0.3.7)
 
 ## Notes
 Massive shout out to [Smephey](https://github.com/Smephey) for helping with all this and making everything look great!
