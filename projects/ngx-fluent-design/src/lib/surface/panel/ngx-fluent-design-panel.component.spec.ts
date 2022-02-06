@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NgxFluentDesignPanelComponent } from './ngx-fluent-design-panel.component';
+import { NgxFluentDesignIconModule } from '../../icons/ngx-fluent-design-icon.module';
 
 describe('PanelComponent', () => {
     let component: NgxFluentDesignPanelComponent;
@@ -8,7 +9,8 @@ describe('PanelComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [NgxFluentDesignPanelComponent]
+            declarations: [NgxFluentDesignPanelComponent],
+            imports: [NgxFluentDesignIconModule]
         })
             .compileComponents();
     });
