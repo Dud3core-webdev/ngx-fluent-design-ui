@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgxFluentDesignPanelComponent } from './panel/ngx-fluent-design-panel.component';
 import { NgxFluentDesignIconModule } from '../icons/ngx-fluent-design-icon.module';
+import { NgxFluentDesignCommonComponentsModule } from '../common/components/ngx-fluent-design-common-components.module';
 
 const DECLARATIONS: Array<any> = [
     NgxFluentDesignPanelComponent
@@ -10,7 +11,8 @@ const DECLARATIONS: Array<any> = [
 @NgModule({
     imports: [
         CommonModule,
-        NgxFluentDesignIconModule
+        NgxFluentDesignIconModule,
+        NgxFluentDesignCommonComponentsModule
     ],
     declarations: [...DECLARATIONS],
     exports: [...DECLARATIONS]
