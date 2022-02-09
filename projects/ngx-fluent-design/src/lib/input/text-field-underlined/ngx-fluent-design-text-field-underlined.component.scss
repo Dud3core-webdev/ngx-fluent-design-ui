@@ -18,15 +18,12 @@
 
         ::ng-deep {
             input {
-                min-width: 75%;
+                flex-grow: 1;
             }
-        }
 
-        label {
-            color: $theme-colors-grey190;
-            padding: 6px 0;
-            text-overflow: ellipsis;
-            max-width: 25%;
+            textarea {
+                flex-grow: 1;
+            }
         }
     }
 }
