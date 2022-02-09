@@ -1,13 +1,13 @@
-<ngx-fluent-design-sheet>
-    <section class="ngx-fluent-design-panel">
-        <section class="header">
-            <h1 class="header-content">{{header}}</h1>
-            <ngx-fluent-design-icon *ngIf="displayCloseIcon" (click)="closeIconClicked.emit()" class="close-icon" [icon]="closeIcon"></ngx-fluent-design-icon>
-        </section>
-
-        <section class="content">
-            <ng-content></ng-content>
-        </section>
+<section class="ngx-fluent-design-panel">
+    <section class="header">
+        <h1 class="header-content">{{header}}</h1>
+        <ngx-fluent-design-icon *ngIf="displayCloseIcon" (click)="handler.close()" class="close-icon" [icon]="closeIcon"></ngx-fluent-design-icon>
     </section>
-</ngx-fluent-design-sheet>
+
+    <section class="content">
+        <ng-content></ng-content>
+    </section>
+</section>
+
+<ngx-fluent-design-sheet></ngx-fluent-design-sheet>
 

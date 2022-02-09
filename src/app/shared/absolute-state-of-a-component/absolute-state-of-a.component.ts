@@ -1,6 +1,7 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgxFluentDesignIconInfoWarn } from '../../../../projects/ngx-fluent-design/src/lib/icons/shared/constants/ngx-fluent-design-icons-list';
+import { NgxFluentDesignPanelHandler } from '../../../../projects/ngx-fluent-design/src/lib/surface/panel/panel-handler.helper';
 
 @Component({
     selector: 'absolute-mess',
@@ -12,7 +13,7 @@ export class AbsoluteStateOfAComponent implements AfterViewInit {
     public inputsDisabled: boolean = false;
     public displaySheet: boolean = false;
     public buttonLinkDisabled: boolean = false;
-    public isPanelOpen: boolean = false;
+    public panelHandler: NgxFluentDesignPanelHandler = new NgxFluentDesignPanelHandler(false);
 
     testForm = new FormGroup({
         checkboxEnabled: new FormControl(''),

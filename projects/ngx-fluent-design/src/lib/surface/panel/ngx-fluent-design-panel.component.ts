@@ -1,6 +1,7 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { INgxFluentDesignIcon } from '../../icons/shared/types/ngx-fluent-design-icon.interface';
 import { NgxFluentDesignIconClearClose } from '../../icons/shared/constants/ngx-fluent-design-icons-list';
+import { NgxFluentDesignPanelHandler } from './panel-handler.helper';
 
 @Component({
     selector: 'ngx-fluent-design-panel',
@@ -10,8 +11,7 @@ import { NgxFluentDesignIconClearClose } from '../../icons/shared/constants/ngx-
 export class NgxFluentDesignPanelComponent {
     @Input() public displayCloseIcon: boolean = true;
     @Input() public header: string;
-
-    @Output() public readonly closeIconClicked: EventEmitter<void> = new EventEmitter<void>();
+    @Input() public handler: NgxFluentDesignPanelHandler = new NgxFluentDesignPanelHandler(false);
 
     public readonly closeIcon: INgxFluentDesignIcon = NgxFluentDesignIconClearClose;
 }
