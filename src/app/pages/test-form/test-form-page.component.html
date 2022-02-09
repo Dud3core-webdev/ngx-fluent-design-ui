@@ -1,0 +1,42 @@
+<div class="mobile-test container w-100">
+    <h1 class="hero-title">This is just a test form</h1>
+
+    <span class="m-5">
+        <ngx-fluent-design-message-bar>
+            Literally just using this as a test form to see how everything looks once it's all put together
+        </ngx-fluent-design-message-bar>
+    </span>
+
+    <ngx-fluent-design-card>
+        <h2 class="pane-header">Personal details</h2>
+        <p>This doesn't actually do anything!</p>
+
+        <form>
+            <section class="my-3 d-flex flex-row w-100 justify-content-between">
+                <ngx-fluent-design-toggle
+                    [inlineLabel]="true"
+                    (changeEvent)="toggleHasSubmissionError()"
+                    [toggled]="hasSubmissionError"
+                    [label]="'Toggle for submission error'">
+                </ngx-fluent-design-toggle>
+                <span>Submission error toggled: {{hasSubmissionError | json}}</span>
+            </section>
+
+            <section class="w-md-50 w-100">
+                <ngx-fluent-design-form-field-underlined label="First Name">
+                    <input ngxFluentDesignInput />
+                </ngx-fluent-design-form-field-underlined>
+
+                <ngx-fluent-design-form-field-underlined label="Last Name">
+                    <input ngxFluentDesignInput />
+                </ngx-fluent-design-form-field-underlined>
+            </section>
+
+            <div class="d-flex flex-row">
+                <ngx-fluent-design-compound-button [disabled]="formGroup.invalid" [secondaryText]="'This may take a while'">
+                    <span>Submit</span>
+                </ngx-fluent-design-compound-button>
+            </div>
+        </form>
+    </ngx-fluent-design-card>
+</div>

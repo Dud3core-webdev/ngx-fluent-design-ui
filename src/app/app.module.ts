@@ -10,6 +10,7 @@ import { NgxFluentDesignCtaModule } from 'projects/ngx-fluent-design/src/lib/cta
 import { MobileTestPageModule } from './pages/mobile-test/mobile-test.page.module';
 import { NgxFluentDesignCommonComponentsModule } from '../../projects/ngx-fluent-design/src/lib/common/components/ngx-fluent-design-common-components.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TestFormPageModule } from './pages/test-form/test-form-page.module';
 
 @NgModule({
     declarations: [
@@ -19,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         AppRoutingModule,
         DesktopTestPageModule,
         MobileTestPageModule,
+        TestFormPageModule,
         BrowserAnimationsModule,
         HttpClientModule,
         MarkdownModule.forRoot(),

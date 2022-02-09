@@ -2,6 +2,7 @@ import { Router, RouterModule, Routes } from '@angular/router';
 import { DesktopTestPageComponent } from './pages/desktop-test/desktop-test.page.component';
 import { NgModule } from '@angular/core';
 import { MobileTestPageComponent } from './pages/mobile-test/mobile-test.page.component';
+import { TestFormPageComponent } from './pages/test-form/test-form-page.component';
 
 const routes: Routes = [
     {
@@ -16,6 +17,10 @@ const routes: Routes = [
     {
         path: 'mobile',
         component: MobileTestPageComponent
+    },
+    {
+        path: 'test-form',
+        component: TestFormPageComponent
     }
 ];
 
