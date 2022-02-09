@@ -10,6 +10,5 @@ export class NgxFluentDesignTextFieldBorderlessComponent implements INgxFluentDe
     @Input() public disabled: boolean;
     @Input() public displayLabel: boolean;
     @Input() public id: string;
-    @Input() public label: string;
 }
 

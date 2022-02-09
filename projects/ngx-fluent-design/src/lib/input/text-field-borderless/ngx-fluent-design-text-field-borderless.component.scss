@@ -9,4 +9,10 @@
     border-right: none;
     border-bottom: none;
     border-radius: 0;
+
+    ::ng-deep {
+        input, textarea {
+            flex-grow: 0;
+        }
+    }
 }

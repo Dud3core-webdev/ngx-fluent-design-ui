@@ -1,6 +1,6 @@
 export interface INgxFluentDesignInput {
     id: string;
-    label: string;
+    label?: string;
     disabled: boolean;
     displayLabel: boolean;
 }
