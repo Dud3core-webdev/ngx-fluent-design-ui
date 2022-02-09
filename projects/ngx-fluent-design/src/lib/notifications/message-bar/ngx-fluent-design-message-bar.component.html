@@ -1,7 +1,8 @@
 <section class="ngx-fluent-design-message-bar" [ngClass]="[messageBarType]" [hidden]="shouldBeHidden">
-    <ngx-fluent-design-icon class="icon" [icon]="icon"></ngx-fluent-design-icon>
-    <p class="message"><ng-content></ng-content></p>
-
+    <span class="message-container">
+        <ngx-fluent-design-icon class="icon" [icon]="icon"></ngx-fluent-design-icon>
+        <span class="message"><ng-content></ng-content></span>
+    </span>
     <section class="calls-to-action" *ngIf="canDisplayActionBar">
         <ngx-fluent-design-button data-spec="fluent-design-message-bar-action" class="user-action" *ngIf="displayActions" (clicked)="onActionClicked()" type="standard">{{actionName}}</ngx-fluent-design-button>
         <ngx-fluent-design-icon *ngIf="canDismiss" data-spec="fluent-design-message-bar-dismiss-CTA" class="x-icon" (click)="onCloseClicked()" [icon]="closeLogo"></ngx-fluent-design-icon>

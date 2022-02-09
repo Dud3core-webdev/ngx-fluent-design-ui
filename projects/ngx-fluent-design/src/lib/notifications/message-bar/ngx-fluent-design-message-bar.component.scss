@@ -34,13 +34,16 @@
         margin: 0 8px;
     }
 
-    .message {
-        font-size: $theme-metadata-font-size !important;
-        line-height: normal;
+    .message-container {
         display: flex;
         align-items: center;
-        margin: 8px 12px 8px 8px;
-        width: 75%;
+        min-width: 75%;
+
+        .message {
+            font-size: $theme-metadata-font-size !important;
+            line-height: normal;
+            margin: 8px 12px 8px 8px;
+        }
     }
 
     .calls-to-action {
