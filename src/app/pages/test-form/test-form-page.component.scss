@@ -1,0 +1,8 @@
+@import "./projects/ngx-fluent-design/src/lib/common/styles/mixins";
+
+.w-md-50 {
+    width: 50%;
+    @include ngx-fluent-design-medium-breakpoint {
+        width: 100%;
+    }
+}

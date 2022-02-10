@@ -1,3 +1,18 @@
+<ngx-fluent-design-sheet [hidden]="!showModal">
+    <section class="w-100 h-100 d-flex align-items-center justify-content-center">
+        <ngx-fluent-design-dialog
+            [header]="'Are you sure you want to submit this form?'"
+            [primaryActionName]="'Submit Form'"
+            [displaySecondaryAction]="true"
+            [secondaryActionName]="'Cancel & Reset'"
+            [displayCloseIcon]="false"
+            (primaryActionClicked)="submitForm()"
+            (secondaryActionClicked)="cancelFormSubmission()">
+            <p>This will start the mock submission process. Cancelling will reset your form</p>
+        </ngx-fluent-design-dialog>
+    </section>
+</ngx-fluent-design-sheet>
+
 <div class="mobile-test container w-100">
     <h1 class="hero-title">This is just a test form</h1>
 
@@ -7,36 +22,94 @@
         </ngx-fluent-design-message-bar>
     </span>
 
+    <section class="my-3 d-flex flex-row w-100 justify-content-between">
+        <ngx-fluent-design-toggle
+            [inlineLabel]="true"
+            (changeEvent)="toggleHasSubmissionError()"
+            [toggled]="hasSubmissionError"
+            [label]="'Toggle for submission error'">
+        </ngx-fluent-design-toggle>
+        <span>Submission error toggled: {{hasSubmissionError | json}}</span>
+    </section>
+
     <ngx-fluent-design-card>
-        <h2 class="pane-header">Personal details</h2>
+        <h2 class="pane-header">Random Test Form</h2>
         <p>This doesn't actually do anything!</p>
 
-        <form>
-            <section class="my-3 d-flex flex-row w-100 justify-content-between">
-                <ngx-fluent-design-toggle
-                    [inlineLabel]="true"
-                    (changeEvent)="toggleHasSubmissionError()"
-                    [toggled]="hasSubmissionError"
-                    [label]="'Toggle for submission error'">
-                </ngx-fluent-design-toggle>
-                <span>Submission error toggled: {{hasSubmissionError | json}}</span>
-            </section>
-
-            <section class="w-md-50 w-100">
+        <form [formGroup]="formGroup">
+            <section class="w-md-50 my-4">
+                <h3 class="subject-title">Personal details</h3>
                 <ngx-fluent-design-form-field-underlined label="First Name">
-                    <input ngxFluentDesignInput />
+                    <input formControlName="firstName" ngxFluentDesignInput />
                 </ngx-fluent-design-form-field-underlined>
 
                 <ngx-fluent-design-form-field-underlined label="Last Name">
-                    <input ngxFluentDesignInput />
+                    <input  formControlName="lastName" ngxFluentDesignInput />
                 </ngx-fluent-design-form-field-underlined>
             </section>
 
-            <div class="d-flex flex-row">
-                <ngx-fluent-design-compound-button [disabled]="formGroup.invalid" [secondaryText]="'This may take a while'">
-                    <span>Submit</span>
+            <section class="my-4">
+                <h3 class="subject-title">What is your favourite game?</h3>
+                <section class="d-flex flex-md-row flex-column justify-content-between w-100">
+                    <ngx-fluent-design-radio [name]="'radio'" formControlName="favouriteGame"
+                                             [label]="'Radio Enabled'"
+                                             [value]="'Some value'">
+                    </ngx-fluent-design-radio>
+
+                    <ngx-fluent-design-radio [name]="'radio'" formControlName="favouriteGame"
+                                             [label]="'Radio Enabled'"
+                                             [value]="'some value 2'">
+                    </ngx-fluent-design-radio>
+
+                    <ngx-fluent-design-radio [name]="'radio'" formControlName="favouriteGame"
+                                             [e2eSuffix]="'form-section-disabled'"
+                                             [label]="'Disabled'"
+                                             [value]="'Radio disabled value'">
+                    </ngx-fluent-design-radio>
+                </section>
+            </section>
+
+            <section class="my-4">
+                <h3 class="subject-title">Consent to Marketing</h3>
+
+                <ngx-fluent-design-checkbox [label]="'I Consent to Marketing'"
+                                            formControlName="marketingConsent"
+                                            [checked]="formGroup.get('marketingConsent').value">
+                </ngx-fluent-design-checkbox>
+            </section>
+
+            <div class="d-flex flex-row mt-5">
+                <ngx-fluent-design-compound-button (clicked)="toggleConfirmModal()"
+                                                   [disabled]="formGroup.invalid || showLoadingSpinner">
+                    <span *ngIf="!showLoadingSpinner">Submit</span>
+                    <ngx-fluent-design-spinner
+                        *ngIf="showLoadingSpinner"
+                        [label]="'Please wait while we submit your details'"
+                        size="extra-small">
+                    </ngx-fluent-design-spinner>
                 </ngx-fluent-design-compound-button>
             </div>
         </form>
+
+        <section class="my-4">
+            <ngx-fluent-design-message-bar
+                    messageBarType="success"
+                    *ngIf="displaySuccessSubmission"
+                    [displayActions]="true"
+                    (actionClicked)="displaySuccessSubmission = false"
+                    [actionName]="'Close'">
+
+                Success!! You can now close this message
+            </ngx-fluent-design-message-bar>
+            <ngx-fluent-design-message-bar
+                    messageBarType="error"
+                    *ngIf="displayErrorSubmission"
+                    [displayActions]="true"
+                    (actionClicked)="this.displayErrorSubmission = false"
+                    [actionName]="'close'">
+
+                Whoops!! Something went wrong, please try again
+            </ngx-fluent-design-message-bar>
+        </section>
     </ngx-fluent-design-card>
 </div>
