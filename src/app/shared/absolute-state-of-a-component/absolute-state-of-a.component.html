@@ -260,24 +260,24 @@
 
     <div>
         <p>Click the button below to see a sheet with an alert inside it.</p>
-        <ngx-fluent-design-button (clicked)="displaySheet = !displaySheet" >
+        <ngx-fluent-design-button (clicked)="displaySheet = !displaySheet">
             Toggle alert
         </ngx-fluent-design-button>
     </div>
 </ngx-fluent-design-card>
 
-<ngx-fluent-design-sheet [hidden]="!displaySheet">
-    <section class="w-100 h-100 d-flex align-items-center justify-content-center">
-        <ngx-fluent-design-dialog
-            [header]="'YOOOOOO'"
-            [primaryActionName]="'Okay'"
-            [displaySecondaryAction]="true"
-            [secondaryActionName]="'Close'"
-            [displayCloseIcon]="false"
-            (closeIconClicked)="exampleAlert('Alert close icon')"
-            (primaryActionClicked)="exampleAlert('Alert primary action')"
-            (secondaryActionClicked)="displaySheet = !displaySheet">
-            <p>This is an alert inside a "Sheet"</p>
-        </ngx-fluent-design-dialog>
-    </section>
-</ngx-fluent-design-sheet>
+<ngx-fluent-design-card>
+    <h1 class="mb-3 pane-header bold">Surfaces</h1>
+
+    <h3>Basic Panel</h3>
+    <hr>
+    <div class="pt-3">
+        <ngx-fluent-design-button (clicked)="panelHandler.open()">
+            Open Panel
+        </ngx-fluent-design-button>
+    </div>
+</ngx-fluent-design-card>
+
+<ngx-fluent-design-panel *ngIf="panelHandler.isOpen" [handler]="panelHandler" [header]="'Basic Panel'">
+    Content goes here.
+</ngx-fluent-design-panel>
