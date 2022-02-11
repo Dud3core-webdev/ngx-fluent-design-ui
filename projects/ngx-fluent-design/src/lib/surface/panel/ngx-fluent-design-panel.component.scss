@@ -16,6 +16,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
 
         .header-content {
             font-size: $theme-pane-header-font-size;
