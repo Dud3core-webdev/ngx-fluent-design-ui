@@ -39,10 +39,12 @@
     }
 
     &:focus {
-        background: #FFFFFF;
-        border: 2px solid #0078D4;
-        box-sizing: border-box;
-        border-radius: 2px;
+        border-bottom: 2px solid #0078D4;
+        ::ng-deep {
+            input {
+                padding-bottom: 0;
+            }
+        }
     }
 
     &:focus-within {
