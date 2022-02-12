@@ -23,8 +23,8 @@ export { NgxFluentDesignInputClassValidatorDirective } from './lib/input/shared/
 export { NgxFluentDesignCheckboxComponent } from './lib/input/checkbox/ngx-fluent-design-checkbox.component';
 
 /** CTA */
-export { NgxFluentDesignButtonComponent } from './lib/cta/button/standard/ngx-fluent-design-button.component';
-export { NgxFluentDesignCompoundButtonComponent } from './lib/cta/button/compound/ngx-fluent-design-compound-button.component';
+export { NgxFluentDesignButtonComponent } from './lib/cta/standard-button/ngx-fluent-design-button.component';
+export { NgxFluentDesignCompoundButtonComponent } from './lib/cta/compound-button/ngx-fluent-design-compound-button.component';
 export { NgxFluentDesignButtonLinkDirective } from './lib/cta/link-button/ngx-fluent-design-button-link.directive';
 export { NgxFluentDesignActionButtonDirective } from './lib/cta/action-button/ngx-fluent-design-action-button.directive';
 

@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { bySpecAttribute } from '../../../../testing/test-helper';
+import { bySpecAttribute } from '../../../testing/test-helper';
 import { NgxFluentDesignCompoundButtonComponent } from './ngx-fluent-design-compound-button.component';
 import SpyInstance = jest.SpyInstance;
 
@@ -23,10 +23,10 @@ describe('NgxFluentDesignCompoundButtonComponent', () => {
         fixture.detectChanges();
     });
 
-    describe('Given the compound-button component initialises', () => {
+    describe('Given the compound-button-button component initialises', () => {
         describe('When the user clicks on the button', () => {
             beforeEach(() => {
-                const compoundButton = fixture.debugElement.query(bySpecAttribute('fluent-design-compound-button')).nativeElement;
+                const compoundButton = fixture.debugElement.query(bySpecAttribute('fluent-design-compound-button-button')).nativeElement;
                 compoundButton.click();
             });
 

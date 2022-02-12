@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NgxFluentDesignButtonComponent } from './ngx-fluent-design-button.component';
-import { bySpecAttribute } from '../../../../testing/test-helper';
+import { bySpecAttribute } from '../../../testing/test-helper';
 import SpyInstance = jest.SpyInstance;
 
 describe('NgxFluentDesignButtonComponent', () => {
@@ -26,7 +26,7 @@ describe('NgxFluentDesignButtonComponent', () => {
     describe('Given the button component initialises', () => {
         describe('When the user clicks on the button', () => {
             beforeEach(() => {
-                const button = fixture.debugElement.query(bySpecAttribute('fluent-design-standard-button')).nativeElement;
+                const button = fixture.debugElement.query(bySpecAttribute('fluent-design-standard-button-button')).nativeElement;
                 button.click();
             });
 

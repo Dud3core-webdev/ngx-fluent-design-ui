@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgxFluentDesignCompoundButtonComponent } from './button/compound/ngx-fluent-design-compound-button.component';
-import { NgxFluentDesignButtonComponent } from './button/standard/ngx-fluent-design-button.component';
+import { NgxFluentDesignCompoundButtonComponent } from './compound-button/ngx-fluent-design-compound-button.component';
+import { NgxFluentDesignButtonComponent } from './standard-button/ngx-fluent-design-button.component';
 import { NgxFluentDesignButtonLinkDirective } from './link-button/ngx-fluent-design-button-link.directive';
 import { NgxFluentDesignActionButtonDirective } from './action-button/ngx-fluent-design-action-button.directive';
 
