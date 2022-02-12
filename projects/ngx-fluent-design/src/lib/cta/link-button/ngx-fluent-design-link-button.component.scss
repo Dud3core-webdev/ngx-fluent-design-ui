@@ -4,5 +4,22 @@
     padding: 0;
     border: none;
     background: inherit;
+    text-decoration: none !important;
+
+    &.active, &:hover {
+        text-decoration: underline !important;
+    }
+
+    &:focus {
+        text-decoration: underline !important;
+    }
+
+    &:disabled, [disabled] {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none !important;
+        }
+    }
     @include action-link;
 }

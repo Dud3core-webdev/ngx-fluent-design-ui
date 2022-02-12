@@ -1,23 +1,14 @@
-import { Directive, HostBinding, Input } from '@angular/core';
+import { Directive, ElementRef, HostBinding, Input, ViewChild } from '@angular/core';
 
 @Directive({
     selector: '[ngxFluentDesignLinkButton]'
 })
 export class NgxFluentDesignButtonLinkDirective {
+    @ViewChild('fluentActionLinkButton', { static: false })
+    private readonly _elementReference: ElementRef;
 
-    protected _elementClass: Array<string> = [];
-
-    @Input('class')
-    @HostBinding('class')
-    public get elementClass(): string {
-        return this._elementClass.join(' ');
-    }
-
-    public set elementClass(value: string){
-        this._elementClass = value.split(' ');
-    }
-
-    constructor() {
-        this._elementClass = this._elementClass.concat('ngx-fluent-design-link-button');
+    constructor(elementReference: ElementRef) {
+        this._elementReference = elementReference;
+        this._elementReference.nativeElement.classList.add('ngx-fluent-design-link-button');
     }
 }
