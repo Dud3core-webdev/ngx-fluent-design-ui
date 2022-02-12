@@ -16,12 +16,13 @@ We've only tested this package with Angular 11. We are working out a plan to sup
 This was due to including `BrowserAnimationsModule` at the library level, and would cause a multiple imports error. Please include `BrowserAnimationsModule` in your `app.module.ts` file.
 
 ## Breaking Changes
-Cards have been moved from `NgxFluentDesignCardModule` to `NgxFluentDesignCommomComponentsModule`
 
-Dropped support for custom SCSS variables, mostly the grey palette. (V 0.3.7) See docs for more
+- Dropped support for custom SCSS variables, mostly the grey palette. (V 0.3.7) See docs for more
 
-Created TextArea Components as shared styles weren't effective. Any usages of text fields around a textarea will have to be changed
+- Created TextArea Components as shared styles weren't effective. Any usages of text fields around a textarea will have to be changed
 See docs for more details.
+
+- CommonComponentsModule has been deleted, please use NgxFluentDesignSurfaceModule instead
 
 ## Notes
 Massive shout out to [Smephey](https://github.com/Smephey) for helping with all this and making everything look great!
