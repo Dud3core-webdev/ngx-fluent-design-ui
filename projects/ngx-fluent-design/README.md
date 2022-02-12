@@ -1,6 +1,12 @@
 # NGXFluentDesign UI
-
 An open-source, Angular implementation of Microsoft's Fluent Design system. Based off designs found in the official [Figma File](https://aka.ms/FluentToolkits/Web/Figma)
+
+## Latest Changes 
+- Reduced production bundle size by only included styles that we need. 
+- Refactored textfields and created textarea components. 
+- Created alerts
+- Created a Panel Component
+- General refactors
 
 ## WARNING
 We've only tested this package with Angular 11. We are working out a plan to support multiple versions of Angular, but for now use at your own risk!
@@ -12,7 +18,10 @@ This was due to including `BrowserAnimationsModule` at the library level, and wo
 ## Breaking Changes
 Cards have been moved from `NgxFluentDesignCardModule` to `NgxFluentDesignCommomComponentsModule`
 
-Dropped support for custom SCSS variables, mostly the grey palette. (V 0.3.7)
+Dropped support for custom SCSS variables, mostly the grey palette. (V 0.3.7) See docs for more
+
+Created TextArea Components as shared styles weren't effective. Any usages of text fields around a textarea will have to be changed
+See docs for more details.
 
 ## Notes
 Massive shout out to [Smephey](https://github.com/Smephey) for helping with all this and making everything look great!
