@@ -70,6 +70,7 @@
             textarea {
                 background-color: inherit;
                 pointer-events: none;
+                resize: none;
 
                 &:hover {
                     border: none !important;
