@@ -1,0 +1,27 @@
+@import "../../common/styles/mixins";
+
+.ngx-fluent-design-action-button {
+    color: $theme-colors-grey190;
+    outline: none;
+    font-family: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0;
+    border: 1px solid transparent;
+    background: inherit;
+
+    &:hover {
+        color: $theme-primary;
+        background: inherit;
+        border: 1px solid transparent;
+    }
+
+    &:focus {
+        border: 1px solid $theme-colors-grey190;
+    }
+
+    &:disabled, [disabled] {
+        color: $theme-type-disabled;
+        cursor: not-allowed;
+    }
+}

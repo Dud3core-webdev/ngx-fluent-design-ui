@@ -26,6 +26,7 @@ export { NgxFluentDesignCheckboxComponent } from './lib/input/checkbox/ngx-fluen
 export { NgxFluentDesignButtonComponent } from './lib/cta/button/standard/ngx-fluent-design-button.component';
 export { NgxFluentDesignCompoundButtonComponent } from './lib/cta/button/compound/ngx-fluent-design-compound-button.component';
 export { NgxFluentDesignButtonLinkDirective } from './lib/cta/link-button/ngx-fluent-design-button-link.directive';
+export { NgxFluentDesignActionButtonDirective } from './lib/cta/action-button/ngx-fluent-design-action-button.directive';
 
 /** Notification */
 export { NgxFluentDesignMessageBarComponent } from './lib/notifications/message-bar/ngx-fluent-design-message-bar.component';
