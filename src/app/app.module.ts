@@ -8,9 +8,9 @@ import { AppRoutingModule } from './app.routing.module';
 import { NgxFluentDesignNotificationModule } from 'projects/ngx-fluent-design/src/lib/notifications/ngx-fluent-design-notification.module';
 import { NgxFluentDesignCtaModule } from 'projects/ngx-fluent-design/src/lib/cta/ngx-fluent-design-cta.module';
 import { MobileTestPageModule } from './pages/mobile-test/mobile-test.page.module';
-import { NgxFluentDesignCommonComponentsModule } from '../../projects/ngx-fluent-design/src/lib/common/components/ngx-fluent-design-common-components.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TestFormPageModule } from './pages/test-form/test-form-page.module';
+import { NgxFluentDesignSurfaceModule } from '../../projects/ngx-fluent-design/src/lib/surface/ngx-fluent-design-surface.module';
 
 @NgModule({
     declarations: [
@@ -27,7 +27,7 @@ import { TestFormPageModule } from './pages/test-form/test-form-page.module';
         BrowserModule,
         NgxFluentDesignNotificationModule,
         NgxFluentDesignCtaModule,
-        NgxFluentDesignCommonComponentsModule
+        NgxFluentDesignSurfaceModule
     ],
     bootstrap: [AppComponent]
 })

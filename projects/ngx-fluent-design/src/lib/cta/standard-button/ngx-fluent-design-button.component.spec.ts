@@ -26,7 +26,7 @@ describe('NgxFluentDesignButtonComponent', () => {
     describe('Given the button component initialises', () => {
         describe('When the user clicks on the button', () => {
             beforeEach(() => {
-                const button = fixture.debugElement.query(bySpecAttribute('fluent-design-standard-button-button')).nativeElement;
+                const button = fixture.debugElement.query(bySpecAttribute('fluent-design-standard-button')).nativeElement;
                 button.click();
             });
 

@@ -9,8 +9,7 @@ import { NgxFluentDesignProgressModule } from '../../../projects/ngx-fluent-desi
 import { NgxFluentDesignIconModule } from '../../../projects/ngx-fluent-design/src/lib/icons/ngx-fluent-design-icon.module';
 import { NgxFluentDesignAlertModule } from '../../../projects/ngx-fluent-design/src/lib/alerts/ngx-fluent-design-alert.module';
 import { AbsoluteStateOfAComponent } from './absolute-state-of-a-component/absolute-state-of-a.component';
-import { NgxFluentDesignCommonComponentsModule } from '../../../projects/ngx-fluent-design/src/lib/common/components/ngx-fluent-design-common-components.module';
-import { NgxFluentDesignPanelModule } from '../../../projects/ngx-fluent-design/src/lib/surface/ngx-fluent-design-surface.module';
+import { NgxFluentDesignSurfaceModule } from '../../../projects/ngx-fluent-design/src/lib/surface/ngx-fluent-design-surface.module';
 
 @NgModule({
     imports: [
@@ -23,8 +22,7 @@ import { NgxFluentDesignPanelModule } from '../../../projects/ngx-fluent-design/
         NgxFluentDesignProgressModule,
         NgxFluentDesignIconModule,
         NgxFluentDesignAlertModule,
-        NgxFluentDesignCommonComponentsModule,
-        NgxFluentDesignPanelModule
+        NgxFluentDesignSurfaceModule
     ],
     declarations: [AbsoluteStateOfAComponent],
     exports: [AbsoluteStateOfAComponent]
