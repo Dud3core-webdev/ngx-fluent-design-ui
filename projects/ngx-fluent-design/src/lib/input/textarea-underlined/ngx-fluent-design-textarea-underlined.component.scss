@@ -48,6 +48,11 @@
 
     &:focus-within {
         border-bottom: 2px solid #0078D4;
+        ::ng-deep {
+            textarea {
+                padding: 7.5px 0;
+            }
+        }
     }
 
     &.has-error {
