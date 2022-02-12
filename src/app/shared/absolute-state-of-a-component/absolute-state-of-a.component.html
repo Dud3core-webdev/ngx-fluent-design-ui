@@ -185,17 +185,17 @@
 
         <form [formGroup]="testFormTextAreaForm">
             <h4 class="subject-title">Standard inputs</h4>
-            <ngx-fluent-design-form-field [label]="'A Label'" [disabled]="inputsDisabled">
-                <textarea ngxFluentDesignInput formControlName="bordered" placeholder="Hello there"></textarea>
-            </ngx-fluent-design-form-field>
+            <ngx-fluent-design-standard-textarea [label]="'A Label'" [disabled]="inputsDisabled">
+                <textarea ngxFluentDesignInput rows="12" formControlName="bordered" placeholder="Hello there"></textarea>
+            </ngx-fluent-design-standard-textarea>
 
-            <ngx-fluent-design-form-field-underlined [label]="'A Label'" [disabled]="inputsDisabled">
+            <ngx-fluent-design-textarea-underlined [label]="'A Label'" [disabled]="inputsDisabled">
                 <textarea ngxFluentDesignInput formControlName="bottomBorder" placeholder="Bottom Border"></textarea>
-            </ngx-fluent-design-form-field-underlined>
+            </ngx-fluent-design-textarea-underlined>
 
-            <ngx-fluent-design-form-field-borderless [disabled]="inputsDisabled">
-                <textarea ngxFluentDesignInput formControlName="borderless" placeholder="Borderless"></textarea>
-            </ngx-fluent-design-form-field-borderless>
+            <ngx-fluent-design-textarea-borderless [disabled]="inputsDisabled">
+                <textarea ngxFluentDesignInput rows="12" formControlName="borderless" placeholder="Borderless"></textarea>
+            </ngx-fluent-design-textarea-borderless>
         </form>
     </div>
 </ngx-fluent-design-card>

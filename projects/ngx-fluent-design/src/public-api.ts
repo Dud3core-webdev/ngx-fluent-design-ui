@@ -13,8 +13,11 @@ export { NgxFluentDesignDocumentCardComponent } from './lib/card/document/ngx-fl
 
 /** Input */
 export { NgxFluentDesignFormFieldComponent } from './lib/input/standard-textfield/ngx-fluent-design-form-field.component';
+export { NgxFluentDesignTextareaComponent } from './lib/input/standard-textarea/ngx-fluent-design-textarea.component';
 export { NgxFluentDesignFormFieldUnderlinedComponent } from './lib/input/text-field-underlined/ngx-fluent-design-text-field-underlined.component';
+export { NgxFluentDesignTextareaUnderlinedComponent } from './lib/input/textarea-underlined/ngx-fluent-design-textarea-underlined.component';
 export { NgxFluentDesignTextFieldBorderlessComponent } from './lib/input/text-field-borderless/ngx-fluent-design-text-field-borderless.component';
+export { NgxFluentDesignTextareaBorderlessComponent } from './lib/input/textarea-borderless/ngx-fluent-design-textarea-borderless.component';
 export { NgxFluentDesignToggleComponent } from './lib/input/toggle/ngx-fluent-design-toggle.component';
 export { NgxFluentDesignInputClassValidatorDirective } from './lib/input/shared/directives/ngx-fluent-design-input-class-validator.directive';
 export { NgxFluentDesignCheckboxComponent } from './lib/input/checkbox/ngx-fluent-design-checkbox.component';

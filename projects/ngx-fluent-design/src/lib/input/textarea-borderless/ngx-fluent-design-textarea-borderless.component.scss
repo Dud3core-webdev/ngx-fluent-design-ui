@@ -1,21 +1,19 @@
 @import "../../common/styles/variables";
 
-
-label {
-    padding-bottom: 8px;
-}
-
 .fluent-input-field {
     ::ng-deep {
-        input {
+        textarea {
             border: none;
             width: 100%;
-            height: 100%;
             margin: 0;
-            padding: 6px 8px;
             font: inherit;
             font-size: $theme-body-text-font-size;
             font-weight: 400;
+            box-shadow: none;
+            padding: 6px 8px;
+            box-sizing: border-box;
+            border-radius: 0;
+            resize: vertical;
 
             &:focus {
                 outline: none;
@@ -23,45 +21,21 @@ label {
         }
     }
 
+    label {
+        padding-bottom: 8px;
+    }
+
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 32px;
+    height: 100%;
     left: 0;
     right: 0;
     background: #FFFFFF;
-    border: 1px solid $theme-input-border;
+    border: none;
     border-radius: 2px;
     margin: 6px 0 0 0;
     align-items: stretch;
-
-    &:hover {
-        border-color: $theme-input-hover-border;
-    }
-
-    &:focus {
-        background: #FFFFFF;
-        border: 2px solid #0078D4;
-        box-sizing: border-box;
-        border-radius: 2px;
-    }
-
-    &:focus-within {
-        background: #FFFFFF;
-        border: 2px solid #0078D4;
-        box-sizing: border-box;
-        border-radius: 2px;
-
-        ::ng-deep {
-            textarea, input {
-                padding: 5px 7px;
-            }
-        }
-    }
-
-    &.has-error {
-        border-color: $theme-status-error;
-    }
 
     &.disabled {
         background-color: $theme-colors-grey30;
@@ -69,9 +43,10 @@ label {
         border-color: transparent;
 
         ::ng-deep {
-            input {
+            textarea {
                 background-color: inherit;
                 pointer-events: none;
+                resize: none !important;
 
                 &:hover {
                     border: none !important;

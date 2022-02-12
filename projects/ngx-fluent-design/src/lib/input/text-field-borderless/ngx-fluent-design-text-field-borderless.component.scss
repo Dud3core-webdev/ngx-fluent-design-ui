@@ -1,18 +1,47 @@
-@import "../shared/styles/input-styles";
+@import "../../common/styles/variables";
 
 .fluent-input-field {
-    display: flex;
-    flex-direction: column;
-    padding: 0 $theme-padding-base / 3;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
-    border-radius: 0;
+    height: 32px;
+    margin: 6px 0 0 0;
+    background: #FFFFFF;
+    width: 100%;
+
+    label {
+        display: none;
+    }
 
     ::ng-deep {
-        input, textarea {
-            flex-grow: 0;
+        input {
+            border: none;
+            height: 100%;
+            margin: 0;
+            padding: 6px 8px;
+            font: inherit;
+            font-size: $theme-body-text-font-size;
+            font-weight: 400;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &:hover {
+        border-color: $theme-input-hover-border;
+    }
+
+    &.disabled {
+        background-color: $theme-colors-grey30;
+        pointer-events: none;
+
+        ::ng-deep {
+            input {
+                background-color: inherit;
+                pointer-events: none;
+
+                &:hover {
+                    border: none !important;
+                }
+            }
         }
     }
 }

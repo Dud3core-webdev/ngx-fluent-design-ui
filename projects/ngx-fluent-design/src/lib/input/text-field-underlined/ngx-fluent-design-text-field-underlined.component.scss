@@ -1,28 +1,76 @@
-@import "../shared/styles/input-styles";
+@import "../../common/styles/variables";
 
 .fluent-input-field {
     display: flex;
-    flex-direction: column;
-    padding: 0 $theme-padding-base / 3;
-    border-top: transparent;
-    border-left: transparent;
-    border-right: transparent;
-    border-radius: 0;
+    flex-direction: row;
+    align-items: stretch;
+    height: 32px;
+    border-bottom: 1px solid $theme-input-border;
+    margin: 6px 0 0 0;
+    background: #FFFFFF;
 
-    &.underlined {
+    label {
+        flex-grow: 0;
         display: flex;
-        flex-direction: row;
-        align-items: baseline;
-        justify-content: normal;
-        height: 100%;
+        padding: 6px 8px;
+        text-overflow: ellipsis;
+    }
+
+    ::ng-deep {
+        input {
+            display: flex;
+            flex-grow: 1;
+            height: 100%;
+            border: none;
+            margin: 0;
+            font: inherit;
+            font-size: $theme-body-text-font-size;
+            font-weight: 400;
+
+            &:focus {
+                outline: none;
+                border: none;
+            }
+        }
+    }
+
+    &:hover {
+        border-color: $theme-input-hover-border;
+    }
+
+    &:focus {
+        background: #FFFFFF;
+        border: 2px solid #0078D4;
+        box-sizing: border-box;
+        border-radius: 2px;
+    }
+
+    &:focus-within {
+        border-bottom: 2px solid #0078D4;
+        ::ng-deep {
+            input {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    &.has-error {
+        border-color: $theme-status-error;
+    }
+
+    &.disabled {
+        background-color: $theme-colors-grey30;
+        pointer-events: none;
+        border-color: transparent;
 
         ::ng-deep {
             input {
-                flex-grow: 1;
-            }
+                background-color: inherit;
+                pointer-events: none;
 
-            textarea {
-                flex-grow: 1;
+                &:hover {
+                    border: none !important;
+                }
             }
         }
     }
