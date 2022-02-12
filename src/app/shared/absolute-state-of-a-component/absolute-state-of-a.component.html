@@ -284,3 +284,11 @@
 <ngx-fluent-design-panel *ngIf="panelHandler.isOpen" [handler]="panelHandler" [header]="'Basic Panel'">
     Content goes here.
 </ngx-fluent-design-panel>
+
+<ngx-fluent-design-sheet [hidden]="!displaySheet">
+    <div class="w-100 h-100 d-flex align-items-center justify-content-center">
+        <ngx-fluent-design-dialog [header]="'Hello'" [displaySecondaryAction]="false" [primaryActionName]="'Ok'" (primaryActionClicked)="displaySheet = !displaySheet">
+            WHEEEEEY! This is an alert
+        </ngx-fluent-design-dialog>
+    </div>
+</ngx-fluent-design-sheet>
