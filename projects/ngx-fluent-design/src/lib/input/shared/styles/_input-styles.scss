@@ -1,7 +1,8 @@
 @import "../../../common/styles/variables";
 
-.fluent-input-field {
+$ngx-fluent-design-input-margin: $theme-padding-base / 2;
 
+.fluent-input-field {
     box-shadow: none;
     padding: 0;
     box-sizing: border-box;
@@ -18,7 +19,7 @@
     color: $theme-type-primary;
     width: 100%;
     min-width: 0;
-    margin: 0.35rem 0 0.85rem;
+    margin: ($ngx-fluent-design-input-margin / 2) 0 $ngx-fluent-design-input-margin;
     background: none transparent;
 
     ::ng-deep {
@@ -62,10 +63,15 @@
 
     &:focus {
         border-color: $theme-primary;
+        border-width: 2px;
+        margin:  (($ngx-fluent-design-input-margin / 2) - 1) 0 ($ngx-fluent-design-input-margin - 1);
+        padding: -1px;
     }
 
     &:focus-within {
         border-color: $theme-primary;
+        border-width: 2px;
+        margin:  (($ngx-fluent-design-input-margin / 2) - 1) 0 ($ngx-fluent-design-input-margin - 1);
     }
 
     &.has-error {
