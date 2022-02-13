@@ -1,5 +1,5 @@
 import { EventEmitter } from '@angular/core';
-import { MessageBarType } from '../../../common/types/message-bar.type';
+import { MessageBarType } from './message-bar.type';
 
 export interface INgxFluentDesignMessageBar {
     messageBarType: MessageBarType;

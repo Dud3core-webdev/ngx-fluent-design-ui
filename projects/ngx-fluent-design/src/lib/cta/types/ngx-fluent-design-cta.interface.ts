@@ -1,6 +1,6 @@
 import { EventEmitter } from '@angular/core';
-import { NgxFluentDesignCtaType } from '../../../common/types/cta.type';
-import { NgxFluentDesignSlotNames } from '../../../common/types/theme-names.type';
+import { NgxFluentDesignCtaType } from './cta.type';
+import { NgxFluentDesignSlotNames } from '../../types/theme-names.type';
 
 export interface INgxFluentDesignCta {
     disabled: boolean;

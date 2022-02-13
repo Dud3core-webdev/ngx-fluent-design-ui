@@ -1,8 +1,5 @@
 /** Shared types */
-export { NgxFluentDesignCtaType } from './lib/common/types/cta.type';
-export { MessageBarType } from './lib/common/types/message-bar.type';
-export { NgxFluentDesignSlotNames } from './lib/common/types/theme-names.type';
-export { NgxFluentDesignProgressSizeType } from './lib/common/types/ngx-fluent-design-progress-size.type';
+export { NgxFluentDesignSlotNames } from './lib/types/theme-names.type';
 
 /** Surface */
 export { NgxFluentDesignDialogComponent } from './lib/surface/dialog/ngx-fluent-design-dialog.component';
@@ -29,14 +26,17 @@ export { NgxFluentDesignButtonComponent } from './lib/cta/standard-button/ngx-fl
 export { NgxFluentDesignCompoundButtonComponent } from './lib/cta/compound-button/ngx-fluent-design-compound-button.component';
 export { NgxFluentDesignButtonLinkDirective } from './lib/cta/link-button/ngx-fluent-design-button-link.directive';
 export { NgxFluentDesignActionButtonDirective } from './lib/cta/action-button/ngx-fluent-design-action-button.directive';
+export { NgxFluentDesignCtaType } from './lib/cta/types/cta.type';
 
 /** Notification */
 export { NgxFluentDesignMessageBarComponent } from './lib/notifications/message-bar/ngx-fluent-design-message-bar.component';
+export { MessageBarType } from './lib/notifications/types/message-bar.type';
 
 /** Progress */
 export { NgxFluentDesignSpinnerComponent } from './lib/progress/spinner/ngx-fluent-design-spinner.component';
 export { NgxFluentDesignProgressIndicatorComponent } from './lib/progress/progress-indicator/ngx-fluent-design-progress-indicator.component';
 export { NgxFluentDesignProgressIndicatorIndeterminateComponent } from './lib/progress/progress-indicator-indeterminate/ngx-fluent-design-progress-indicator-indeterminate.component';
+export { NgxFluentDesignProgressSizeType } from './lib/progress/types/ngx-fluent-design-progress-size.type';
 
 /** Icons */
 export * from './lib/icons/shared/constants/ngx-fluent-design-icons-list';

@@ -1,7 +1,7 @@
-import { INgxFluentDesignComponentHandler } from '../../common/types/ngx-fluent-design-component-handler.interface';
+import { INgxFluentDesignSurfaceComponentHandler } from '../types/ngx-fluent-design-surface-component-handler.interface';
 import { BehaviorSubject, Observable } from 'rxjs';
 
-export class NgxFluentDesignDialogHandler implements INgxFluentDesignComponentHandler {
+export class NgxFluentDesignDialogHandler implements INgxFluentDesignSurfaceComponentHandler {
 
     private readonly _isOpenSubject: BehaviorSubject<boolean>;
 

@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 
-export interface INgxFluentDesignComponentHandler {
+export interface INgxFluentDesignSurfaceComponentHandler {
     isOpen: boolean;
     isOpenAsObservable: Observable<boolean>;
     open(): void;
