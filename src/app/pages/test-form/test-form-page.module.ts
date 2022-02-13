@@ -7,7 +7,6 @@ import { NgxFluentDesignNotificationModule } from '../../../../projects/ngx-flue
 import { NgxFluentDesignInputModule } from '../../../../projects/ngx-fluent-design/src/lib/input/ngx-fluent-design-input.module';
 import { NgxFluentDesignCtaModule } from '../../../../projects/ngx-fluent-design/src/lib/cta/ngx-fluent-design-cta.module';
 import { NgxFluentDesignProgressModule } from '../../../../projects/ngx-fluent-design/src/lib/progress/ngx-fluent-design-progress.module';
-import { NgxFluentDesignAlertModule } from '../../../../projects/ngx-fluent-design/src/lib/alerts/ngx-fluent-design-alert.module';
 import { NgxFluentDesignSurfaceModule } from '../../../../projects/ngx-fluent-design/src/lib/surface/ngx-fluent-design-surface.module';
 
 @NgModule({
@@ -18,7 +17,6 @@ import { NgxFluentDesignSurfaceModule } from '../../../../projects/ngx-fluent-de
         ReactiveFormsModule,
         NgxFluentDesignCtaModule,
         CommonModule,
-        NgxFluentDesignAlertModule,
         NgxFluentDesignProgressModule,
         NgxFluentDesignSurfaceModule
     ],

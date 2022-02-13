@@ -5,6 +5,7 @@ export { NgxFluentDesignSlotNames } from './lib/common/types/theme-names.type';
 export { NgxFluentDesignProgressSizeType } from './lib/common/types/ngx-fluent-design-progress-size.type';
 
 /** Surface */
+export { NgxFluentDesignDialogComponent } from './lib/surface/dialog/ngx-fluent-design-dialog.component';
 export { NgxFluentDesignSheetComponent } from './lib/surface/sheet/ngx-fluent-design-sheet.component';
 export { NgxFluentDesignCardComponent } from './lib/surface/card/ngx-fluent-design-card.component';
 export { NgxFluentDesignPanelComponent } from './lib/surface/panel/ngx-fluent-design-panel.component';
@@ -43,9 +44,6 @@ export { INgxFluentDesignIcon } from './lib/icons/shared/types/ngx-fluent-design
 export { INgxFluentDesignIconComponent } from './lib/icons/shared/types/ngx-fluent-design-icon-component.interface';
 export { NgxFluentDesignIconComponent } from './lib/icons/icon-component/icon.component';
 
-/** Alerts */
-export { NgxFluentDesignDialogComponent } from './lib/alerts/dialog/ngx-fluent-design-dialog.component';
-
 /** Modules */
 export { NgxFluentDesignCardModule } from './lib/card/ngx-fluent-design-card.module';
 export { NgxFluentDesignCtaModule } from './lib/cta/ngx-fluent-design-cta.module';
@@ -53,5 +51,4 @@ export { NgxFluentDesignInputModule } from './lib/input/ngx-fluent-design-input.
 export { NgxFluentDesignNotificationModule } from './lib/notifications/ngx-fluent-design-notification.module';
 export { NgxFluentDesignProgressModule } from './lib/progress/ngx-fluent-design-progress.module';
 export { NgxFluentDesignIconModule } from './lib/icons/ngx-fluent-design-icon.module';
-export { NgxFluentDesignAlertModule } from './lib/alerts/ngx-fluent-design-alert.module';
 export { NgxFluentDesignSurfaceModule } from './lib/surface/ngx-fluent-design-surface.module';

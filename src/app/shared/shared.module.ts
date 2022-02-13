@@ -7,7 +7,6 @@ import { NgxFluentDesignCtaModule } from '../../../projects/ngx-fluent-design/sr
 import { NgxFluentDesignInputModule } from '../../../projects/ngx-fluent-design/src/lib/input/ngx-fluent-design-input.module';
 import { NgxFluentDesignProgressModule } from '../../../projects/ngx-fluent-design/src/lib/progress/ngx-fluent-design-progress.module';
 import { NgxFluentDesignIconModule } from '../../../projects/ngx-fluent-design/src/lib/icons/ngx-fluent-design-icon.module';
-import { NgxFluentDesignAlertModule } from '../../../projects/ngx-fluent-design/src/lib/alerts/ngx-fluent-design-alert.module';
 import { AbsoluteStateOfAComponent } from './absolute-state-of-a-component/absolute-state-of-a.component';
 import { NgxFluentDesignSurfaceModule } from '../../../projects/ngx-fluent-design/src/lib/surface/ngx-fluent-design-surface.module';
 
@@ -21,7 +20,6 @@ import { NgxFluentDesignSurfaceModule } from '../../../projects/ngx-fluent-desig
         NgxFluentDesignInputModule,
         NgxFluentDesignProgressModule,
         NgxFluentDesignIconModule,
-        NgxFluentDesignAlertModule,
         NgxFluentDesignSurfaceModule
     ],
     declarations: [AbsoluteStateOfAComponent],

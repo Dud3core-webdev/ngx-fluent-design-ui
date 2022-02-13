@@ -5,18 +5,22 @@ import { NgxFluentDesignIconModule } from '../icons/ngx-fluent-design-icon.modul
 import { NgxFluentDesignSheetComponent } from './sheet/ngx-fluent-design-sheet.component';
 import { NgxFluentDesignCardComponent } from './card/ngx-fluent-design-card.component';
 import { NgxFluentDesignModalComponent } from './modal/ngx-fluent-design-modal.component';
+import { NgxFluentDesignDialogComponent } from './dialog/ngx-fluent-design-dialog.component';
+import { NgxFluentDesignCtaModule } from '../cta/ngx-fluent-design-cta.module';
 
 const DECLARATIONS: Array<any> = [
     NgxFluentDesignPanelComponent,
     NgxFluentDesignSheetComponent,
     NgxFluentDesignCardComponent,
-    NgxFluentDesignModalComponent
+    NgxFluentDesignModalComponent,
+    NgxFluentDesignDialogComponent
 ];
 
 @NgModule({
     imports: [
         CommonModule,
         NgxFluentDesignIconModule,
+        NgxFluentDesignCtaModule
     ],
     declarations: [...DECLARATIONS],
     exports: [...DECLARATIONS]

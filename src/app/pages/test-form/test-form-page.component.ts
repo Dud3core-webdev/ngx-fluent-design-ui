@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable, of, throwError, timer } from 'rxjs';
-import { NgxFluentDesignDialogHandler } from '../../../../projects/ngx-fluent-design/src/lib/alerts/dialog/dialog-handler.helper';
+import { NgxFluentDesignDialogHandler } from '../../../../projects/ngx-fluent-design/src/lib/surface/dialog/dialog-handler.helper';
 import { switchMap } from 'rxjs/operators';
 
 @Component({

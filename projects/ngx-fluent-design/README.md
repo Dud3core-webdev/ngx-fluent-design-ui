@@ -24,6 +24,8 @@ See docs for more details.
 
 - CommonComponentsModule has been deleted, please use NgxFluentDesignSurfaceModule instead
 
+- AlertsModule has been removed. If you want to use the DialogComponent, then please import the `SurfacesModule`
+
 ## Notes
 Massive shout out to [Smephey](https://github.com/Smephey) for helping with all this and making everything look great!
 
