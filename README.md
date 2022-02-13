@@ -10,6 +10,9 @@ No special configuration is required to develop this app, simply install from pa
 
 The Fluent Design System can be found [here](https://aka.ms/FluentToolkits/Web/Figma) (Figma File).
 
+Any styles you want to be exported on build need to go in the `ngx-fluent-design/src/lib/styles` folder or they 
+won't get included in the production build. This is so that the prod bundle is as small as possible. 
+
 #### NOTE! This package can only be deployed if you are a contributor to this repository.
 
 ### Important Links:
