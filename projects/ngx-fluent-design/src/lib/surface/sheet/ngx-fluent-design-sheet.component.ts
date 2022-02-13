@@ -5,7 +5,7 @@ import { NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator } from '../orchestr
 import { NgxFluentDesignCommonAnimations } from '../animations/ngx-fluent-design.animations';
 import { INgxFluentDesignSheet } from './ngx-fluent-design-sheet.interface';
 
-export declare type NgxFluentDesignSheetContentAlignment = 'middle' | 'left' | 'right' | 'top';
+export declare type NgxFluentDesignSheetContentAlignment = 'middle' | 'left' | 'right';
 
 @Component({
     selector: 'ngx-fluent-design-sheet',

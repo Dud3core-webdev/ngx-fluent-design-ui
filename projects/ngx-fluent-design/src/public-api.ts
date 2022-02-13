@@ -3,7 +3,7 @@ export { NgxFluentDesignSlotNames } from './lib/types/theme-names.type';
 
 /** Surface */
 export { NgxFluentDesignDialogComponent } from './lib/surface/dialog/ngx-fluent-design-dialog.component';
-export { NgxFluentDesignSheetComponent } from './lib/surface/sheet/ngx-fluent-design-sheet.component';
+export { NgxFluentDesignSheetComponent, NgxFluentDesignSheetContentAlignment } from './lib/surface/sheet/ngx-fluent-design-sheet.component';
 export { NgxFluentDesignPanelComponent } from './lib/surface/panel/ngx-fluent-design-panel.component';
 export { NgxFluentDesignModalComponent } from './lib/surface/modal/ngx-fluent-design-modal.component';
 export { NgxFluentDesignCardComponent } from './lib/surface/card/ngx-fluent-design-card.component';

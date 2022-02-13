@@ -26,6 +26,8 @@ See docs for more details.
 
 - AlertsModule has been removed. If you want to use the DialogComponent, then please import the `SurfacesModule`
 
+- ####There will be a lot of breakages over the next few minor versions. We're almost ready for V1, and the next few updates will be getting us ready for The first release.
+
 ## Notes
 Massive shout out to [Smephey](https://github.com/Smephey) for helping with all this and making everything look great!
 
