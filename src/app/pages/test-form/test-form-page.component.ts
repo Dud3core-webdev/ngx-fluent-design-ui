@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable, of, throwError, timer } from 'rxjs';
 import { NgxFluentDesignDialogHandler } from '../../../../projects/ngx-fluent-design/src/lib/alerts/dialog/dialog-handler.helper';
-import { map, switchMap } from 'rxjs/operators';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
     templateUrl: './test-form-page.component.html',
