@@ -4,7 +4,7 @@ import { NgxFluentDesignIconClearClose } from '../../icons/shared/constants/ngx-
 import { NgxFluentDesignPanelHandler } from './panel-handler.helper';
 import { ComponentHandlerBodyClassOrchestrator } from '../../common/orchestrators/component-handler-body-class.orchestrator';
 import { DOCUMENT } from '@angular/common';
-import { NgxFluentDesignCommonAnimations } from '../../common/animations/fade-in.animation';
+import { NgxFluentDesignCommonAnimations } from '../../common/animations/ngx-fluent-design.animations';
 
 @Component({
     selector: 'ngx-fluent-design-panel',

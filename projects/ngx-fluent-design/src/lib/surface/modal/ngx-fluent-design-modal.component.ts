@@ -3,7 +3,7 @@ import { INgxFluentDesignModalComponent } from '../shared/types/ngx-fluent-desig
 import { NgxFluentDesignModalHandler } from './modal-handler.helper';
 import { DOCUMENT } from '@angular/common';
 import { Subscription } from 'rxjs';
-import { NgxFluentDesignCommonAnimations } from '../../common/animations/fade-in.animation';
+import { NgxFluentDesignCommonAnimations } from '../../common/animations/ngx-fluent-design.animations';
 
 @Component({
     selector: 'ngx-fluent-design-modal',
