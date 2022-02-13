@@ -30,12 +30,12 @@
                 </ngx-fluent-design-button>
 
                 <ngx-fluent-design-button
-                    *ngIf="displaySecondaryAction"
+                    *ngIf="shouldDisplaySecondaryAction"
                     data-spec="fluent-design-message-bar-action-secondary"
                     (clicked)="secondaryActionClicked.emit()"
                     class="action-cta"
                     type="standard">
-                    {{secondaryActionName}}
+                    {{secondaryActionNameString}}
                 </ngx-fluent-design-button>
             </section>
         </section>

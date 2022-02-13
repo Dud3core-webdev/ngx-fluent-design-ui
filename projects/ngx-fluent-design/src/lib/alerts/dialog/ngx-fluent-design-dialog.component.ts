@@ -16,9 +16,11 @@ import { FadeInAnimation } from '../../common/animations/fade-in.animation';
     ]
 })
 export class NgxFluentDesignDialogComponent implements INgxFluentDesignDialog, OnInit {
-    @Input() public displaySecondaryAction: boolean = true;
     @Input() public primaryActionName: string = 'Primary Action';
-    @Input() public secondaryActionName: string = 'Secondary Action';
+    @Input() public set secondaryActionName(actionName: string) {
+        this._secondaryActionName = actionName;
+        this._displaySecondaryAction = true;
+    }
     @Input() public header: string = '';
     @Input() public displayCloseIcon: boolean = false;
     @Input() public outsideSheetCanDismissContent: boolean = false;
@@ -27,12 +29,22 @@ export class NgxFluentDesignDialogComponent implements INgxFluentDesignDialog, O
     @Output() public readonly primaryActionClicked: EventEmitter<void> = new EventEmitter<void>();
     @Output() public readonly secondaryActionClicked: EventEmitter<void> = new EventEmitter<void>();
     @Output() public readonly sheetDismissClicked: EventEmitter<void> = new EventEmitter<void>();
-
     public readonly closeIcon: INgxFluentDesignIcon = NgxFluentDesignIconClearClose;
+
+    private _displaySecondaryAction: boolean = false;
+    private _secondaryActionName: string = '';
 
     private readonly _subscriptions: Subscription = new Subscription();
     private readonly _document: Document;
     private readonly _noScrollClassName: string = 'no-scroll';
+
+    public get shouldDisplaySecondaryAction(): boolean {
+        return this._displaySecondaryAction;
+    }
+
+    public get secondaryActionNameString(): string {
+        return this._secondaryActionName;
+    }
 
     constructor(@Inject(DOCUMENT) document: Document) {
         this._document = document;
