@@ -1,16 +1,16 @@
 import { Component, EventEmitter, Inject, Input, OnInit } from '@angular/core';
 import { INgxFluentDesignModalComponent } from '../shared/types/ngx-fluent-design-modal-component.interface';
 import { NgxFluentDesignModalHandler } from './modal-handler.helper';
-import { FadeInAnimation } from '../../common/animations/fade-in.animation';
 import { DOCUMENT } from '@angular/common';
 import { Subscription } from 'rxjs';
+import { NgxFluentDesignCommonAnimations } from '../../common/animations/fade-in.animation';
 
 @Component({
     selector: 'ngx-fluent-design-modal',
     templateUrl: './ngx-fluent-design-modal.component.html',
     styleUrls: ['./ngx-fluent-design-modal.component.scss'],
     animations: [
-        FadeInAnimation('150ms', '150ms')
+        NgxFluentDesignCommonAnimations.FadeInAnimation('150ms', '150ms')
     ]
 })
 export class NgxFluentDesignModalComponent implements INgxFluentDesignModalComponent, OnInit {

@@ -4,6 +4,7 @@ import { NgxFluentDesignPanelComponent } from './ngx-fluent-design-panel.compone
 import { NgxFluentDesignIconModule } from '../../icons/ngx-fluent-design-icon.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxFluentDesignSheetComponent } from '../sheet/ngx-fluent-design-sheet.component';
+import { NgxFluentDesignPanelHandler } from './panel-handler.helper';
 
 describe('PanelComponent', () => {
     let component: NgxFluentDesignPanelComponent;
@@ -26,6 +27,7 @@ describe('PanelComponent', () => {
     beforeEach(() => {
         fixture = TestBed.createComponent(NgxFluentDesignPanelComponent);
         component = fixture.componentInstance;
+        component.handler = new NgxFluentDesignPanelHandler(false);
         fixture.detectChanges();
     });
 

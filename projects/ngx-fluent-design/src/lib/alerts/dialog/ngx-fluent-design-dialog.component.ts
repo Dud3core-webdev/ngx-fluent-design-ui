@@ -4,7 +4,7 @@ import { NgxFluentDesignIconClearClose } from '../../icons/shared/constants/ngx-
 import { INgxFluentDesignDialog } from '../shared/types/ngx-fluent-design-dialog.interface';
 import { NgxFluentDesignDialogHandler } from './dialog-handler.helper';
 import { DOCUMENT } from '@angular/common';
-import { FadeInAnimation } from '../../common/animations/fade-in.animation';
+import { NgxFluentDesignCommonAnimations } from '../../common/animations/fade-in.animation';
 import { ComponentHandlerBodyClassOrchestrator } from '../../common/orchestrators/component-handler-body-class.orchestrator';
 
 @Component({
@@ -12,7 +12,7 @@ import { ComponentHandlerBodyClassOrchestrator } from '../../common/orchestrator
     templateUrl: './ngx-fluent-design-dialog.component.html',
     styleUrls: ['./ngx-fluent-design-dialog.component.scss'],
     animations: [
-        FadeInAnimation('150ms', '150ms')
+        NgxFluentDesignCommonAnimations.FadeInAnimation('150ms', '150ms')
     ]
 })
 export class NgxFluentDesignDialogComponent implements INgxFluentDesignDialog, OnInit, OnDestroy {

@@ -1,13 +1,13 @@
-<section class="ngx-fluent-design-panel">
-    <section class="header">
-        <h1 class="header-content">{{header}}</h1>
-        <ngx-fluent-design-icon *ngIf="displayCloseIcon" (click)="handler.close()" class="close-icon" [icon]="closeIcon"></ngx-fluent-design-icon>
+<section class="ngx-fluent-design-container" (click)="handler.close()" [ngStyle]="{ visibility: handler.isOpen ? 'visible' : 'hidden' }">
+    <section (click)="$event.stopPropagation()" class="ngx-fluent-design-panel" [@slideInRight]="!handler.isOpen ? 'hide' : 'show'">
+        <section class="header">
+            <h1 class="header-content">{{header}}</h1>
+            <ngx-fluent-design-icon *ngIf="displayCloseIcon" (click)="handler.close()" class="close-icon" [icon]="closeIcon"></ngx-fluent-design-icon>
+        </section>
+
+        <section class="content">
+            <ng-content></ng-content>
+        </section>
     </section>
 
-    <section class="content">
-        <ng-content></ng-content>
-    </section>
 </section>
-
-<ngx-fluent-design-sheet></ngx-fluent-design-sheet>
-

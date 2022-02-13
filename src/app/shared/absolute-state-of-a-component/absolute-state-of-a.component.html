@@ -282,7 +282,7 @@
     </div>
 </ngx-fluent-design-card>
 
-<ngx-fluent-design-panel *ngIf="panelHandler.isOpen" [handler]="panelHandler" [header]="'Basic Panel'">
+<ngx-fluent-design-panel [handler]="panelHandler" [header]="'Basic Panel'">
     Content goes here.
 </ngx-fluent-design-panel>
 
@@ -296,15 +296,15 @@
     This is an alert that can be dismissed via the modal content
 </ngx-fluent-design-dialog>
 
-<ngx-fluent-design-modal [outsideSheetCanDismissContent]="true" [modalHandler]="modalHandler">
-    <div class="w-100 h-100 d-flex flex-column">
-        <div class="d-flex align-top">
-            <p>Hello</p>
-            <p>You can use the button below to close the modal.</p>
-        </div>
+<!--<ngx-fluent-design-modal [outsideSheetCanDismissContent]="true" [modalHandler]="modalHandler">-->
+<!--    <div class="w-100 h-100 d-flex flex-column">-->
+<!--        <div class="d-flex align-top">-->
+<!--            <p>Hello</p>-->
+<!--            <p>You can use the button below to close the modal.</p>-->
+<!--        </div>-->
 
-        <div class="d-flex align-bottom">
-            <ngx-fluent-design-button (clicked)="modalHandler.close()">K Den</ngx-fluent-design-button>
-        </div>
-    </div>
-</ngx-fluent-design-modal>
+<!--        <div class="d-flex align-bottom">-->
+<!--            <ngx-fluent-design-button (clicked)="modalHandler.close()">K Den</ngx-fluent-design-button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</ngx-fluent-design-modal>-->
