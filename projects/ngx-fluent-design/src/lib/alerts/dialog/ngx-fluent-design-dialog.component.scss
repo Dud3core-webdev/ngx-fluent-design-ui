@@ -1,50 +1,82 @@
 @import "../../common/styles/variables";
 @import "../../common/styles/mixins";
 
-.ngx-fluent-design-alert {
-    max-width: 100%;
-    width: 560px;
-
-    @include ngx-fluent-design-small-breakpoint {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    background: $theme-colors-white;
-    box-shadow: $depth-64;
-    border-radius: $theme-border-radius-base;
-    padding: $theme-padding-base;
-
-    .header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        .header-content {
-            font-size: $theme-pane-header-font-size;
-            margin: 0;
-        }
-
-        .close-icon {
-            cursor: pointer;
+::ng-deep {
+    body, html {
+        .no-scroll {
+            overflow: hidden;
         }
     }
+}
 
-    .content {
-        p, h1, h2, h3, h4, h5, span, {
-            font-size: $theme-body-text-font-size;
+.ngx-fluent-design-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+
+    .ngx-fluent-design-alert {
+        cursor: default;
+        width: 560px;
+        background-color: $theme-colors-white;
+        z-index: 9000;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: $depth-64;
+        border-radius: $theme-border-radius-base;
+        padding: $theme-padding-base;
+        position: relative;
+
+        @include ngx-fluent-design-small-breakpoint {
+            width: 100%;
+            max-width: 100%;
         }
-    }
 
-    .actions {
-        width: 100%;
-
-        .actions-content {
+        .header {
             display: flex;
             flex-direction: row;
-            justify-content: flex-end;
+            justify-content: space-between;
+            align-items: center;
 
-            .action-cta {
-                margin: 0 4px;
+            .header-content {
+                font-size: $theme-pane-header-font-size;
+                margin: 0;
+            }
+
+            .close-icon {
+                cursor: pointer;
+            }
+        }
+
+        .content {
+            margin: 0 0 16px 0;
+            ::ng-deep {
+                font-size: $theme-body-text-font-size;
+            }
+        }
+
+        .actions {
+            width: 100%;
+
+            .actions-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+
+                .action-cta {
+                    margin: 0 4px;
+                }
             }
         }
     }

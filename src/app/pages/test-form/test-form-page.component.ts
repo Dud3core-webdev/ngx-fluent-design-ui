@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { timer } from 'rxjs';
+import { Observable, of, throwError, timer } from 'rxjs';
+import { NgxFluentDesignDialogHandler } from '../../../../projects/ngx-fluent-design/src/lib/alerts/dialog/dialog-handler.helper';
+import { map, switchMap } from 'rxjs/operators';
 
 @Component({
     templateUrl: './test-form-page.component.html',
@@ -8,14 +10,15 @@ import { timer } from 'rxjs';
 })
 export class TestFormPageComponent {
     public hasSubmissionError: boolean = false;
-    public showModal: boolean = false;
     public showLoadingSpinner: boolean = false;
     public displayErrorSubmission: boolean = false;
+    public dialogHandler: NgxFluentDesignDialogHandler;
     displaySuccessSubmission: boolean = false;
 
     public formGroup: FormGroup;
 
     constructor() {
+        this.dialogHandler = new NgxFluentDesignDialogHandler(false);
         this.formGroup = new FormGroup({
             firstName: new FormControl(null, [Validators.required]),
             lastName: new FormControl(null, [Validators.required]),
@@ -28,29 +31,38 @@ export class TestFormPageComponent {
         this.hasSubmissionError = !this.hasSubmissionError;
     }
 
-    public toggleConfirmModal(): void {
-        this.showModal = !this.showModal;
-    }
-
     public submitForm(): void {
+        this.displayErrorSubmission = false;
+        this.displaySuccessSubmission = false;
         this.showLoadingSpinner = true;
-        this.toggleConfirmModal();
+        this.dialogHandler.close();
         timer(10000)
-            .subscribe(() => {
-                this.formGroup.reset({
-                    marketingConsent: false
-                });
-                this.showLoadingSpinner = false;
-                if (this.hasSubmissionError) {
-                   this.displayErrorSubmission = true;
-                } else {
+            .pipe(
+                switchMap((): Observable<boolean | never> => {
+                    if (this.hasSubmissionError === true) {
+                        return throwError('Lol');
+                    }
+
+                    return of(true);
+                })
+            )
+            .subscribe({
+                next: () => {
+                    this.formGroup.reset({
+                        marketingConsent: false
+                    });
                     this.displaySuccessSubmission = true;
+                    this.showLoadingSpinner = false;
+                },
+                error: () => {
+                    this.displayErrorSubmission = true;
+                    this.showLoadingSpinner = false;
                 }
             });
     }
 
     public cancelFormSubmission(): void {
-        this.toggleConfirmModal();
+        this.dialogHandler.close();
         this.formGroup.reset({
             marketingConsent: false
         });

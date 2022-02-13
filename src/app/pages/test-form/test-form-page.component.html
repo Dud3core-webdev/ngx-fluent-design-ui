@@ -1,17 +1,14 @@
-<ngx-fluent-design-sheet [hidden]="!showModal">
-    <section class="w-100 h-100 d-flex align-items-center justify-content-center">
-        <ngx-fluent-design-dialog
-            [header]="'Are you sure you want to submit this form?'"
-            [primaryActionName]="'Submit Form'"
-            [displaySecondaryAction]="true"
-            [secondaryActionName]="'Cancel & Reset'"
-            [displayCloseIcon]="false"
-            (primaryActionClicked)="submitForm()"
-            (secondaryActionClicked)="cancelFormSubmission()">
-            <p>This will start the mock submission process. Cancelling will reset your form</p>
-        </ngx-fluent-design-dialog>
-    </section>
-</ngx-fluent-design-sheet>
+<ngx-fluent-design-dialog
+    [header]="'Are you sure you want to submit this form?'"
+    [dialogHandler]="dialogHandler"
+    [primaryActionName]="'Submit Form'"
+    [displaySecondaryAction]="true"
+    [secondaryActionName]="'Cancel & Reset'"
+    [displayCloseIcon]="false"
+    (primaryActionClicked)="submitForm()"
+    (secondaryActionClicked)="cancelFormSubmission()">
+    <p>This will start the mock submission process. Cancelling will reset your form</p>
+</ngx-fluent-design-dialog>
 
 <div class="mobile-test container w-100">
     <h1 class="hero-title">This is just a test form</h1>
@@ -80,7 +77,7 @@
             </section>
 
             <div class="d-flex flex-row mt-5">
-                <ngx-fluent-design-compound-button (clicked)="toggleConfirmModal()"
+                <ngx-fluent-design-compound-button (clicked)="dialogHandler.open()"
                                                    [disabled]="formGroup.invalid || showLoadingSpinner">
                     <span *ngIf="!showLoadingSpinner">Submit</span>
                     <ngx-fluent-design-spinner

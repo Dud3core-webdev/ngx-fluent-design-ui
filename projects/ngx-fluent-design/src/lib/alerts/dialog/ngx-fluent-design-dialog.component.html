@@ -1,33 +1,43 @@
-<section class="ngx-fluent-design-alert">
-    <section class="header">
-        <h1 class="header-content">{{header}}</h1>
-        <ngx-fluent-design-icon *ngIf="displayCloseIcon" data-spec="ngx-fluent-design-close-icon" (click)="closeIconClicked.emit()" class="close-icon" [icon]="closeIcon"></ngx-fluent-design-icon>
-    </section>
+<section class="ngx-fluent-design-container"
+        [ngStyle]="{ 'cursor': outsideSheetCanDismissContent ? 'pointer' : 'default' }"
+        [@fadeIn]="!dialogHandler.isOpen ? 'hide' : 'show'"
+        (click)="outerSheetClicked()">
 
-    <section class="content">
-        <ng-content></ng-content>
-    </section>
+    <section class="ngx-fluent-design-alert" (click)="$event.stopPropagation()">
+        <section class="header">
+            <h1 class="header-content">{{header}}</h1>
+            <ngx-fluent-design-icon *ngIf="displayCloseIcon"
+                                    [icon]="closeIcon"
+                                    (click)="dialogHandler.close()"
+                                    data-spec="ngx-fluent-design-close-icon"
+                                    class="close-icon">
+            </ngx-fluent-design-icon>
+        </section>
 
-    <section class="actions">
-        <section class="actions-content">
+        <section class="content">
+            <ng-content></ng-content>
+        </section>
 
-            <ngx-fluent-design-button
-                data-spec="fluent-design-message-bar-action-primary"
-                (clicked)="primaryActionClicked.emit()"
-                class="action-cta"
-                type="primary">
+        <section class="actions">
+            <section class="actions-content">
+
+                <ngx-fluent-design-button
+                    data-spec="fluent-design-message-bar-action-primary"
+                    (clicked)="primaryActionClicked.emit()"
+                    class="action-cta"
+                    type="primary">
                     {{primaryActionName}}
-            </ngx-fluent-design-button>
+                </ngx-fluent-design-button>
 
-            <ngx-fluent-design-button
-                *ngIf="displaySecondaryAction"
-                data-spec="fluent-design-message-bar-action-secondary"
-                (clicked)="secondaryActionClicked.emit()"
-                class="action-cta"
-                type="standard">
+                <ngx-fluent-design-button
+                    *ngIf="displaySecondaryAction"
+                    data-spec="fluent-design-message-bar-action-secondary"
+                    (clicked)="secondaryActionClicked.emit()"
+                    class="action-cta"
+                    type="standard">
                     {{secondaryActionName}}
-            </ngx-fluent-design-button>
-
+                </ngx-fluent-design-button>
+            </section>
         </section>
     </section>
 </section>
