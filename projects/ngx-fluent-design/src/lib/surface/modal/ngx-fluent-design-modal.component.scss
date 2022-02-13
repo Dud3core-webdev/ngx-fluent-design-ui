@@ -27,7 +27,8 @@
 
     .ngx-fluent-design-modal-content {
         cursor: default;
-        width: 560px;
+        width: 640px;
+        min-height: 480px;
         background-color: $theme-colors-white;
         z-index: 9000;
         top: 0;
@@ -41,43 +42,6 @@
         @include ngx-fluent-design-small-breakpoint {
             width: 100%;
             max-width: 100%;
-        }
-
-        .header {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            .header-content {
-                font-size: $theme-pane-header-font-size;
-                margin: 0;
-            }
-
-            .close-icon {
-                cursor: pointer;
-            }
-        }
-
-        .content {
-            margin: 0 0 16px 0;
-            ::ng-deep {
-                font-size: $theme-body-text-font-size;
-            }
-        }
-
-        .actions {
-            width: 100%;
-
-            .actions-content {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-end;
-
-                .action-cta {
-                    margin: 0 4px;
-                }
-            }
         }
     }
 }

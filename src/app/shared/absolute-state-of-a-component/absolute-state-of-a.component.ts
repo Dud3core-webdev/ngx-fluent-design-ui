@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgxFluentDesignIconInfoWarn } from '../../../../projects/ngx-fluent-design/src/lib/icons/shared/constants/ngx-fluent-design-icons-list';
 import { NgxFluentDesignPanelHandler } from '../../../../projects/ngx-fluent-design/src/lib/surface/panel/panel-handler.helper';
 import { NgxFluentDesignDialogHandler } from '../../../../projects/ngx-fluent-design/src/lib/alerts/dialog/dialog-handler.helper';
+import { NgxFluentDesignModalHandler } from '../../../../projects/ngx-fluent-design/src/lib/surface/modal/modal-handler.helper';
 
 @Component({
     selector: 'absolute-mess',
@@ -12,10 +13,10 @@ export class AbsoluteStateOfAComponent implements AfterViewInit {
     public progressIndicatorCurrentValue: number = 0;
     public isToggled: boolean = false;
     public inputsDisabled: boolean = false;
-    public displaySheet: boolean = false;
     public buttonLinkDisabled: boolean = false;
     public panelHandler: NgxFluentDesignPanelHandler = new NgxFluentDesignPanelHandler(false);
     public dialogHandler: NgxFluentDesignDialogHandler = new NgxFluentDesignDialogHandler(false);
+    public modalHandler: NgxFluentDesignModalHandler = new NgxFluentDesignModalHandler(false);
 
     testForm = new FormGroup({
         checkboxEnabled: new FormControl(''),

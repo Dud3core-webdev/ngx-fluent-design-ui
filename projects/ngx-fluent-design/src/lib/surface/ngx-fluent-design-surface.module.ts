@@ -4,11 +4,13 @@ import { NgxFluentDesignPanelComponent } from './panel/ngx-fluent-design-panel.c
 import { NgxFluentDesignIconModule } from '../icons/ngx-fluent-design-icon.module';
 import { NgxFluentDesignSheetComponent } from './sheet/ngx-fluent-design-sheet.component';
 import { NgxFluentDesignCardComponent } from './card/ngx-fluent-design-card.component';
+import { NgxFluentDesignModalComponent } from './modal/ngx-fluent-design-modal.component';
 
 const DECLARATIONS: Array<any> = [
     NgxFluentDesignPanelComponent,
     NgxFluentDesignSheetComponent,
-    NgxFluentDesignCardComponent
+    NgxFluentDesignCardComponent,
+    NgxFluentDesignModalComponent
 ];
 
 @NgModule({

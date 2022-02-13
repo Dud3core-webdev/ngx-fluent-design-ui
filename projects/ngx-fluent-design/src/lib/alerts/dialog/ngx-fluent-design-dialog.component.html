@@ -3,7 +3,7 @@
         [@fadeIn]="!dialogHandler.isOpen ? 'hide' : 'show'"
         (click)="outerSheetClicked()">
 
-    <section class="ngx-fluent-design-alert" (click)="$event.stopPropagation()">
+    <section class="ngx-fluent-design-modal-content" (click)="$event.stopPropagation()">
         <section class="header">
             <h1 class="header-content">{{header}}</h1>
             <ngx-fluent-design-icon *ngIf="displayCloseIcon"
