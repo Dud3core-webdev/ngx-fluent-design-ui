@@ -17,10 +17,6 @@ import { FadeInAnimation } from '../../common/animations/fade-in.animation';
 })
 export class NgxFluentDesignDialogComponent implements INgxFluentDesignDialog, OnInit {
     @Input() public primaryActionName: string = 'Primary Action';
-    @Input() public set secondaryActionName(actionName: string) {
-        this._secondaryActionName = actionName;
-        this._displaySecondaryAction = true;
-    }
     @Input() public header: string = '';
     @Input() public displayCloseIcon: boolean = false;
     @Input() public outsideSheetCanDismissContent: boolean = false;
@@ -42,7 +38,12 @@ export class NgxFluentDesignDialogComponent implements INgxFluentDesignDialog, O
         return this._displaySecondaryAction;
     }
 
-    public get secondaryActionNameString(): string {
+    @Input() public set secondaryActionName(actionName: string) {
+        this._secondaryActionName = actionName;
+        this._displaySecondaryAction = true;
+    }
+
+    public get secondaryActionName(): string {
         return this._secondaryActionName;
     }
 
