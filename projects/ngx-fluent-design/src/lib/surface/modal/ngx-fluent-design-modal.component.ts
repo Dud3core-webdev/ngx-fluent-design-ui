@@ -2,7 +2,6 @@ import { Component, EventEmitter, Inject, Input, OnInit } from '@angular/core';
 import { INgxFluentDesignModalComponent } from '../shared/types/ngx-fluent-design-modal-component.interface';
 import { NgxFluentDesignModalHandler } from './modal-handler.helper';
 import { DOCUMENT } from '@angular/common';
-import { Subscription } from 'rxjs';
 import { NgxFluentDesignCommonAnimations } from '../../common/animations/ngx-fluent-design.animations';
 import { ComponentHandlerBodyClassOrchestrator } from '../../common/orchestrators/component-handler-body-class.orchestrator';
 

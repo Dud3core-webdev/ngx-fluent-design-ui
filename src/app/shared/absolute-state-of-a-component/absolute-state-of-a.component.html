@@ -252,17 +252,6 @@
 </ngx-fluent-design-card>
 
 <ngx-fluent-design-card>
-    <h1 class="mb-3 pane-header bold">Sheets</h1>
-
-    <div>
-        <p>Click the button below to see a sheet with an alert inside it.</p>
-        <ngx-fluent-design-button (clicked)="dialogHandler.open()">
-            Toggle alert
-        </ngx-fluent-design-button>
-    </div>
-</ngx-fluent-design-card>
-
-<ngx-fluent-design-card>
     <h1 class="mb-3 pane-header bold">Surfaces</h1>
 
     <h3>Basic Panel</h3>
@@ -278,6 +267,22 @@
     <div class="pt-3">
         <ngx-fluent-design-button (clicked)="modalHandler.open()">
             Open Modal
+        </ngx-fluent-design-button>
+    </div>
+
+    <h3>Dialog</h3>
+    <hr>
+    <div class="pt-3">
+        <ngx-fluent-design-button (clicked)="dialogHandler.open()">
+            Open Dialog
+        </ngx-fluent-design-button>
+    </div>
+
+    <h3>Sheet</h3>
+    <hr>
+    <div class="pt-3">
+        <ngx-fluent-design-button (clicked)="sheetHandler.open()">
+            Open Sheet
         </ngx-fluent-design-button>
     </div>
 </ngx-fluent-design-card>
@@ -308,3 +313,17 @@
         </div>
     </div>
 </ngx-fluent-design-modal>
+
+<ngx-fluent-design-sheet [handler]="sheetHandler">
+    <h1>Hello</h1>
+    <p>
+        This is basically no different to a dialog container, the only difference being that,
+        whatever content goes into the card is your call.
+    </p>
+    <section class="mb-2">
+        <ngx-fluent-design-message-bar messageBarType="warning">
+            The content will always be justified to the center as displayed in this example
+        </ngx-fluent-design-message-bar>
+    </section>
+    <small>Click outside the sheet to close.</small>
+</ngx-fluent-design-sheet>

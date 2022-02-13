@@ -1,55 +1,45 @@
-import { Component, Inject, Input } from '@angular/core';
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import { Component, EventEmitter, Inject, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { NgxFluentDesignSheetHandler } from './sheet-handler.helper';
+import { ComponentHandlerBodyClassOrchestrator } from '../../common/orchestrators/component-handler-body-class.orchestrator';
+import { NgxFluentDesignCommonAnimations } from '../../common/animations/ngx-fluent-design.animations';
 
 @Component({
     selector: 'ngx-fluent-design-sheet',
     templateUrl: './ngx-fluent-design-sheet.component.html',
     styleUrls: ['./ngx-fluent-design-sheet.component.scss'],
     animations: [
-        trigger('fadeIn', [
-            state('show', style({
-                opacity: 1,
-                visibility: 'visible'
-            })),
-            state('hide', style({
-                opacity: 0,
-                visibility: 'hidden'
-            })),
-            transition('show => hide', [
-                animate('150ms')
-            ]),
-            transition('hide => show', [
-                animate('150ms')
-            ]),
-        ])
+        NgxFluentDesignCommonAnimations.FadeInAnimation('150ms', '150ms')
     ]
 })
-export class NgxFluentDesignSheetComponent {
+export class NgxFluentDesignSheetComponent implements OnInit, OnDestroy {
+
+    @Input() public handler: NgxFluentDesignSheetHandler;
+    @Input() public canDismissWithOuterContent: boolean = true;
+
+    @Output() public readonly outerContentClicked: EventEmitter<void>;
 
     private readonly _document: Document;
-    private readonly _noScrollClassName: string = 'no-scroll';
-    private _hidden: boolean = false;
+    private _orchestrator: ComponentHandlerBodyClassOrchestrator;
 
     constructor(@Inject(DOCUMENT) document: Document) {
+        this.outerContentClicked = new EventEmitter<void>();
         this._document = document;
     }
 
-    @Input()
-    public set hidden(isHidden: boolean) {
-        this._hidden = isHidden;
-        this.toggleNoScrollBodyElement(isHidden);
+    public ngOnInit(): void {
+        this._orchestrator = new ComponentHandlerBodyClassOrchestrator(this.handler, this._document);
+        this._orchestrator.onInit();
     }
 
-    public get hidden(): boolean {
-        return this._hidden;
+    public ngOnDestroy(): void {
+        this._orchestrator.onDestroy();
     }
 
-    private toggleNoScrollBodyElement(isHidden: boolean): void {
-        if (isHidden) {
-            this._document.body.classList.remove(this._noScrollClassName);
-        } else {
-            this._document.body.classList.add(this._noScrollClassName);
+    public handleClickEvent(): void {
+        if (this.canDismissWithOuterContent) {
+            this.outerContentClicked.emit();
+            this.handler.close();
         }
     }
 }

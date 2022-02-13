@@ -1,5 +1,5 @@
-<div class="overlay" [@fadeIn]="hidden ? 'hide' : 'show'">
-    <div class="overlay-content">
+<div class="overlay" (click)="handleClickEvent()" [ngStyle]="{ cursor: canDismissWithOuterContent ? 'pointer' : 'default'}" [@fadeIn]="handler.isOpen ? 'show' : 'hide'">
+    <div class="overlay-content" (click)="$event.stopPropagation()">
         <ng-content></ng-content>
     </div>
 </div>

@@ -4,6 +4,7 @@ import { NgxFluentDesignIconInfoWarn } from '../../../../projects/ngx-fluent-des
 import { NgxFluentDesignPanelHandler } from '../../../../projects/ngx-fluent-design/src/lib/surface/panel/panel-handler.helper';
 import { NgxFluentDesignDialogHandler } from '../../../../projects/ngx-fluent-design/src/lib/surface/dialog/dialog-handler.helper';
 import { NgxFluentDesignModalHandler } from '../../../../projects/ngx-fluent-design/src/lib/surface/modal/modal-handler.helper';
+import { NgxFluentDesignSheetHandler } from '../../../../projects/ngx-fluent-design/src/lib/surface/sheet/sheet-handler.helper';
 
 @Component({
     selector: 'absolute-mess',
@@ -17,6 +18,7 @@ export class AbsoluteStateOfAComponent implements AfterViewInit {
     public panelHandler: NgxFluentDesignPanelHandler = new NgxFluentDesignPanelHandler(false);
     public dialogHandler: NgxFluentDesignDialogHandler = new NgxFluentDesignDialogHandler(false);
     public modalHandler: NgxFluentDesignModalHandler = new NgxFluentDesignModalHandler(false);
+    public sheetHandler: NgxFluentDesignSheetHandler = new NgxFluentDesignSheetHandler(false);
 
     testForm = new FormGroup({
         checkboxEnabled: new FormControl(''),
