@@ -3,7 +3,9 @@ import { DOCUMENT } from '@angular/common';
 import { NgxFluentDesignSheetHandler } from './sheet-handler.helper';
 import { NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator } from '../orchestrators/ngx-fluent-design-surface-handler-body-styles.orchestrator';
 import { NgxFluentDesignCommonAnimations } from '../animations/ngx-fluent-design.animations';
-import { INgxFluentDesignSurface } from '../types/ngx-fluent-design-surface.interface';
+import { INgxFluentDesignSheet } from './ngx-fluent-design-sheet.interface';
+
+export declare type NgxFluentDesignSheetContentAlignment = 'middle' | 'left' | 'right' | 'top';
 
 @Component({
     selector: 'ngx-fluent-design-sheet',
@@ -11,10 +13,11 @@ import { INgxFluentDesignSurface } from '../types/ngx-fluent-design-surface.inte
     styleUrls: ['./ngx-fluent-design-sheet.component.scss'],
     animations: [NgxFluentDesignCommonAnimations.FadeInAnimation('150ms', '150ms')]
 })
-export class NgxFluentDesignSheetComponent implements OnInit, OnDestroy, INgxFluentDesignSurface {
+export class NgxFluentDesignSheetComponent implements OnInit, OnDestroy, INgxFluentDesignSheet {
 
     @Input() public handler: NgxFluentDesignSheetHandler;
     @Input() public canDismissWithOuterContent: boolean = true;
+    @Input() public alignContent: NgxFluentDesignSheetContentAlignment = 'middle';
 
     @Output() public readonly componentClosed: EventEmitter<void>;
 

@@ -284,6 +284,30 @@
         <ngx-fluent-design-button (clicked)="sheetHandler.open()">
             Open Sheet
         </ngx-fluent-design-button>
+        <form [formGroup]="sheetAlignmentForm">
+            <h3>Align Sheet Content</h3>
+            <p>Click a radio to align the content within the sheet</p>
+            <div class="d-flex flex-row justify-content-between w-100 my-4">
+                <ngx-fluent-design-radio formControlName="sheetContentAlignment"
+                                         [checked]="sheetAlignmentForm.get('sheetContentAlignment').value === 'left'"
+                                         [label]="'Left Align Content'"
+                                         [value]="'left'"
+                                         [name]="'left'">
+                </ngx-fluent-design-radio>
+                <ngx-fluent-design-radio formControlName="sheetContentAlignment"
+                                         [checked]="sheetAlignmentForm.get('sheetContentAlignment').value === 'middle'"
+                                         [label]="'Middle Align Content'"
+                                         [value]="'middle'"
+                                         [name]="'middle'">
+                </ngx-fluent-design-radio>
+                <ngx-fluent-design-radio formControlName="sheetContentAlignment"
+                                         [checked]="sheetAlignmentForm.get('sheetContentAlignment').value === 'right'"
+                                         [label]="'Right Align Content'"
+                                         [value]="'right'"
+                                         [name]="'right'">
+                </ngx-fluent-design-radio>
+            </div>
+        </form>
     </div>
 </ngx-fluent-design-card>
 
@@ -314,8 +338,10 @@
     </div>
 </ngx-fluent-design-modal>
 
-<ngx-fluent-design-sheet [handler]="sheetHandler">
-    <section class="p-3 shadow-lg" style="background: white">
+<ngx-fluent-design-sheet [alignContent]="sheetAlignmentForm.get('sheetContentAlignment').value" [handler]="sheetHandler">
+    <section class="p-3 shadow-lg"
+             style="background: white"
+             [ngClass]="{ 'h-100': sheetAlignmentForm.get('sheetContentAlignment').value === 'left' || sheetAlignmentForm.get('sheetContentAlignment').value === 'right' }">
         <h1>Hello</h1>
         <p>
             This is basically no different to a dialog container, the only difference being that,
@@ -329,6 +355,14 @@
                 set literally everything (in regards to content styles) yourself. This Gives you absolute control over content
             </ngx-fluent-design-message-bar>
         </section>
+
+        <section class="my-2">
+            <ngx-fluent-design-message-bar messageBarType="warning">
+                It's recommended that you make the content height 100% of the screen if you use the left or right alignment.
+                This sheet recommends top alignment for now but it doesn't really make sense
+            </ngx-fluent-design-message-bar>
+        </section>
+
         <small>Click outside the sheet to close.</small>
     </section>
 </ngx-fluent-design-sheet>

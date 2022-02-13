@@ -32,6 +32,10 @@ export class AbsoluteStateOfAComponent implements AfterViewInit {
         borderless: new FormControl(null, [Validators.required])
     });
 
+    sheetAlignmentForm = new FormGroup({
+        sheetContentAlignment: new FormControl('middle')
+    });
+
     tesIconList = {
         warningIcon: NgxFluentDesignIconInfoWarn
     };
@@ -55,5 +59,8 @@ export class AbsoluteStateOfAComponent implements AfterViewInit {
 
     public toggleInputDisabled(): void {
         this.inputsDisabled = !this.inputsDisabled;
+    }
+
+    public setSheetAlignment(): void {
     }
 }
