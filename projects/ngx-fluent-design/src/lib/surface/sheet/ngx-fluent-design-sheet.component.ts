@@ -1,34 +1,33 @@
 import { Component, EventEmitter, Inject, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { NgxFluentDesignSheetHandler } from './sheet-handler.helper';
-import { ComponentHandlerBodyClassOrchestrator } from '../../common/orchestrators/component-handler-body-class.orchestrator';
-import { NgxFluentDesignCommonAnimations } from '../../common/animations/ngx-fluent-design.animations';
+import { NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator } from '../orchestrators/ngx-fluent-design-surface-handler-body-styles.orchestrator';
+import { NgxFluentDesignCommonAnimations } from '../animations/ngx-fluent-design.animations';
+import { INgxFluentDesignSurface } from '../types/ngx-fluent-design-surface.interface';
 
 @Component({
     selector: 'ngx-fluent-design-sheet',
     templateUrl: './ngx-fluent-design-sheet.component.html',
     styleUrls: ['./ngx-fluent-design-sheet.component.scss'],
-    animations: [
-        NgxFluentDesignCommonAnimations.FadeInAnimation('150ms', '150ms')
-    ]
+    animations: [NgxFluentDesignCommonAnimations.FadeInAnimation('150ms', '150ms')]
 })
-export class NgxFluentDesignSheetComponent implements OnInit, OnDestroy {
+export class NgxFluentDesignSheetComponent implements OnInit, OnDestroy, INgxFluentDesignSurface {
 
     @Input() public handler: NgxFluentDesignSheetHandler;
     @Input() public canDismissWithOuterContent: boolean = true;
 
-    @Output() public readonly outerContentClicked: EventEmitter<void>;
+    @Output() public readonly componentClosed: EventEmitter<void>;
 
     private readonly _document: Document;
-    private _orchestrator: ComponentHandlerBodyClassOrchestrator;
+    private _orchestrator: NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator;
 
     constructor(@Inject(DOCUMENT) document: Document) {
-        this.outerContentClicked = new EventEmitter<void>();
+        this.componentClosed = new EventEmitter<void>();
         this._document = document;
     }
 
     public ngOnInit(): void {
-        this._orchestrator = new ComponentHandlerBodyClassOrchestrator(this.handler, this._document);
+        this._orchestrator = new NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator(this.handler, this._document, ['no-scroll']);
         this._orchestrator.onInit();
     }
 
@@ -36,9 +35,9 @@ export class NgxFluentDesignSheetComponent implements OnInit, OnDestroy {
         this._orchestrator.onDestroy();
     }
 
-    public handleClickEvent(): void {
+    public handleCloseClickEvent(): void {
         if (this.canDismissWithOuterContent) {
-            this.outerContentClicked.emit();
+            this.componentClosed.emit();
             this.handler.close();
         }
     }

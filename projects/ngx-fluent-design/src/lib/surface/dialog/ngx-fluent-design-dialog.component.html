@@ -1,14 +1,14 @@
 <section class="ngx-fluent-design-container"
-        [ngStyle]="{ 'cursor': outsideSheetCanDismissContent ? 'pointer' : 'default' }"
-        [@fadeIn]="!dialogHandler.isOpen ? 'hide' : 'show'"
-        (click)="outerSheetClicked()">
+        [ngStyle]="{ 'cursor': canDismissWithOuterContent ? 'pointer' : 'default' }"
+        [@fadeIn]="!handler.isOpen ? 'hide' : 'show'"
+        (click)="handleCloseClickEvent()">
 
     <section class="ngx-fluent-design-modal-content" (click)="$event.stopPropagation()">
         <section class="header">
             <h1 class="header-content">{{header}}</h1>
             <ngx-fluent-design-icon *ngIf="displayCloseIcon"
                                     [icon]="closeIcon"
-                                    (click)="dialogHandler.close()"
+                                    (click)="handler.close()"
                                     data-spec="ngx-fluent-design-close-icon"
                                     class="close-icon">
             </ngx-fluent-design-icon>

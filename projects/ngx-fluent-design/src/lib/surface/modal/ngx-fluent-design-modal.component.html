@@ -1,9 +1,7 @@
 <section class="ngx-fluent-design-container"
-         [ngStyle]="{
-            'cursor': outsideSheetCanDismissContent ? 'pointer' : 'default'
-          }"
-         [@fadeIn]="!modalHandler.isOpen ? 'hide' : 'show'"
-         (click)="outerSheetClicked()">
+         [ngStyle]="{ 'cursor': canDismissWithOuterContent ? 'pointer' : 'default' }"
+         [@fadeIn]="!handler.isOpen ? 'hide' : 'show'"
+         (click)="handleCloseClickEvent()">
     <section class="ngx-fluent-design-modal-content" (click)="$event.stopPropagation()">
         <ng-content></ng-content>
     </section>

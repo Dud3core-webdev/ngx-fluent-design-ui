@@ -1,10 +1,11 @@
-import { Component, Inject, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, EventEmitter, Inject, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { INgxFluentDesignIcon } from '../../icons/shared/types/ngx-fluent-design-icon.interface';
 import { NgxFluentDesignIconClearClose } from '../../icons/shared/constants/ngx-fluent-design-icons-list';
 import { NgxFluentDesignPanelHandler } from './panel-handler.helper';
-import { ComponentHandlerBodyClassOrchestrator } from '../../common/orchestrators/component-handler-body-class.orchestrator';
+import { NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator } from '../orchestrators/ngx-fluent-design-surface-handler-body-styles.orchestrator';
 import { DOCUMENT } from '@angular/common';
-import { NgxFluentDesignCommonAnimations } from '../../common/animations/ngx-fluent-design.animations';
+import { NgxFluentDesignCommonAnimations } from '../animations/ngx-fluent-design.animations';
+import { INgxFluentDesignPanel } from './ngx-fluent-design-panel.interface';
 
 @Component({
     selector: 'ngx-fluent-design-panel',
@@ -14,22 +15,33 @@ import { NgxFluentDesignCommonAnimations } from '../../common/animations/ngx-flu
         NgxFluentDesignCommonAnimations.SlideInFromRightAnimation('150ms', '150ms'),
     ]
 })
-export class NgxFluentDesignPanelComponent implements OnInit, OnDestroy {
+export class NgxFluentDesignPanelComponent implements INgxFluentDesignPanel, OnInit, OnDestroy {
+    @Input() public handler: NgxFluentDesignPanelHandler;
+    @Input() public canDismissWithOuterContent: boolean = true;
     @Input() public displayCloseIcon: boolean = true;
     @Input() public header: string;
-    @Input() public handler: NgxFluentDesignPanelHandler;
+
+    @Output() public readonly componentClosed: EventEmitter<void>;
 
     public readonly closeIcon: INgxFluentDesignIcon = NgxFluentDesignIconClearClose;
 
-    private _orchestrator: ComponentHandlerBodyClassOrchestrator;
+    private _orchestrator: NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator;
     private readonly _document: Document;
 
     constructor(@Inject(DOCUMENT) document: Document) {
+        this.componentClosed = new EventEmitter<void>();
         this._document = document;
     }
 
+    handleCloseClickEvent(): void {
+        if (this.canDismissWithOuterContent) {
+            this.handler.close();
+            this.componentClosed.emit();
+        }
+    }
+
     public ngOnInit(): void {
-        this._orchestrator = new ComponentHandlerBodyClassOrchestrator(this.handler, this._document);
+        this._orchestrator = new NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator(this.handler, this._document, ['no-scroll']);
         this._orchestrator.onInit();
     }
 

@@ -27,14 +27,10 @@
     .overlay-content {
         cursor: default;
         width: 560px;
-        background-color: $theme-colors-white;
         z-index: 9000;
         top: 0;
         right: 0;
         bottom: 0;
-        box-shadow: $depth-64;
-        border-radius: $theme-border-radius-base;
-        padding: $theme-padding-base;
         position: relative;
     }
 }

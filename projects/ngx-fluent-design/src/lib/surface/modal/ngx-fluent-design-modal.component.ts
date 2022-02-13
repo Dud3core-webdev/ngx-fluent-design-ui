@@ -1,9 +1,9 @@
 import { Component, EventEmitter, Inject, Input, OnInit } from '@angular/core';
-import { INgxFluentDesignModalComponent } from '../shared/types/ngx-fluent-design-modal-component.interface';
 import { NgxFluentDesignModalHandler } from './modal-handler.helper';
 import { DOCUMENT } from '@angular/common';
-import { NgxFluentDesignCommonAnimations } from '../../common/animations/ngx-fluent-design.animations';
-import { ComponentHandlerBodyClassOrchestrator } from '../../common/orchestrators/component-handler-body-class.orchestrator';
+import { NgxFluentDesignCommonAnimations } from '../animations/ngx-fluent-design.animations';
+import { NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator } from '../orchestrators/ngx-fluent-design-surface-handler-body-styles.orchestrator';
+import { INgxFluentDesignSurface } from '../types/ngx-fluent-design-surface.interface';
 
 @Component({
     selector: 'ngx-fluent-design-modal',
@@ -13,28 +13,29 @@ import { ComponentHandlerBodyClassOrchestrator } from '../../common/orchestrator
         NgxFluentDesignCommonAnimations.FadeInAnimation('150ms', '150ms')
     ]
 })
-export class NgxFluentDesignModalComponent implements INgxFluentDesignModalComponent, OnInit {
-    @Input() public modalHandler: NgxFluentDesignModalHandler;
-    @Input() public outsideSheetCanDismissContent: boolean = true;
-    public readonly sheetDismissClicked: EventEmitter<void>;
+export class NgxFluentDesignModalComponent implements INgxFluentDesignSurface, OnInit {
+    @Input() public handler: NgxFluentDesignModalHandler;
+    @Input() public canDismissWithOuterContent: boolean = true;
 
-    private _orchestrator: ComponentHandlerBodyClassOrchestrator;
+    public readonly componentClosed: EventEmitter<void>;
+
+    private _orchestrator: NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator;
     private readonly _document: Document;
 
     constructor(@Inject(DOCUMENT) document: Document) {
         this._document = document;
-        this.sheetDismissClicked = new EventEmitter<void>();
+        this.componentClosed = new EventEmitter<void>();
     }
 
     public ngOnInit(): void {
-        this._orchestrator = new ComponentHandlerBodyClassOrchestrator(this.modalHandler, this._document);
+        this._orchestrator = new NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator(this.handler, this._document, ['no-scroll']);
         this._orchestrator.onInit();
     }
 
-    public outerSheetClicked(): void {
-        if (this.outsideSheetCanDismissContent) {
-            this.modalHandler.close();
-            this.sheetDismissClicked.emit();
+    public handleCloseClickEvent(): void {
+        if (this.canDismissWithOuterContent) {
+            this.handler.close();
+            this.componentClosed.emit();
         }
     }
 }

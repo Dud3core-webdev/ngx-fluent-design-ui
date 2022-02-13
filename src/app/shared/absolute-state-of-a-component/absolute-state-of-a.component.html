@@ -292,16 +292,16 @@
 </ngx-fluent-design-panel>
 
 <ngx-fluent-design-dialog
-    [dialogHandler]="dialogHandler"
+    [handler]="dialogHandler"
     [header]="'Hello there'"
-    [outsideSheetCanDismissContent]="true"
+    [canDismissWithOuterContent]="true"
     [displayCloseIcon]="true"
     (primaryActionClicked)="dialogHandler.close()"
     (secondaryActionClicked)="exampleAlert('Alert secondary Action')">
     This is an alert that can be dismissed via the modal content
 </ngx-fluent-design-dialog>
 
-<ngx-fluent-design-modal [outsideSheetCanDismissContent]="true" [modalHandler]="modalHandler">
+<ngx-fluent-design-modal [canDismissWithOuterContent]="true" [handler]="modalHandler">
     <div class="w-100 h-100 d-flex flex-column">
         <div class="d-flex align-top">
             <p>Hello</p>
@@ -315,15 +315,20 @@
 </ngx-fluent-design-modal>
 
 <ngx-fluent-design-sheet [handler]="sheetHandler">
-    <h1>Hello</h1>
-    <p>
-        This is basically no different to a dialog container, the only difference being that,
-        whatever content goes into the card is your call.
-    </p>
-    <section class="mb-2">
-        <ngx-fluent-design-message-bar messageBarType="warning">
-            The content will always be justified to the center as displayed in this example
-        </ngx-fluent-design-message-bar>
+    <section class="p-3 shadow-lg" style="background: white">
+        <h1>Hello</h1>
+        <p>
+            This is basically no different to a dialog container, the only difference being that,
+            whatever content goes into this sheet is your call.
+        </p>
+
+        <p>Take a look at the templating for yourself to see, the shadow generated on this is from bootstrap.</p>
+        <section class="mb-2">
+            <ngx-fluent-design-message-bar messageBarType="warning">
+                The content will always be justified to the center as displayed in this example, but you will have to
+                set literally everything (in regards to content styles) yourself. This Gives you absolute control over content
+            </ngx-fluent-design-message-bar>
+        </section>
+        <small>Click outside the sheet to close.</small>
     </section>
-    <small>Click outside the sheet to close.</small>
 </ngx-fluent-design-sheet>

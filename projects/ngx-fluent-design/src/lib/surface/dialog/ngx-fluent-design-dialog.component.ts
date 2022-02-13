@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Inject, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { INgxFluentDesignIcon } from '../../icons/shared/types/ngx-fluent-design-icon.interface';
 import { NgxFluentDesignIconClearClose } from '../../icons/shared/constants/ngx-fluent-design-icons-list';
-import { INgxFluentDesignDialog } from '../shared/types/ngx-fluent-design-dialog.interface';
+import { INgxFluentDesignDialog } from './ngx-fluent-design-dialog.interface';
 import { NgxFluentDesignDialogHandler } from './dialog-handler.helper';
 import { DOCUMENT } from '@angular/common';
-import { NgxFluentDesignCommonAnimations } from '../../common/animations/ngx-fluent-design.animations';
-import { ComponentHandlerBodyClassOrchestrator } from '../../common/orchestrators/component-handler-body-class.orchestrator';
+import { NgxFluentDesignCommonAnimations } from '../animations/ngx-fluent-design.animations';
+import { NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator } from '../orchestrators/ngx-fluent-design-surface-handler-body-styles.orchestrator';
 
 @Component({
     selector: 'ngx-fluent-design-dialog',
@@ -19,24 +19,26 @@ export class NgxFluentDesignDialogComponent implements INgxFluentDesignDialog, O
     @Input() public primaryActionName: string = 'Primary Action';
     @Input() public header: string = '';
     @Input() public displayCloseIcon: boolean = false;
-    @Input() public outsideSheetCanDismissContent: boolean = false;
-    @Input() public dialogHandler: NgxFluentDesignDialogHandler;
+    @Input() public handler: NgxFluentDesignDialogHandler;
+    @Input() public canDismissWithOuterContent: boolean;
 
+    @Output() public readonly componentClosed: EventEmitter<void> = new EventEmitter<void>();
     @Output() public readonly primaryActionClicked: EventEmitter<void> = new EventEmitter<void>();
     @Output() public readonly secondaryActionClicked: EventEmitter<void> = new EventEmitter<void>();
-    @Output() public readonly sheetDismissClicked: EventEmitter<void> = new EventEmitter<void>();
+
     public readonly closeIcon: INgxFluentDesignIcon = NgxFluentDesignIconClearClose;
 
     private _displaySecondaryAction: boolean = false;
     private _secondaryActionName: string = '';
-    private _orchestrator: ComponentHandlerBodyClassOrchestrator;
+    private _orchestrator: NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator;
     private readonly _document: Document;
 
     public get shouldDisplaySecondaryAction(): boolean {
         return this._displaySecondaryAction;
     }
 
-    @Input() public set secondaryActionName(actionName: string) {
+    @Input()
+    public set secondaryActionName(actionName: string) {
         this._secondaryActionName = actionName;
         this._displaySecondaryAction = true;
     }
@@ -50,7 +52,7 @@ export class NgxFluentDesignDialogComponent implements INgxFluentDesignDialog, O
     }
 
     public ngOnInit(): void {
-        this._orchestrator = new ComponentHandlerBodyClassOrchestrator(this.dialogHandler, this._document);
+        this._orchestrator = new NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator(this.handler, this._document, ['no-scroll']);
         this._orchestrator.onInit();
     }
 
@@ -58,9 +60,10 @@ export class NgxFluentDesignDialogComponent implements INgxFluentDesignDialog, O
         this._orchestrator.onDestroy();
     }
 
-    public outerSheetClicked(): void {
-        if (this.outsideSheetCanDismissContent) {
-            this.dialogHandler.close();
+    public handleCloseClickEvent(): void {
+        if (this.canDismissWithOuterContent) {
+            this.handler.close();
+            this.componentClosed.emit();
         }
     }
 }
