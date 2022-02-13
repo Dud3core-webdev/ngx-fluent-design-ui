@@ -4,8 +4,15 @@ export { NgxFluentDesignSlotNames } from './lib/types/theme-names.type';
 /** Surface */
 export { NgxFluentDesignDialogComponent } from './lib/surface/dialog/ngx-fluent-design-dialog.component';
 export { NgxFluentDesignSheetComponent } from './lib/surface/sheet/ngx-fluent-design-sheet.component';
-export { NgxFluentDesignCardComponent } from './lib/surface/card/ngx-fluent-design-card.component';
 export { NgxFluentDesignPanelComponent } from './lib/surface/panel/ngx-fluent-design-panel.component';
+export { NgxFluentDesignModalComponent } from './lib/surface/modal/ngx-fluent-design-modal.component';
+export { NgxFluentDesignCardComponent } from './lib/surface/card/ngx-fluent-design-card.component';
+
+/** Surface Handlers */
+export { NgxFluentDesignDialogHandler } from './lib/surface/dialog/dialog-handler.helper';
+export { NgxFluentDesignSheetHandler } from './lib/surface/sheet/sheet-handler.helper';
+export { NgxFluentDesignPanelHandler } from './lib/surface/panel/panel-handler.helper';
+export { NgxFluentDesignModalHandler } from './lib/surface/modal/modal-handler.helper';
 
 /** card */
 export { NgxFluentDesignDocumentCardComponent } from './lib/card/document/ngx-fluent-design-document-card.component';
