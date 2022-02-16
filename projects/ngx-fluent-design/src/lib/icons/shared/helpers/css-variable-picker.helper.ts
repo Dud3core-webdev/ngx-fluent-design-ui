@@ -5,7 +5,7 @@ export class CssVariablePickerHelper {
     }
 
     public static getNewCssVar(variableName: string): string {
-        const style = getComputedStyle(document.body);
+        const style = getComputedStyle(document.documentElement);
         return style.getPropertyValue(`--ngx-fluent-design-${variableName}`);
     }
 

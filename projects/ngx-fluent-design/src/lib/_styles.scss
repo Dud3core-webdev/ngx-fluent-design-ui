@@ -4,35 +4,6 @@
 @import "styles/utilities";
 
 :root {
-    /** Colors */
-    --theme-primary: #0078D4;
-    --theme-default-font-color: #201F1E;
-    --theme-background: #ffffff;
-
-    // light
-    --theme-lighter-alt: #EFF6FC;
-    --theme-lighter: #DEECF9;
-    --theme-light: #C7E0F4;
-
-    // dark
-    --theme-dark-alt: #106EBE;
-    --theme-darker: #004578;
-    --theme-dark: #005A9E;
-
-    //tertiary
-    --theme-tertiary: #2B88D8;
-
-    /** Error and status */
-    --theme-error-background-fill: #FDE7E9;
-    --theme-success-background-fill: #DFF6DD;
-    --theme-severe-background-fill: #FED9CC;
-    --theme-warning-background-fill: #FFF4CE;
-
-    --theme-status-error: #A80000;
-    --theme-status-success: #107C10;
-    --theme-status-severe-warning: #D83B01;
-    --theme-status-warning: #797775;
-
     /** primary **/
     --ngx-fluent-design-theme-primary: #0078d4;
     --ngx-fluent-design-secondary: #2b88d8;
@@ -52,6 +23,8 @@
     --ngx-fluent-design-foreground-neutral-secondary: #605e5c;
     --ngx-fluent-design-foreground-neutral-tertiary: #a19f9d;
     --ngx-fluent-design-foreground-white: #ffffff;
+    /** @todo: get rid of this somehow...*/
+    --ngx-fluent-design-foreground-white-rgba: rgb(255, 255, 255, 0.5);
 
     /** Background **/
     --ngx-fluent-design-background-neutral-tertiary-alt: #c8c6c4;

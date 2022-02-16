@@ -48,7 +48,7 @@ export class ThemeSwitcherService {
 
     private setTheme(themeMap: Map<string, string>): void {
         themeMap.forEach((value, key) => {
-            const root = this._document.documentElement;
+            const root = this._document.body;
             root.style.setProperty(key, value);
         });
     }

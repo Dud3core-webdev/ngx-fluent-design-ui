@@ -21,6 +21,7 @@ export const DefaultThemeMap: Map<string, string > = new Map<string, string>([
     ['--ngx-fluent-design-foreground-neutral-secondary', '#605e5c'],
     ['--ngx-fluent-design-foreground-neutral-tertiary', '#a19f9d'],
     ['--ngx-fluent-design-foreground-white', '#ffffff'],
+    ['--ngx-fluent-design-foreground-white-rgba', 'rgb(255, 255, 255, 0.5)'],
 
     /* Background **/
     ['--ngx-fluent-design-background-neutral-tertiary-alt', '#c8c6c4'],

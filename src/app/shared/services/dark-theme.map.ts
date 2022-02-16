@@ -20,6 +20,7 @@ export const DarkThemeMap: Map<string, string> = new Map<string, string>([
     ['--ngx-fluent-design-foreground-neutral-secondary', '#d0d0d0'],
     ['--ngx-fluent-design-foreground-neutral-tertiary', '#c8c8c8'],
     ['--ngx-fluent-design-foreground-white', '#292828'],
+    ['--ngx-fluent-design-foreground-white-rgba', 'rgb(41, 40, 40, 0.5)'],
 
     /* Background **/
     ['--ngx-fluent-design-background-neutral-tertiary-alt', '#747171'],
