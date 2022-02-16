@@ -8,7 +8,7 @@
             <h1 class="header-content">{{header}}</h1>
             <ngx-fluent-design-icon *ngIf="displayCloseIcon"
                                     [icon]="closeIcon"
-                                    (click)="handler.close()"
+                                    (click)="handler.close(); componentClosed.emit()"
                                     data-spec="ngx-fluent-design-close-icon"
                                     class="close-icon">
             </ngx-fluent-design-icon>
