@@ -1,5 +1,5 @@
 export const DarkThemeMap: Map<string, string> = new Map<string, string>([
-    ['--application-background', 'black'],
+    ['--application-background', '#383737'],
     /* New Styles that conform to variables given by
          https,//fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/master/theming-designer/index.html */
     ['--ngx-fluent-design-theme-primary', '#8ca3ff'],
