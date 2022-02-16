@@ -39,6 +39,9 @@ export { NgxFluentDesignCtaType } from './lib/cta/types/cta.type';
 export { NgxFluentDesignMessageBarComponent } from './lib/notifications/message-bar/ngx-fluent-design-message-bar.component';
 export { MessageBarType } from './lib/notifications/types/message-bar.type';
 
+/** Notification Handlers */
+export { NgxFluentDesignMessageBarHandler } from './lib/notifications/message-bar/message-bar-handler.helper';
+
 /** Progress */
 export { NgxFluentDesignSpinnerComponent } from './lib/progress/spinner/ngx-fluent-design-spinner.component';
 export { NgxFluentDesignProgressIndicatorComponent } from './lib/progress/progress-indicator/ngx-fluent-design-progress-indicator.component';

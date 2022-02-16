@@ -1,3 +1,7 @@
+<ngx-fluent-design-message-bar [fixed]="true" [canDismiss]="true" messageBarType="error" [handler]="messageBarHandler">
+    This is the thing
+</ngx-fluent-design-message-bar>
+
 <div class="container">
-    <absolute-mess></absolute-mess>
+    <absolute-mess (displayErrorMessageBar)="messageBarHandler.open()"></absolute-mess>
 </div>

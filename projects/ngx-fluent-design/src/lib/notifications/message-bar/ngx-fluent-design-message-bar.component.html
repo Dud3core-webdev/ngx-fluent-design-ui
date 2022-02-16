@@ -1,14 +1,14 @@
-<section class="ngx-fluent-design-message-bar" [class.action-bar-active]="canDisplayActionBar" [ngClass]="messageBarType" [hidden]="shouldBeHidden">
+<section class="ngx-fluent-design-message-bar" [@slideInFromTop]="handler && !handler.isOpen ? 'hide' : 'show'" [class.action-bar-active]="canDisplayActionBar" [class.is-fixed]="fixed" [ngClass]="messageBarType">
     <span class="message-container">
         <ngx-fluent-design-icon class="icon" [icon]="icon"></ngx-fluent-design-icon>
         <span class="message"><ng-content></ng-content></span>
     </span>
-    <section class="calls-to-action" [ngClass]="{ 'action-bar-displayed': displayActions }" *ngIf="canDisplayActionBar">
+    <section class="calls-to-action" [ngClass]="{ 'action-bar-displayed': canDisplayActionBar }">
         <section class="user-action">
-            <ngx-fluent-design-button data-spec="fluent-design-message-bar-action" *ngIf="displayActions" (clicked)="onActionClicked()" type="standard">{{actionName}}</ngx-fluent-design-button>
+            <ngx-fluent-design-button data-spec="fluent-design-message-bar-action" *ngIf="canDisplayActionBar" (clicked)="onActionClicked()" type="standard">{{actionName}}</ngx-fluent-design-button>
         </section>
         <section class="x-icon">
-            <ngx-fluent-design-icon *ngIf="canDismiss" data-spec="fluent-design-message-bar-dismiss-CTA" (click)="onCloseClicked()" [icon]="closeLogo"></ngx-fluent-design-icon>
+            <ngx-fluent-design-icon *ngIf="canDisplayCloseLogo" data-spec="fluent-design-message-bar-dismiss-CTA" (click)="onCloseClicked()" [icon]="closeLogo"></ngx-fluent-design-icon>
         </section>
     </section>
 </section>

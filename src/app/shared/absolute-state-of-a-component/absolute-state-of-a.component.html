@@ -71,7 +71,6 @@
         <h3 class="header">With Actions</h3>
         <ngx-fluent-design-message-bar [actionName]="'Some action'"
                                        messageBarType="info"
-                                       [displayActions]="true"
                                        [canDismiss]="true"
                                        (actionClicked)="exampleAlert('Message bar action')">
             This is a message bar with the actions displayed.
@@ -81,7 +80,6 @@
     <section class="my-3">
         <ngx-fluent-design-message-bar [actionName]="'Some action'"
                                        messageBarType="warning"
-                                       [displayActions]="true"
                                        [canDismiss]="true"
                                        (actionClicked)="exampleAlert('Message bar action')">
             This is a message bar with the actions displayed.
@@ -91,7 +89,6 @@
     <section class="my-3">
         <ngx-fluent-design-message-bar [actionName]="'Some action'"
                                        messageBarType="error"
-                                       [displayActions]="true"
                                        [canDismiss]="true"
                                        (actionClicked)="exampleAlert('Message bar action')">
             This is a message bar with the actions displayed.
@@ -101,7 +98,6 @@
     <section class="my-3">
         <ngx-fluent-design-message-bar [actionName]="'Some action'"
                                        messageBarType="success"
-                                       [displayActions]="true"
                                        [canDismiss]="true"
                                        (actionClicked)="exampleAlert('Message bar action')">
             This is a message bar with the actions displayed.
@@ -111,7 +107,6 @@
     <section class="my-3">
         <ngx-fluent-design-message-bar [actionName]="'Some action'"
                                        messageBarType="severe-warning"
-                                       [displayActions]="true"
                                        [canDismiss]="true"
                                        (actionClicked)="exampleAlert('Message bar action')">
             This is a message bar with the actions displayed.
@@ -121,7 +116,6 @@
     <section class="my-3">
         <ngx-fluent-design-message-bar [actionName]="'Some action'"
                                        messageBarType="blocked"
-                                       [displayActions]="true"
                                        [canDismiss]="true"
                                        (actionClicked)="exampleAlert('Message bar action')">
             This is a message bar with the actions displayed.
@@ -130,57 +124,52 @@
 
     <section class="my-3">
         <h3 class="header">No Actions</h3>
-        <ngx-fluent-design-message-bar [actionName]="'Some action'"
-                                       messageBarType="info"
-                                       [displayActions]="false"
+        <ngx-fluent-design-message-bar messageBarType="info"
                                        [canDismiss]="false">
             This is a message bar with the actions displayed.
         </ngx-fluent-design-message-bar>
     </section>
 
     <section class="my-3">
-        <ngx-fluent-design-message-bar [actionName]="'Some action'"
-                                       messageBarType="warning"
-                                       [displayActions]="false"
+        <ngx-fluent-design-message-bar messageBarType="warning"
                                        [canDismiss]="false">
             This is a message bar with the actions displayed.
         </ngx-fluent-design-message-bar>
     </section>
 
     <section class="my-3">
-        <ngx-fluent-design-message-bar [actionName]="'Some action'"
-                                       messageBarType="error"
-                                       [displayActions]="false"
+        <ngx-fluent-design-message-bar messageBarType="error"
                                        [canDismiss]="false">
             This is a message bar with the actions displayed.
         </ngx-fluent-design-message-bar>
     </section>
 
     <section class="my-3">
-        <ngx-fluent-design-message-bar [actionName]="'Some action'"
-                                       messageBarType="success"
-                                       [displayActions]="false"
+        <ngx-fluent-design-message-bar messageBarType="success"
                                        [canDismiss]="false">
             This is a message bar with the actions displayed.
         </ngx-fluent-design-message-bar>
     </section>
 
     <section class="my-3">
-        <ngx-fluent-design-message-bar [actionName]="'Some action'"
-                                       messageBarType="severe-warning"
-                                       [displayActions]="false"
+        <ngx-fluent-design-message-bar messageBarType="severe-warning"
                                        [canDismiss]="false">
             This is a message bar with the actions displayed.
         </ngx-fluent-design-message-bar>
     </section>
 
     <section class="my-3">
-        <ngx-fluent-design-message-bar [actionName]="'Some action'"
-                                       messageBarType="blocked"
-                                       [displayActions]="false"
+        <ngx-fluent-design-message-bar messageBarType="blocked"
                                        [canDismiss]="true">
             This is a message bar with the actions displayed.
         </ngx-fluent-design-message-bar>
+    </section>
+
+    <section class="my-3">
+        <h3>Fixed Message Bar</h3>
+        <ngx-fluent-design-button (clicked)="displayErrorMessageBar.emit()">
+            Click here to launch a message bar
+        </ngx-fluent-design-button>
     </section>
 
 </ngx-fluent-design-card>

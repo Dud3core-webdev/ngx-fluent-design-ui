@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgxFluentDesignIconInfoWarn } from '../../../../projects/ngx-fluent-design/src/lib/icons/shared/constants/ngx-fluent-design-icons-list';
 import { NgxFluentDesignPanelHandler } from '../../../../projects/ngx-fluent-design/src/lib/surface/panel/panel-handler.helper';
@@ -40,6 +40,9 @@ export class AbsoluteStateOfAComponent implements AfterViewInit {
         warningIcon: NgxFluentDesignIconInfoWarn
     };
 
+    @Output()
+    public displayErrorMessageBar: EventEmitter<void> = new EventEmitter<void>();
+
     ngAfterViewInit(): void {
         this.exampleProgressLoad();
     }
@@ -59,8 +62,5 @@ export class AbsoluteStateOfAComponent implements AfterViewInit {
 
     public toggleInputDisabled(): void {
         this.inputsDisabled = !this.inputsDisabled;
-    }
-
-    public setSheetAlignment(): void {
     }
 }

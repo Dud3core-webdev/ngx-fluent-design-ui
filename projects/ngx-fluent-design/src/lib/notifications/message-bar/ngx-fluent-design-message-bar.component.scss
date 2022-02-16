@@ -6,8 +6,12 @@
     flex-direction: row;
     justify-content: space-between;
 
-    &.fixed {
+    &.is-fixed {
         position: sticky;
+        position: -webkit-sticky; /* Safari */
+        top: 0;
+        z-index: 9000;
+        width: 100vw;
     }
 
     &.info {

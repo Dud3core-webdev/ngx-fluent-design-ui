@@ -36,4 +36,23 @@ export class NgxFluentDesignCommonAnimations {
             ]),
         ]);
     }
+
+    public static slideInFromTop(slideInTime: string, slideOutTime: string): AnimationTriggerMetadata {
+        return trigger('slideInFromTop', [
+            state('hide', style({
+                transform: 'translateY(-100%)',
+                visibility: 'hidden'
+            })),
+            state('show', style({
+                transform: 'translateY(0%)',
+                visibility: 'visible'
+            })),
+            transition('show => hide', [
+                animate(slideOutTime)
+            ]),
+            transition('hide => show', [
+                animate(slideInTime)
+            ]),
+        ]);
+    }
 }

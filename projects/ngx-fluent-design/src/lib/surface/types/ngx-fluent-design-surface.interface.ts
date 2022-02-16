@@ -1,4 +1,4 @@
-import { INgxFluentDesignSurfaceComponentHandler } from './ngx-fluent-design-surface-component-handler.interface';
+import { INgxFluentDesignSurfaceComponentHandler } from '../../types/ngx-fluent-design-surface-component-handler.interface';
 import { EventEmitter } from '@angular/core';
 
 export interface INgxFluentDesignSurface {

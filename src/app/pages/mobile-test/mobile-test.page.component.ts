@@ -1,39 +1,15 @@
-import { AfterViewInit, Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { NgxFluentDesignIconInfoWarn } from '../../../../projects/ngx-fluent-design/src/lib/icons/shared/constants/ngx-fluent-design-icons-list';
+import { Component } from '@angular/core';
+import { NgxFluentDesignMessageBarHandler } from '../../../../projects/ngx-fluent-design/src/lib/notifications/message-bar/message-bar-handler.helper';
 
 @Component({
     templateUrl: './mobile-test.page.component.html',
     styleUrls: ['./mobile-test.page.component.scss']
 })
-export class MobileTestPageComponent implements AfterViewInit {
+export class MobileTestPageComponent {
     public progressIndicatorCurrentValue: number = 0;
+    public messageBarHandler: NgxFluentDesignMessageBarHandler = new NgxFluentDesignMessageBarHandler(false);
 
-    testForm = new FormGroup({
-        checkboxEnabled: new FormControl(''),
-        checkboxDisabled: new FormControl(true),
-        radio: new FormControl('Radio disabled value'),
-    });
-
-    tesIconList = {
-        warningIcon: NgxFluentDesignIconInfoWarn
-    };
-
-    ngAfterViewInit(): void {
-        this.exampleProgressLoad();
+    sayHello() {
+        alert('Hello');
     }
-
-    public exampleAlert(componentType: string): void {
-        window.alert(`This is a ${componentType} click event`);
-    }
-
-    public exampleProgressLoad(percentage = 0): void {
-        if (percentage >= 100) {
-            return;
-        }
-        this.progressIndicatorCurrentValue = percentage;
-        requestAnimationFrame(() => this.exampleProgressLoad(this.progressIndicatorCurrentValue + 0.05));
-    }
-
-
 }

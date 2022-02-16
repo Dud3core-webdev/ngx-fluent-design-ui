@@ -1,3 +1,7 @@
-<div class="mobile-test container w-100">
-    <absolute-mess></absolute-mess>
+<ngx-fluent-design-message-bar (actionClicked)="sayHello()" [actionName]="'Ok'" [fixed]="true" [canDismiss]="true" messageBarType="error" [handler]="messageBarHandler">
+    This is the thing
+</ngx-fluent-design-message-bar>
+
+<div class="mobile-test container w-100 my-2">
+    <absolute-mess (displayErrorMessageBar)="messageBarHandler.open()"></absolute-mess>
 </div>

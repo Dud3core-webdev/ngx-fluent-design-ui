@@ -4,6 +4,8 @@ import { NgxFluentDesignMessageBarComponent } from './ngx-fluent-design-message-
 import { NgxFluentDesignCtaModule } from '../../cta/ngx-fluent-design-cta.module';
 import { NgxFluentDesignIconModule } from '../../icons/ngx-fluent-design-icon.module';
 import SpyInstance = jest.SpyInstance;
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxFluentDesignMessageBarHandler } from './message-bar-handler.helper';
 
 describe('NgxFluentDesignMessageBarComponent', () => {
     let component: NgxFluentDesignMessageBarComponent;
@@ -17,7 +19,8 @@ describe('NgxFluentDesignMessageBarComponent', () => {
             declarations: [NgxFluentDesignMessageBarComponent],
             imports: [
                 NgxFluentDesignCtaModule,
-                NgxFluentDesignIconModule
+                NgxFluentDesignIconModule,
+                BrowserAnimationsModule
             ]
         })
             .compileComponents();
@@ -34,7 +37,6 @@ describe('NgxFluentDesignMessageBarComponent', () => {
     describe('Given the message bar component initialises', () => {
         describe('And the "action" and "dismiss" CTAs are disabled', () => {
             beforeEach(() => {
-                component.displayActions = false;
                 component.canDismiss = false;
                 fixture.detectChanges();
             });
@@ -50,7 +52,8 @@ describe('NgxFluentDesignMessageBarComponent', () => {
         });
         describe('And "action" and "dismiss" CTAs are enabled', () => {
             beforeEach(() => {
-                component.displayActions = true;
+                component.actionName = 'Hello';
+                component.handler = new NgxFluentDesignMessageBarHandler(true);
                 component.canDismiss = true;
                 fixture.detectChanges();
             });
