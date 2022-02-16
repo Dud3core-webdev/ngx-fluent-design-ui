@@ -11,7 +11,7 @@
     messageBarType="error"
     [handler]="errorMessageHandler"
     [fixed]="true"
-    (actionClicked)="successMessageHandler.close()"
+    (actionClicked)="errorMessageHandler.close()"
     [actionName]="'close'">
     Whoops!! Something went wrong, please try again
 </ngx-fluent-design-message-bar>
