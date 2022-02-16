@@ -15,7 +15,7 @@
     .toggle-label {
         margin-right: 12px;
         font-size: $theme-body-text-font-size;
-        color: $theme-colors-grey190;
+        color: $theme-default-font-color;
     }
 
     .switch {
@@ -32,7 +32,7 @@
             &:disabled {
                 + {
                     .slider {
-                        background-color: $theme-colors-white;
+                        background-color: $theme-background;
                         border-color: $theme-type-disabled;
 
                         &:before {
@@ -99,7 +99,7 @@
                         -webkit-transform: translateX(19px);
                         -ms-transform: translateX(19px);
                         transform: translateX(19px);
-                        background-color: $theme-colors-white;
+                        background-color: $theme-background;
                         left: 4px;
                         right: 4px;
                         bottom: 4px;
@@ -115,7 +115,7 @@
                         border-color: $theme-type-disabled !important;
 
                         &:before {
-                            background-color: $theme-colors-white !important;
+                            background-color: $theme-background !important;
                         }
                     }
                 }

@@ -11,6 +11,7 @@ import { MobileTestPageModule } from './pages/mobile-test/mobile-test.page.modul
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TestFormPageModule } from './pages/test-form/test-form-page.module';
 import { NgxFluentDesignSurfaceModule } from '../../projects/ngx-fluent-design/src/lib/surface/ngx-fluent-design-surface.module';
+import { NgxFluentDesignInputModule } from 'projects/ngx-fluent-design/src/lib/input/ngx-fluent-design-input.module';
 
 @NgModule({
     declarations: [
@@ -27,7 +28,8 @@ import { NgxFluentDesignSurfaceModule } from '../../projects/ngx-fluent-design/s
         BrowserModule,
         NgxFluentDesignNotificationModule,
         NgxFluentDesignCtaModule,
-        NgxFluentDesignSurfaceModule
+        NgxFluentDesignSurfaceModule,
+        NgxFluentDesignInputModule
     ],
     bootstrap: [AppComponent]
 })

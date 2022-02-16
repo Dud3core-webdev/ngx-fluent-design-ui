@@ -7,7 +7,7 @@
 @import "projects/ngx-fluent-design/src/lib/styles";
 @import "app/styles/typography";
 
-body { margin: 0; background: #faf9f8}
+body { margin: 0; background: var(--application-background)}
 
 .c-pointer {
     cursor: pointer;

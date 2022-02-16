@@ -1,4 +1,8 @@
+
 <div class="container my-4">
+    <section class="my-3">
+        <ngx-fluent-design-toggle (change)="toggleTheme()" [label]="'Toggle dark theme (in development)'" [toggled]="!isNormalTheme"></ngx-fluent-design-toggle>
+    </section>
     <button ngxFluentDesignLinkButton class="mr-2" [routerLink]="['', 'desktop']" [routerLinkActive]="'active'">Desktop</button>
     <button ngxFluentDesignLinkButton class="mr-2" [routerLink]="['', 'mobile']" [routerLinkActive]="'active'">Mobile</button>
     <button ngxFluentDesignLinkButton class="mr-2" [routerLink]="['', 'test-form']" [routerLinkActive]="'active'">Form </button>

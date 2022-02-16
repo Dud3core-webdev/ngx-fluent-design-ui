@@ -10,9 +10,10 @@
     font-size: $theme-body-text-font-size;
 
     &.standard {
-        color: $theme-type-primary;
+        color: $theme-colors-grey190;
 
         &.none {
+            color: $theme-colors-grey190;
             border: 1px solid $theme-colors-grey50;
             background: $theme-colors-white;
             &:hover {

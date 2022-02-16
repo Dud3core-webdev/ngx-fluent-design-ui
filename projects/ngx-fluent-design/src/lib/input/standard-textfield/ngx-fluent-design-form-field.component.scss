@@ -41,14 +41,14 @@ label {
 
     &:focus {
         background: #FFFFFF;
-        border: 2px solid #0078D4;
+        border: 2px solid $theme-primary;
         box-sizing: border-box;
         border-radius: 2px;
     }
 
     &:focus-within {
         background: #FFFFFF;
-        border: 2px solid #0078D4;
+        border: 2px solid $theme-primary;
         box-sizing: border-box;
         border-radius: 2px;
 
