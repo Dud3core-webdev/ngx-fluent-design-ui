@@ -65,6 +65,18 @@
 </ngx-fluent-design-card>
 
 <ngx-fluent-design-card>
+    <h1 class="mb-4 pane-header bold">Message Bar</h1>
+
+    <ngx-fluent-design-message-bar [actionName]="'Some action'"
+                                   messageBarType="info"
+                                   [displayActions]="true"
+                                   [canDismiss]="true"
+                                   (actionClicked)="exampleAlert('Message bar action')">
+        This is some alert, I don't know
+    </ngx-fluent-design-message-bar>
+</ngx-fluent-design-card>
+
+<ngx-fluent-design-card>
     <h1 class="mb-3 pane-header bold">Buttons</h1>
 
     <h3 class="header">Standard button</h3>

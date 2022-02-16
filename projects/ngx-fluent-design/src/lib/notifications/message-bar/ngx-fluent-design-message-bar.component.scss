@@ -1,10 +1,9 @@
 @import "../../styles/variables";
 
 .ngx-fluent-design-message-bar {
-
     display: flex;
     flex-direction: row;
-    width: 100%;
+    justify-content: space-between;
 
     &.fixed {
         position: sticky;
@@ -37,32 +36,29 @@
     .message-container {
         display: flex;
         align-items: center;
-        min-width: 75%;
 
         .message {
             font-size: $theme-metadata-font-size !important;
             line-height: normal;
-            margin: 8px 12px 8px 8px;
         }
     }
 
     .calls-to-action {
-        padding: $theme-padding-base / 2 $theme-padding-base;
         display: flex;
-        align-items: flex-end;
-        flex-direction: row;
         justify-content: space-between;
-        min-width: 25%;
-        max-width: 35%;
-
         .user-action {
-            align-self: flex-end;
+            margin-right: 12px !important;
         }
-
         .x-icon {
             align-self: flex-start;
             position: sticky;
             cursor: pointer;
         }
+    }
+
+    .action-bar-displayed {
+        display: flex;
+        justify-content: space-between;
+        padding: $theme-padding-base / 2;
     }
 }
