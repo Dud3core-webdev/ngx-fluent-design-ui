@@ -1,7 +1,3 @@
 @function get_theme_var($varName) {
-    @return (var(--theme-#{$varName}));
-}
-
-@function get_new_theme_var($varName) {
     @return (var(--ngx-fluent-design-#{$varName}));
 }

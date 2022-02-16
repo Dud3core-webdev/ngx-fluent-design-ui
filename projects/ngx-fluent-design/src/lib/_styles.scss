@@ -4,6 +4,17 @@
 @import "styles/utilities";
 
 :root {
+    /** Error and status */
+    --ngx-fluent-design-error-background-fill: #FDE7E9;
+    --ngx-fluent-design-success-background-fill: #DFF6DD;
+    --ngx-fluent-design-severe-background-fill: #FED9CC;
+    --ngx-fluent-design-warning-background-fill: #FFF4CE;
+
+    --ngx-fluent-design-status-error: #A80000;
+    --ngx-fluent-design-status-success: #107C10;
+    --ngx-fluent-design-status-severe-warning: #D83B01;
+    --ngx-fluent-design-status-warning: #797775;
+
     /** primary **/
     --ngx-fluent-design-theme-primary: #0078d4;
     --ngx-fluent-design-secondary: #2b88d8;
