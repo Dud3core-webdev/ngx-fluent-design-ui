@@ -5,8 +5,8 @@
     display: inline-block;
     padding-left: 30px;
     user-select: none;
-    font-size: $theme-body-text-font-size;
-    color: $theme-default-font-color;
+    font-size: $ngx-fluent-design-body-text-font-size;
+    color: $ngx-fluent-design-foreground-neutral-primary;
 
     input {
         position: absolute;
@@ -14,13 +14,19 @@
         height: 0;
         width: 0;
 
+        &.disabled {
+            label {
+                color: $ngx-fluent-design-background-neutral-quaternary-alt;
+            }
+        }
+
         &:not(:checked):disabled ~ .checkmark {
-            border-color: $theme-type-disabled;
+            border-color: $ngx-fluent-design-foreground-neutral-primary;
         }
 
         &:checked {
             ~ .checkmark {
-                background-color: $theme-primary;
+                background-color: $ngx-fluent-design-theme-primary;
                 border: none;
 
                 &:after {
@@ -30,7 +36,7 @@
 
             &:disabled {
                 ~ .checkmark {
-                    background-color: $theme-type-disabled;
+                    background-color: $ngx-fluent-design-foreground-neutral-tertiary;
                     border: none;
 
                     &:after {
@@ -46,7 +52,7 @@
         top: 2px;
         width: 6px;
         height: 12px;
-        border: solid $theme-colors-white;
+        border: solid $ngx-fluent-design-foreground-white;
         border-width: 0 1px 1px 0;
         transform: rotate(45deg);
     }
@@ -57,8 +63,8 @@
     left: 0;
     height: 20px;
     width: 20px;
-    border: 1px solid $theme-colors-grey130;
-    border-radius: $theme-border-radius-base;
+    border: 1px solid $ngx-fluent-design-foreground-neutral-secondary;
+    border-radius: $ngx-fluent-design-border-radius-base;
     top: 50%;
     transform: translateY(-50%);
 
@@ -76,13 +82,13 @@
         top: 1px;
         width: 6px;
         height: 12px;
-        border: solid $theme-colors-grey130;
+        border: solid $ngx-fluent-design-foreground-neutral-secondary;
         border-width: 0 1px 1px 0;
         transform: rotate(45deg);
     }
 
     input:checked:not(:disabled) ~ .checkmark {
-        background-color: $theme-dark-alt;
+        background-color: $ngx-fluent-design-theme-dark-alt;
         border: none;
     }
 }

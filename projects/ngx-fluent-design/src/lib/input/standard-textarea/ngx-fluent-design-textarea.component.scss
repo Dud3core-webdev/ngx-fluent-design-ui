@@ -1,6 +1,5 @@
 @import "../../styles/variables";
 
-
 label {
     padding-bottom: 8px;
 }
@@ -12,8 +11,10 @@ label {
             width: 100%;
             margin: 0;
             font: inherit;
-            font-size: $theme-body-text-font-size;
+            font-size: $ngx-fluent-design-body-text-font-size;
+            color: $ngx-fluent-design-foreground-neutral-primary;
             font-weight: 400;
+            background: $ngx-fluent-design-foreground-white;
             box-shadow: none;
             padding: 6px 8px;
             box-sizing: border-box;
@@ -32,18 +33,18 @@ label {
     height: 100%;
     left: 0;
     right: 0;
-    background: #FFFFFF;
-    border: 1px solid $theme-input-border;
+    background: $ngx-fluent-design-foreground-white;
+    border: 1px solid $ngx-fluent-design-foreground-neutral-tertiary;
     border-radius: 2px;
     margin: 6px 0 0 0;
     align-items: stretch;
 
     &:hover {
-        border-color: $theme-input-hover-border;
+        border-color: $ngx-fluent-design-foreground-neutral-primary;
     }
 
     &:focus {
-        border: 2px solid $theme-primary;
+        border: 2px solid $ngx-fluent-design-theme-primary;
         margin: 5px 0 0 0;
 
         ::ng-deep {
@@ -55,7 +56,7 @@ label {
     }
 
     &:focus-within {
-        border: 2px solid $theme-primary;
+        border: 2px solid $ngx-fluent-design-theme-primary;
         margin: 5px 0 0 0;
 
         ::ng-deep {
@@ -66,11 +67,11 @@ label {
     }
 
     &.has-error {
-        border-color: $theme-status-error;
+        border-color: $ngx-fluent-design-status-error;
     }
 
     &.disabled {
-        background-color: $theme-colors-grey30;
+        background-color: $ngx-fluent-design-background-neutral-light;
         pointer-events: none;
         border-color: transparent;
 

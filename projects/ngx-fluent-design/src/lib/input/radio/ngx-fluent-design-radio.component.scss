@@ -5,8 +5,8 @@
     display: inline-block;
     padding-left: 30px;
     user-select: none;
-    font-size: $theme-body-text-font-size;
-    color: $theme-default-font-color;
+    font-size: $ngx-fluent-design-body-text-font-size;
+    color: $ngx-fluent-design-foreground-neutral-primary;
 
     input {
         position: absolute;
@@ -14,10 +14,12 @@
         height: 0;
         width: 0;
         cursor: pointer;
+        color: $ngx-fluent-design-foreground-neutral-primary;
+        background-color: $ngx-fluent-design-foreground-neutral-primary;
 
         &:checked ~ .checkmark {
-            background-color: white;
-            border-color: $theme-primary;
+            background-color: $ngx-fluent-design-foreground-white;
+            border-color: $ngx-fluent-design-theme-primary;
 
             &:after {
                 display: block;
@@ -26,11 +28,11 @@
 
         &:disabled {
             ~ .checkmark {
-                border-color: $theme-type-disabled;
+                border-color: $ngx-fluent-design-foreground-neutral-tertiary;
             }
 
             ~ .checkmark:after {
-                background-color: $theme-type-disabled;
+                background-color: $ngx-fluent-design-foreground-neutral-tertiary;
             }
         }
     }
@@ -41,7 +43,7 @@
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        background: $theme-primary;
+        background: $ngx-fluent-design-theme-primary;
     }
 
     &:hover {
@@ -52,15 +54,15 @@
             width: 10px;
             height: 10px;
             border-radius: 50%;
-            background: $theme-colors-grey130;
+            background: $ngx-fluent-design-foreground-neutral-secondary;
         }
 
         input:checked:not(:disabled) ~ .checkmark:after {
-            background: $theme-dark-alt;
+            background: $ngx-fluent-design-theme-dark-alt;
         }
 
         input:checked:not(:disabled) ~ .checkmark {
-            border-color: $theme-dark-alt;
+            border-color: $ngx-fluent-design-theme-dark-alt;
         }
     }
 }
@@ -70,8 +72,8 @@
     left: 0;
     height: 20px;
     width: 20px;
-    background-color: white;
-    border: 1px solid $theme-colors-grey150;
+    background-color: $ngx-fluent-design-foreground-white;
+    border: 1px solid $ngx-fluent-design-foreground-neutral-primary-alt;
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);

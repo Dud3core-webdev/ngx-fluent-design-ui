@@ -1,8 +1,8 @@
 @import "../../styles/variables";
 
 label {
-    color: $theme-primary;
-    font-size: $theme-metadata-font-size;
+    color: $ngx-fluent-design-theme-primary;
+    font-size: $ngx-fluent-design-metadata-font-size;
     line-height: 16px;
     padding-top: 0.5rem;
 }
@@ -14,8 +14,8 @@ label {
 }
 
 .spinner {
-    border: 1px solid $theme-light;
-    border-top: 1px solid $theme-primary;
+    border: 1px solid $ngx-fluent-design-theme-light;
+    border-top: 1px solid $ngx-fluent-design-theme-primary;
     border-radius: 50%;
     animation: spin 1.3s ease infinite;
     animation-timing-function: cubic-bezier(.53, .2, .26, .73);

@@ -2,20 +2,20 @@
 @import "../../styles/mixins";
 
 .ngx-fluent-design-card {
-    background: $theme-background;
-    padding: $theme-padding-base * 2;
+    background: $ngx-fluent-design-foreground-white;
+    padding: $ngx-fluent-design-padding-base * 2;
     margin-bottom: 24px;
-    border-radius: $theme-border-radius-base;
+    border-radius: $ngx-fluent-design-border-radius-base;
     background-clip: padding-box;
-    -webkit-box-shadow: $depth-16;
-    box-shadow: $depth-16;
+    -webkit-box-shadow: $ngx-fluent-design-depth-16;
+    box-shadow: $ngx-fluent-design-depth-16;
     position: relative;
 
     @include ngx-fluent-design-medium-breakpoint {
-        padding: $theme-padding-base;
+        padding: $ngx-fluent-design-padding-base;
     }
 
     @include ngx-fluent-design-small-breakpoint {
-        padding: $theme-padding-base / 2;
+        padding: $ngx-fluent-design-padding-base / 2;
     }
 }

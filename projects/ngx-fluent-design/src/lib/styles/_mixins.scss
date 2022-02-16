@@ -1,13 +1,13 @@
 @import "variables";
 
 @mixin default-font-color {
-    color: $theme-default-font-color;
+    color: $ngx-fluent-design-foreground-neutral-primary;
 }
 
 @mixin metadata-limited {
     @include bold-font-weight;
     @include default-font-color;
-    font-size: $theme-metadata-limited-font-size;
+    font-size: $ngx-fluent-design-metadata-limited-font-size;
     font-weight: normal;
     line-height: 12px;
 }
@@ -15,7 +15,7 @@
 @mixin metadata {
     @include bold-font-weight;
     @include default-font-color;
-    font-size: $theme-metadata-font-size;
+    font-size: $ngx-fluent-design-metadata-font-size;
     font-weight: normal;
     line-height: 16px;
 }
@@ -23,7 +23,7 @@
 @mixin body-text {
     @include bold-font-weight;
     @include default-font-color;
-    font-size: $theme-body-text-font-size;
+    font-size: $ngx-fluent-design-body-text-font-size;
     font-weight: normal;
     line-height: 20px;
 }
@@ -31,7 +31,7 @@
 @mixin subject-title {
     @include bold-font-weight;
     @include default-font-color;
-    font-size: $theme-subject-title-font-size;
+    font-size: $ngx-fluent-design-subject-title-font-size;
     font-weight: normal;
     line-height: 22px;
 }
@@ -39,7 +39,7 @@
 @mixin header {
     @include bold-font-weight;
     @include default-font-color;
-    font-size: $theme-header-font-size;
+    font-size: $ngx-fluent-design-header-font-size;
     font-weight: normal;
     line-height: 24px;
 }
@@ -47,7 +47,7 @@
 @mixin pane-header {
     @include bold-font-weight;
     @include default-font-color;
-    font-size: $theme-pane-header-font-size;
+    font-size: $ngx-fluent-design-pane-header-font-size;
     font-weight: normal;
     line-height: 28px;
 }
@@ -55,7 +55,7 @@
 @mixin page-title {
     @include bold-font-weight;
     @include default-font-color;
-    font-size: $theme-page-title-font-size;
+    font-size: $ngx-fluent-design-page-title-font-size;
     font-weight: normal;
     line-height: 36px;
 }
@@ -63,7 +63,7 @@
 @mixin greeting-title {
     @include bold-font-weight;
     @include default-font-color;
-    font-size: $theme-greeting-title-font-size;
+    font-size: $ngx-fluent-design-greeting-title-font-size;
     font-weight: normal;
     line-height: 40px;
 }
@@ -71,7 +71,7 @@
 @mixin hero-title {
     @include bold-font-weight;
     @include default-font-color;
-    font-size: $theme-hero-title-font-size;
+    font-size: $ngx-fluent-design-hero-title-font-size;
     font-weight: normal;
     line-height: 52px;
 }
@@ -79,7 +79,7 @@
 @mixin xl-numerics {
     @include bold-font-weight;
     @include default-font-color;
-    font-size: $theme-xl-numerics-font-size;
+    font-size: $ngx-fluent-design-xl-numerics-font-size;
     font-weight: normal;
     line-height: 76px;
 }
@@ -91,7 +91,7 @@
 }
 
 @mixin action-link {
-    color: $theme-primary;
+    color: $ngx-fluent-design-theme-primary;
     outline: none;
     font-family: inherit;
     text-decoration: underline;
@@ -99,25 +99,25 @@
     border: 1px solid transparent;
 
     &.active, &:hover {
-        color: $theme-dark-alt;
+        color: $ngx-fluent-design-theme-dark-alt;
         background: inherit;
         border: 1px solid transparent;
     }
 
     &:focus {
-        border: 1px solid $theme-colors-grey190;
+        border: 1px solid $ngx-fluent-design-foreground-neutral-dark !important;
     }
 
     &:disabled, [disabled] {
-        color: $theme-type-disabled;
+        color: $ngx-fluent-design-foreground-neutral-tertiary;
         cursor: not-allowed;
     }
 }
 
 @mixin ngx-fluent-design-small-breakpoint {
-    @media (max-width: $theme-small-breakpoint) { @content; }
+    @media (max-width: $ngx-fluent-design-small-breakpoint) { @content; }
 }
 
 @mixin ngx-fluent-design-medium-breakpoint {
-    @media (max-width: $theme-medium-breakpoint) { @content; }
+    @media (max-width: $ngx-fluent-design-medium-breakpoint) { @content; }
 }

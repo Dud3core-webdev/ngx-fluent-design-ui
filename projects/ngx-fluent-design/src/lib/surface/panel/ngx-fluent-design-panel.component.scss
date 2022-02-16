@@ -26,9 +26,11 @@
         cursor: default;
         transition: none;
         width: 340px;
-        background: $theme-colors-white;
-        padding: $theme-padding-base;
-        box-shadow: $depth-64;
+        background-color: $ngx-fluent-design-foreground-white;
+        color: $ngx-fluent-design-foreground-neutral-primary;
+        padding: $ngx-fluent-design-padding-base;
+        box-shadow: $ngx-fluent-design-depth-64;
+        border-radius: $ngx-fluent-design-border-radius-base;
         position: fixed;
         top: 0;
         right: 0;
@@ -42,7 +44,7 @@
             align-items: center;
 
             .header-content {
-                font-size: $theme-pane-header-font-size;
+                font-size: $ngx-fluent-design-pane-header-font-size;
                 margin: 0;
             }
 

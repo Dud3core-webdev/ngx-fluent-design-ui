@@ -1,7 +1,7 @@
 @import "../mixins";
 
 .ngx-fluent-design-action-button {
-    color: $theme-default-font-color;
+    color: $ngx-fluent-design-foreground-neutral-primary;
     outline: none;
     font-family: inherit;
     text-decoration: none;
@@ -11,17 +11,17 @@
     background: inherit;
 
     &:hover {
-        color: $theme-primary;
-        background: inherit;
+        color: $ngx-fluent-design-theme-primary;
         border: 1px solid transparent;
     }
 
     &:focus {
-        border: 1px solid $theme-colors-grey190;
+        border: 1px solid $ngx-fluent-design-foreground-neutral-dark;
     }
 
     &:disabled, [disabled] {
-        color: $theme-type-disabled;
+        color: $ngx-fluent-design-foreground-neutral-tertiary;
         cursor: not-allowed;
     }
 }
+

@@ -5,9 +5,9 @@
     flex-direction: row;
     align-items: stretch;
     height: 32px;
-    border-bottom: 1px solid $theme-input-border;
+    border-bottom: 1px solid $ngx-fluent-design-foreground-neutral-tertiary;
     margin: 6px 0 0 0;
-    background: #FFFFFF;
+    background: $ngx-fluent-design-foreground-white;
 
     label {
         max-width: 25%;
@@ -26,8 +26,9 @@
             border: none;
             margin: 0;
             font: inherit;
-            font-size: $theme-body-text-font-size;
+            font-size: $ngx-fluent-design-body-text-font-size;
             font-weight: 400;
+            background: $ngx-fluent-design-foreground-white;
 
             &:focus {
                 outline: none;
@@ -37,11 +38,11 @@
     }
 
     &:hover {
-        border-color: $theme-input-hover-border;
+        border-color: $ngx-fluent-design-foreground-neutral-primary;;
     }
 
     &:focus {
-        border-bottom: 2px solid $theme-primary;
+        border-bottom: 2px solid $ngx-fluent-design-theme-primary;
         ::ng-deep {
             input {
                 padding-bottom: 0;
@@ -50,7 +51,7 @@
     }
 
     &:focus-within {
-        border-bottom: 2px solid $theme-primary;
+        border-bottom: 2px solid $ngx-fluent-design-theme-primary;
         ::ng-deep {
             input {
                 padding-bottom: 0;
@@ -59,11 +60,11 @@
     }
 
     &.has-error {
-        border-color: $theme-status-error;
+        border-color: $ngx-fluent-design-status-error;
     }
 
     &.disabled {
-        background-color: $theme-colors-grey30;
+        background-color: $ngx-fluent-design-background-neutral-light;
         pointer-events: none;
         border-color: transparent;
 

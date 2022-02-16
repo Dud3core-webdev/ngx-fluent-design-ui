@@ -1,15 +1,15 @@
 @import "../../styles/variables";
 
 label {
-    font-size: $theme-metadata-font-size;
+    font-size: $ngx-fluent-design-metadata-font-size;
     line-height: 16px;
-    color: $theme-default-font-color;
+    color: $ngx-fluent-design-foreground-neutral-primary;
 }
 
 p {
-    color: $theme-colors-grey130;
+    color: $ngx-fluent-design-foreground-neutral-secondary;
     line-height: 16px;
-    font-size: $theme-metadata-font-size;
+    font-size: $ngx-fluent-design-metadata-font-size;
 }
 
 .progress-indicator {
@@ -19,9 +19,9 @@ p {
 }
 
 .progress-indicator::-webkit-progress-bar {
-    background: $theme-colors-grey30;
+    background: $ngx-fluent-design-background-neutral-light;
 }
 
 .progress-indicator::-webkit-progress-value {
-    background: $theme-primary;
+    background: $ngx-fluent-design-theme-primary;
 }

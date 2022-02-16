@@ -1,80 +1,70 @@
 @import "functions";
 
-/** Theme colors */
-$theme-primary: get_theme_var(primary);
-$theme-lighter-alt: get_theme_var(lighter-alt);
-$theme-lighter: get_theme_var(lighter);
-$theme-light: get_theme_var(light);
-$theme-dark-alt: get_theme_var(dark-alt);
-$theme-darker: get_theme_var(darker);
-$theme-dark: get_theme_var(dark);
-$theme-tertiary: get_theme_var(tertiary);
-$theme-background: get_theme_var(background);
-$theme-default-font-color: get_theme_var(default-font-color);
+$ngx-fluent-design-theme-primary: get_new_theme_var(theme-primary);
+$ngx-fluent-design-secondary: get_new_theme_var(secondary);
+$ngx-fluent-design-theme-tertiary: get_new_theme_var(theme-tertiary);
+$ngx-fluent-design-theme-light: get_new_theme_var(theme-light);
+$ngx-fluent-design-theme-lighter: get_new_theme_var(theme-lighter);
+$ngx-fluent-design-theme-lighter-alt: get_new_theme_var(theme-lighter-alt);
+$ngx-fluent-design-theme-dark: get_new_theme_var(theme-dark);
+$ngx-fluent-design-theme-darker: get_new_theme_var(theme-darker);
+$ngx-fluent-design-theme-dark-alt: get_new_theme_var(theme-dark-alt);
+
+/** foreground **/
+$ngx-fluent-design-foreground-black: get_new_theme_var(foreground-black);
+$ngx-fluent-design-foreground-neutral-dark: get_new_theme_var(foreground-neutral-dark);
+$ngx-fluent-design-foreground-neutral-primary: get_new_theme_var(foreground-neutral-primary);
+$ngx-fluent-design-foreground-neutral-primary-alt: get_new_theme_var(foreground-neutral-primary-alt);
+$ngx-fluent-design-foreground-neutral-secondary: get_new_theme_var(foreground-neutral-secondary);
+$ngx-fluent-design-foreground-neutral-tertiary: get_new_theme_var(foreground-neutral-tertiary);
+$ngx-fluent-design-foreground-white: get_new_theme_var(foreground-white);
+
+/** Background **/
+$ngx-fluent-design-background-neutral-tertiary-alt: get_new_theme_var(background-neutral-tertiary-alt);
+$ngx-fluent-design-background-neutral-dark: get_new_theme_var(background-neutral-dark);
+$ngx-fluent-design-background-neutral-quaternary-alt: get_new_theme_var(background-neutral-quaternary-alt);
+$ngx-fluent-design-background-neutral-light: get_new_theme_var(background-neutral-light);
+$ngx-fluent-design-background-neutral-lighter: get_new_theme_var(background-neutral-lighter);
+$ngx-fluent-design-background-neutral-light-alt: get_new_theme_var(background-neutral-light-alt);
 
 /** Errors and status */
-$theme-error-background-fill: get_theme_var(error-background-fill);
-$theme-success-background-fill: get_theme_var(success-background-fill);
-$theme-severe-background-fill: get_theme_var(severe-background-fill);
-$theme-warning-background-fill: get_theme_var(warning-background-fill);
+$ngx-fluent-design-error-background-fill: get_theme_var(error-background-fill);
+$ngx-fluent-design-success-background-fill: get_theme_var(success-background-fill);
+$ngx-fluent-design-severe-background-fill: get_theme_var(severe-background-fill);
+$ngx-fluent-design-warning-background-fill: get_theme_var(warning-background-fill);
 
-$theme-status-error: get_theme_var(status-error);
-$theme-status-success: get_theme_var(status-success);
-$theme-status-severe-warning: get_theme_var(status-severe-warning);
-$theme-status-warning: get_theme_var(status-warning);
-
-/** overlays */
-$theme-overlay-light: #fff;
-$theme-overlay-dark: #000;
-
-/** Greys */
-$theme-colors-white: #fff;
-$theme-colors-grey10: #FAF9F8;
-$theme-colors-grey20: #F3F2F1;
-$theme-colors-grey30: #EDEBE9;
-$theme-colors-grey40: #E1DFDD;
-$theme-colors-grey50: #D2D0CE;
-$theme-colors-grey60: #C8C6C4;
-$theme-colors-grey90: #A19F9D;
-$theme-colors-grey130: #605E5C;
-$theme-colors-grey150: #3B3A39;
-$theme-colors-grey190: #201F1E;
-
-/** Type */
-$theme-type-primary: #323130;
-$theme-type-secondary: #605E5C;
-$theme-type-disabled: #A19F9D;
+$ngx-fluent-design-status-error: #A80000;
+$ngx-fluent-design-status-success: #107C10;
+$ngx-fluent-design-status-severe-warning:  #D83B01;
+$ngx-fluent-design-status-warning: #797775;
 
 /** Fonts */
-$theme-metadata-limited-font-size: 10px;
-$theme-metadata-font-size: 12px;
-$theme-body-text-font-size: 14px;
-$theme-subject-title-font-size: 16px;
-$theme-header-font-size: 18px;
-$theme-pane-header-font-size: 20px;
-$theme-page-title-font-size: 28px;
-$theme-greeting-title-font-size: 32px;
-$theme-hero-title-font-size: 42px;
-$theme-xl-numerics-font-size: 68px;
-
-/** Dividers and borders */
-$theme-body-divider: #EDEBE9;
-$theme-input-border: #8A8886;
-$theme-input-hover-border: #323130;
-$theme-border-radius-base: 2px;
+$ngx-fluent-design-metadata-limited-font-size: 10px;
+$ngx-fluent-design-metadata-font-size: 12px;
+$ngx-fluent-design-body-text-font-size: 14px;
+$ngx-fluent-design-subject-title-font-size: 16px;
+$ngx-fluent-design-header-font-size: 18px;
+$ngx-fluent-design-pane-header-font-size: 20px;
+$ngx-fluent-design-page-title-font-size: 28px;
+$ngx-fluent-design-greeting-title-font-size: 32px;
+$ngx-fluent-design-hero-title-font-size: 42px;
+$ngx-fluent-design-xl-numerics-font-size: 68px;
 
 /** Shadow */
-$depth-4: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1), 0px 1.6px 3.6px rgba(0, 0, 0, 0.13);
-$depth-8: 0px 0.6px 1.8px rgba(0, 0, 0, 0.1), 0px 3.2px 7.2px rgba(0, 0, 0, 0.13);
-$depth-16: 0px 1.2px 3.6px rgba(0, 0, 0, 0.1), 0px 6.4px 14.4px rgba(0, 0, 0, 0.13);
-$depth-64:  0px 4.8px 14.4px rgba(0, 0, 0, 0.18), 0px 25.6px 57.6px rgba(0, 0, 0, 0.22);
+$ngx-fluent-design-depth-4: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1), 0px 1.6px 3.6px rgba(0, 0, 0, 0.13);
+$ngx-fluent-design-depth-8: 0px 0.6px 1.8px rgba(0, 0, 0, 0.1), 0px 3.2px 7.2px rgba(0, 0, 0, 0.13);
+$ngx-fluent-design-depth-16: 0px 1.2px 3.6px rgba(0, 0, 0, 0.1), 0px 6.4px 14.4px rgba(0, 0, 0, 0.13);
+$ngx-fluent-design-depth-64:  0px 4.8px 14.4px rgba(0, 0, 0, 0.18), 0px 25.6px 57.6px rgba(0, 0, 0, 0.22);
 
 /** Padding & Margin */
-$theme-padding-base: 24px;
+$ngx-fluent-design-padding-base: 24px;
+$ngx-fluent-design-border-radius-base: 2px;
 
 /** Breakpoints */
-$theme-small-breakpoint: 576px;
-$theme-medium-breakpoint: 768px;
-$theme-large-breakpoint: 992px;
-$theme-xl-breakpoint: 1200px;
-$theme-xxl-breakpoint: 1400px;
+$ngx-fluent-design-small-breakpoint: 576px;
+$ngx-fluent-design-medium-breakpoint: 768px;
+$ngx-fluent-design-large-breakpoint: 992px;
+$ngx-fluent-design-xl-breakpoint: 1200px;
+$ngx-fluent-design-xxl-breakpoint: 1400px;
+
+

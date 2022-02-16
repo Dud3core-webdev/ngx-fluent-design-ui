@@ -1,7 +1,7 @@
 @import "../../styles/variables";
 
 .ngx-fluent-design-message-bar {
-    padding: $theme-padding-base / 3;
+    padding: $ngx-fluent-design-padding-base / 3;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -14,23 +14,24 @@
     }
 
     &.info {
-        background-color: $theme-colors-grey20;
+        background-color: $ngx-fluent-design-background-neutral-lighter;
+        color: $ngx-fluent-design-foreground-neutral-primary;
     }
 
     &.warning {
-        background-color: $theme-warning-background-fill;
+        background-color: $ngx-fluent-design-warning-background-fill;
     }
 
     &.severe-warning {
-        background-color: $theme-severe-background-fill;
+        background-color: $ngx-fluent-design-severe-background-fill;
     }
 
     &.error, &.blocked {
-        background-color: $theme-error-background-fill;
+        background-color: $ngx-fluent-design-error-background-fill;
     }
 
     &.success {
-        background-color: $theme-success-background-fill;
+        background-color: $ngx-fluent-design-success-background-fill;
     }
 
     &.action-bar-active {
@@ -51,7 +52,7 @@
         }
 
         .message {
-            font-size: $theme-metadata-font-size !important;
+            font-size: $ngx-fluent-design-metadata-font-size !important;
             line-height: normal;
         }
     }

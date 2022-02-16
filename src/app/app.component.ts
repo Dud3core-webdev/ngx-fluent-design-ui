@@ -16,6 +16,7 @@ export class AppComponent {
 
     constructor(themeService: ThemeSwitcherService) {
         this._themeService = themeService;
+        this._themeService.theme = ThemeType.DARK;
     }
 
     public toggleTheme(): void {

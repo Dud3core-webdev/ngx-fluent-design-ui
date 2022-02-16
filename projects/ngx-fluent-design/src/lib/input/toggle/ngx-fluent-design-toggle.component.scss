@@ -8,14 +8,14 @@
         flex-direction: row;
 
         .toggle-label {
-            margin-right: $theme-padding-base / 2;
+            margin-right: $ngx-fluent-design-padding-base / 2;
         }
     }
 
     .toggle-label {
         margin-right: 12px;
-        font-size: $theme-body-text-font-size;
-        color: $theme-default-font-color;
+        font-size: $ngx-fluent-design-body-text-font-size;
+        color: $ngx-fluent-design-foreground-neutral-primary;
     }
 
     .switch {
@@ -32,11 +32,11 @@
             &:disabled {
                 + {
                     .slider {
-                        background-color: $theme-background;
-                        border-color: $theme-type-disabled;
+                        background-color: $ngx-fluent-design-foreground-white;
+                        border-color: $ngx-fluent-design-background-neutral-light;
 
                         &:before {
-                            background-color: $theme-type-disabled;
+                            background-color: $ngx-fluent-design-background-neutral-light;
                         }
                     }
                 }
@@ -52,7 +52,7 @@
         right: 0;
         bottom: 0;
         background-color: inherit;
-        border: 1px solid $theme-colors-grey130;
+        border: 1px solid $ngx-fluent-design-foreground-neutral-secondary;
 
         &:before {
             position: absolute;
@@ -63,18 +63,18 @@
             right: 4px;
             bottom: 4px;
             top: 3px;
-            background-color: $theme-colors-grey130;
+            background-color: $ngx-fluent-design-foreground-neutral-secondary;
             margin-right: 7px;
             border-radius: 50%;
         }
 
         &:hover {
             &.slider {
-                border-color: $theme-colors-grey190;
+                border-color: $ngx-fluent-design-foreground-neutral-primary;
             }
 
             &:before {
-                background-color: $theme-colors-grey190;
+                background-color: $ngx-fluent-design-foreground-neutral-primary;
             }
         }
 
@@ -92,14 +92,14 @@
         &:checked {
             + {
                 .slider {
-                    background-color: $theme-primary;
+                    background-color: $ngx-fluent-design-theme-primary;
                     border: none;
 
                     &:before {
                         -webkit-transform: translateX(19px);
                         -ms-transform: translateX(19px);
                         transform: translateX(19px);
-                        background-color: $theme-background;
+                        background-color: $ngx-fluent-design-foreground-white;
                         left: 4px;
                         right: 4px;
                         bottom: 4px;
@@ -111,11 +111,11 @@
             &:disabled {
                 + {
                     .slider {
-                        background-color: $theme-type-disabled !important;
-                        border-color: $theme-type-disabled !important;
+                        background-color: $ngx-fluent-design-background-neutral-light !important;
+                        border-color: $ngx-fluent-design-background-neutral-light !important;
 
                         &:before {
-                            background-color: $theme-background !important;
+                            background-color: $ngx-fluent-design-background-neutral-light !important;
                         }
                     }
                 }
@@ -124,8 +124,8 @@
             &:hover {
                 + {
                     .slider {
-                        background-color: $theme-dark-alt;
-                        border-color: $theme-dark-alt;
+                        background-color: $ngx-fluent-design-theme-dark-alt;
+                        border-color: $ngx-fluent-design-theme-dark-alt;
                     }
                 }
             }
@@ -134,7 +134,7 @@
         &:focus {
             + {
                 .slider {
-                    box-shadow: 0 0 1px $theme-primary;
+                    box-shadow: 0 0 1px $ngx-fluent-design-foreground-white;
                 }
             }
         }

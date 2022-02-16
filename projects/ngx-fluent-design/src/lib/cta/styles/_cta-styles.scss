@@ -5,32 +5,23 @@
     position: relative;
     font-family: inherit;
     -webkit-font-smoothing: antialiased;
-    border-radius: $theme-border-radius-base;
+    border-radius: $ngx-fluent-design-border-radius-base;
     user-select: none;
-    font-size: $theme-body-text-font-size;
+    font-size: $ngx-fluent-design-body-text-font-size;
 
     &.standard {
-        color: $theme-default-font-color;
+        border: 1px solid $ngx-fluent-design-background-neutral-tertiary-alt;
+        background: $ngx-fluent-design-foreground-white;
 
-        &.none {
-            color: $theme-default-font-color;
-            border: 1px solid $theme-colors-grey50;
-            background: $theme-background;
-            &:hover {
-                background-color: $theme-colors-grey20;
-            }
-        }
-
-        &.neutral {
-            border: 1px solid $theme-colors-grey20;
-            background: $theme-colors-grey50;
+        &:hover {
+            background-color: $ngx-fluent-design-background-neutral-lighter;
         }
 
         &:disabled {
-            p, small { color: $theme-type-disabled; }
-            background-color: $theme-colors-grey20;
-            border: 1px solid $theme-colors-grey20;
-            color: $theme-type-disabled;
+            p, small { color: $ngx-fluent-design-foreground-neutral-tertiary; }
+            background-color: $ngx-fluent-design-background-neutral-lighter;
+            border: 1px solid $ngx-fluent-design-background-neutral-lighter;
+            color: $ngx-fluent-design-foreground-neutral-tertiary;
             pointer-events: none;
             cursor: not-allowed;
             user-select: none;
@@ -38,26 +29,23 @@
     }
 
     &.primary {
-        p, small { color: $theme-colors-white }
-        color: $theme-colors-white;
+        p, small { color: $ngx-fluent-design-foreground-white }
+        color: $ngx-fluent-design-foreground-white;
+        border: 1px solid $ngx-fluent-design-theme-primary;
+        background-color: $ngx-fluent-design-theme-primary;
 
-        &.none {
-            border: 1px solid $theme-primary;
-            background-color: $theme-primary;
-
-            &:hover {
-                background-color: $theme-dark-alt;
-            }
+        &:hover {
+            background-color: $ngx-fluent-design-theme-dark;
         }
 
         &:disabled {
-            p, small { color: $theme-type-disabled; }
-            background-color: $theme-colors-grey20;
+            p, small { color: $ngx-fluent-design-background-neutral-quaternary-alt; }
+            background-color: $ngx-fluent-design-background-neutral-lighter;
             border: none;
             pointer-events: none;
             cursor: not-allowed;
 			user-select: none;
-            color: $theme-type-disabled;
+            color: $ngx-fluent-design-background-neutral-quaternary-alt;
         }
     }
 }

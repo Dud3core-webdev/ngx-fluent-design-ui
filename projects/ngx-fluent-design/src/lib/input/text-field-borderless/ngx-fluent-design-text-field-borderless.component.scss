@@ -3,7 +3,7 @@
 .fluent-input-field {
     height: 32px;
     margin: 6px 0 0 0;
-    background: #FFFFFF;
+    background: $ngx-fluent-design-foreground-white;
     width: 100%;
 
     label {
@@ -18,7 +18,9 @@
             margin: 0;
             padding: 6px 8px;
             font: inherit;
-            font-size: $theme-body-text-font-size;
+            font-size: $ngx-fluent-design-body-text-font-size;
+            color: $ngx-fluent-design-foreground-neutral-primary;
+            background: $ngx-fluent-design-foreground-white;
             font-weight: 400;
             &:focus {
                 outline: none;
@@ -26,12 +28,8 @@
         }
     }
 
-    &:hover {
-        border-color: $theme-input-hover-border;
-    }
-
     &.disabled {
-        background-color: $theme-colors-grey30;
+        background-color: $ngx-fluent-design-background-neutral-light;
         pointer-events: none;
 
         ::ng-deep {
