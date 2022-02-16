@@ -1,9 +1,10 @@
 <section class="ngx-fluent-design-message-bar"
+         data-spec="ngx-fluent-design-message-bar"
          [@slideInFromTop]="handler && !handler.isOpen ? 'hide' : 'show'"
          [class.action-bar-active]="canDisplayActionBar"
          [class.is-fixed]="fixed"
          [ngClass]="messageBarType">
-    
+
     <span class="message-container">
         <ngx-fluent-design-icon class="icon" [icon]="icon"></ngx-fluent-design-icon>
         <span class="message"><ng-content></ng-content></span>
