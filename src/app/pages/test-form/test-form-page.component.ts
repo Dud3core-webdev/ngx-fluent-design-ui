@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable, of, throwError, timer } from 'rxjs';
 import { NgxFluentDesignDialogHandler } from '../../../../projects/ngx-fluent-design/src/lib/surface/dialog/dialog-handler.helper';
 import { switchMap } from 'rxjs/operators';
+import { NgxFluentDesignMessageBarHandler } from '../../../../projects/ngx-fluent-design/src/lib/notifications/message-bar/message-bar-handler.helper';
 
 @Component({
     templateUrl: './test-form-page.component.html',
@@ -13,6 +14,8 @@ export class TestFormPageComponent {
     public showLoadingSpinner: boolean = false;
     public displayErrorSubmission: boolean = false;
     public dialogHandler: NgxFluentDesignDialogHandler;
+    public errorMessageHandler: NgxFluentDesignMessageBarHandler = new NgxFluentDesignMessageBarHandler(false);
+    public successMessageHandler: NgxFluentDesignMessageBarHandler = new NgxFluentDesignMessageBarHandler(false);
     displaySuccessSubmission: boolean = false;
 
     public formGroup: FormGroup;
@@ -53,10 +56,12 @@ export class TestFormPageComponent {
                     });
                     this.displaySuccessSubmission = true;
                     this.showLoadingSpinner = false;
+                    this.successMessageHandler.open();
                 },
                 error: () => {
                     this.displayErrorSubmission = true;
                     this.showLoadingSpinner = false;
+                    this.errorMessageHandler.open();
                 }
             });
     }

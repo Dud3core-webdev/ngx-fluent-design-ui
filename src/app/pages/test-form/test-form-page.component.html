@@ -1,3 +1,21 @@
+<ngx-fluent-design-message-bar
+    messageBarType="success"
+    [fixed]="true"
+    [handler]="successMessageHandler"
+    (actionClicked)="successMessageHandler.close()"
+    [actionName]="'Close'">
+    Success!! You can now close this message
+</ngx-fluent-design-message-bar>
+
+<ngx-fluent-design-message-bar
+    messageBarType="error"
+    [handler]="errorMessageHandler"
+    [fixed]="true"
+    (actionClicked)="successMessageHandler.close()"
+    [actionName]="'close'">
+    Whoops!! Something went wrong, please try again
+</ngx-fluent-design-message-bar>
+
 <ngx-fluent-design-dialog
     [header]="'Are you sure you want to submit this form?'"
     [handler]="dialogHandler"
@@ -87,26 +105,5 @@
                 </ngx-fluent-design-compound-button>
             </div>
         </form>
-
-        <section class="my-4">
-            <ngx-fluent-design-message-bar
-                    messageBarType="success"
-                    *ngIf="displaySuccessSubmission"
-                    [displayActions]="true"
-                    (actionClicked)="displaySuccessSubmission = false"
-                    [actionName]="'Close'">
-
-                Success!! You can now close this message
-            </ngx-fluent-design-message-bar>
-            <ngx-fluent-design-message-bar
-                    messageBarType="error"
-                    *ngIf="displayErrorSubmission"
-                    [displayActions]="true"
-                    (actionClicked)="this.displayErrorSubmission = false"
-                    [actionName]="'close'">
-
-                Whoops!! Something went wrong, please try again
-            </ngx-fluent-design-message-bar>
-        </section>
     </ngx-fluent-design-card>
 </div>

@@ -7,8 +7,7 @@
     justify-content: space-between;
 
     &.is-fixed {
-        position: sticky;
-        position: -webkit-sticky; /* Safari */
+        position: fixed;
         top: 0;
         z-index: 9000;
         width: 100vw;

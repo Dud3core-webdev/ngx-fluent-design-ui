@@ -41,7 +41,8 @@ export class NgxFluentDesignCommonAnimations {
         return trigger('slideInFromTop', [
             state('hide', style({
                 transform: 'translateY(-100%)',
-                visibility: 'hidden'
+                visibility: 'hidden',
+                height: 0
             })),
             state('show', style({
                 transform: 'translateY(0%)',
