@@ -1,6 +1,7 @@
 @import "../../styles/variables";
 
 .ngx-fluent-design-message-bar {
+    padding: $theme-padding-base / 4;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -29,13 +30,13 @@
         background-color: $theme-success-background-fill;
     }
 
-    .icon {
-        margin: 0 8px;
-    }
-
     .message-container {
         display: flex;
         align-items: center;
+
+        .icon {
+            margin: 0 8px;
+        }
 
         .message {
             font-size: $theme-metadata-font-size !important;
@@ -46,9 +47,13 @@
     .calls-to-action {
         display: flex;
         justify-content: space-between;
+        height: 100%;
+
         .user-action {
+            align-self: flex-end;
             margin-right: 12px !important;
         }
+
         .x-icon {
             align-self: flex-start;
             position: sticky;
@@ -59,6 +64,6 @@
     .action-bar-displayed {
         display: flex;
         justify-content: space-between;
-        padding: $theme-padding-base / 2;
+        min-height: 64px;
     }
 }

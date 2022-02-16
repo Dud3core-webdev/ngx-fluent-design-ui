@@ -67,13 +67,122 @@
 <ngx-fluent-design-card>
     <h1 class="mb-4 pane-header bold">Message Bar</h1>
 
-    <ngx-fluent-design-message-bar [actionName]="'Some action'"
-                                   messageBarType="info"
-                                   [displayActions]="true"
-                                   [canDismiss]="true"
-                                   (actionClicked)="exampleAlert('Message bar action')">
-        This is some alert, I don't know
-    </ngx-fluent-design-message-bar>
+    <section class="my-3">
+        <h3 class="header">With Actions</h3>
+        <ngx-fluent-design-message-bar [actionName]="'Some action'"
+                                       messageBarType="info"
+                                       [displayActions]="true"
+                                       [canDismiss]="true"
+                                       (actionClicked)="exampleAlert('Message bar action')">
+            This is a message bar with the actions displayed.
+        </ngx-fluent-design-message-bar>
+    </section>
+
+    <section class="my-3">
+        <ngx-fluent-design-message-bar [actionName]="'Some action'"
+                                       messageBarType="warning"
+                                       [displayActions]="true"
+                                       [canDismiss]="true"
+                                       (actionClicked)="exampleAlert('Message bar action')">
+            This is a message bar with the actions displayed.
+        </ngx-fluent-design-message-bar>
+    </section>
+
+    <section class="my-3">
+        <ngx-fluent-design-message-bar [actionName]="'Some action'"
+                                       messageBarType="error"
+                                       [displayActions]="true"
+                                       [canDismiss]="true"
+                                       (actionClicked)="exampleAlert('Message bar action')">
+            This is a message bar with the actions displayed.
+        </ngx-fluent-design-message-bar>
+    </section>
+
+    <section class="my-3">
+        <ngx-fluent-design-message-bar [actionName]="'Some action'"
+                                       messageBarType="success"
+                                       [displayActions]="true"
+                                       [canDismiss]="true"
+                                       (actionClicked)="exampleAlert('Message bar action')">
+            This is a message bar with the actions displayed.
+        </ngx-fluent-design-message-bar>
+    </section>
+
+    <section class="my-3">
+        <ngx-fluent-design-message-bar [actionName]="'Some action'"
+                                       messageBarType="severe-warning"
+                                       [displayActions]="true"
+                                       [canDismiss]="true"
+                                       (actionClicked)="exampleAlert('Message bar action')">
+            This is a message bar with the actions displayed.
+        </ngx-fluent-design-message-bar>
+    </section>
+
+    <section class="my-3">
+        <ngx-fluent-design-message-bar [actionName]="'Some action'"
+                                       messageBarType="blocked"
+                                       [displayActions]="true"
+                                       [canDismiss]="true"
+                                       (actionClicked)="exampleAlert('Message bar action')">
+            This is a message bar with the actions displayed.
+        </ngx-fluent-design-message-bar>
+    </section>
+
+    <section class="my-3">
+        <h3 class="header">No Actions</h3>
+        <ngx-fluent-design-message-bar [actionName]="'Some action'"
+                                       messageBarType="info"
+                                       [displayActions]="false"
+                                       [canDismiss]="false">
+            This is a message bar with the actions displayed.
+        </ngx-fluent-design-message-bar>
+    </section>
+
+    <section class="my-3">
+        <ngx-fluent-design-message-bar [actionName]="'Some action'"
+                                       messageBarType="warning"
+                                       [displayActions]="false"
+                                       [canDismiss]="false">
+            This is a message bar with the actions displayed.
+        </ngx-fluent-design-message-bar>
+    </section>
+
+    <section class="my-3">
+        <ngx-fluent-design-message-bar [actionName]="'Some action'"
+                                       messageBarType="error"
+                                       [displayActions]="false"
+                                       [canDismiss]="false">
+            This is a message bar with the actions displayed.
+        </ngx-fluent-design-message-bar>
+    </section>
+
+    <section class="my-3">
+        <ngx-fluent-design-message-bar [actionName]="'Some action'"
+                                       messageBarType="success"
+                                       [displayActions]="false"
+                                       [canDismiss]="false">
+            This is a message bar with the actions displayed.
+        </ngx-fluent-design-message-bar>
+    </section>
+
+    <section class="my-3">
+        <ngx-fluent-design-message-bar [actionName]="'Some action'"
+                                       messageBarType="severe-warning"
+                                       [displayActions]="false"
+                                       [canDismiss]="false">
+            This is a message bar with the actions displayed.
+        </ngx-fluent-design-message-bar>
+    </section>
+
+    <section class="my-3">
+        <ngx-fluent-design-message-bar [actionName]="'Some action'"
+                                       messageBarType="blocked"
+                                       [displayActions]="false"
+                                       [canDismiss]="false">
+            This is a message bar with the actions displayed.
+        </ngx-fluent-design-message-bar>
+    </section>
+
 </ngx-fluent-design-card>
 
 <ngx-fluent-design-card>
