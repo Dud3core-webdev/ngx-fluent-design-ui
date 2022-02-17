@@ -96,14 +96,12 @@
                     border: none;
 
                     &:before {
-                        -webkit-transform: translateX(19px);
-                        -ms-transform: translateX(19px);
-                        transform: translateX(19px);
+                        -webkit-transform: translateX(18px);
+                        -ms-transform: translateX(18px);
+                        transform: translateX(18px);
                         background-color: $ngx-fluent-design-foreground-white;
-                        left: 4px;
-                        right: 4px;
-                        bottom: 4px;
-                        top: 4px;
+                        height: 15px;
+                        width: 15px;
                     }
                 }
             }
