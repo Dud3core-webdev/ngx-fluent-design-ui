@@ -1,3 +1,10 @@
-<svg class="ngx-fluent-design-icon" *ngIf="icon" [attr.width]="icon.width" [attr.height]="icon.height" [attr.viewBox]="'0 0' + ' ' + icon.width + ' ' + icon.height" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path *ngFor="let path of icon.paths" [attr.d]="path" [attr.fill]="icon.fill"></path>
+<svg class="ngx-fluent-design-icon"
+     data-spec="fluent-design-icon"
+     *ngIf="icon && svgBackgroundColor"
+     [attr.width]="icon.width"
+     [attr.height]="icon.height"
+     [attr.viewBox]="iconViewBox"
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+    <path data-spec="fluent-design-icon-path" [attr.d]="icon.path" [attr.fill]="svgBackgroundColor"></path>
 </svg>

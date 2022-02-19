@@ -1,5 +1,5 @@
 import { BehaviorSubject, Observable } from 'rxjs';
-import { INgxFluentDesignSurfaceComponentHandler } from '../../types/ngx-fluent-design-surface-component-handler.interface';
+import { INgxFluentDesignSurfaceComponentHandler } from '../types/ngx-fluent-design-surface-component-handler.interface';
 
 export class NgxFluentDesignPanelHandler implements INgxFluentDesignSurfaceComponentHandler {
 

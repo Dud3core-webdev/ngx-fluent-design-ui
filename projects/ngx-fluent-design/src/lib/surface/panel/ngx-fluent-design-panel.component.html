@@ -2,7 +2,12 @@
     <section (click)="$event.stopPropagation()" class="ngx-fluent-design-panel" [@slideInRight]="!handler.isOpen ? 'hide' : 'show'">
         <section class="header">
             <h1 class="header-content">{{header}}</h1>
-            <ngx-fluent-design-icon *ngIf="displayCloseIcon" (click)="handler.close()" class="close-icon" [icon]="closeIcon"></ngx-fluent-design-icon>
+            <ngx-fluent-design-icon *ngIf="displayCloseIcon"
+                                    (click)="handler.close()"
+                                    class="close-icon"
+                                    [icon]="closeIcon"
+                                    [ngxFluentDesignCssVariableName]="closeIconFillColourVariable">
+            </ngx-fluent-design-icon>
         </section>
 
         <section class="content">

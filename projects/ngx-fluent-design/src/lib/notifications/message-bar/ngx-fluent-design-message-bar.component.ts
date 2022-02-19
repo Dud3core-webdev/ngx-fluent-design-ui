@@ -1,17 +1,11 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { INgxFluentDesignMessageBar } from '../types/ngx-fluent-design-message-bar.interface';
 import { MessageBarType } from '../types/message-bar.type';
-import {
-    NgxFluentDesignIconClearClose,
-    NgxFluentDesignIconInfoBlocked,
-    NgxFluentDesignIconInfoError,
-    NgxFluentDesignIconInfoSevereWarn,
-    NgxFluentDesignIconInfoSuccess,
-    NgxFluentDesignIconInfoWarn
-} from '../../icons/shared/constants/ngx-fluent-design-icons-list';
+import { NgxFluentDesignIconClearClose } from '../../icons/shared/constants/ngx-fluent-design-icons-list';
 import { INgxFluentDesignIcon } from '../../icons/shared/types/ngx-fluent-design-icon.interface';
 import { NgxFluentDesignMessageBarHandler } from './message-bar-handler.helper';
 import { NgxFluentDesignCommonAnimations } from '../../surface/animations/ngx-fluent-design.animations';
+import { INgxFluentDesignMessageBarIcon, NgxFluentDesignMessageBarIconFactory } from './ngx-fluent-design-message-bar-icon.factory';
 
 @Component({
     selector: 'ngx-fluent-design-message-bar',
@@ -21,7 +15,7 @@ import { NgxFluentDesignCommonAnimations } from '../../surface/animations/ngx-fl
         NgxFluentDesignCommonAnimations.slideInFromTop('150ms', '150ms')
     ]
 })
-export class NgxFluentDesignMessageBarComponent implements INgxFluentDesignMessageBar {
+export class NgxFluentDesignMessageBarComponent implements OnInit, INgxFluentDesignMessageBar {
     @Input() public messageBarType: MessageBarType = 'info';
     @Input() public canDismiss: boolean;
     @Input() public fixed: boolean = false;
@@ -29,15 +23,21 @@ export class NgxFluentDesignMessageBarComponent implements INgxFluentDesignMessa
 
     @Output() public readonly actionClicked: EventEmitter<void>;
     @Output() public readonly closeClicked: EventEmitter<void>;
+    public iconConfig: INgxFluentDesignMessageBarIcon;
+    public closeIconConfig: INgxFluentDesignMessageBarIcon;
 
     private _displaySecondaryActions: boolean = false;
+    private _actionName: string;
 
     constructor() {
         this.actionClicked = new EventEmitter<void>();
         this.closeClicked = new EventEmitter<void>();
     }
 
-    private _actionName: string;
+    public ngOnInit(): void {
+        this.iconConfig = NgxFluentDesignMessageBarIconFactory.for(this.messageBarType);
+        this.closeIconConfig = NgxFluentDesignMessageBarIconFactory.forCloseIcon(this.messageBarType);
+    }
 
     public get actionName(): string {
         return this._actionName;
@@ -59,23 +59,6 @@ export class NgxFluentDesignMessageBarComponent implements INgxFluentDesignMessa
 
     public get canDisplayCloseLogo(): boolean {
         return typeof this.handler !== 'undefined' && this.canDismiss;
-    }
-
-    public get icon(): INgxFluentDesignIcon {
-        switch (this.messageBarType) {
-            case 'warning':
-                return NgxFluentDesignIconInfoWarn;
-            case 'severe-warning':
-                return NgxFluentDesignIconInfoSevereWarn;
-            case 'error':
-                return NgxFluentDesignIconInfoError;
-            case 'blocked':
-                return NgxFluentDesignIconInfoBlocked;
-            case 'success':
-                return NgxFluentDesignIconInfoSuccess;
-            case 'info':
-                return NgxFluentDesignIconInfoWarn;
-        }
     }
 
     public onCloseClicked(): void {

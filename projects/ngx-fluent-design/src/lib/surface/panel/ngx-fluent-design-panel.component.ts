@@ -24,6 +24,7 @@ export class NgxFluentDesignPanelComponent implements INgxFluentDesignPanel, OnI
     @Output() public readonly componentClosed: EventEmitter<void>;
 
     public readonly closeIcon: INgxFluentDesignIcon = NgxFluentDesignIconClearClose;
+    public readonly closeIconFillColourVariable: string = '--ngx-fluent-design-foreground-neutral-primary';
 
     private _orchestrator: NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator;
     private readonly _document: Document;

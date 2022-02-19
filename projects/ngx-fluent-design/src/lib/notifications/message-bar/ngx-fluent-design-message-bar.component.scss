@@ -11,6 +11,8 @@
         top: 0;
         z-index: 9000;
         width: 100vw;
+        padding-left: $ngx-fluent-design-padding-base / 2;
+        padding-right: $ngx-fluent-design-padding-base / 2;
     }
 
     &.info {

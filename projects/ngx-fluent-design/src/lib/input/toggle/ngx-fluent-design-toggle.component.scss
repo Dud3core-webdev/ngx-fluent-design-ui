@@ -93,6 +93,7 @@
             + {
                 .slider {
                     background-color: $ngx-fluent-design-theme-primary;
+                    border: 1px solid transparent;
 
                     &:before {
                         -webkit-transform: translateX(19px);

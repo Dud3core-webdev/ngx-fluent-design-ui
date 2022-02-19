@@ -27,6 +27,7 @@ export class NgxFluentDesignDialogComponent implements INgxFluentDesignDialog, O
     @Output() public readonly secondaryActionClicked: EventEmitter<void> = new EventEmitter<void>();
 
     public readonly closeIcon: INgxFluentDesignIcon = NgxFluentDesignIconClearClose;
+    public readonly closeIconFillColourVariable: string = '--ngx-fluent-design-foreground-neutral-primary';
 
     private _displaySecondaryAction: boolean = false;
     private _secondaryActionName: string = '';

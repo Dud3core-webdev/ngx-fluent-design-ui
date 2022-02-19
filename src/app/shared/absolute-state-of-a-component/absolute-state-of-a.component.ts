@@ -37,7 +37,8 @@ export class AbsoluteStateOfAComponent implements AfterViewInit {
     });
 
     tesIconList = {
-        warningIcon: NgxFluentDesignIconInfoWarn
+        warningIcon: NgxFluentDesignIconInfoWarn,
+        iconFill: '--ngx-fluent-design-foreground-neutral-primary'
     };
 
     @Output()
