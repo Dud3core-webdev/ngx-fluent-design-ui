@@ -24,6 +24,7 @@ export class NgxFluentDesignSelectComponent implements INgxFluentDesignInput {
 
     public setCurrentSelectedOption(value: string): void {
         this.optionClicked.emit(value);
+        this.toggleDisplayOptions();
         this._currentSelectOption = value;
     }
 
