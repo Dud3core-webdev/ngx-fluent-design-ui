@@ -12,16 +12,16 @@ describe('NgxFluentDesignSelectComponent', () => {
             imports: [NgxFluentDesignCtaModule],
             declarations: [NgxFluentDesignSelectComponent]
         })
-            .compileComponents()
-            .then(() => {
-                fixture = TestBed.createComponent(NgxFluentDesignSelectComponent);
-                component = fixture.componentInstance;
+        .compileComponents()
+        .then(() => {
+            fixture = TestBed.createComponent(NgxFluentDesignSelectComponent);
+            component = fixture.componentInstance;
 
-                component.label = 'Test Label';
-                component.options = ['Option 1', 'option 2'];
+            component.label = 'Test Label';
+            component.options = ['Option 1', 'option 2'];
 
-                fixture.detectChanges();
-            });
+            fixture.detectChanges();
+        });
     });
 
     describe('Given the component is in its default state', () => {
