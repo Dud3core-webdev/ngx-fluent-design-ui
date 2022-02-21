@@ -11,6 +11,8 @@ import { NgxFluentDesignTextFieldBorderlessComponent } from './text-field-border
 import { NgxFluentDesignTextareaComponent } from './standard-textarea/ngx-fluent-design-textarea.component';
 import { NgxFluentDesignTextareaBorderlessComponent } from './textarea-borderless/ngx-fluent-design-textarea-borderless.component';
 import { NgxFluentDesignTextareaUnderlinedComponent } from './textarea-underlined/ngx-fluent-design-textarea-underlined.component';
+import { NgxFluentDesignSelectComponent } from './select/ngx-fluent-design-select.component';
+import { NgxFluentDesignCtaModule } from '../cta/ngx-fluent-design-cta.module';
 
 const DECLARATIONS = [
     NgxFluentDesignFormFieldComponent,
@@ -22,14 +24,16 @@ const DECLARATIONS = [
     NgxFluentDesignFormFieldUnderlinedComponent,
     NgxFluentDesignTextareaUnderlinedComponent,
     NgxFluentDesignTextFieldBorderlessComponent,
-    NgxFluentDesignTextareaBorderlessComponent
+    NgxFluentDesignTextareaBorderlessComponent,
+    NgxFluentDesignSelectComponent
 ];
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        NgxFluentDesignCtaModule
     ],
     declarations: [...DECLARATIONS],
     exports: [...DECLARATIONS]

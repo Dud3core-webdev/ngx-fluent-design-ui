@@ -1,0 +1,20 @@
+<section class="fluent-design-select">
+    <label>{{label}}</label>
+
+    <section class="select-container" tabindex="1234" (click)="toggleDisplayOptions()">
+        <p>{{getCurrentSelectedOption()}}</p>
+    </section>
+
+    <section class="select-options" *ngIf="canDisplayOptions">
+        <section class="select-option">
+            <a ngxFluentDesignActionButton (click)="setCurrentSelectedOption('Hello')">
+                Hello
+            </a>
+        </section>
+        <section class="select-option">
+            <a ngxFluentDesignActionButton (click)="setCurrentSelectedOption('Goodbye')">
+                Goodbye
+            </a>
+        </section>
+    </section>
+</section>

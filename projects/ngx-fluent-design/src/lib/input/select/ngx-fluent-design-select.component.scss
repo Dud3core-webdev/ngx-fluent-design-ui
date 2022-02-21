@@ -1,0 +1,74 @@
+@import "../../styles/variables";
+
+.fluent-design-select {
+
+    .select-container {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 32px;
+        left: 0;
+        right: 0;
+        background: $ngx-fluent-design-foreground-white;
+        border: 1px solid $ngx-fluent-design-foreground-neutral-tertiary;
+        border-radius: 2px;
+        margin: 6px 0 0 0;
+        align-items: stretch;
+        justify-content: center;
+        padding: 0 8px;
+
+        &:hover {
+            border-color: $ngx-fluent-design-foreground-neutral-primary;
+        }
+
+        &:focus {
+            border: 2px solid $ngx-fluent-design-theme-primary;
+            box-sizing: border-box;
+            border-radius: 2px;
+        }
+
+        &:focus-within {
+            border: 2px solid $ngx-fluent-design-theme-primary;
+            box-sizing: border-box;
+            border-radius: 2px;
+
+        }
+
+        &.disabled {
+            background-color: $ngx-fluent-design-background-neutral-light;
+            pointer-events: none;
+            border-color: transparent;
+        }
+    }
+
+    .select-options {
+        -webkit-box-shadow: $ngx-fluent-design-depth-16;
+        box-shadow: $ngx-fluent-design-depth-16;
+        max-height: 908px;
+        width: 100%;
+        background: $ngx-fluent-design-foreground-white;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+
+        .select-option {
+            height: 36px;
+            width: 100%;
+            display: flex;
+
+            a {
+                padding: 0 8px;
+                width: 100%;
+                display: flex;
+                height: 100%;
+                align-self: center;
+            }
+
+            :hover {
+                cursor: pointer;
+                background-color: $ngx-fluent-design-background-neutral-light;
+            }
+        }
+    }
+}
