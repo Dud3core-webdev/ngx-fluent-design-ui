@@ -1,14 +1,14 @@
-<section class="fluent-design-select">
-    <label>{{label}}</label>
+<section class="fluent-design-select" data-spec="fluent-design-compound-select">
+    <label [for]="id" data-spec="fluent-design-compound-select-label">{{label}}</label>
 
-    <section class="select-container" tabindex="1234" (click)="toggleDisplayOptions()">
+    <section [id]="id" data-spec="fluent-design-compound-container" class="select-container" tabindex="1234" (click)="toggleDisplayOptions()">
         <p *ngIf="getCurrentSelectedOption()">{{getCurrentSelectedOption()}}</p>
         <p class="default-text" *ngIf="!getCurrentSelectedOption()">Select an option</p>
     </section>
 
-    <section class="select-options" *ngIf="canDisplayOptions">
-        <section *ngFor="let option of options" [ngClass]="{ 'selected' : getCurrentSelectedOption() === option }" class="select-option">
-            <button ngxFluentDesignActionButton (click)="setCurrentSelectedOption(option)">
+    <section data-spec="fluent-design-compound-select-options" class="select-options" *ngIf="canDisplayOptions">
+        <section *ngFor="let option of options; let i = index" [ngClass]="{ 'selected' : getCurrentSelectedOption() === option }" class="select-option">
+            <button [class]="'--spec-select-option-' + i" ngxFluentDesignActionButton (click)="setCurrentSelectedOption(option)">
                 {{option}}
             </button>
         </section>
