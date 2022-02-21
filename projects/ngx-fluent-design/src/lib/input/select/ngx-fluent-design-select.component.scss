@@ -57,6 +57,10 @@
             width: 100%;
             display: flex;
 
+            &.selected {
+                background-color: $ngx-fluent-design-background-neutral-lighter;
+            }
+
             button {
                 width: 100%;
                 text-align: start;
