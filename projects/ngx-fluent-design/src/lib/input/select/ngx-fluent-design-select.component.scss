@@ -50,11 +50,12 @@
         -webkit-box-shadow: $ngx-fluent-design-depth-16;
         box-shadow: $ngx-fluent-design-depth-16;
         max-height: 908px;
-        width: 100%;
+        width: 335px;
         background: $ngx-fluent-design-foreground-white;
         align-items: center;
         flex-direction: column;
         display: flex;
+        position: absolute;
 
         .select-option {
             height: 36px;
