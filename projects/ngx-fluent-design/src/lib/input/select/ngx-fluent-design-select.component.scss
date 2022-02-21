@@ -18,6 +18,10 @@
         justify-content: center;
         padding: 0 8px;
 
+        .default-text {
+            color: $ngx-fluent-design-background-neutral-light;
+        }
+
         &:hover {
             border-color: $ngx-fluent-design-foreground-neutral-primary;
         }

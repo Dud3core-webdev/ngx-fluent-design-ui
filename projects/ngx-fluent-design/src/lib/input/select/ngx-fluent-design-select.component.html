@@ -2,7 +2,8 @@
     <label>{{label}}</label>
 
     <section class="select-container" tabindex="1234" (click)="toggleDisplayOptions()">
-        <p>{{getCurrentSelectedOption()}}</p>
+        <p *ngIf="getCurrentSelectedOption()">{{getCurrentSelectedOption()}}</p>
+        <p class="default-text" *ngIf="!getCurrentSelectedOption()">Select an option</p>
     </section>
 
     <section class="select-options" *ngIf="canDisplayOptions">

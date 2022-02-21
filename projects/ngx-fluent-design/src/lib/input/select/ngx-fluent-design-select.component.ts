@@ -15,7 +15,7 @@ export class NgxFluentDesignSelectComponent implements INgxFluentDesignInput {
 
     @Output() public optionClicked: EventEmitter<string> = new EventEmitter<string>();
 
-    private _currentSelectOption: string = '';
+    private _currentSelectOption: string;
     private _canDisplayOptions: boolean = false;
 
     public get canDisplayOptions(): boolean {
