@@ -41,3 +41,10 @@ export const NgxFluentDesignIconClearClose: INgxFluentDesignIcon = {
     width: 10,
     height: 10
 };
+
+export const NgxFluentDesignIconArrowLeft: INgxFluentDesignIcon = {
+    name: 'string-icon-arrow-left',
+    path: 'M16 8.5H1.95312L8.10156 14.6484L7.39844 15.3516L0.046875 8L7.39844 0.648438L8.10156 1.35156L1.95312 7.5H16V8.5Z',
+    width: 16,
+    height: 16
+};

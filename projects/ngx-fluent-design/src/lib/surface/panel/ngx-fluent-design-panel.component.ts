@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Inject, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { INgxFluentDesignIcon } from '../../icons/shared/types/ngx-fluent-design-icon.interface';
-import { NgxFluentDesignIconClearClose } from '../../icons/shared/constants/ngx-fluent-design-icons-list';
+import { NgxFluentDesignIconArrowLeft, NgxFluentDesignIconClearClose } from '../../icons/shared/constants/ngx-fluent-design-icons-list';
 import { NgxFluentDesignPanelHandler } from './panel-handler.helper';
 import { NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator } from '../orchestrators/ngx-fluent-design-surface-handler-body-styles.orchestrator';
 import { DOCUMENT } from '@angular/common';
@@ -19,12 +19,16 @@ export class NgxFluentDesignPanelComponent implements INgxFluentDesignPanel, OnI
     @Input() public handler: NgxFluentDesignPanelHandler;
     @Input() public canDismissWithOuterContent: boolean = true;
     @Input() public displayCloseIcon: boolean = true;
+    @Input() public includeReturnCta: boolean = false;
+    @Input() public returnCtaLabel: string;
     @Input() public header: string;
 
     @Output() public readonly componentClosed: EventEmitter<void>;
 
     public readonly closeIcon: INgxFluentDesignIcon = NgxFluentDesignIconClearClose;
     public readonly closeIconFillColourVariable: string = '--ngx-fluent-design-foreground-neutral-primary';
+    public readonly leftArrowIcon: INgxFluentDesignIcon = NgxFluentDesignIconArrowLeft;
+    public readonly leftArrowIconFillColourVariable: string = '--ngx-fluent-design-theme-primary';
 
     private _orchestrator: NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator;
     private readonly _document: Document;

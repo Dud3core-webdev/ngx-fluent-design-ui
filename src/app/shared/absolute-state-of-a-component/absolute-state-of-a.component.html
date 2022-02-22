@@ -368,6 +368,14 @@
         </ngx-fluent-design-button>
     </div>
 
+    <h3>Panel with "Back" CTA</h3>
+    <hr>
+    <div class="pt-3">
+        <ngx-fluent-design-button (clicked)="panelWithBackCtaHandler.open()">
+            Open Panel
+        </ngx-fluent-design-button>
+    </div>
+
     <h3>Basic Modal</h3>
     <hr>
     <div class="pt-3">
@@ -418,6 +426,13 @@
 </ngx-fluent-design-card>
 
 <ngx-fluent-design-panel [handler]="panelHandler" [header]="'Basic Panel'">
+    Content goes here.
+</ngx-fluent-design-panel>
+
+<ngx-fluent-design-panel [handler]="panelWithBackCtaHandler"
+                         [header]="'Basic Panel'"
+                         [includeReturnCta]="true"
+                         [returnCtaLabel]="'Back'">
     Content goes here.
 </ngx-fluent-design-panel>
 

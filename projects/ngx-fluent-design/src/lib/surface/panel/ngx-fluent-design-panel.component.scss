@@ -36,6 +36,8 @@
         right: 0;
         bottom: 0;
         z-index: 9000;
+        display: flex;
+        flex-direction: column;
 
         .header {
             display: flex;
@@ -48,10 +50,31 @@
                 margin: 0;
             }
 
-            .close-icon {
-                cursor: pointer;
+            .return-cta {
+                display: flex;
+                align-items: center;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            .return-icon {
+                padding-right: 0.5rem;
             }
         }
+
+        .content {
+            flex: 1 0 auto;
+        }
     }
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }
 

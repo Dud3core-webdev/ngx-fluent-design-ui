@@ -16,6 +16,7 @@ export class AbsoluteStateOfAComponent implements AfterViewInit {
     public inputsDisabled: boolean = false;
     public buttonLinkDisabled: boolean = false;
     public panelHandler: NgxFluentDesignPanelHandler = new NgxFluentDesignPanelHandler(false);
+    public panelWithBackCtaHandler: NgxFluentDesignPanelHandler = new NgxFluentDesignPanelHandler(false);
     public dialogHandler: NgxFluentDesignDialogHandler = new NgxFluentDesignDialogHandler(false);
     public modalHandler: NgxFluentDesignModalHandler = new NgxFluentDesignModalHandler(false);
     public sheetHandler: NgxFluentDesignSheetHandler = new NgxFluentDesignSheetHandler(false);

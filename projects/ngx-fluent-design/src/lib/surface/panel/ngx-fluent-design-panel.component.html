@@ -1,10 +1,30 @@
 <section class="ngx-fluent-design-container" (click)="handler.close()" [ngStyle]="{ visibility: handler.isOpen ? 'visible' : 'hidden' }">
     <section (click)="$event.stopPropagation()" class="ngx-fluent-design-panel" [@slideInRight]="!handler.isOpen ? 'hide' : 'show'">
-        <section class="header">
-            <h1 class="header-content">{{header}}</h1>
+
+        <section *ngIf="includeReturnCta">
+            <div class="header">
+                <div class="return-cta cursor-pointer" (click)="handler.close()">
+                    <ngx-fluent-design-icon class="return-icon"
+                                            [icon]="leftArrowIcon"
+                                            [ngxFluentDesignCssVariableName]="leftArrowIconFillColourVariable">
+                    </ngx-fluent-design-icon>
+                    <p *ngIf="returnCtaLabel">{{returnCtaLabel}}</p>
+                </div>
+                <ngx-fluent-design-icon *ngIf="displayCloseIcon"
+                                        (click)="handler.close()"
+                                        class="cursor-pointer"
+                                        [icon]="closeIcon"
+                                        [ngxFluentDesignCssVariableName]="closeIconFillColourVariable">
+                </ngx-fluent-design-icon>
+            </div>
+            <h1 class="header-content pane-header bold">{{header}}</h1>
+        </section>
+
+        <section class="header" *ngIf="!includeReturnCta">
+            <h1 class="header-content bold">{{header}}</h1>
             <ngx-fluent-design-icon *ngIf="displayCloseIcon"
                                     (click)="handler.close()"
-                                    class="close-icon"
+                                    class="cursor-pointer"
                                     [icon]="closeIcon"
                                     [ngxFluentDesignCssVariableName]="closeIconFillColourVariable">
             </ngx-fluent-design-icon>
