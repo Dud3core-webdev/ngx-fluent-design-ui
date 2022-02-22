@@ -368,6 +368,14 @@
         </ngx-fluent-design-button>
     </div>
 
+    <h3>Panel with Footer</h3>
+    <hr>
+    <div class="pt-3">
+        <ngx-fluent-design-button (clicked)="panelWithFooterHandler.open()">
+            Open Panel
+        </ngx-fluent-design-button>
+    </div>
+
     <h3>Panel with "Back" CTA</h3>
     <hr>
     <div class="pt-3">
@@ -429,8 +437,14 @@
     Content goes here.
 </ngx-fluent-design-panel>
 
+<ngx-fluent-design-panel [handler]="panelWithFooterHandler"
+                         [header]="'Panel with Footer'">
+    Content goes here.
+    <div footer>Footer content goes here</div>
+</ngx-fluent-design-panel>
+
 <ngx-fluent-design-panel [handler]="panelWithBackCtaHandler"
-                         [header]="'Basic Panel'"
+                         [header]="'Panel with &quot;Back&quot; CTA'"
                          [includeReturnCta]="true"
                          [returnCtaLabel]="'Back'">
     Content goes here.
