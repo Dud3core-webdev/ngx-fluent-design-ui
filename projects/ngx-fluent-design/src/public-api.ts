@@ -27,6 +27,7 @@ export { NgxFluentDesignTextareaBorderlessComponent } from './lib/input/textarea
 export { NgxFluentDesignToggleComponent } from './lib/input/toggle/ngx-fluent-design-toggle.component';
 export { NgxFluentDesignInputClassValidatorDirective } from './lib/input/shared/directives/ngx-fluent-design-input-class-validator.directive';
 export { NgxFluentDesignCheckboxComponent } from './lib/input/checkbox/ngx-fluent-design-checkbox.component';
+export { NgxFluentDesignSelectComponent } from './lib/input/select/ngx-fluent-design-select.component';
 
 /** CTA */
 export { NgxFluentDesignButtonComponent } from './lib/cta/standard-button/ngx-fluent-design-button.component';
