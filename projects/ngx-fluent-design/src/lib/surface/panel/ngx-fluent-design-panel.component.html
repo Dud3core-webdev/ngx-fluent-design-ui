@@ -1,4 +1,5 @@
-<section class="ngx-fluent-design-container" (click)="handler.close()" [ngStyle]="{ visibility: handler.isOpen ? 'visible' : 'hidden' }">
+<section class="ngx-fluent-design-container" (click)="handleCloseClickEvent()"
+         [ngStyle]="{ visibility: handler.isOpen ? 'visible' : 'hidden', 'cursor': canDismissWithOuterContent ? 'pointer' : 'default' }">
     <section (click)="$event.stopPropagation()" class="ngx-fluent-design-panel" [@slideInRight]="!handler.isOpen ? 'hide' : 'show'">
 
         <section *ngIf="includeReturnCta">
