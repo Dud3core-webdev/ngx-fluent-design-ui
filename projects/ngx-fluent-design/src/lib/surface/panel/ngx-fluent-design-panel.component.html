@@ -4,13 +4,14 @@
         <section *ngIf="includeReturnCta">
             <div class="header">
                 <div class="return-cta cursor-pointer" (click)="handler.close()">
-                    <ngx-fluent-design-icon class="return-icon"
+                    <ngx-fluent-design-icon *ngIf="leftArrowIcon && handler.isOpen"
+                                            class="return-icon"
                                             [icon]="leftArrowIcon"
                                             [ngxFluentDesignCssVariableName]="leftArrowIconFillColourVariable">
                     </ngx-fluent-design-icon>
                     <p *ngIf="returnCtaLabel">{{returnCtaLabel}}</p>
                 </div>
-                <ngx-fluent-design-icon *ngIf="displayCloseIcon"
+                <ngx-fluent-design-icon *ngIf="displayCloseIcon && handler.isOpen"
                                         (click)="handler.close()"
                                         class="cursor-pointer"
                                         [icon]="closeIcon"
@@ -22,7 +23,7 @@
 
         <section class="header" *ngIf="!includeReturnCta">
             <h1 class="header-content bold">{{header}}</h1>
-            <ngx-fluent-design-icon *ngIf="displayCloseIcon"
+            <ngx-fluent-design-icon *ngIf="displayCloseIcon && handler.isOpen"
                                     (click)="handler.close()"
                                     class="cursor-pointer"
                                     [icon]="closeIcon"

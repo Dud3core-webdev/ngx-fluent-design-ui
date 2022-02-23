@@ -1,12 +1,12 @@
 <section class="ngx-fluent-design-container"
-        [ngStyle]="{ 'cursor': canDismissWithOuterContent ? 'pointer' : 'default' }"
-        [@fadeIn]="!handler.isOpen ? 'hide' : 'show'"
-        (click)="handleCloseClickEvent()">
+         [ngStyle]="{ 'cursor': canDismissWithOuterContent ? 'pointer' : 'default' }"
+         [@fadeIn]="!handler.isOpen ? 'hide' : 'show'"
+         (click)="handleCloseClickEvent()">
 
     <section class="ngx-fluent-design-modal-content" (click)="$event.stopPropagation()">
         <section class="header">
             <h1 class="header-content">{{header}}</h1>
-            <ngx-fluent-design-icon *ngIf="displayCloseIcon"
+            <ngx-fluent-design-icon *ngIf="displayCloseIcon && handler.isOpen"
                                     [icon]="closeIcon"
                                     [ngxFluentDesignCssVariableName]="closeIconFillColourVariable"
                                     (click)="handler.close(); componentClosed.emit()"

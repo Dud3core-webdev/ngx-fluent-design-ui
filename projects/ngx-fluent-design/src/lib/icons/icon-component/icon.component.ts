@@ -33,7 +33,6 @@ export class NgxFluentDesignIconComponent implements OnInit, INgxFluentDesignIco
     private setIconFill(): void {
         if (NgxFluentDesignIconComponent.isNullOrUndefined(this.fillColor)) {
             this.svgBackgroundColor = getComputedStyle(this._document.body).getPropertyValue(this.ngxFluentDesignCssVariableName);
-            getComputedStyle(this._document.body).getPropertyValue(this.ngxFluentDesignCssVariableName);
         } else {
             this.svgBackgroundColor = this.fillColor;
         }
