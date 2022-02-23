@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Inject, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, HostListener, Inject, Input, OnInit } from '@angular/core';
 import { NgxFluentDesignModalHandler } from './modal-handler.helper';
 import { DOCUMENT } from '@angular/common';
 import { NgxFluentDesignCommonAnimations } from '../animations/ngx-fluent-design.animations';
@@ -32,10 +32,21 @@ export class NgxFluentDesignModalComponent implements INgxFluentDesignSurface, O
         this._orchestrator.onInit();
     }
 
+    @HostListener('document:keydown.escape')
+    public dismissModal(): void {
+        if (this.canDismissWithOuterContent) {
+            this.closeModal();
+        }
+    }
+
     public handleCloseClickEvent(): void {
         if (this.canDismissWithOuterContent) {
-            this.handler.close();
-            this.componentClosed.emit();
+            this.closeModal();
         }
+    }
+
+    private closeModal(): void {
+        this.handler.close();
+        this.componentClosed.emit();
     }
 }

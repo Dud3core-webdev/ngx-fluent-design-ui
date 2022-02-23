@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Inject, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Inject, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { INgxFluentDesignIcon } from '../../icons/shared/types/ngx-fluent-design-icon.interface';
 import { NgxFluentDesignIconArrowLeft, NgxFluentDesignIconClearClose } from '../../icons/shared/constants/ngx-fluent-design-icons-list';
 import { NgxFluentDesignPanelHandler } from './panel-handler.helper';
@@ -38,10 +38,16 @@ export class NgxFluentDesignPanelComponent implements INgxFluentDesignPanel, OnI
         this._document = document;
     }
 
+    @HostListener('document:keydown.escape')
+    public dismissPanel(): void {
+        if (this.canDismissWithOuterContent) {
+            this.closePanel();
+        }
+    }
+
     handleCloseClickEvent(): void {
         if (this.canDismissWithOuterContent) {
-            this.handler.close();
-            this.componentClosed.emit();
+            this.closePanel();
         }
     }
 
@@ -52,5 +58,10 @@ export class NgxFluentDesignPanelComponent implements INgxFluentDesignPanel, OnI
 
     public ngOnDestroy(): void {
         this._orchestrator.onDestroy();
+    }
+
+    private closePanel(): void {
+        this.handler.close();
+        this.componentClosed.emit();
     }
 }

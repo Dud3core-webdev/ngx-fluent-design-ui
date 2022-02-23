@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Inject, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Inject, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { INgxFluentDesignIcon } from '../../icons/shared/types/ngx-fluent-design-icon.interface';
 import { NgxFluentDesignIconClearClose } from '../../icons/shared/constants/ngx-fluent-design-icons-list';
 import { INgxFluentDesignDialog } from './ngx-fluent-design-dialog.interface';
@@ -38,6 +38,13 @@ export class NgxFluentDesignDialogComponent implements INgxFluentDesignDialog, O
         return this._displaySecondaryAction;
     }
 
+    @HostListener('document:keydown.escape')
+    public dismissDialog(): void {
+        if (this.canDismissWithOuterContent) {
+            this.closeDialog();
+        }
+    }
+
     @Input()
     public set secondaryActionName(actionName: string) {
         this._secondaryActionName = actionName;
@@ -63,8 +70,12 @@ export class NgxFluentDesignDialogComponent implements INgxFluentDesignDialog, O
 
     public handleCloseClickEvent(): void {
         if (this.canDismissWithOuterContent) {
-            this.handler.close();
-            this.componentClosed.emit();
+            this.closeDialog();
         }
+    }
+
+    private closeDialog(): void {
+        this.handler.close();
+        this.componentClosed.emit();
     }
 }
