@@ -1,4 +1,4 @@
 <label [hidden]="true" [for]="id"></label>
-<div class="fluent-input-field borderless" [ngClass]="{ 'disabled' : disabled }">
+<div class="fluent-input-field borderless" [ngClass]="{ 'disabled' : disabled, 'has-error': childInput.hasError}">
     <ng-content></ng-content>
 </div>

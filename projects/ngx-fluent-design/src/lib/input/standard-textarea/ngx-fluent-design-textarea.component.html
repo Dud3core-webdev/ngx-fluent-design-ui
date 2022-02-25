@@ -1,4 +1,4 @@
 <label class="bold" *ngIf="displayLabel" [for]="id">{{label}}</label>
-<div class="fluent-input-field" [ngClass]="{ 'disabled' : disabled }">
+<div class="fluent-input-field" [ngClass]="{ 'disabled' : disabled, 'has-error': childInput.hasError }">
     <ng-content></ng-content>
 </div>

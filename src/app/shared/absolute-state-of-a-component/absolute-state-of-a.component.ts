@@ -28,6 +28,12 @@ export class AbsoluteStateOfAComponent implements AfterViewInit {
         radio: new FormControl('Radio disabled value')
     });
 
+    testFormStandardInputForm = new FormGroup({
+        bordered: new FormControl(null, [Validators.required, Validators.minLength(12)]),
+        bottomBorder: new FormControl(null, [Validators.required, Validators.minLength(1), Validators.maxLength(12)]),
+        borderless: new FormControl(null, [Validators.required, Validators.maxLength(3)])
+    });
+
     testFormTextAreaForm = new FormGroup({
         bordered: new FormControl(null, [Validators.required, Validators.minLength(12)]),
         bottomBorder: new FormControl(null, [Validators.required, Validators.minLength(1), Validators.maxLength(12)]),

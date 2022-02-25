@@ -266,7 +266,7 @@
             </ngx-fluent-design-toggle>
         </section>
 
-        <form [formGroup]="testFormTextAreaForm">
+        <form [formGroup]="testFormStandardInputForm">
             <h4 class="subject-title">Standard inputs</h4>
             <ngx-fluent-design-form-field [label]="'A Label'" [disabled]="inputsDisabled">
                 <input ngxFluentDesignInput formControlName="bordered" placeholder="Hello there">
@@ -451,12 +451,12 @@
 </ngx-fluent-design-panel>
 
 <ngx-fluent-design-dialog
-    [handler]="dialogHandler"
-    [header]="'Hello there'"
-    [canDismissWithOuterContent]="true"
-    [displayCloseIcon]="true"
-    (primaryActionClicked)="dialogHandler.close()"
-    (secondaryActionClicked)="exampleAlert('Alert secondary Action')">
+        [handler]="dialogHandler"
+        [header]="'Hello there'"
+        [canDismissWithOuterContent]="true"
+        [displayCloseIcon]="true"
+        (primaryActionClicked)="dialogHandler.close()"
+        (secondaryActionClicked)="exampleAlert('Alert secondary Action')">
     This is an alert that can be dismissed via the modal content
 </ngx-fluent-design-dialog>
 

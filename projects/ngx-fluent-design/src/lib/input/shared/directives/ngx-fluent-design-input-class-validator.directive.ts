@@ -1,41 +1,28 @@
-import { Directive, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { AbstractControl, NG_VALIDATORS, ValidationErrors, Validator } from '@angular/forms';
+import { Directive, HostBinding, OnInit } from '@angular/core';
+import { NgControl } from '@angular/forms';
 
 @Directive({
-    selector: '[ngxFluentDesignInput]',
-    providers: [
-        {
-            provide: NG_VALIDATORS,
-            useExisting: NgxFluentDesignInputClassValidatorDirective,
-            multi: true
-        }
-    ]
+    selector: '[ngxFluentDesignInput]'
 })
-export class NgxFluentDesignInputClassValidatorDirective implements Validator {
+export class NgxFluentDesignInputClassValidatorDirective implements OnInit {
 
-    @ViewChild('fluentInputField', { static: false })
-    private readonly _elementReference: ElementRef;
+    private readonly _ngControl: NgControl;
 
-    constructor(elementReference: ElementRef) {
-        this._elementReference = elementReference;
+    constructor(ngControl: NgControl) {
+        this._ngControl = ngControl;
     }
 
-    public validate(control: AbstractControl): ValidationErrors | null {
-        if (control.errors && control.value?.length > 0) {
-            this.setErrorClassOnInput();
-        } else {
-            this.removeErrorClassOnInput();
+    public ngOnInit(): void {
+        this._ngControl.statusChanges
+            .subscribe((x) => console.log(x));
+    }
+
+    @HostBinding('class.has-error')
+    public get hasError(): boolean {
+        if (this._ngControl.pending) {
+            return this._ngControl.dirty;
         }
-
-        return undefined;
+        return !this._ngControl.pending && this._ngControl.invalid && (this._ngControl.dirty ||
+            (this._ngControl.control.validator === null && this._ngControl.control.asyncValidator !== null));
     }
-
-    private setErrorClassOnInput(): void {
-        this._elementReference.nativeElement.parentNode.classList.add('has-error');
-    }
-
-    private removeErrorClassOnInput(): void {
-        this._elementReference.nativeElement.parentNode.classList.remove('has-error');
-    }
-
 }
