@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/variables/inputs";
 
 .checkbox-container {
     position: relative;
@@ -36,7 +37,7 @@
 
             &:disabled {
                 ~ .checkmark {
-                    background-color: $ngx-fluent-design-foreground-neutral-tertiary;
+                    background-color: $foreground-disabled;
                     border: none;
 
                     &:after {
@@ -91,4 +92,8 @@
         background-color: $ngx-fluent-design-theme-dark-alt;
         border: none;
     }
+}
+
+.disabled-state {
+    color: $foreground-disabled;
 }

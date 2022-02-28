@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/variables/inputs";
 
 .radio-container {
     position: relative;
@@ -28,11 +29,11 @@
 
         &:disabled {
             ~ .checkmark {
-                border-color: $ngx-fluent-design-foreground-neutral-tertiary;
+                border-color: $foreground-disabled;
             }
 
             ~ .checkmark:after {
-                background-color: $ngx-fluent-design-foreground-neutral-tertiary;
+                background-color: $foreground-disabled;
             }
         }
     }
@@ -83,4 +84,8 @@
         position: absolute;
         display: none;
     }
+}
+
+.disabled-state {
+    color: $foreground-disabled;
 }
