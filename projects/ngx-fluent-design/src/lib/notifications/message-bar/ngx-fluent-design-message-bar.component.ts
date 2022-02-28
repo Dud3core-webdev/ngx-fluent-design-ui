@@ -34,13 +34,14 @@ export class NgxFluentDesignMessageBarComponent implements OnInit, INgxFluentDes
         this.closeClicked = new EventEmitter<void>();
     }
 
-    ngOnChanges(changes: SimpleChanges): void {
-        this.messageBarType = changes.messageBarType.currentValue;
-    }
 
     public ngOnInit(): void {
         this.iconConfig = NgxFluentDesignMessageBarIconFactory.for(this._messageBarType);
         this.closeIconConfig = NgxFluentDesignMessageBarIconFactory.forCloseIcon(this._messageBarType);
+    }
+
+    public ngOnChanges(changes: SimpleChanges): void {
+        this.messageBarType = changes.messageBarType.currentValue;
     }
 
     public get actionName(): string {
