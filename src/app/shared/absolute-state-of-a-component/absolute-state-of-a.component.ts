@@ -5,6 +5,7 @@ import { NgxFluentDesignPanelHandler } from '../../../../projects/ngx-fluent-des
 import { NgxFluentDesignDialogHandler } from '../../../../projects/ngx-fluent-design/src/lib/surface/dialog/dialog-handler.helper';
 import { NgxFluentDesignModalHandler } from '../../../../projects/ngx-fluent-design/src/lib/surface/modal/modal-handler.helper';
 import { NgxFluentDesignSheetHandler } from '../../../../projects/ngx-fluent-design/src/lib/surface/sheet/sheet-handler.helper';
+import { MessageBarType } from '../../../../projects/ngx-fluent-design/src/lib/notifications/types/message-bar.type';
 
 @Component({
     selector: 'absolute-mess',
@@ -21,6 +22,7 @@ export class AbsoluteStateOfAComponent implements AfterViewInit {
     public dialogHandler: NgxFluentDesignDialogHandler = new NgxFluentDesignDialogHandler(false);
     public modalHandler: NgxFluentDesignModalHandler = new NgxFluentDesignModalHandler(false);
     public sheetHandler: NgxFluentDesignSheetHandler = new NgxFluentDesignSheetHandler(false);
+    public messageBarName: FormControl = new FormControl('success');
 
     testForm = new FormGroup({
         checkboxEnabled: new FormControl(''),
@@ -50,7 +52,7 @@ export class AbsoluteStateOfAComponent implements AfterViewInit {
     };
 
     @Output()
-    public displayErrorMessageBar: EventEmitter<void> = new EventEmitter<void>();
+    public displayErrorMessageBar: EventEmitter<MessageBarType> = new EventEmitter<MessageBarType>();
 
     ngAfterViewInit(): void {
         this.exampleProgressLoad();

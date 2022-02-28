@@ -1,4 +1,4 @@
-import { Component, Inject, Input, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { INgxFluentDesignIcon } from '../shared/types/ngx-fluent-design-icon.interface';
 import { INgxFluentDesignIconComponent } from '../shared/types/ngx-fluent-design-icon-component.interface';
 import { DOCUMENT } from '@angular/common';
@@ -8,7 +8,7 @@ import { DOCUMENT } from '@angular/common';
     templateUrl: './icon.component.html',
     styleUrls: ['./icon.component.scss']
 })
-export class NgxFluentDesignIconComponent implements OnInit, INgxFluentDesignIconComponent {
+export class NgxFluentDesignIconComponent implements OnInit, INgxFluentDesignIconComponent, OnChanges {
     @Input() public icon: INgxFluentDesignIcon;
     @Input() public fillColor: string;
     @Input() public ngxFluentDesignCssVariableName: string;
@@ -27,6 +27,10 @@ export class NgxFluentDesignIconComponent implements OnInit, INgxFluentDesignIco
 
     public ngOnInit(): void {
         this.iconViewBox = `0 0 ${this.icon.width} ${this.icon.height}`;
+        this.setIconFill();
+    }
+
+    public ngOnChanges(changes: SimpleChanges): void {
         this.setIconFill();
     }
 

@@ -167,11 +167,60 @@
 
     <section class="my-3">
         <h3>Fixed Message Bar</h3>
-        <ngx-fluent-design-button (clicked)="displayErrorMessageBar.emit()">
+        <ngx-fluent-design-button (clicked)="displayErrorMessageBar.emit(messageBarName.value)">
             Click here to launch a message bar
         </ngx-fluent-design-button>
     </section>
 
+    <div class="d-flex flex-md-row justify-content-between flex-column my-3">
+        <ngx-fluent-design-radio
+            value="info"
+            class="mb-3"
+            [checked]="messageBarName.value === 'info'"
+            [formControl]="messageBarName"
+            [label]="'info'">
+        </ngx-fluent-design-radio>
+        <ngx-fluent-design-radio
+            class="mb-3"
+            value="error"
+            [formControl]="messageBarName"
+            [checked]="messageBarName.value === 'error'"
+            [label]="'error'"
+            [name]="'unchecked-disabled'">
+        </ngx-fluent-design-radio>
+        <ngx-fluent-design-radio
+            value="blocked"
+            class="mb-3"
+            [checked]="messageBarName.value === 'blocked'"
+            [formControl]="messageBarName"
+            [label]="'blocked'"
+            [name]="'unchecked-rest'">
+        </ngx-fluent-design-radio>
+        <ngx-fluent-design-radio
+            value="severe-warning"
+            class="mb-3"
+            [checked]="messageBarName.value === 'severe-warning'"
+            [formControl]="messageBarName"
+            [label]="'severe-warning'"
+            [name]="'unchecked-rest'">
+        </ngx-fluent-design-radio>
+        <ngx-fluent-design-radio
+            value="success"
+            class="mb-3"
+            [checked]="messageBarName.value === 'success'"
+            [formControl]="messageBarName"
+            [label]="'success'"
+            [name]="'unchecked-rest'">
+        </ngx-fluent-design-radio>
+        <ngx-fluent-design-radio
+            value="warning"
+            class="mb-3"
+            [checked]="messageBarName.value === 'warning'"
+            [formControl]="messageBarName"
+            [label]="'warning'"
+            [name]="'unchecked-rest'">
+        </ngx-fluent-design-radio>
+    </div>
 </ngx-fluent-design-card>
 
 <ngx-fluent-design-card>

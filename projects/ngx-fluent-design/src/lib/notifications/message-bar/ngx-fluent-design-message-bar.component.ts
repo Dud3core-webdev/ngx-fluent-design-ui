@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { INgxFluentDesignMessageBar } from '../types/ngx-fluent-design-message-bar.interface';
 import { MessageBarType } from '../types/message-bar.type';
 import { NgxFluentDesignIconClearClose } from '../../icons/shared/constants/ngx-fluent-design-icons-list';
@@ -15,8 +15,7 @@ import { INgxFluentDesignMessageBarIcon, NgxFluentDesignMessageBarIconFactory } 
         NgxFluentDesignCommonAnimations.slideInFromTop('150ms', '150ms')
     ]
 })
-export class NgxFluentDesignMessageBarComponent implements OnInit, INgxFluentDesignMessageBar {
-    @Input() public messageBarType: MessageBarType = 'info';
+export class NgxFluentDesignMessageBarComponent implements OnInit, INgxFluentDesignMessageBar, OnChanges {
     @Input() public canDismiss: boolean;
     @Input() public fixed: boolean = false;
     @Input() public handler: NgxFluentDesignMessageBarHandler;
@@ -28,19 +27,34 @@ export class NgxFluentDesignMessageBarComponent implements OnInit, INgxFluentDes
 
     private _displaySecondaryActions: boolean = false;
     private _actionName: string;
+    private _messageBarType: MessageBarType = 'success';
 
     constructor() {
         this.actionClicked = new EventEmitter<void>();
         this.closeClicked = new EventEmitter<void>();
     }
 
+    ngOnChanges(changes: SimpleChanges): void {
+        this.messageBarType = changes.messageBarType.currentValue;
+    }
+
     public ngOnInit(): void {
-        this.iconConfig = NgxFluentDesignMessageBarIconFactory.for(this.messageBarType);
-        this.closeIconConfig = NgxFluentDesignMessageBarIconFactory.forCloseIcon(this.messageBarType);
+        this.iconConfig = NgxFluentDesignMessageBarIconFactory.for(this._messageBarType);
+        this.closeIconConfig = NgxFluentDesignMessageBarIconFactory.forCloseIcon(this._messageBarType);
     }
 
     public get actionName(): string {
         return this._actionName;
+    }
+
+    public get messageBarType(): MessageBarType {
+        return this._messageBarType;
+    }
+
+    @Input()
+    public set messageBarType(messageBarType: MessageBarType) {
+        this.iconConfig = NgxFluentDesignMessageBarIconFactory.for(messageBarType);
+        this._messageBarType = messageBarType;
     }
 
     @Input()
