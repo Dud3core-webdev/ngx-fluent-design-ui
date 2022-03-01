@@ -1,8 +1,13 @@
 # NGXFluentDesign UI
 An open-source, Angular implementation of Microsoft's Fluent Design system. Based off designs found in the official [Figma File](https://aka.ms/FluentToolkits/Web/Figma)
 
-## WARNING
-We've only tested this package with Angular 11. We are working out a plan to support multiple versions of Angular, but for now use at your own risk!
+###Version support: 
+- Angular 11
+- Angular 12
+
+##Patch Notes: v1.01
+- Added change detection to icon component and message bar component
+- Style fixes for disabled states (checkbox and radio)
 
 ## Getting started:
 
