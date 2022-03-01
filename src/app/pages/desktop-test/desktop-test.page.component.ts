@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { MessageBarType } from 'projects/ngx-fluent-design/src/lib/notifications/types/message-bar.type';
 import { NgxFluentDesignMessageBarHandler } from '../../../../projects/ngx-fluent-design/src/lib/notifications/message-bar/message-bar-handler.helper';
-import { MessageBarType } from 'ngx-fluent-design';
 
 @Component({
     templateUrl: './desktop-test.page.component.html',
