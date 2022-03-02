@@ -28,6 +28,7 @@ export { NgxFluentDesignToggleComponent } from './lib/input/toggle/ngx-fluent-de
 export { NgxFluentDesignInputClassValidatorDirective } from './lib/input/shared/directives/ngx-fluent-design-input-class-validator.directive';
 export { NgxFluentDesignCheckboxComponent } from './lib/input/checkbox/ngx-fluent-design-checkbox.component';
 export { NgxFluentDesignSelectComponent } from './lib/input/select/ngx-fluent-design-select.component';
+export { NgxFluentDesignRadioComponent} from './lib/input/radio/ngx-fluent-design-radio.component';
 
 /** CTA */
 export { NgxFluentDesignButtonComponent } from './lib/cta/standard-button/ngx-fluent-design-button.component';
