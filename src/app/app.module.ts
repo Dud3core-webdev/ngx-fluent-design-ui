@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { MarkdownModule } from 'ngx-markdown';
 import { HttpClientModule } from '@angular/common/http';
 import { DesktopTestPageModule } from './pages/desktop-test/desktop-test.page.module';
 import { AppRoutingModule } from './app.routing.module';
@@ -24,7 +23,6 @@ import { NgxFluentDesignInputModule } from 'projects/ngx-fluent-design/src/lib/i
         TestFormPageModule,
         BrowserAnimationsModule,
         HttpClientModule,
-        MarkdownModule.forRoot(),
         BrowserModule,
         NgxFluentDesignNotificationModule,
         NgxFluentDesignCtaModule,

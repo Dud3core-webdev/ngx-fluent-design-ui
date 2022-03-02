@@ -20,18 +20,6 @@
                             "tsConfig": "projects/ngx-fluent-design/tsconfig.lib.prod.json"
                         }
                     }
-                },
-                "lint": {
-                    "builder": "@angular-devkit/build-angular:tslint",
-                    "options": {
-                        "tsConfig": [
-                            "projects/ngx-fluent-design/tsconfig.lib.json",
-                            "projects/ngx-fluent-design/tsconfig.spec.json"
-                        ],
-                        "exclude": [
-                            "**/node_modules/**"
-                        ]
-                    }
                 }
             }
         },
@@ -64,16 +52,7 @@
                                 "output": "/src/assets/"
                             }
                         ],
-                        "styles": [
-                            "src/styles.scss",
-                            "node_modules/prismjs/themes/prism-okaidia.css"
-                        ],
-                        "scripts": [
-                            "node_modules/marked/lib/marked.js",
-                            "node_modules/prismjs/prism.js",
-                            "node_modules/prismjs/components/prism-csharp.min.js",
-                            "node_modules/prismjs/components/prism-typescript.min.js"
-                        ],
+                        "styles": ["src/styles.scss"],
                         "serviceWorker": true,
                         "ngswConfigPath": "ngsw-config.json",
                         "vendorChunk": true,
@@ -123,35 +102,12 @@
                         "production": {
                             "browserTarget": "ngx-fluent-design-testbed:build:production"
                         }
-                    },
-                    "assets": [
-                        "src/favicon.ico",
-                        "src/assets",
-                        "src/manifest.webmanifest",
-                        {
-                            "glob": "**/*",
-                            "input": "./projects/ngx-fluent-design/assets/**",
-                            "output": "/src/assets/"
-                        }
-                    ]
+                    }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
                         "browserTarget": "ngx-fluent-design-testbed:build"
-                    }
-                },
-                "lint": {
-                    "builder": "@angular-devkit/build-angular:tslint",
-                    "options": {
-                        "tsConfig": [
-                            "tsconfig.app.json",
-                            "tsconfig.spec.json",
-                            "e2e/tsconfig.json"
-                        ],
-                        "exclude": [
-                            "**/node_modules/**"
-                        ]
                     }
                 },
                 "e2e": {
