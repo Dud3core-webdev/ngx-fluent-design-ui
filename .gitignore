@@ -47,4 +47,4 @@ Thumbs.db
 /cypress/videos/
 
 # lib node_modules
-
+/projects/ngx-fluent-design/node_modules
