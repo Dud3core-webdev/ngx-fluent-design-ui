@@ -5,9 +5,10 @@ An open-source, Angular implementation of Microsoft's Fluent Design system. Base
 - Angular 11
 - Angular 12
 
-##Patch Notes: v1.01
+##Patch Notes: v1.0.1 - 0.2
 - Added change detection to icon component and message bar component
 - Style fixes for disabled states (checkbox and radio)
+- Getting an error when importing 1.0.1 because of a package.json object that was left in from early stages of development
 
 ## Getting started:
 
