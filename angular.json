@@ -54,13 +54,7 @@
                         ],
                         "styles": ["src/styles.scss"],
                         "serviceWorker": true,
-                        "ngswConfigPath": "ngsw-config.json",
-                        "vendorChunk": true,
-                        "extractLicenses": false,
-                        "buildOptimizer": false,
-                        "sourceMap": true,
-                        "optimization": false,
-                        "namedChunks": true
+                        "ngswConfigPath": "ngsw-config.json"
                     },
                     "configurations": {
                         "production": {
@@ -90,8 +84,7 @@
                                 }
                             ]
                         }
-                    },
-                    "defaultConfiguration": ""
+                    }
                 },
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
