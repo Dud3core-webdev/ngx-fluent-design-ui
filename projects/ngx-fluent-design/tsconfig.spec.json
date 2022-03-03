@@ -1,12 +1,17 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-    "extends": "../../tsconfig.json",
-    "compilerOptions": {
-        "outDir": "../../out-tsc/spec",
-        "module": "CommonJS"
-    },
-    "include": [
-        "../ngx-fluent-design/src/*.spec.ts",
-        "../ngx-fluent-design/src/*.d.ts"
-    ]
+    "extends": "../../tslint.json",
+    "rules": {
+        "directive-selector": [
+            true,
+            "attribute",
+            "ngxFluentDesign",
+            "camelCase"
+        ],
+        "component-selector": [
+            true,
+            "element",
+            "ngx-fluent-design",
+            "kebab-case"
+        ]
+    }
 }

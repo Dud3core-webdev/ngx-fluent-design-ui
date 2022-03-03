@@ -1,7 +1,7 @@
 {
     "name": "ngx-fluent-design",
     "description": "An ngx implementation of Microsoft's fluent design",
-    "version": "11.0.3",
+    "version": "13.0.5",
     "sideEffects": false,
     "keywords": [
         "Angular",
@@ -25,8 +25,8 @@
         "url": "https://github.com/Dud3core-webdev/ngx-fluent-design-ui/issues"
     },
     "peerDependencies": {
-        "@angular/common": "~11.2.9",
-        "@angular/core": "~11.2.9"
+        "@angular/common": "~13.2.5",
+        "@angular/core": "~13.2.5"
     },
     "dependencies": {
         "tslib": "^2.0.0"

@@ -17,7 +17,7 @@ if(($isPatch -eq $false) -and ($isMinorUpdate -eq $true)) {
 }
 
 Write-Host -BackgroundColor "Green" "Running build";
-ng b ngx-fluent-design --prod
+ng b ngx-fluent-design --configuration production
 
 Set-Location .\
 Set-Location ..\..\dist\ngx-fluent-design
@@ -35,4 +35,4 @@ Write-Host $newVersionNumber
 git add .
 git commit -m "Upgraded package version to $newVersionNumber"
 
-git push -u origin v11
+git push -u origin master

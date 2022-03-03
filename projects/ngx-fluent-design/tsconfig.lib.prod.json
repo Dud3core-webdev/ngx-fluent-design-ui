@@ -1,24 +1,10 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-    "extends": "../../tsconfig.json",
+    "extends": "./tsconfig.lib.json",
     "compilerOptions": {
-        "outDir": "../../out-tsc/lib",
-        "target": "es2015",
-        "declaration": true,
-        "declarationMap": true,
-        "inlineSources": true,
-        "types": [],
-        "lib": [
-            "dom",
-            "es2018"
-        ]
+        "declarationMap": false
     },
     "angularCompilerOptions": {
-        "skipTemplateCodegen": true,
-        "strictMetadataEmit": false,
-        "enableResourceInlining": true,
-        "enableIvy": false
-    },
-    "exclude": [
-        "**/*.spec.ts"
-    ]
+        "compilationMode": "partial"
+    }
 }
