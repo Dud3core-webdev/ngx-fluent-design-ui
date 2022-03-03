@@ -1,17 +1,17 @@
 {
-  "extends": "../../tslint.json",
-  "rules": {
-    "directive-selector": [
-      true,
-      "attribute",
-      "ngxFluentDesign",
-      "camelCase"
-    ],
-    "component-selector": [
-      true,
-      "element",
-      "ngx-fluent-design",
-      "kebab-case"
-    ]
-  }
+    "extends": "../../tslint.json",
+    "rules": {
+        "directive-selector": [
+            true,
+            "attribute",
+            "ngxFluentDesign",
+            "camelCase"
+        ],
+        "component-selector": [
+            true,
+            "element",
+            "ngx-fluent-design",
+            "kebab-case"
+        ]
+    }
 }
