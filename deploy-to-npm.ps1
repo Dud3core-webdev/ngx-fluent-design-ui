@@ -35,4 +35,4 @@ Write-Host $newVersionNumber
 git add .
 git commit -m "Upgraded package version to $newVersionNumber"
 
-git push -u origin master
+git push -u origin v11
