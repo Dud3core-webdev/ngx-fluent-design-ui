@@ -27,7 +27,6 @@
         "@angular/service-worker": "~12.2.16",
         "bootstrap-scss": "^4.6.1",
         "http-server": "^14.1.0",
-        "ngx-markdown": "^11.0.0",
         "rxjs": "~6.6.0",
         "tslib": "^2.0.0",
         "zone.js": "~0.11.4"
