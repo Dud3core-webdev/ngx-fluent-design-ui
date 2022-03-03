@@ -1,4 +1,4 @@
-# NGXFluentDesign UI
+# NGXFluentDesign UI (V12)
 An open-source, Angular implementation of Microsoft's Fluent Design system. Based off designs found in the official [Figma File](https://aka.ms/FluentToolkits/Web/Figma)
 
 ###Version support: 
@@ -6,8 +6,8 @@ An open-source, Angular implementation of Microsoft's Fluent Design system. Base
 - Angular 12
 - Angular 13 (currently testing, please use with ng-13 at your own risk)
 
-##Patch Notes: v1.0.4
-- Updated Angular version to 13, currently testing
+##Patch Notes: v12.0.3
+- Proper V12 build
 
 ## Getting started:
 
