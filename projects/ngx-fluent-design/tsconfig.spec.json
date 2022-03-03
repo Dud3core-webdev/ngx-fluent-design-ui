@@ -1,12 +1,19 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-    "extends": "../../tsconfig.json",
+    "extends": "./tsconfig.json",
     "compilerOptions": {
-        "outDir": "../../out-tsc/spec",
-        "module": "CommonJS"
+        "outDir": "./out-tsc/spec",
+        "module": "CommonJS",
+        "types": [
+            "jest",
+            "node"
+        ]
     },
+    "files": [
+        "src/polyfills.ts",
+    ],
     "include": [
-        "../ngx-fluent-design/src/*.spec.ts",
-        "../ngx-fluent-design/src/*.d.ts"
+        "src/**/*.spec.ts",
+        "src/**/*.d.ts"
     ]
 }

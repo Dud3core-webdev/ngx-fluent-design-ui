@@ -102,7 +102,17 @@
                         "production": {
                             "browserTarget": "ngx-fluent-design-testbed:build:production"
                         }
-                    }
+                    },
+                    "assets": [
+                        "src/favicon.ico",
+                        "src/assets",
+                        "src/manifest.webmanifest",
+                        {
+                            "glob": "**/*",
+                            "input": "./projects/ngx-fluent-design/assets/**",
+                            "output": "/src/assets/"
+                        }
+                    ]
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
