@@ -1,5 +1,5 @@
 {
-    "extends": "tslint:recommended",
+    "extends": "./tsconfig.json",
     "rulesDirectory": [
         "codelyzer"
     ],
