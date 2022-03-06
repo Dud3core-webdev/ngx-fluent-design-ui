@@ -22,7 +22,7 @@
         }
 
         &:not(:checked):disabled ~ .checkmark {
-            border-color: $ngx-fluent-design-foreground-neutral-primary;
+            border-color: $foreground-disabled;
         }
 
         &:checked {

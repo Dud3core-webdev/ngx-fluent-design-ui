@@ -6,7 +6,11 @@
             <div class="d-flex justify-content-between px-0">
                 <ngx-fluent-design-checkbox [label]="'Checkbox Enabled'" formControlName="checkboxEnabled" [e2eSuffix]="'form-section-enabled'">
                 </ngx-fluent-design-checkbox>
-                <ngx-fluent-design-checkbox [label]="'Checkbox Disabled'" [disabled]="true" [e2eSuffix]="'form-section-disabled'"
+                <ngx-fluent-design-checkbox [label]="'Checkbox Enabled, checked'" [checked]="true">
+                </ngx-fluent-design-checkbox>
+                <ngx-fluent-design-checkbox [label]="'Checkbox Disabled'" [disabled]="true">
+                </ngx-fluent-design-checkbox>
+                <ngx-fluent-design-checkbox [label]="'Checkbox Disabled, checked'" [disabled]="true" [e2eSuffix]="'form-section-disabled'"
                                             formControlName="checkboxDisabled">
                 </ngx-fluent-design-checkbox>
             </div>
@@ -500,12 +504,12 @@
 </ngx-fluent-design-panel>
 
 <ngx-fluent-design-dialog
-        [handler]="dialogHandler"
-        [header]="'Hello there'"
-        [canDismissWithOuterContent]="true"
-        [displayCloseIcon]="true"
-        (primaryActionClicked)="dialogHandler.close()"
-        (secondaryActionClicked)="exampleAlert('Alert secondary Action')">
+    [handler]="dialogHandler"
+    [header]="'Hello there'"
+    [canDismissWithOuterContent]="true"
+    [displayCloseIcon]="true"
+    (primaryActionClicked)="dialogHandler.close()"
+    (secondaryActionClicked)="exampleAlert('Alert secondary Action')">
     This is an alert that can be dismissed via the modal content
 </ngx-fluent-design-dialog>
 
