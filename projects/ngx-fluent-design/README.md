@@ -1,13 +1,15 @@
 # NGXFluentDesign UI
 An open-source, Angular implementation of Microsoft's Fluent Design system. Based off designs found in the official [Figma File](https://aka.ms/FluentToolkits/Web/Figma)
 
-###Version support: 
+### Version support: 
 - Angular 11
 - Angular 12
-- Angular 13 (currently testing, please use with ng-13 at your own risk)
+- Angular 13
 
-##Patch Notes: v1.0.4
-- Updated Angular version to 13, currently testing
+We will always support the latest 2 versions with new components and features, we will only be doing bug features for the third-latest version, however.
+
+## Patch Notes: 13.0.7
+- Breaking change with styles. We have a Tool on docs that will convert your hex palette to RGB values.
 
 ## Getting started:
 

@@ -1,32 +1,32 @@
 @import "functions";
 
-$ngx-fluent-design-theme-primary: get_theme_var(theme-primary);
-$ngx-fluent-design-secondary: get_theme_var(secondary);
-$ngx-fluent-design-theme-tertiary: get_theme_var(theme-tertiary);
-$ngx-fluent-design-theme-light: get_theme_var(theme-light);
-$ngx-fluent-design-theme-lighter: get_theme_var(theme-lighter);
-$ngx-fluent-design-theme-lighter-alt: get_theme_var(theme-lighter-alt);
-$ngx-fluent-design-theme-dark: get_theme_var(theme-dark);
-$ngx-fluent-design-theme-darker: get_theme_var(theme-darker);
-$ngx-fluent-design-theme-dark-alt: get_theme_var(theme-dark-alt);
+$ngx-fluent-design-theme-primary: rgba(get_theme_var(theme-primary));
+$ngx-fluent-design-secondary: rgba(get_theme_var(secondary));
+$ngx-fluent-design-theme-tertiary: rgba(get_theme_var(theme-tertiary));
+$ngx-fluent-design-theme-light: rgba(get_theme_var(theme-light));
+$ngx-fluent-design-theme-lighter: rgba(get_theme_var(theme-lighter));
+$ngx-fluent-design-theme-lighter-alt: rgba(get_theme_var(theme-lighter-alt));
+$ngx-fluent-design-theme-dark: rgba(get_theme_var(theme-dark));
+$ngx-fluent-design-theme-darker: rgba(get_theme_var(theme-darker));
+$ngx-fluent-design-theme-dark-alt: rgba(get_theme_var(theme-dark-alt));
 
 /** foreground **/
-$ngx-fluent-design-foreground-black: get_theme_var(foreground-black);
-$ngx-fluent-design-foreground-neutral-dark: get_theme_var(foreground-neutral-dark);
-$ngx-fluent-design-foreground-neutral-primary: get_theme_var(foreground-neutral-primary);
-$ngx-fluent-design-foreground-neutral-primary-alt: get_theme_var(foreground-neutral-primary-alt);
-$ngx-fluent-design-foreground-neutral-secondary: get_theme_var(foreground-neutral-secondary);
-$ngx-fluent-design-foreground-neutral-tertiary: get_theme_var(foreground-neutral-tertiary);
-$ngx-fluent-design-foreground-white: get_theme_var(foreground-white);
-$ngx-fluent-design-foreground-white-rgba: get_theme_var(foreground-white-rgba);
+$ngx-fluent-design-foreground-black: rgba(get_theme_var(foreground-black));
+$ngx-fluent-design-foreground-neutral-dark: rgba(get_theme_var(foreground-neutral-dark));
+$ngx-fluent-design-foreground-neutral-primary: rgba(get_theme_var(foreground-neutral-primary));
+$ngx-fluent-design-foreground-neutral-primary-alt: rgba(get_theme_var(foreground-neutral-primary-alt));
+$ngx-fluent-design-foreground-neutral-secondary: rgba(get_theme_var(foreground-neutral-secondary));
+$ngx-fluent-design-foreground-neutral-tertiary: rgba(get_theme_var(foreground-neutral-tertiary));
+$ngx-fluent-design-foreground-white: rgba(get_theme_var(foreground-white));
+$ngx-fluent-design-foreground-white-rgba: rgba(get_theme_var(foreground-white-rgba));
 
 /** Background **/
-$ngx-fluent-design-background-neutral-tertiary-alt: get_theme_var(background-neutral-tertiary-alt);
-$ngx-fluent-design-background-neutral-dark: get_theme_var(background-neutral-dark);
-$ngx-fluent-design-background-neutral-quaternary-alt: get_theme_var(background-neutral-quaternary-alt);
-$ngx-fluent-design-background-neutral-light: get_theme_var(background-neutral-light);
-$ngx-fluent-design-background-neutral-lighter: get_theme_var(background-neutral-lighter);
-$ngx-fluent-design-background-neutral-light-alt: get_theme_var(background-neutral-light-alt);
+$ngx-fluent-design-background-neutral-tertiary-alt: rgba(get_theme_var(background-neutral-tertiary-alt));
+$ngx-fluent-design-background-neutral-dark: rgba(get_theme_var(background-neutral-dark));
+$ngx-fluent-design-background-neutral-quaternary-alt: rgba(get_theme_var(background-neutral-quaternary-alt));
+$ngx-fluent-design-background-neutral-light: rgba(get_theme_var(background-neutral-light));
+$ngx-fluent-design-background-neutral-lighter: rgba(get_theme_var(background-neutral-lighter));
+$ngx-fluent-design-background-neutral-light-alt: rgba(get_theme_var(background-neutral-light-alt));
 
 /** Errors and status */
 $ngx-fluent-design-error-background-fill: get_theme_var(error-background-fill);

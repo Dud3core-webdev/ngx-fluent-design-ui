@@ -1,6 +1,7 @@
 @import "../../styles/mixins";
 @import "../../styles/functions";
 @import "../../styles/variables";
+@import "../../styles/variables/surface";
 
 ::ng-deep {
     body, html {
@@ -10,7 +11,6 @@
     }
 }
 
-
 .ngx-fluent-design-container {
     position: fixed;
     width: 100%;
@@ -19,7 +19,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $ngx-fluent-design-foreground-white-rgba;
+    background-color: $ngx-fluent-design-surface-transparent-background;
     z-index: 5;
     display: flex;
     align-items: center;
