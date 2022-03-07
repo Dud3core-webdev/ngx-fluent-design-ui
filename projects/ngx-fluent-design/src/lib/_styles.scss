@@ -10,38 +10,36 @@
     --ngx-fluent-design-severe-background-fill: #FED9CC;
     --ngx-fluent-design-warning-background-fill: #FFF4CE;
 
-    --ngx-fluent-design-status-error: #A80000;
-    --ngx-fluent-design-status-success: #107C10;
-    --ngx-fluent-design-status-severe-warning: #D83B01;
-    --ngx-fluent-design-status-warning: #797775;
+    --ngx-fluent-design-status-error: 168, 0, 0;
+    --ngx-fluent-design-status-success: 16, 124, 16;
+    --ngx-fluent-design-status-severe-warning: 216, 59, 1;
+    --ngx-fluent-design-status-warning: 121, 119, 117;
 
-    /** primary **/
-    --ngx-fluent-design-theme-primary: #0078d4;
-    --ngx-fluent-design-secondary: #2b88d8;
-    --ngx-fluent-design-theme-tertiary: #71afe5;
-    --ngx-fluent-design-theme-light: #c7e0f4;
-    --ngx-fluent-design-theme-lighter: #deecf9;
-    --ngx-fluent-design-theme-lighter-alt: #eff6fc;
-    --ngx-fluent-design-theme-dark: #005a9e;
-    --ngx-fluent-design-theme-darker: #004578;
-    --ngx-fluent-design-theme-dark-alt: #106ebe;
+    /** Primary */
+    --ngx-fluent-design-theme-primary: 0,120,212;
+    --ngx-fluent-design-theme-secondary: 43,136,216;
+    --ngx-fluent-design-theme-tertiary: 113,175,229;
+    --ngx-fluent-design-theme-light: 199,224,244;
+    --ngx-fluent-design-theme-lighter: 222,236,249;
+    --ngx-fluent-design-theme-lighter-alt: 239,246,252;
+    --ngx-fluent-design-theme-dark: 0,90,158;
+    --ngx-fluent-design-theme-darker: 0,69,120;
+    --ngx-fluent-design-theme-dark-alt: 16,110,190;
 
     /** foreground **/
-    --ngx-fluent-design-foreground-black: #000000;
-    --ngx-fluent-design-foreground-neutral-dark: #201f1e;
-    --ngx-fluent-design-foreground-neutral-primary: #323130;
-    --ngx-fluent-design-foreground-neutral-primary-alt: #3b3a39;
-    --ngx-fluent-design-foreground-neutral-secondary: #605e5c;
-    --ngx-fluent-design-foreground-neutral-tertiary: #a19f9d;
-    --ngx-fluent-design-foreground-white: #ffffff;
-    /** @todo: get rid of this somehow...*/
-    --ngx-fluent-design-foreground-white-rgba: rgb(255, 255, 255, 0.5);
+    --ngx-fluent-design-foreground-black: 0,0,0;
+    --ngx-fluent-design-foreground-neutral-dark: 32,31,30;
+    --ngx-fluent-design-foreground-neutral-primary: 50,49,48;
+    --ngx-fluent-design-foreground-neutral-primary-alt: 59,58,57;
+    --ngx-fluent-design-foreground-neutral-secondary: 96,94,92;
+    --ngx-fluent-design-foreground-neutral-tertiary: 161,159,157;
+    --ngx-fluent-design-foreground-white: 255,255,255;
 
-    /** Background **/
-    --ngx-fluent-design-background-neutral-tertiary-alt: #c8c6c4;
-    --ngx-fluent-design-background-neutral-dark: #201f1e;
-    --ngx-fluent-design-background-neutral-quaternary-alt: #e1dfdd;
-    --ngx-fluent-design-background-neutral-light: #edebe9;
-    --ngx-fluent-design-background-neutral-lighter: #f3f2f1;
-    --ngx-fluent-design-background-neutral-light-alt: #faf9f8;
+    /** Background */
+    --ngx-fluent-design-background-neutral-tertiary-alt: 200,198,196;
+    --ngx-fluent-design-background-neutral-dark: 32,31,30;
+    --ngx-fluent-design-background-neutral-quaternary-alt: 225,223,221;
+    --ngx-fluent-design-background-neutral-light: 237,235,233;
+    --ngx-fluent-design-background-neutral-lighter: 243,242,241;
+    --ngx-fluent-design-background-neutral-light-alt: 250,249,248;
 }

@@ -1,5 +1,7 @@
+import { ApplicationCssVarNames } from './application-css-var-names.enum';
+
 export const DefaultThemeMap: Map<string, string > = new Map<string, string>([
-    ['--application-background', '#faf9f8'],
+    [ApplicationCssVarNames.APPLICATION_BACKGROUND, '#faf9f8'],
 
     /* New Styles that conform to variables given by
      https,//fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/master/theming-designer/index.html */

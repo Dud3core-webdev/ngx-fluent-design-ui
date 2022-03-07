@@ -1,5 +1,6 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
+@import "../../styles/variables/surface";
 
 ::ng-deep {
     body, html {
@@ -17,7 +18,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $ngx-fluent-design-foreground-white-rgba;
+    background-color: $ngx-fluent-design-surface-transparent-background;
     z-index: 5;
     transition: visibility 200ms;
     cursor: pointer;

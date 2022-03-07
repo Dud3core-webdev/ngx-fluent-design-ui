@@ -2,13 +2,13 @@
 An open-source, Angular implementation of Microsoft's Fluent Design system. Based off designs found in the official [Figma File](https://aka.ms/FluentToolkits/Web/Figma)
 
 ###Version support: 
-- Angular 11
+- Angular 11 (bug fixes only)
 - Angular 12
-- Angular 13 (currently testing, please use with ng-13 at your own risk)
+- Angular 13
 
-##Patch Notes: v12.0.3
-- Proper V12 build
-
+## Patch Notes: 12.1.0
+- Breaking change with styles. We have a Tool on docs that will convert your hex palette to RGB values.
+ 
 ## Getting started:
 
 `yarn add ngx-fluent-design`\
