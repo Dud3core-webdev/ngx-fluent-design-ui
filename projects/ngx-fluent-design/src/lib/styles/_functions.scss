@@ -1,3 +1,7 @@
 @function get_theme_var($varName) {
     @return (var(--ngx-fluent-design-#{$varName}));
 }
+
+@function convert_to_rgb($rgbValues, $opacity) {
+    @return rgba($rgbValues)
+}

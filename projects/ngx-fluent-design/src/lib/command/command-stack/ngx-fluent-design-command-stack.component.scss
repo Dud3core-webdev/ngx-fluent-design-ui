@@ -1,0 +1,10 @@
+@import "../../styles/variables";
+
+.ngx-fluent-design-command-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0 16px;
+    align-items: center;
+    background-color: $ngx-fluent-design-foreground-white;
+}
