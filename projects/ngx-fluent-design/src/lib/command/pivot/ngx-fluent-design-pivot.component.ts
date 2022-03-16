@@ -10,4 +10,5 @@ export class NgxFluentDesignPivotComponent implements INgxFluentDesignCommandCom
     @Input()
     public isChecked: boolean;
     public readonly onChecked: EventEmitter<void> = new EventEmitter<void>();
+    commandName: string = '';
 }
