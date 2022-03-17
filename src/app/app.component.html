@@ -2,9 +2,9 @@
     <section class="mx-3">
         <ngx-fluent-design-toggle [inlineLabel]="true" (change)="toggleTheme()" [label]="'Toggle dark theme'" [toggled]="!isNormalTheme"></ngx-fluent-design-toggle>
     </section>
-    <ngx-fluent-design-tab [isChecked]="isCurrentRoute('desktop')" (onChecked)="navigateTo('desktop')" [commandName]="'Desktop'"></ngx-fluent-design-tab>
-    <ngx-fluent-design-tab [isChecked]="isCurrentRoute('mobile')" (onChecked)="navigateTo('mobile')" [commandName]="'Mobile'"></ngx-fluent-design-tab>
-    <ngx-fluent-design-tab [isChecked]="isCurrentRoute('test-form')" (onChecked)="navigateTo('test-form')" [commandName]="'Test Form'"></ngx-fluent-design-tab>
+    <ngx-fluent-design-pivot [isChecked]="isCurrentRoute('desktop')" (checked)="navigateTo('desktop')" [commandName]="'Desktop'"></ngx-fluent-design-pivot>
+    <ngx-fluent-design-pivot [isChecked]="isCurrentRoute('mobile')" (checked)="navigateTo('mobile')" [commandName]="'Mobile'"></ngx-fluent-design-pivot>
+    <ngx-fluent-design-pivot [isChecked]="isCurrentRoute('test-form')" (checked)="navigateTo('test-form')" [commandName]="'Test Form'"></ngx-fluent-design-pivot>
 </ngx-fluent-design-command-stack>
 
 <section class="my-3">

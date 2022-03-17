@@ -7,4 +7,12 @@
     padding: 0 16px;
     align-items: center;
     background-color: $ngx-fluent-design-foreground-white;
+
+    &.fixed {
+        position: fixed;
+        top: 0;
+        z-index: 2000;
+        box-shadow: $ngx-fluent-design-depth-16;
+        tab-index: -1;
+    }
 }

@@ -10,5 +10,6 @@ export class NgxFluentDesignTabComponent implements INgxFluentDesignCommandCompo
     @Input() public isChecked: boolean = false;
     @Input() public commandName: string = '';
 
-    @Output() public readonly onChecked: EventEmitter<void> = new EventEmitter<void>();
+    @Output()
+    public readonly checked: EventEmitter<void> = new EventEmitter<void>();
 }

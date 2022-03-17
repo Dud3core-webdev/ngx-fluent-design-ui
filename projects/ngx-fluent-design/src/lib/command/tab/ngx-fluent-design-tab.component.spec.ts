@@ -50,12 +50,12 @@ describe('NgxFluentDesignTabComponent', () => {
                 let clickSpy: SpyInstance;
 
                 beforeEach(() => {
-                     clickSpy = jest.spyOn(component.onChecked, 'emit').mockReturnThis();
+                     clickSpy = jest.spyOn(component.checked, 'emit').mockReturnThis();
                      mainElement.nativeElement.click();
                 });
 
                 it('Then an event is emitted', () => {
-                    expect(component.onChecked.emit).toHaveBeenCalledWith();
+                    expect(component.checked.emit).toHaveBeenCalledWith();
                 });
             });
         });
@@ -80,12 +80,12 @@ describe('NgxFluentDesignTabComponent', () => {
                 let clickSpy: SpyInstance;
 
                 beforeEach(() => {
-                    clickSpy = jest.spyOn(component.onChecked, 'emit').mockReturnThis();
+                    clickSpy = jest.spyOn(component.checked, 'emit').mockReturnThis();
                     mainElement.nativeElement.click();
                 });
 
                 it('Then an event is emitted', () => {
-                    expect(component.onChecked.emit).toHaveBeenCalledWith();
+                    expect(component.checked.emit).toHaveBeenCalledWith();
                 });
             });
         });
