@@ -8,8 +8,8 @@ An open-source, Angular implementation of Microsoft's Fluent Design system. Base
 
 We will always support the latest 2 versions with new components and features, we will only be doing bug features for the third-latest version, however.
 
-## Patch Notes: 13.0.7
-- Breaking change with styles. We have a Tool on docs that will convert your hex palette to RGB values.
+## Patch Notes: 13.1.0
+Added a new set of command components. Please head over to docs to view them.
 
 ## Getting started:
 
@@ -17,7 +17,7 @@ We will always support the latest 2 versions with new components and features, w
 `npm i ngx-fluent-design`
 
 ## Usage
-You can view the [docs](https://ngx-fluent-design.mfwebdev.net/home) for this library for more information.
+You can view the [docs](https://ngx-fluent-design.mfwebdev.net) for this library for more information.
 
 We are working on documentation alongside the actual library, so bare with us if every component isn't documented.
 
