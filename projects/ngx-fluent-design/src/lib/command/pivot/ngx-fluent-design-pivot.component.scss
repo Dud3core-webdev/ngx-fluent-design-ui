@@ -43,18 +43,20 @@
     }
 
     &.active {
-        background-color: $ngx-fluent-design-background-neutral-lighter;
+        background-color: $ngx-fluent-design-background-neutral-lighter;;
 
         hr {
             @include border-bottom;
-            width: 50% !important;
+            transform: scaleX(0.5);
+            transition: 0.1s ease-in-out;
         }
 
         &:hover {
             background-color: $ngx-fluent-design-background-neutral-light;
 
             hr {
-                width: 100% !important;
+                transition: 0.1s ease-in-out;
+                transform: scaleX(1);
             }
         }
     }
