@@ -29,37 +29,20 @@ export class NgxFluentDesignMessageBarComponent implements OnInit, INgxFluentDes
     private _actionName: string;
     private _messageBarType: MessageBarType = 'success';
 
-    constructor() {
-        this.actionClicked = new EventEmitter<void>();
-        this.closeClicked = new EventEmitter<void>();
+    public get messageBarType(): MessageBarType {
+        return this._messageBarType;
     }
 
-
-    public ngOnInit(): void {
-        this.iconConfig = NgxFluentDesignMessageBarIconFactory.for(this._messageBarType);
-        this.closeIconConfig = NgxFluentDesignMessageBarIconFactory.forCloseIcon(this._messageBarType);
-    }
-
-    public ngOnChanges(changes: SimpleChanges): void {
-        this.messageBarType = changes.messageBarType.currentValue;
+    @Input() public set messageBarType(messageBarType: MessageBarType) {
+        this.iconConfig = NgxFluentDesignMessageBarIconFactory.for(messageBarType);
+        this._messageBarType = messageBarType;
     }
 
     public get actionName(): string {
         return this._actionName;
     }
 
-    public get messageBarType(): MessageBarType {
-        return this._messageBarType;
-    }
-
-    @Input()
-    public set messageBarType(messageBarType: MessageBarType) {
-        this.iconConfig = NgxFluentDesignMessageBarIconFactory.for(messageBarType);
-        this._messageBarType = messageBarType;
-    }
-
-    @Input()
-    public set actionName(actionName: string) {
+    @Input() public set actionName(actionName: string) {
         this._actionName = actionName;
         this._displaySecondaryActions = true;
     }
@@ -74,6 +57,20 @@ export class NgxFluentDesignMessageBarComponent implements OnInit, INgxFluentDes
 
     public get canDisplayCloseLogo(): boolean {
         return typeof this.handler !== 'undefined' && this.canDismiss;
+    }
+
+    constructor() {
+        this.actionClicked = new EventEmitter<void>();
+        this.closeClicked = new EventEmitter<void>();
+    }
+
+    public ngOnInit(): void {
+        this.iconConfig = NgxFluentDesignMessageBarIconFactory.for(this._messageBarType);
+        this.closeIconConfig = NgxFluentDesignMessageBarIconFactory.forCloseIcon(this._messageBarType);
+    }
+
+    public ngOnChanges(changes: SimpleChanges): void {
+        this.messageBarType = changes.messageBarType.currentValue;
     }
 
     public onCloseClicked(): void {
