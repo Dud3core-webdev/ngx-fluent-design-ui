@@ -56,6 +56,11 @@ export { INgxFluentDesignIcon } from './lib/icons/shared/types/ngx-fluent-design
 export { INgxFluentDesignIconComponent } from './lib/icons/shared/types/ngx-fluent-design-icon-component.interface';
 export { NgxFluentDesignIconComponent } from './lib/icons/icon-component/icon.component';
 
+/** Commands */
+export { NgxFluentDesignCommandStackComponent } from './lib/command/command-stack/ngx-fluent-design-command-stack.component';
+export { NgxFluentDesignPivotComponent } from './lib/command/pivot/ngx-fluent-design-pivot.component';
+export { NgxFluentDesignTabComponent } from './lib/command/tab/ngx-fluent-design-tab.component';
+
 /** Modules */
 export { NgxFluentDesignCardModule } from './lib/card/ngx-fluent-design-card.module';
 export { NgxFluentDesignCtaModule } from './lib/cta/ngx-fluent-design-cta.module';
@@ -64,3 +69,4 @@ export { NgxFluentDesignNotificationModule } from './lib/notifications/ngx-fluen
 export { NgxFluentDesignProgressModule } from './lib/progress/ngx-fluent-design-progress.module';
 export { NgxFluentDesignIconModule } from './lib/icons/ngx-fluent-design-icon.module';
 export { NgxFluentDesignSurfaceModule } from './lib/surface/ngx-fluent-design-surface.module';
+export { NgxFluentDesignCommandModule } from './lib/command/ngx-fluent-design-command.module';
