@@ -5,31 +5,30 @@ export const DefaultThemeMap: Map<string, string > = new Map<string, string>([
 
     /* New Styles that conform to variables given by
      https,//fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/master/theming-designer/index.html */
-    ['--ngx-fluent-design-theme-primary', '#0078d4'],
-    ['--ngx-fluent-design-secondary', '#2b88d8'],
-    ['--ngx-fluent-design-theme-tertiary', '#71afe5'],
-    ['--ngx-fluent-design-theme-light', '#c7e0f4'],
-    ['--ngx-fluent-design-theme-lighter', '#deecf9'],
-    ['--ngx-fluent-design-theme-lighter-alt', '#eff6fc'],
-    ['--ngx-fluent-design-theme-dark', '#005a9e'],
-    ['--ngx-fluent-design-theme-darker', '#004578'],
-    ['--ngx-fluent-design-theme-dark-alt', '#106ebe'],
+    [ApplicationCssVarNames.THEME_PRIMARY, '0,120,212'],
+    [ApplicationCssVarNames.THEME_SECONDARY, '43,136,216'],
+    [ApplicationCssVarNames.THEME_TERTIARY, '113,175,229'],
+    [ApplicationCssVarNames.THEME_LIGHT, '199,224,244'],
+    [ApplicationCssVarNames.THEME_LIGHTER, '222,236,249'],
+    [ApplicationCssVarNames.THEME_LIGHTER_ALT, '239,246,252'],
+    [ApplicationCssVarNames.THEME_DARK, '0,90,158'],
+    [ApplicationCssVarNames.THEME_DARKER, '0,69,120'],
+    [ApplicationCssVarNames.THEME_DARK_ALT, '16,110,190'],
 
     /* foreground **/
-    ['--ngx-fluent-design-foreground-black', '#000000'],
-    ['--ngx-fluent-design-foreground-neutral-dark', '#201f1e'],
-    ['--ngx-fluent-design-foreground-neutral-primary', '#323130'],
-    ['--ngx-fluent-design-foreground-neutral-primary-alt', '#3b3a39'],
-    ['--ngx-fluent-design-foreground-neutral-secondary', '#605e5c'],
-    ['--ngx-fluent-design-foreground-neutral-tertiary', '#a19f9d'],
-    ['--ngx-fluent-design-foreground-white', '#ffffff'],
-    ['--ngx-fluent-design-foreground-white-rgba', 'rgb(255, 255, 255, 0.5)'],
+    [ApplicationCssVarNames.THEME_FOREGROUND_BLACK, '0,0,0'],
+    [ApplicationCssVarNames.THEME_FOREGROUND_NEUTRAL_DARK, '32,31,30'],
+    [ApplicationCssVarNames.THEME_FOREGROUND_NEUTRAL_PRIMARY, '50,49,48'],
+    [ApplicationCssVarNames.THEME_FOREGROUND_NEUTRAL_PRIMARY_ALT, '59,58,57'],
+    [ApplicationCssVarNames.THEME_FOREGROUND_NEUTRAL_SECONDARY, '96,94,92'],
+    [ApplicationCssVarNames.THEME_FOREGROUND_NEUTRAL_TERTIARY, '161,159,157'],
+    [ApplicationCssVarNames.THEME_FOREGROUND_WHITE, '255,255,255'],
 
     /* Background **/
-    ['--ngx-fluent-design-background-neutral-tertiary-alt', '#c8c6c4'],
-    ['--ngx-fluent-design-background-neutral-dark', '#201f1e'],
-    ['--ngx-fluent-design-background-neutral-quaternary-alt', '#e1dfdd'],
-    ['--ngx-fluent-design-background-neutral-light', '#edebe9'],
-    ['--ngx-fluent-design-background-neutral-lighter', '#f3f2f1'],
-    ['--ngx-fluent-design-background-neutral-light-alt', '#faf9f8']
+    [ApplicationCssVarNames.THEME_BACKGROUND_NEUTRAL_TERTIARY_ALT, '200,198,196'],
+    [ApplicationCssVarNames.THEME_BACKGROUND_NEUTRAL_DARK, '32,31,30'],
+    [ApplicationCssVarNames.THEME_BACKGROUND_NEUTRAL_QUATERNARY_ALT, '225,223,221'],
+    [ApplicationCssVarNames.THEME_BACKGROUND_NEUTRAL_LIGHT, '237,235,233'],
+    [ApplicationCssVarNames.THEME_BACKGROUND_NEUTRAL_LIGHTER, '243,242,241'],
+    [ApplicationCssVarNames.THEME_BACKGROUND_NEUTRAL_LIGHT_ALT, '250,249,24']
 ]);

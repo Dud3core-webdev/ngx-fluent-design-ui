@@ -6,8 +6,8 @@ An open-source, Angular implementation of Microsoft's Fluent Design system. Base
 - Angular 12
 - Angular 13
 
-## Patch Notes: 12.1.0
-- Breaking change with styles. We have a Tool on docs that will convert your hex palette to RGB values.
+## Patch Notes: 12.2.0
+Added a new set of command components. Please head over to docs to view them.
  
 ## Getting started:
 
@@ -15,7 +15,7 @@ An open-source, Angular implementation of Microsoft's Fluent Design system. Base
 `npm i ngx-fluent-design`
 
 ## Usage
-You can view the [docs](https://ngx-fluent-design.mfwebdev.net/home) for this library for more information.
+You can view the [docs](https://ngx-fluent-design.mfwebdev.net) for this library for more information.
 
 We are working on documentation alongside the actual library, so bare with us if every component isn't documented.
 

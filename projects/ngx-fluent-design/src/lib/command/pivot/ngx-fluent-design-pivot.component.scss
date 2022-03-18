@@ -1,0 +1,63 @@
+@import "../../styles/variables";
+
+@mixin border-bottom {
+    border: 2px solid $ngx-fluent-design-theme-primary !important;
+    width: 100%;
+    display: block;
+    margin-bottom: 0;
+    background-color: inherit;
+    border-radius: 1px;
+}
+
+.ngx-fluent-design-pivot {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 12px 8px;
+    height: 44px;
+    cursor: pointer;
+    text-align: center;
+    background-color: $ngx-fluent-design-foreground-white;
+
+    hr {
+        display: none;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    &:hover {
+        background-color: $ngx-fluent-design-background-neutral-lighter;
+        padding: 12px 8px 11px 8px;
+
+        hr {
+            @include border-bottom;
+        }
+    }
+
+    &:focus {
+        .border {
+            border: 1px solid $ngx-fluent-design-foreground-neutral-dark;
+        }
+    }
+
+    &.active {
+        background-color: $ngx-fluent-design-background-neutral-lighter;;
+
+        hr {
+            @include border-bottom;
+            transform: scaleX(0.5);
+            transition: 0.1s ease-in-out;
+        }
+
+        &:hover {
+            background-color: $ngx-fluent-design-background-neutral-light;
+
+            hr {
+                transition: 0.1s ease-in-out;
+                transform: scaleX(1);
+            }
+        }
+    }
+}

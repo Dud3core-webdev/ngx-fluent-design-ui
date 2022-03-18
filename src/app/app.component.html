@@ -1,11 +1,12 @@
-
-<div class="container my-4">
-    <section class="my-3">
-        <ngx-fluent-design-toggle (change)="toggleTheme()" [label]="'Toggle dark theme (in development)'" [toggled]="!isNormalTheme"></ngx-fluent-design-toggle>
+<ngx-fluent-design-command-stack>
+    <section class="mx-3">
+        <ngx-fluent-design-toggle [inlineLabel]="true" (change)="toggleTheme()" [label]="'Toggle dark theme'" [toggled]="!isNormalTheme"></ngx-fluent-design-toggle>
     </section>
-    <button ngxFluentDesignLinkButton class="mr-2" [routerLink]="['', 'desktop']" [routerLinkActive]="'active'">Desktop</button>
-    <button ngxFluentDesignLinkButton class="mr-2" [routerLink]="['', 'mobile']" [routerLinkActive]="'active'">Mobile</button>
-    <button ngxFluentDesignLinkButton class="mr-2" [routerLink]="['', 'test-form']" [routerLinkActive]="'active'">Form </button>
-</div>
+    <ngx-fluent-design-pivot [isChecked]="isCurrentRoute('desktop')" (checked)="navigateTo('desktop')" [commandName]="'Desktop'"></ngx-fluent-design-pivot>
+    <ngx-fluent-design-pivot [isChecked]="isCurrentRoute('mobile')" (checked)="navigateTo('mobile')" [commandName]="'Mobile'"></ngx-fluent-design-pivot>
+    <ngx-fluent-design-pivot [isChecked]="isCurrentRoute('test-form')" (checked)="navigateTo('test-form')" [commandName]="'Test Form'"></ngx-fluent-design-pivot>
+</ngx-fluent-design-command-stack>
 
-<router-outlet></router-outlet>
+<section class="outlet">
+    <router-outlet></router-outlet>
+</section>
