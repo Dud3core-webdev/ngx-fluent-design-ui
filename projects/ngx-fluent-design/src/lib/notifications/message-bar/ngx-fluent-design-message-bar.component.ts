@@ -8,6 +8,7 @@ import { NgxFluentDesignCommonAnimations } from '../../surface/animations/ngx-fl
 import { INgxFluentDesignMessageBarIcon, NgxFluentDesignMessageBarIconFactory } from './ngx-fluent-design-message-bar-icon.factory';
 
 @Component({
+    standalone: false,
     selector: 'ngx-fluent-design-message-bar',
     templateUrl: './ngx-fluent-design-message-bar.component.html',
     styleUrls: ['./ngx-fluent-design-message-bar.component.scss'],

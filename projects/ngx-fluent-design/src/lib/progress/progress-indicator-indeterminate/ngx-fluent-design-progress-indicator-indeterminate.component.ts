@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
+    standalone: false,
     selector: 'ngx-fluent-design-progress-indicator-indeterminate',
     templateUrl: 'ngx-fluent-design-progress-indicator-indeterminate.component.html',
     styleUrls: ['ngx-fluent-design-progress-indicator-indeterminate.component.scss']

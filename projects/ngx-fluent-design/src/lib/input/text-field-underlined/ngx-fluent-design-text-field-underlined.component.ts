@@ -3,6 +3,7 @@ import { INgxFluentDesignInput } from '../shared/types/ngx-fluent-design-input.i
 import { NgxFluentDesignInputClassValidatorDirective } from '../shared/directives/ngx-fluent-design-input-class-validator.directive';
 
 @Component({
+    standalone: false,
     selector: 'ngx-fluent-design-form-field-underlined',
     templateUrl: './ngx-fluent-design-text-field-underlined.component.html',
     styleUrls: ['./ngx-fluent-design-text-field-underlined.component.scss']

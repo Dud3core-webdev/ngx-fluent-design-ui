@@ -3,6 +3,7 @@ import { INgxFluentDesignInput } from '../shared/types/ngx-fluent-design-input.i
 import { NgxFluentDesignInputClassValidatorDirective } from '../shared/directives/ngx-fluent-design-input-class-validator.directive';
 
 @Component({
+    standalone: false,
     selector: 'ngx-fluent-design-textarea-underlined',
     templateUrl: './ngx-fluent-design-textarea-underlined.component.html',
     styleUrls: ['./ngx-fluent-design-textarea-underlined.component.scss']

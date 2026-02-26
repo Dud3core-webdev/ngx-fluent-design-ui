@@ -3,6 +3,7 @@ import { INgxFluentDesignInput } from '../shared/types/ngx-fluent-design-input.i
 import { NgxFluentDesignInputClassValidatorDirective } from '../shared/directives/ngx-fluent-design-input-class-validator.directive';
 
 @Component({
+    standalone: false,
     selector: 'ngx-fluent-design-form-field',
     templateUrl: './ngx-fluent-design-form-field.component.html',
     styleUrls: ['./ngx-fluent-design-form-field.component.scss']

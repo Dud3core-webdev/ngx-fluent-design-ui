@@ -3,6 +3,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { INgxFluentDesignRadio } from '../shared/types/ngx-fluent-design-radio.interface';
 
 @Component({
+    standalone: false,
     selector: 'ngx-fluent-design-radio',
     templateUrl: 'ngx-fluent-design-radio.component.html',
     styleUrls: ['ngx-fluent-design-radio.component.scss'],
