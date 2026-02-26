@@ -3,6 +3,7 @@ import { ThemeSwitcherService, ThemeType } from './shared/services/theme-switche
 import { Router } from '@angular/router';
 
 @Component({
+    standalone: false,
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']

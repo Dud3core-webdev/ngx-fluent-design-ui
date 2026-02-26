@@ -4,6 +4,7 @@ import { INgxFluentDesignIconComponent } from '../shared/types/ngx-fluent-design
 import { DOCUMENT } from '@angular/common';
 
 @Component({
+    standalone: false,
     selector: 'ngx-fluent-design-icon',
     templateUrl: './icon.component.html',
     styleUrls: ['./icon.component.scss']

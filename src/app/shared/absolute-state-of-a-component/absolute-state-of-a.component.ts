@@ -8,6 +8,7 @@ import { NgxFluentDesignSheetHandler } from '../../../../projects/ngx-fluent-des
 import { MessageBarType } from '../../../../projects/ngx-fluent-design/src/lib/notifications/types/message-bar.type';
 
 @Component({
+    standalone: false,
     selector: 'absolute-mess',
     templateUrl: './absolute-state-of-a.component.html'
 })

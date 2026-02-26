@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { INgxFluentDesignToggle } from '../shared/types/ngx-fluent-design-toggle.interface';
 
 @Component({
+    standalone: false,
     selector: 'ngx-fluent-design-toggle',
     templateUrl: './ngx-fluent-design-toggle.component.html',
     styleUrls: ['./ngx-fluent-design-toggle.component.scss']

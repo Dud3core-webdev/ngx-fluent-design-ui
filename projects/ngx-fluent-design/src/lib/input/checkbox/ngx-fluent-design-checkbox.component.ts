@@ -3,6 +3,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { INgxFluentDesignCheckbox } from '../shared/types/ngx-fluent-design-checkbox.interface';
 
 @Component({
+    standalone: false,
     selector: 'ngx-fluent-design-checkbox',
     templateUrl: 'ngx-fluent-design-checkbox.component.html',
     styleUrls: ['ngx-fluent-design-checkbox.component.scss'],

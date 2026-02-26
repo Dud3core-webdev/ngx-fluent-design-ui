@@ -6,6 +6,7 @@ import { NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator } from '../orchestr
 import { INgxFluentDesignSurface } from '../types/ngx-fluent-design-surface.interface';
 
 @Component({
+    standalone: false,
     selector: 'ngx-fluent-design-modal',
     templateUrl: './ngx-fluent-design-modal.component.html',
     styleUrls: ['./ngx-fluent-design-modal.component.scss'],

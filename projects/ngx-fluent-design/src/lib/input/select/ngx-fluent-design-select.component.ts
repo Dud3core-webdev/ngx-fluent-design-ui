@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { INgxFluentDesignInput } from '../shared/types/ngx-fluent-design-input.interface';
 
 @Component({
+    standalone: false,
     selector: 'ngx-fluent-design-select-component',
     templateUrl: './ngx-fluent-design-select.component.html',
     styleUrls: ['./ngx-fluent-design-select.component.scss']

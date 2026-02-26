@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { DesktopTestPageModule } from './pages/desktop-test/desktop-test.page.module';
 import { AppRoutingModule } from './app.routing.module';
 import { NgxFluentDesignNotificationModule } from 'projects/ngx-fluent-design/src/lib/notifications/ngx-fluent-design-notification.module';
@@ -23,13 +23,15 @@ import { NgxFluentDesignCommandModule } from '../../projects/ngx-fluent-design/s
         MobileTestPageModule,
         TestFormPageModule,
         BrowserAnimationsModule,
-        HttpClientModule,
         BrowserModule,
         NgxFluentDesignNotificationModule,
         NgxFluentDesignCtaModule,
         NgxFluentDesignSurfaceModule,
         NgxFluentDesignInputModule,
         NgxFluentDesignCommandModule
+    ],
+    providers: [
+        provideHttpClient(withInterceptorsFromDi())
     ],
     bootstrap: [AppComponent]
 })

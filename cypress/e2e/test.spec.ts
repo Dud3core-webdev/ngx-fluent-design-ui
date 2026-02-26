@@ -1,4 +1,4 @@
-import { Selector } from '../../support/selector';
+import { Selector } from '../support/selector';
 
 const views = ['desktop', 'mobile'];
 

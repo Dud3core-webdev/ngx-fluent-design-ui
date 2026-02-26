@@ -1,17 +1,32 @@
-name: Cypress Tests
+name: CI
 
-on: [ push ]
+on: [push, pull_request]
 
 jobs:
-    cypress-run:
+    test:
         runs-on: ubuntu-latest
         steps:
-            -   name: Checkout
-                uses: actions/checkout@v2
-            # Install NPM dependencies, cache them correctly
-            # and run all Cypress tests
-            -   name: Cypress run
-                uses: cypress-io/github-action@v2
-                with:
-                    start: npm run start
-                    wait-on: 'http://localhost:8080'
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '22'
+                  cache: 'npm'
+
+            - name: Install dependencies
+              run: npm ci --legacy-peer-deps
+
+            - name: Run unit tests
+              run: npm run test
+
+            - name: Build library
+              run: npx ng build ngx-fluent-design --configuration production
+
+            # Leaving for now until I can get Cypress to run in GitHub
+            # - name: Cypress run
+            #   uses: cypress-io/github-action@v6
+            #   with:
+            #       start: npm run start
+            #       wait-on: 'http://localhost:8080'
