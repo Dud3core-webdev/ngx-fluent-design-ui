@@ -5,6 +5,7 @@ An open-source, Angular implementation of Microsoft's Fluent Design system. Base
 - Angular 11
 - Angular 12
 - Angular 13
+- Angular 21 (This package hasn't been update for four years.)
 
 We will always support the latest 2 versions with new components and features, we will only be doing bug features for the third-latest version, however.
 
