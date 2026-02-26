@@ -6,6 +6,7 @@ import { switchMap } from 'rxjs/operators';
 import { NgxFluentDesignMessageBarHandler } from '../../../../projects/ngx-fluent-design/src/lib/notifications/message-bar/message-bar-handler.helper';
 
 @Component({
+    standalone: false,
     templateUrl: './test-form-page.component.html',
     styleUrls: ['./test-form-page.component.scss']
 })

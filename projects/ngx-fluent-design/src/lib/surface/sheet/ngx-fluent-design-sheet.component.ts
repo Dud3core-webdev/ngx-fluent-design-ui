@@ -8,6 +8,7 @@ import { INgxFluentDesignSheet } from './ngx-fluent-design-sheet.interface';
 export declare type NgxFluentDesignSheetContentAlignment = 'middle' | 'left' | 'right';
 
 @Component({
+    standalone: false,
     selector: 'ngx-fluent-design-sheet',
     templateUrl: './ngx-fluent-design-sheet.component.html',
     styleUrls: ['./ngx-fluent-design-sheet.component.scss'],

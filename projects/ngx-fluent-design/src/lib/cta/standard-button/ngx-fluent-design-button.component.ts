@@ -4,6 +4,7 @@ import { NgxFluentDesignSlotNames } from '../../types/theme-names.type';
 import { NgxFluentDesignCtaType } from '../types/cta.type';
 
 @Component({
+    standalone: false,
     selector: 'ngx-fluent-design-button',
     templateUrl: './ngx-fluent-design-button.component.html',
     styleUrls: ['./ngx-fluent-design-button.component.scss']

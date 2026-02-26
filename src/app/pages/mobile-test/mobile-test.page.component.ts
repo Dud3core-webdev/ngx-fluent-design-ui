@@ -3,6 +3,7 @@ import { MessageBarType } from 'projects/ngx-fluent-design/src/lib/notifications
 import { NgxFluentDesignMessageBarHandler } from '../../../../projects/ngx-fluent-design/src/lib/notifications/message-bar/message-bar-handler.helper';
 
 @Component({
+    standalone: false,
     templateUrl: './mobile-test.page.component.html',
     styleUrls: ['./mobile-test.page.component.scss']
 })

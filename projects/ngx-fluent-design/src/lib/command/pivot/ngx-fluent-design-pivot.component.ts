@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { INgxFluentDesignCommandComponent } from '../types/ngx-fluent-design-command-component.interface';
 
 @Component({
+    standalone: false,
     selector: 'ngx-fluent-design-pivot',
     templateUrl: './ngx-fluent-design-pivot.component.html',
     styleUrls: ['./ngx-fluent-design-pivot.component.scss']

@@ -8,6 +8,7 @@ import { NgxFluentDesignCommonAnimations } from '../animations/ngx-fluent-design
 import { INgxFluentDesignPanel } from './ngx-fluent-design-panel.interface';
 
 @Component({
+    standalone: false,
     selector: 'ngx-fluent-design-panel',
     templateUrl: './ngx-fluent-design-panel.component.html',
     styleUrls: ['./ngx-fluent-design-panel.component.scss'],

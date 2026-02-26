@@ -8,6 +8,7 @@ import { NgxFluentDesignCommonAnimations } from '../animations/ngx-fluent-design
 import { NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator } from '../orchestrators/ngx-fluent-design-surface-handler-body-styles.orchestrator';
 
 @Component({
+    standalone: false,
     selector: 'ngx-fluent-design-dialog',
     templateUrl: './ngx-fluent-design-dialog.component.html',
     styleUrls: ['./ngx-fluent-design-dialog.component.scss'],

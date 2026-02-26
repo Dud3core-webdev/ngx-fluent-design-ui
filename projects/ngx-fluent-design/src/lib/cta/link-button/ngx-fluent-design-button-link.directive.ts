@@ -1,6 +1,7 @@
 import { Directive, ElementRef, ViewChild } from '@angular/core';
 
 @Directive({
+    standalone: false,
     selector: '[ngxFluentDesignLinkButton]'
 })
 export class NgxFluentDesignButtonLinkDirective {
