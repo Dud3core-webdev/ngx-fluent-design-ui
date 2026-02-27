@@ -1,4 +1,5 @@
 param( [bool]$isPatch = $true, [bool]$isMinorUpdate = $false )
+$ErrorActionPreference = 'Stop'
 
 Write-Host -BackgroundColor "Red" "Warning! Make sure you have committed all your changes before running this script"
 
