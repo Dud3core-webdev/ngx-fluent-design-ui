@@ -1,18 +1,19 @@
 import { Component, EventEmitter, HostListener, Inject, Input, OnInit } from '@angular/core';
 import { NgxFluentDesignModalHandler } from './modal-handler.helper';
-import { DOCUMENT } from '@angular/common';
-import { NgxFluentDesignCommonAnimations } from '../animations/ngx-fluent-design.animations';
+import { DOCUMENT, NgStyle } from '@angular/common';
+import { ngxFluentDesignFadeInTrigger } from '../animations/ngx-fluent-design.animations';
 import { NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator } from '../orchestrators/ngx-fluent-design-surface-handler-body-styles.orchestrator';
 import { INgxFluentDesignSurface } from '../types/ngx-fluent-design-surface.interface';
+import { NgxFluentDesignPanelComponent } from '../panel/ngx-fluent-design-panel.component';
 
 @Component({
-    standalone: false,
     selector: 'ngx-fluent-design-modal',
     templateUrl: './ngx-fluent-design-modal.component.html',
     styleUrls: ['./ngx-fluent-design-modal.component.scss'],
     animations: [
-        NgxFluentDesignCommonAnimations.FadeInAnimation('150ms', '150ms')
-    ]
+        ngxFluentDesignFadeInTrigger
+    ],
+    imports: [NgStyle]
 })
 export class NgxFluentDesignModalComponent implements INgxFluentDesignSurface, OnInit {
     @Input() public handler: NgxFluentDesignModalHandler;

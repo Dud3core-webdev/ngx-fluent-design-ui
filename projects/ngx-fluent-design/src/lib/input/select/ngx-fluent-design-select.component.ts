@@ -1,11 +1,13 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { INgxFluentDesignInput } from '../shared/types/ngx-fluent-design-input.interface';
+import { NgClass } from '@angular/common';
+import { NgxFluentDesignActionButtonDirective } from '../../cta/action-button/ngx-fluent-design-action-button.directive';
 
 @Component({
-    standalone: false,
     selector: 'ngx-fluent-design-select-component',
     templateUrl: './ngx-fluent-design-select.component.html',
-    styleUrls: ['./ngx-fluent-design-select.component.scss']
+    styleUrls: ['./ngx-fluent-design-select.component.scss'],
+    imports: [NgClass, NgxFluentDesignActionButtonDirective]
 })
 export class NgxFluentDesignSelectComponent implements INgxFluentDesignInput {
     @Input() public disabled: boolean;

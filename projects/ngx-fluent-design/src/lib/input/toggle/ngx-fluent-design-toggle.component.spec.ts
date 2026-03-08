@@ -13,7 +13,7 @@ describe('NgxFluentDesignToggleComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [NgxFluentDesignToggleComponent]
+            imports: [NgxFluentDesignToggleComponent]
         })
             .compileComponents();
     });

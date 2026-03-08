@@ -1,12 +1,13 @@
 import { Component, ContentChild, Input } from '@angular/core';
 import { INgxFluentDesignInput } from '../shared/types/ngx-fluent-design-input.interface';
 import { NgxFluentDesignInputClassValidatorDirective } from '../shared/directives/ngx-fluent-design-input-class-validator.directive';
+import { NgClass } from '@angular/common';
 
 @Component({
-    standalone: false,
     selector: 'ngx-fluent-design-standard-textarea',
     templateUrl: './ngx-fluent-design-textarea.component.html',
-    styleUrls: ['./ngx-fluent-design-textarea.component.scss']
+    styleUrls: ['./ngx-fluent-design-textarea.component.scss'],
+    imports: [NgClass]
 })
 export class NgxFluentDesignTextareaComponent implements INgxFluentDesignInput {
     @ContentChild(NgxFluentDesignInputClassValidatorDirective, {static: true}) public childInput: NgxFluentDesignInputClassValidatorDirective;

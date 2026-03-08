@@ -1,49 +1,51 @@
-@import "mixins";
+@use "mixins";
+@use "variables";
+
 
 .metadata-limited {
-   @include metadata-limited;
+   @include mixins.metadata-limited;
 }
 
 .metadata {
-    @include metadata;
+    @include mixins.metadata;
 }
 
 .body-text {
-    @include body-text;
+    @include mixins.body-text;
 }
 
 .subject-title {
-    @include subject-title;
+    @include mixins.subject-title;
 }
 
 .header {
-    @include header;
+    @include mixins.header;
 }
 
 .pane-header {
-    @include pane-header;
+    @include mixins.pane-header;
 }
 
 .page-title {
-    @include page-title;
+    @include mixins.page-title;
 }
 
 .greeting-title {
-    @include greeting-title;
+    @include mixins.greeting-title;
 }
 
 .hero-title {
-    @include hero-title;
+    @include mixins.hero-title;
 }
 
 .xl-numerics {
-    @include xl-numerics;
+    @include mixins.xl-numerics;
 }
 
 .fluent-design-link {
-    @include action-link;
+    @include mixins.action-link;
 
     &:visited {
-        background-color: $ngx-fluent-design-theme-dark-alt;
+        background-color: variables.$ngx-fluent-design-theme-dark-alt;
     }
 }

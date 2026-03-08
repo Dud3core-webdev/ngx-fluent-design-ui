@@ -9,7 +9,7 @@ describe('NgxFluentDesignIconComponent', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [NgxFluentDesignIconComponent],
+            imports: [NgxFluentDesignIconComponent],
             providers: [
                 {
                     provide: getComputedStyle,

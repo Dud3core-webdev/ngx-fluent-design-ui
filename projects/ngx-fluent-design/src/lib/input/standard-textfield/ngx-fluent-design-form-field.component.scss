@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@use "../../styles/variables";
 
 .fluent-input-field {
     ::ng-deep {
@@ -9,10 +9,10 @@
             margin: 0;
             padding: 6px 8px;
             font: inherit;
-            font-size: $ngx-fluent-design-body-text-font-size;
-            color: $ngx-fluent-design-foreground-neutral-primary;
+            font-size: variables.$ngx-fluent-design-body-text-font-size;
+            color: variables.$ngx-fluent-design-foreground-neutral-primary;
             font-weight: 400;
-            background: $ngx-fluent-design-foreground-white;
+            background: variables.$ngx-fluent-design-foreground-white;
 
             &:focus {
                 outline: none;
@@ -26,24 +26,24 @@
     height: 32px;
     left: 0;
     right: 0;
-    background: $ngx-fluent-design-foreground-white;
-    border: 1px solid $ngx-fluent-design-foreground-neutral-tertiary;
+    background: variables.$ngx-fluent-design-foreground-white;
+    border: 1px solid variables.$ngx-fluent-design-foreground-neutral-tertiary;
     border-radius: 2px;
     margin: 6px 0 0 0;
     align-items: stretch;
 
     &:hover {
-        border-color: $ngx-fluent-design-foreground-neutral-primary;
+        border-color: variables.$ngx-fluent-design-foreground-neutral-primary;
     }
 
     &:focus {
-        border: 2px solid $ngx-fluent-design-theme-primary;
+        border: 2px solid variables.$ngx-fluent-design-theme-primary;
         box-sizing: border-box;
         border-radius: 2px;
     }
 
     &:focus-within {
-        border: 2px solid $ngx-fluent-design-theme-primary;
+        border: 2px solid variables.$ngx-fluent-design-theme-primary;
         box-sizing: border-box;
         border-radius: 2px;
 
@@ -55,11 +55,11 @@
     }
 
     &.has-error {
-        border-color: $ngx-fluent-design-status-error;
+        border-color: variables.$ngx-fluent-design-status-error;
     }
 
     &.disabled {
-        background-color: $ngx-fluent-design-background-neutral-light;
+        background-color: variables.$ngx-fluent-design-background-neutral-light;
         pointer-events: none;
         border-color: transparent;
 

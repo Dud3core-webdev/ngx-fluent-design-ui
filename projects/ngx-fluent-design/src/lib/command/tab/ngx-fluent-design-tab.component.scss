@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@use "../../styles/variables";
 
 .ngx-fluent-design-tab {
     display: flex;
@@ -7,24 +7,24 @@
     height: 44px;
     cursor: pointer;
     text-align: center;
-    background-color: $ngx-fluent-design-foreground-white;
+    background-color: variables.$ngx-fluent-design-foreground-white;
 
     &:hover {
-        background-color: $ngx-fluent-design-theme-primary;
-        p { color: $ngx-fluent-design-foreground-white }
+        background-color: variables.$ngx-fluent-design-theme-primary;
+        p { color: variables.$ngx-fluent-design-foreground-white }
     }
 
     &:focus {
-        p { color: $ngx-fluent-design-foreground-white }
+        p { color: variables.$ngx-fluent-design-foreground-white }
     }
 
     &.active {
-        background-color: $ngx-fluent-design-theme-primary;
-        p { color: $ngx-fluent-design-foreground-white }
+        background-color: variables.$ngx-fluent-design-theme-primary;
+        p { color: variables.$ngx-fluent-design-foreground-white }
 
         &:hover {
-            background-color: $ngx-fluent-design-theme-dark-alt;
-            p { color: $ngx-fluent-design-foreground-white }
+            background-color: variables.$ngx-fluent-design-theme-dark-alt;
+            p { color: variables.$ngx-fluent-design-foreground-white }
         }
     }
 }

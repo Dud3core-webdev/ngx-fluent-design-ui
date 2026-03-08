@@ -1,21 +1,21 @@
-@import "../../styles/variables";
-@import "../../styles/mixins";
+@use "../../styles/variables";
+@use "../../styles/mixins";
 
 .ngx-fluent-design-card {
-    background: $ngx-fluent-design-foreground-white;
-    padding: $ngx-fluent-design-padding-base * 2;
+    background: variables.$ngx-fluent-design-foreground-white;
+    padding: variables.$ngx-fluent-design-padding-base * 2;
     margin-bottom: 24px;
-    border-radius: $ngx-fluent-design-border-radius-base;
+    border-radius: variables.$ngx-fluent-design-border-radius-base;
     background-clip: padding-box;
-    -webkit-box-shadow: $ngx-fluent-design-depth-16;
-    box-shadow: $ngx-fluent-design-depth-16;
+    -webkit-box-shadow: variables.$ngx-fluent-design-depth-16;
+    box-shadow: variables.$ngx-fluent-design-depth-16;
     position: relative;
 
-    @include ngx-fluent-design-medium-breakpoint {
-        padding: $ngx-fluent-design-padding-base;
+    @include mixins.ngx-fluent-design-medium-breakpoint {
+        padding: variables.$ngx-fluent-design-padding-base;
     }
 
-    @include ngx-fluent-design-small-breakpoint {
-        padding: $ngx-fluent-design-padding-base / 2;
+    @include mixins.ngx-fluent-design-small-breakpoint {
+        padding: variables.$ngx-fluent-design-padding-base / 2;
     }
 }

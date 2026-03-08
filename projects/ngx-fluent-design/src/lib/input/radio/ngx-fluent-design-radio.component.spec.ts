@@ -8,7 +8,7 @@ describe('NgxFluentDesignRadioComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [NgxFluentDesignRadioComponent]
+            imports: [NgxFluentDesignRadioComponent]
         })
             .compileComponents();
     });

@@ -1,11 +1,11 @@
 import { NgxFluentDesignDialogComponent } from './ngx-fluent-design-dialog.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NgxFluentDesignCtaModule } from '../../cta/ngx-fluent-design-cta.module';
-import { NgxFluentDesignIconModule } from '../../icons/ngx-fluent-design-icon.module';
+
+
 import { bySpecAttribute } from '../../../testing/test-helper';
 import SpyInstance = jest.SpyInstance;
 import { NgxFluentDesignDialogHandler } from './dialog-handler.helper';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 const spyOn = jest.spyOn;
 
@@ -19,11 +19,9 @@ describe('NgxFluentDesignDialogComponent', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [NgxFluentDesignDialogComponent],
             imports: [
-                NgxFluentDesignCtaModule,
-                NgxFluentDesignIconModule,
-                BrowserAnimationsModule
+                NgxFluentDesignDialogComponent,
+                NoopAnimationsModule
             ]
         })
             .compileComponents()

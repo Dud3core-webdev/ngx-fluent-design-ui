@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { NgxFluentDesignProgressSizeType } from '../types/ngx-fluent-design-progress-size.type';
+import { NgClass } from '@angular/common';
 
 @Component({
-    standalone: false,
     selector: 'ngx-fluent-design-spinner',
     templateUrl: 'ngx-fluent-design-spinner.component.html',
-    styleUrls: ['ngx-fluent-design-spinner.component.scss']
+    styleUrls: ['ngx-fluent-design-spinner.component.scss'],
+    imports: [NgClass]
 })
 
 export class NgxFluentDesignSpinnerComponent {

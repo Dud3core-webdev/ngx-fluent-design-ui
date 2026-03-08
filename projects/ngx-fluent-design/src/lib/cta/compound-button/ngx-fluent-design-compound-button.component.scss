@@ -1,14 +1,16 @@
-@import "../styles/cta-styles";
+@use "../styles/cta-styles";
+@use "../../styles/variables";
+
 
 .ngx-fluent-design-button {
-    font-size: $ngx-fluent-design-body-text-font-size;
+    font-size: variables.$ngx-fluent-design-body-text-font-size;
     font-weight: 400;
     box-sizing: border-box;
     display: inline-block;
     text-decoration: none;
     text-align: center;
     cursor: pointer;
-    padding: 0 $ngx-fluent-design-padding-base;
+    padding: 0 variables.$ngx-fluent-design-padding-base;
     min-width: 140px;
     max-width: 280px;
     min-height: 72px;

@@ -1,5 +1,5 @@
-@import "variables";
-@import "font-face";
-@import "mixins";
+@use "variables";
+@use "font-face";
+@use "mixins";
 
 body { font-family: "Ubuntu-Light", Roboto, sans-serif; }

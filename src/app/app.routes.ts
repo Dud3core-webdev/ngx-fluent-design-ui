@@ -1,10 +1,9 @@
-import { Router, RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { DesktopTestPageComponent } from './pages/desktop-test/desktop-test.page.component';
-import { NgModule } from '@angular/core';
 import { MobileTestPageComponent } from './pages/mobile-test/mobile-test.page.component';
 import { TestFormPageComponent } from './pages/test-form/test-form-page.component';
 
-const routes: Routes = [
+export const routes: Routes = [
     {
         path: '',
         redirectTo: 'desktop',
@@ -23,9 +22,3 @@ const routes: Routes = [
         component: TestFormPageComponent
     }
 ];
-
-@NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
-})
-export class AppRoutingModule {}

@@ -1,42 +1,42 @@
-@import "mixins";
+@use "mixins";
 
 small {
-    @include metadata;
+    @include mixins.metadata;
 
     &.metadata-limited {
-        @include metadata-limited;
+        @include mixins.metadata-limited;
     }
 }
 
 p, label, a, button {
-    @include body-text;
+    @include mixins.body-text;
 }
 
 
 h1 {
-    @include hero-title;
+    @include mixins.hero-title;
 
     &.xl-numerics {
-        @include xl-numerics;
+        @include mixins.xl-numerics;
     }
 }
 
 h2 {
-    @include page-title;
+    @include mixins.page-title;
 
     &.greeting-title {
-        @include greeting-title;
+        @include mixins.greeting-title;
     }
 }
 
 h3 {
-    @include header;
+    @include mixins.header;
 
     &.pane-header {
-        @include pane-header;
+        @include mixins.pane-header;
     }
 }
 
 h4, h5, h6 {
-    @include subject-title;
+    @include mixins.subject-title;
 }

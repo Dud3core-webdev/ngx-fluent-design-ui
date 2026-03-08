@@ -1,13 +1,13 @@
-@import "../../styles/variables";
-@import "../../styles/variables/inputs";
+@use "../../styles/variables";
+@use "../../styles/variables/inputs";
 
 .radio-container {
     position: relative;
     display: inline-block;
     padding-left: 30px;
     user-select: none;
-    font-size: $ngx-fluent-design-body-text-font-size;
-    color: $ngx-fluent-design-foreground-neutral-primary;
+    font-size: variables.$ngx-fluent-design-body-text-font-size;
+    color: variables.$ngx-fluent-design-foreground-neutral-primary;
 
     input {
         position: absolute;
@@ -15,12 +15,12 @@
         height: 0;
         width: 0;
         cursor: pointer;
-        color: $ngx-fluent-design-foreground-neutral-primary;
-        background-color: $ngx-fluent-design-foreground-neutral-primary;
+        color: variables.$ngx-fluent-design-foreground-neutral-primary;
+        background-color: variables.$ngx-fluent-design-foreground-neutral-primary;
 
         &:checked ~ .checkmark {
-            background-color: $ngx-fluent-design-foreground-white;
-            border-color: $ngx-fluent-design-theme-primary;
+            background-color: variables.$ngx-fluent-design-foreground-white;
+            border-color: variables.$ngx-fluent-design-theme-primary;
 
             &:after {
                 display: block;
@@ -29,11 +29,11 @@
 
         &:disabled {
             ~ .checkmark {
-                border-color: $foreground-disabled;
+                border-color: inputs.$foreground-disabled;
             }
 
             ~ .checkmark:after {
-                background-color: $foreground-disabled;
+                background-color: inputs.$foreground-disabled;
             }
         }
     }
@@ -44,7 +44,7 @@
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        background: $ngx-fluent-design-theme-primary;
+        background: variables.$ngx-fluent-design-theme-primary;
     }
 
     &:hover {
@@ -55,15 +55,15 @@
             width: 10px;
             height: 10px;
             border-radius: 50%;
-            background: $ngx-fluent-design-foreground-neutral-secondary;
+            background: variables.$ngx-fluent-design-foreground-neutral-secondary;
         }
 
         input:checked:not(:disabled) ~ .checkmark:after {
-            background: $ngx-fluent-design-theme-dark-alt;
+            background: variables.$ngx-fluent-design-theme-dark-alt;
         }
 
         input:checked:not(:disabled) ~ .checkmark {
-            border-color: $ngx-fluent-design-theme-dark-alt;
+            border-color: variables.$ngx-fluent-design-theme-dark-alt;
         }
     }
 }
@@ -73,8 +73,8 @@
     left: 0;
     height: 20px;
     width: 20px;
-    background-color: $ngx-fluent-design-foreground-white;
-    border: 1px solid $ngx-fluent-design-foreground-neutral-primary-alt;
+    background-color: variables.$ngx-fluent-design-foreground-white;
+    border: 1px solid variables.$ngx-fluent-design-foreground-neutral-primary-alt;
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
@@ -87,5 +87,5 @@
 }
 
 .disabled-state {
-    color: $foreground-disabled;
+    color: inputs.$foreground-disabled;
 }

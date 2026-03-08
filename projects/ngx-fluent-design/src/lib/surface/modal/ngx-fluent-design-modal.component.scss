@@ -1,6 +1,6 @@
-@import "../../styles/variables";
-@import "../../styles/mixins";
-@import "../../styles/variables/surface";
+@use "../../styles/variables";
+@use "../../styles/mixins";
+@use "../../styles/variables/surface";
 
 ::ng-deep {
     body, html {
@@ -18,7 +18,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $ngx-fluent-design-surface-transparent-background;
+    background-color: surface.$ngx-fluent-design-surface-transparent-background;
     z-index: 5;
     display: flex;
     align-items: center;
@@ -30,18 +30,18 @@
         cursor: default;
         width: 640px;
         min-height: 480px;
-        background-color: $ngx-fluent-design-foreground-white;
-        color: $ngx-fluent-design-foreground-neutral-primary;
+        background-color: variables.$ngx-fluent-design-foreground-white;
+        color: variables.$ngx-fluent-design-foreground-neutral-primary;
         z-index: 9000;
         top: 0;
         right: 0;
         bottom: 0;
-        box-shadow: $ngx-fluent-design-depth-64;
-        border-radius: $ngx-fluent-design-border-radius-base;
-        padding: $ngx-fluent-design-padding-base;
+        box-shadow: variables.$ngx-fluent-design-depth-64;
+        border-radius: variables.$ngx-fluent-design-border-radius-base;
+        padding: variables.$ngx-fluent-design-padding-base;
         position: relative;
 
-        @include ngx-fluent-design-small-breakpoint {
+        @include mixins.ngx-fluent-design-small-breakpoint {
             width: 100%;
             max-width: 100%;
         }

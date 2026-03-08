@@ -1,15 +1,19 @@
 <ng-container>
-    <label *ngIf="label"
-           [attr.data-e2e]="'@ngx-fluent-design-progress-indicator-label/' + e2eSuffix"
-           data-spec="fluent-design-progress-indicator-label"
-           for="progress-bar">{{label}}</label>
-    <progress
-            [attr.data-e2e]="'@ngx-fluent-design-progress-indicator/' + e2eSuffix"
-            class="progress-indicator"
-            id="progress-bar"
-            max="100"
-            [value]="currentValue"></progress>
-    <p *ngIf="description"
-       [attr.data-e2e]="'@ngx-fluent-design-progress-indicator-description/' + e2eSuffix"
-       data-spec="fluent-design-progress-indicator-description">{{description}}</p>
+  @if (label) {
+    <label
+      [attr.data-e2e]="'@ngx-fluent-design-progress-indicator-label/' + e2eSuffix"
+      data-spec="fluent-design-progress-indicator-label"
+    for="progress-bar">{{label}}</label>
+  }
+  <progress
+    [attr.data-e2e]="'@ngx-fluent-design-progress-indicator/' + e2eSuffix"
+    class="progress-indicator"
+    id="progress-bar"
+    max="100"
+  [value]="currentValue"></progress>
+  @if (description) {
+    <p
+      [attr.data-e2e]="'@ngx-fluent-design-progress-indicator-description/' + e2eSuffix"
+    data-spec="fluent-design-progress-indicator-description">{{description}}</p>
+  }
 </ng-container>

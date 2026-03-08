@@ -4,17 +4,20 @@ import { MessageBarType } from '../types/message-bar.type';
 import { NgxFluentDesignIconClearClose } from '../../icons/shared/constants/ngx-fluent-design-icons-list';
 import { INgxFluentDesignIcon } from '../../icons/shared/types/ngx-fluent-design-icon.interface';
 import { NgxFluentDesignMessageBarHandler } from './message-bar-handler.helper';
-import { NgxFluentDesignCommonAnimations } from '../../surface/animations/ngx-fluent-design.animations';
+import { ngxFluentDesignSlideInTopTrigger } from '../../surface/animations/ngx-fluent-design.animations';
 import { INgxFluentDesignMessageBarIcon, NgxFluentDesignMessageBarIconFactory } from './ngx-fluent-design-message-bar-icon.factory';
+import { NgClass } from '@angular/common';
+import { NgxFluentDesignIconComponent } from '../../icons/icon-component/icon.component';
+import { NgxFluentDesignButtonComponent } from '../../cta/standard-button/ngx-fluent-design-button.component';
 
 @Component({
-    standalone: false,
     selector: 'ngx-fluent-design-message-bar',
     templateUrl: './ngx-fluent-design-message-bar.component.html',
     styleUrls: ['./ngx-fluent-design-message-bar.component.scss'],
     animations: [
-        NgxFluentDesignCommonAnimations.slideInFromTop('150ms', '150ms')
-    ]
+        ngxFluentDesignSlideInTopTrigger
+    ],
+    imports: [NgClass, NgxFluentDesignIconComponent, NgxFluentDesignButtonComponent]
 })
 export class NgxFluentDesignMessageBarComponent implements OnInit, INgxFluentDesignMessageBar, OnChanges {
     @Input() public canDismiss: boolean;

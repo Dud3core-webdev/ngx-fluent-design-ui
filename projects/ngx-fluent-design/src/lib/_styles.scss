@@ -1,7 +1,7 @@
-@import "styles/cta/ngx-fluent-design-link-button.component";
-@import "styles/cta/ngx-fluent-design-action-button.component";
-@import "styles/typography";
-@import "styles/utilities";
+@use "styles/cta/ngx-fluent-design-link-button.component";
+@use "styles/cta/ngx-fluent-design-action-button.component";
+@use "styles/typography";
+@use "styles/utilities";
 
 :root {
     /** Error and status */

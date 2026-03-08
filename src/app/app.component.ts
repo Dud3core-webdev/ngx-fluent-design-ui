@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { ThemeSwitcherService, ThemeType } from './shared/services/theme-switcher.service';
-import { Router } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
+import { NgxFluentDesignCommandStackComponent } from '../../projects/ngx-fluent-design/src/lib/command/command-stack/ngx-fluent-design-command-stack.component';
+import { NgxFluentDesignToggleComponent } from '../../projects/ngx-fluent-design/src/lib/input/toggle/ngx-fluent-design-toggle.component';
+import { NgxFluentDesignPivotComponent } from '../../projects/ngx-fluent-design/src/lib/command/pivot/ngx-fluent-design-pivot.component';
 
 @Component({
-    standalone: false,
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    styleUrls: ['./app.component.scss'],
+    imports: [NgxFluentDesignCommandStackComponent, NgxFluentDesignToggleComponent, NgxFluentDesignPivotComponent, RouterOutlet]
 })
 export class AppComponent {
 

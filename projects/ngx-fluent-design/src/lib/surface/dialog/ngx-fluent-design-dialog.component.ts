@@ -3,18 +3,21 @@ import { INgxFluentDesignIcon } from '../../icons/shared/types/ngx-fluent-design
 import { NgxFluentDesignIconClearClose } from '../../icons/shared/constants/ngx-fluent-design-icons-list';
 import { INgxFluentDesignDialog } from './ngx-fluent-design-dialog.interface';
 import { NgxFluentDesignDialogHandler } from './dialog-handler.helper';
-import { DOCUMENT } from '@angular/common';
-import { NgxFluentDesignCommonAnimations } from '../animations/ngx-fluent-design.animations';
+import { DOCUMENT, NgStyle } from '@angular/common';
+import { ngxFluentDesignFadeInTrigger } from '../animations/ngx-fluent-design.animations';
 import { NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator } from '../orchestrators/ngx-fluent-design-surface-handler-body-styles.orchestrator';
+import { NgxFluentDesignIconComponent } from '../../icons/icon-component/icon.component';
+import { NgxFluentDesignButtonComponent } from '../../cta/standard-button/ngx-fluent-design-button.component';
+import { NgxFluentDesignPanelComponent } from '../panel/ngx-fluent-design-panel.component';
 
 @Component({
-    standalone: false,
     selector: 'ngx-fluent-design-dialog',
     templateUrl: './ngx-fluent-design-dialog.component.html',
     styleUrls: ['./ngx-fluent-design-dialog.component.scss'],
     animations: [
-        NgxFluentDesignCommonAnimations.FadeInAnimation('150ms', '150ms')
-    ]
+        ngxFluentDesignFadeInTrigger
+    ],
+    imports: [NgStyle, NgxFluentDesignButtonComponent]
 })
 export class NgxFluentDesignDialogComponent implements INgxFluentDesignDialog, OnInit, OnDestroy {
     @Input() public primaryActionName: string = 'Primary Action';

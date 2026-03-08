@@ -12,7 +12,7 @@ describe('NgxFluentDesignTabComponent', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             imports: [CommonModule],
-            declarations: [NgxFluentDesignTabComponent]
+            imports: [NgxFluentDesignTabComponent]
         })
             .compileComponents()
             .then(() => {

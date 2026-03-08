@@ -1,12 +1,13 @@
 import { Component, ContentChild, Input } from '@angular/core';
 import { INgxFluentDesignInput } from '../shared/types/ngx-fluent-design-input.interface';
 import { NgxFluentDesignInputClassValidatorDirective } from '../shared/directives/ngx-fluent-design-input-class-validator.directive';
+import { NgClass } from '@angular/common';
 
 @Component({
-    standalone: false,
     selector: 'ngx-fluent-design-form-field-borderless',
     templateUrl: './ngx-fluent-design-text-field-borderless.component.html',
-    styleUrls: ['./ngx-fluent-design-text-field-borderless.component.scss']
+    styleUrls: ['./ngx-fluent-design-text-field-borderless.component.scss'],
+    imports: [NgClass]
 })
 export class NgxFluentDesignTextFieldBorderlessComponent implements INgxFluentDesignInput {
     @ContentChild(NgxFluentDesignInputClassValidatorDirective, {static: true}) public childInput: NgxFluentDesignInputClassValidatorDirective;

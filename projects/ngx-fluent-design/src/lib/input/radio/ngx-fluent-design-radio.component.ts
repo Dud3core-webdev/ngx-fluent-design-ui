@@ -1,9 +1,9 @@
 import { Component, forwardRef, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { INgxFluentDesignRadio } from '../shared/types/ngx-fluent-design-radio.interface';
+import { NgClass } from '@angular/common';
 
 @Component({
-    standalone: false,
     selector: 'ngx-fluent-design-radio',
     templateUrl: 'ngx-fluent-design-radio.component.html',
     styleUrls: ['ngx-fluent-design-radio.component.scss'],
@@ -13,7 +13,8 @@ import { INgxFluentDesignRadio } from '../shared/types/ngx-fluent-design-radio.i
             useExisting: forwardRef(() => NgxFluentDesignRadioComponent),
             multi: true
         }
-    ]
+    ],
+    imports: [NgClass]
 })
 
 export class NgxFluentDesignRadioComponent implements ControlValueAccessor, INgxFluentDesignRadio {

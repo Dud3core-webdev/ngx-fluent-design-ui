@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NgxFluentDesignSelectComponent } from './ngx-fluent-design-select.component';
-import { NgxFluentDesignCtaModule } from '../../cta/ngx-fluent-design-cta.module';
+
 import { bySpecAttribute } from '../../../testing/test-helper';
 
 describe('NgxFluentDesignSelectComponent', () => {
@@ -9,8 +9,8 @@ describe('NgxFluentDesignSelectComponent', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [NgxFluentDesignCtaModule],
-            declarations: [NgxFluentDesignSelectComponent]
+            imports: [],
+            imports: [NgxFluentDesignSelectComponent]
         })
         .compileComponents()
         .then(() => {

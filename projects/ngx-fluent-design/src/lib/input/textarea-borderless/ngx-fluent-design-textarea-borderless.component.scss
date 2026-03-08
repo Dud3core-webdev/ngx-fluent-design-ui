@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@use "../../styles/variables";
 
 .fluent-input-field {
     ::ng-deep {
@@ -7,9 +7,9 @@
             width: 100%;
             margin: 0;
             font: inherit;
-            font-size: $ngx-fluent-design-body-text-font-size;
-            background: $ngx-fluent-design-foreground-white;
-            color: $ngx-fluent-design-foreground-neutral-primary;
+            font-size: variables.$ngx-fluent-design-body-text-font-size;
+            background: variables.$ngx-fluent-design-foreground-white;
+            color: variables.$ngx-fluent-design-foreground-neutral-primary;
             font-weight: 400;
             box-shadow: none;
             padding: 6px 8px;
@@ -33,14 +33,14 @@
     height: 100%;
     left: 0;
     right: 0;
-    background: $ngx-fluent-design-foreground-white;
+    background: variables.$ngx-fluent-design-foreground-white;
     border: none;
     border-radius: 2px;
     margin: 6px 0 0 0;
     align-items: stretch;
 
     &.disabled {
-        background-color: $ngx-fluent-design-background-neutral-light;
+        background-color: variables.$ngx-fluent-design-background-neutral-light;
         pointer-events: none;
         border-color: transparent;
 

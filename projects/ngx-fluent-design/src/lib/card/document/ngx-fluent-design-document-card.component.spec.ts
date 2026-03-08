@@ -11,7 +11,7 @@ describe('NgxFluentDesignDocumentCardComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [NgxFluentDesignDocumentCardComponent]
+            imports: [NgxFluentDesignDocumentCardComponent]
         })
             .compileComponents();
     });

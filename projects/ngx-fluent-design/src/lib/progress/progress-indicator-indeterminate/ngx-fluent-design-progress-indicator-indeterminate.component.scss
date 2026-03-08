@@ -1,19 +1,19 @@
-@import "../../styles/variables";
+@use "../../styles/variables";
 
 label {
-    font-size: $ngx-fluent-design-metadata-font-size;
+    font-size: variables.$ngx-fluent-design-metadata-font-size;
     line-height: 16px;
-    color: $ngx-fluent-design-foreground-neutral-primary;
+    color: variables.$ngx-fluent-design-foreground-neutral-primary;
 }
 
 p {
-    color: $ngx-fluent-design-foreground-neutral-secondary;
+    color: variables.$ngx-fluent-design-foreground-neutral-secondary;
     line-height: 16px;
-    font-size: $ngx-fluent-design-metadata-font-size;
+    font-size: variables.$ngx-fluent-design-metadata-font-size;
 }
 
 .progress-background {
-    background: $ngx-fluent-design-background-neutral-light;
+    background: variables.$ngx-fluent-design-background-neutral-light;
     width: 100%;
     position: relative;
     padding: 1px;
@@ -27,7 +27,7 @@ p {
 }
 
 .progress-background .progress-bar {
-    background: linear-gradient(to right, $ngx-fluent-design-background-neutral-light, $ngx-fluent-design-theme-primary, $ngx-fluent-design-background-neutral-light);
+    background: linear-gradient(to right, variables.$ngx-fluent-design-background-neutral-light, variables.$ngx-fluent-design-theme-primary, variables.$ngx-fluent-design-background-neutral-light);
     position: absolute;
     top: 0;
     bottom: 0;

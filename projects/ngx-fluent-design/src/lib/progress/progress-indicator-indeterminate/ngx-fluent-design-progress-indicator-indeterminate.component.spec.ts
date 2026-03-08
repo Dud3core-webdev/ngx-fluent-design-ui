@@ -8,7 +8,7 @@ describe('NgxFluentDesignProgressIndicatorIndeterminateComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [NgxFluentDesignProgressIndicatorIndeterminateComponent]
+            imports: [NgxFluentDesignProgressIndicatorIndeterminateComponent]
         })
             .compileComponents();
     });

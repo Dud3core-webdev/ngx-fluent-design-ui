@@ -1,12 +1,13 @@
 import { Component, ContentChild, Input } from '@angular/core';
 import { INgxFluentDesignInput } from '../shared/types/ngx-fluent-design-input.interface';
 import { NgxFluentDesignInputClassValidatorDirective } from '../shared/directives/ngx-fluent-design-input-class-validator.directive';
+import { NgClass } from '@angular/common';
 
 @Component({
-    standalone: false,
     selector: 'ngx-fluent-design-textarea-underlined',
     templateUrl: './ngx-fluent-design-textarea-underlined.component.html',
-    styleUrls: ['./ngx-fluent-design-textarea-underlined.component.scss']
+    styleUrls: ['./ngx-fluent-design-textarea-underlined.component.scss'],
+    imports: [NgClass]
 })
 export class NgxFluentDesignTextareaUnderlinedComponent implements INgxFluentDesignInput {
     @ContentChild(NgxFluentDesignInputClassValidatorDirective, {static: true}) public childInput: NgxFluentDesignInputClassValidatorDirective;

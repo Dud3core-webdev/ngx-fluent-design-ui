@@ -1,9 +1,9 @@
 import { Component, forwardRef, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { INgxFluentDesignCheckbox } from '../shared/types/ngx-fluent-design-checkbox.interface';
+import { NgClass } from '@angular/common';
 
 @Component({
-    standalone: false,
     selector: 'ngx-fluent-design-checkbox',
     templateUrl: 'ngx-fluent-design-checkbox.component.html',
     styleUrls: ['ngx-fluent-design-checkbox.component.scss'],
@@ -13,7 +13,8 @@ import { INgxFluentDesignCheckbox } from '../shared/types/ngx-fluent-design-chec
             useExisting: forwardRef(() => NgxFluentDesignCheckboxComponent),
             multi: true
         }
-    ]
+    ],
+    imports: [NgClass]
 })
 
 export class NgxFluentDesignCheckboxComponent implements ControlValueAccessor, INgxFluentDesignCheckbox {

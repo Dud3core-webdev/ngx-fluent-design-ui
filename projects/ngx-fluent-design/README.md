@@ -9,7 +9,11 @@ An open-source, Angular implementation of Microsoft's Fluent Design system. Base
 
 We will always support the latest 2 versions with new components and features, we will only be doing bug features for the third-latest version, however.
 
-## Patch Notes: 13.1.0
+## 🚨 Breaking Changes [08/03/2026] (Modernization)
+- **NgModules Removed**: `ngx-fluent-design` has been fully modernized. All library components, directives, and pipes are now **Standalone Components**. You must import them directly into your components instead of importing the `NgxFluentDesign*Module`s.
+- **Modern Control Flow & SCSS**: The library has been moved to use Angular's modern block control flow and SCSS `@use`.
+
+## Legacy Patch Notes: 13.1.0
 Added a new set of command components. Please head over to docs to view them.
 
 ## Getting started:

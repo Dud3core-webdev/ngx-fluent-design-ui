@@ -1,18 +1,18 @@
 import { Component, EventEmitter, Inject, Input, OnDestroy, OnInit, Output } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { DOCUMENT, NgClass, NgStyle } from '@angular/common';
 import { NgxFluentDesignSheetHandler } from './sheet-handler.helper';
 import { NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator } from '../orchestrators/ngx-fluent-design-surface-handler-body-styles.orchestrator';
-import { NgxFluentDesignCommonAnimations } from '../animations/ngx-fluent-design.animations';
+import { ngxFluentDesignFadeInTrigger } from '../animations/ngx-fluent-design.animations';
 import { INgxFluentDesignSheet } from './ngx-fluent-design-sheet.interface';
 
 export declare type NgxFluentDesignSheetContentAlignment = 'middle' | 'left' | 'right';
 
 @Component({
-    standalone: false,
     selector: 'ngx-fluent-design-sheet',
     templateUrl: './ngx-fluent-design-sheet.component.html',
     styleUrls: ['./ngx-fluent-design-sheet.component.scss'],
-    animations: [NgxFluentDesignCommonAnimations.FadeInAnimation('150ms', '150ms')]
+    animations: [ngxFluentDesignFadeInTrigger],
+    imports: [NgClass, NgStyle]
 })
 export class NgxFluentDesignSheetComponent implements OnInit, OnDestroy, INgxFluentDesignSheet {
 

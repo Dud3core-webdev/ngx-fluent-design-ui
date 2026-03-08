@@ -1,14 +1,25 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Observable, of, throwError, timer } from 'rxjs';
 import { NgxFluentDesignDialogHandler } from '../../../../projects/ngx-fluent-design/src/lib/surface/dialog/dialog-handler.helper';
 import { switchMap } from 'rxjs/operators';
 import { NgxFluentDesignMessageBarHandler } from '../../../../projects/ngx-fluent-design/src/lib/notifications/message-bar/message-bar-handler.helper';
+import { NgxFluentDesignMessageBarComponent } from '../../../../projects/ngx-fluent-design/src/lib/notifications/message-bar/ngx-fluent-design-message-bar.component';
+import { NgxFluentDesignDialogComponent } from '../../../../projects/ngx-fluent-design/src/lib/surface/dialog/ngx-fluent-design-dialog.component';
+import { NgxFluentDesignToggleComponent } from '../../../../projects/ngx-fluent-design/src/lib/input/toggle/ngx-fluent-design-toggle.component';
+import { NgxFluentDesignCardComponent } from '../../../../projects/ngx-fluent-design/src/lib/surface/card/ngx-fluent-design-card.component';
+import { NgxFluentDesignFormFieldUnderlinedComponent } from '../../../../projects/ngx-fluent-design/src/lib/input/text-field-underlined/ngx-fluent-design-text-field-underlined.component';
+import { NgxFluentDesignInputClassValidatorDirective } from '../../../../projects/ngx-fluent-design/src/lib/input/shared/directives/ngx-fluent-design-input-class-validator.directive';
+import { NgxFluentDesignRadioComponent } from '../../../../projects/ngx-fluent-design/src/lib/input/radio/ngx-fluent-design-radio.component';
+import { NgxFluentDesignCheckboxComponent } from '../../../../projects/ngx-fluent-design/src/lib/input/checkbox/ngx-fluent-design-checkbox.component';
+import { NgxFluentDesignCompoundButtonComponent } from '../../../../projects/ngx-fluent-design/src/lib/cta/compound-button/ngx-fluent-design-compound-button.component';
+import { JsonPipe } from '@angular/common';
+import { NgxFluentDesignSpinnerComponent } from '../../../../projects/ngx-fluent-design/src/lib/progress/spinner/ngx-fluent-design-spinner.component';
 
 @Component({
-    standalone: false,
     templateUrl: './test-form-page.component.html',
-    styleUrls: ['./test-form-page.component.scss']
+    styleUrls: ['./test-form-page.component.scss'],
+    imports: [NgxFluentDesignMessageBarComponent, NgxFluentDesignDialogComponent, NgxFluentDesignToggleComponent, NgxFluentDesignCardComponent, FormsModule, ReactiveFormsModule, NgxFluentDesignFormFieldUnderlinedComponent, NgxFluentDesignInputClassValidatorDirective, NgxFluentDesignRadioComponent, NgxFluentDesignCheckboxComponent, NgxFluentDesignCompoundButtonComponent, NgxFluentDesignSpinnerComponent, JsonPipe]
 })
 export class TestFormPageComponent {
     public hasSubmissionError: boolean = false;

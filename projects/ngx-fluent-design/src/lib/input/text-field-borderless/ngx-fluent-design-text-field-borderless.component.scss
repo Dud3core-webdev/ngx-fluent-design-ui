@@ -1,9 +1,9 @@
-@import "../../styles/variables";
+@use "../../styles/variables";
 
 .fluent-input-field {
     height: 32px;
     margin: 6px 0 0 0;
-    background: $ngx-fluent-design-foreground-white;
+    background: variables.$ngx-fluent-design-foreground-white;
     width: 100%;
 
     label {
@@ -18,9 +18,9 @@
             margin: 0;
             padding: 6px 8px;
             font: inherit;
-            font-size: $ngx-fluent-design-body-text-font-size;
-            color: $ngx-fluent-design-foreground-neutral-primary;
-            background: $ngx-fluent-design-foreground-white;
+            font-size: variables.$ngx-fluent-design-body-text-font-size;
+            color: variables.$ngx-fluent-design-foreground-neutral-primary;
+            background: variables.$ngx-fluent-design-foreground-white;
             font-weight: 400;
             &:focus {
                 outline: none;
@@ -29,7 +29,7 @@
     }
 
     &.disabled {
-        background-color: $ngx-fluent-design-background-neutral-light;
+        background-color: variables.$ngx-fluent-design-background-neutral-light;
         pointer-events: none;
 
         ::ng-deep {

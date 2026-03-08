@@ -4,10 +4,10 @@ import { INgxFluentDesignIconComponent } from '../shared/types/ngx-fluent-design
 import { DOCUMENT } from '@angular/common';
 
 @Component({
-    standalone: false,
     selector: 'ngx-fluent-design-icon',
     templateUrl: './icon.component.html',
-    styleUrls: ['./icon.component.scss']
+    styleUrls: ['./icon.component.scss'],
+    imports: []
 })
 export class NgxFluentDesignIconComponent implements OnInit, INgxFluentDesignIconComponent, OnChanges {
     @Input() public icon: INgxFluentDesignIcon;

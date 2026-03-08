@@ -12,7 +12,7 @@ describe('NgxFluentDesignPivotComponent', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             imports: [CommonModule],
-            declarations: [NgxFluentDesignPivotComponent]
+            imports: [NgxFluentDesignPivotComponent]
         })
             .compileComponents()
             .then(() => {

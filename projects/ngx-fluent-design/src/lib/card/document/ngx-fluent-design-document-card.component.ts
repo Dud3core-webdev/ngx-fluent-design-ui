@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
-    standalone: false,
     selector: 'ngx-fluent-design-document-card',
     templateUrl: './ngx-fluent-design-document-card.component.html',
     styleUrls: ['./ngx-fluent-design-document-card.component.scss']

@@ -1,44 +1,47 @@
 <section class="ngx-fluent-design-container"
-         [ngStyle]="{ 'cursor': canDismissWithOuterContent ? 'pointer' : 'default' }"
-         [@fadeIn]="!handler.isOpen ? 'hide' : 'show'"
-         (click)="handleCloseClickEvent()">
+  [ngStyle]="{ 'cursor': canDismissWithOuterContent ? 'pointer' : 'default' }"
+  [@fadeIn]="!handler.isOpen ? 'hide' : 'show'"
+  (click)="handleCloseClickEvent()">
 
-    <section class="ngx-fluent-design-modal-content" (click)="$event.stopPropagation()">
-        <section class="header">
-            <h1 class="header-content">{{header}}</h1>
-            <ngx-fluent-design-icon *ngIf="displayCloseIcon && handler.isOpen"
-                                    [icon]="closeIcon"
-                                    [ngxFluentDesignCssVariableName]="closeIconFillColourVariable"
-                                    (click)="handler.close(); componentClosed.emit()"
-                                    data-spec="ngx-fluent-design-close-icon"
-                                    class="close-icon">
-            </ngx-fluent-design-icon>
-        </section>
-
-        <section class="content">
-            <ng-content></ng-content>
-        </section>
-
-        <section class="actions">
-            <section class="actions-content">
-
-                <ngx-fluent-design-button
-                    data-spec="fluent-design-message-bar-action-primary"
-                    (clicked)="primaryActionClicked.emit()"
-                    class="action-cta"
-                    type="primary">
-                    {{primaryActionName}}
-                </ngx-fluent-design-button>
-
-                <ngx-fluent-design-button
-                    *ngIf="shouldDisplaySecondaryAction"
-                    data-spec="fluent-design-message-bar-action-secondary"
-                    (clicked)="secondaryActionClicked.emit()"
-                    class="action-cta"
-                    type="standard">
-                    {{secondaryActionName}}
-                </ngx-fluent-design-button>
-            </section>
-        </section>
+  <section class="ngx-fluent-design-modal-content" (click)="$event.stopPropagation()">
+    <section class="header">
+      <h1 class="header-content">{{header}}</h1>
+      @if (displayCloseIcon && handler.isOpen) {
+        <ngx-fluent-design-icon
+          [icon]="closeIcon"
+          [ngxFluentDesignCssVariableName]="closeIconFillColourVariable"
+          (click)="handler.close(); componentClosed.emit()"
+          data-spec="ngx-fluent-design-close-icon"
+          class="close-icon">
+        </ngx-fluent-design-icon>
+      }
     </section>
+
+    <section class="content">
+      <ng-content></ng-content>
+    </section>
+
+    <section class="actions">
+      <section class="actions-content">
+
+        <ngx-fluent-design-button
+          data-spec="fluent-design-message-bar-action-primary"
+          (clicked)="primaryActionClicked.emit()"
+          class="action-cta"
+          type="primary">
+          {{primaryActionName}}
+        </ngx-fluent-design-button>
+
+        @if (shouldDisplaySecondaryAction) {
+          <ngx-fluent-design-button
+            data-spec="fluent-design-message-bar-action-secondary"
+            (clicked)="secondaryActionClicked.emit()"
+            class="action-cta"
+            type="standard">
+            {{secondaryActionName}}
+          </ngx-fluent-design-button>
+        }
+      </section>
+    </section>
+  </section>
 </section>

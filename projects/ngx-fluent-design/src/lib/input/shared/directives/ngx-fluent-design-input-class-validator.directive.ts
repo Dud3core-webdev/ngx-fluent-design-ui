@@ -1,10 +1,7 @@
 import { Directive, HostBinding } from '@angular/core';
 import { NgControl } from '@angular/forms';
 
-@Directive({
-    standalone: false,
-    selector: '[ngxFluentDesignInput]'
-})
+@Directive({ selector: '[ngxFluentDesignInput]' })
 export class NgxFluentDesignInputClassValidatorDirective {
     private readonly _ngControl: NgControl;
 

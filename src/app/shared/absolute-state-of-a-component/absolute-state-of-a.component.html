@@ -1,527 +1,529 @@
 <ngx-fluent-design-card>
-    <form class="d-flex flex-column" [formGroup]="testForm">
-        <h1 class="pane-header bold">Form</h1>
-        <div>
-            <h3 class="header">Checkbox</h3>
-            <div class="d-flex justify-content-between px-0">
-                <ngx-fluent-design-checkbox [label]="'Checkbox Enabled'" formControlName="checkboxEnabled" [e2eSuffix]="'form-section-enabled'">
-                </ngx-fluent-design-checkbox>
-                <ngx-fluent-design-checkbox [label]="'Checkbox Enabled, checked'" [checked]="true">
-                </ngx-fluent-design-checkbox>
-                <ngx-fluent-design-checkbox [label]="'Checkbox Disabled'" [disabled]="true">
-                </ngx-fluent-design-checkbox>
-                <ngx-fluent-design-checkbox [label]="'Checkbox Disabled, checked'" [disabled]="true" [e2eSuffix]="'form-section-disabled'"
-                                            formControlName="checkboxDisabled">
-                </ngx-fluent-design-checkbox>
-            </div>
-        </div>
-
-        <div class="pb-3">
-            <h3 class="header">Radio</h3>
-            <div class="d-flex justify-content-between px-0">
-                <ngx-fluent-design-radio [name]="'radio'" formControlName="radio"
-                                         [label]="'Radio Enabled'"
-                                         [value]="'Some value'"></ngx-fluent-design-radio>
-                <ngx-fluent-design-radio [name]="'radio'" formControlName="radio"
-                                         [label]="'Radio Enabled'"
-                                         [value]="'some value 2'"></ngx-fluent-design-radio>
-                <ngx-fluent-design-radio [name]="'radio'" formControlName="radio"
-                                         [e2eSuffix]="'form-section-disabled'"
-                                         [label]="'Disabled'" [value]="'Radio disabled value'"
-                                         [disabled]="true"></ngx-fluent-design-radio>
-            </div>
-        </div>
-
-        <div class="pb-3">
-            <h3 class="header">Toggle</h3>
-            <div class="d-flex justify-content-between px-0">
-                <ngx-fluent-design-toggle [label]="'Toggle'"
-                                          [toggled]="isToggled"
-                                          (toggleOffEvent)="isToggled = false"
-                                          (toggleOnEvent)="isToggled = true"
-                                          [disabled]="false">
-                </ngx-fluent-design-toggle>
-                <p>toggle is {{isToggled ? 'on' : 'off'}}</p>
-            </div>
-        </div>
-    </form>
-    <div *ngIf="testForm" class="pt-3">{{testForm.value | json}}</div>
-</ngx-fluent-design-card>
-
-<ngx-fluent-design-card>
-    <h1 class="mb-4 pane-header bold">Links</h1>
-
-    <h3 class="header">Button link</h3>
-    <p>But we need to make sure
-        <button [disabled]="buttonLinkDisabled" ngxFluentDesignLinkButton (click)="exampleAlert('button link')">Mar babies oss ay urtin no one!</button>
-    </p>
-
-    <h3 class="header">Action Button</h3>
-    <button [disabled]="buttonLinkDisabled" ngxFluentDesignActionButton (click)="exampleAlert('Action Button')">This is an Action Button</button>
-
-    <ngx-fluent-design-toggle [label]="'Toggle link disabled'"
-                              [toggled]="buttonLinkDisabled"
-                              (changeEvent)="buttonLinkDisabled = !buttonLinkDisabled"
-                              [disabled]="false">
-    </ngx-fluent-design-toggle>
-
-    {{buttonLinkDisabled}}
-</ngx-fluent-design-card>
-
-<ngx-fluent-design-card>
-    <h1 class="mb-4 pane-header bold">Message Bar</h1>
-
-    <section class="my-3">
-        <h3 class="header">With Actions</h3>
-        <ngx-fluent-design-message-bar [actionName]="'Some action'"
-                                       messageBarType="info"
-                                       [canDismiss]="true"
-                                       (actionClicked)="exampleAlert('Message bar action')">
-            This is a message bar with the actions displayed.
-        </ngx-fluent-design-message-bar>
-    </section>
-
-    <section class="my-3">
-        <ngx-fluent-design-message-bar [actionName]="'Some action'"
-                                       messageBarType="warning"
-                                       [canDismiss]="true"
-                                       (actionClicked)="exampleAlert('Message bar action')">
-            This is a message bar with the actions displayed.
-        </ngx-fluent-design-message-bar>
-    </section>
-
-    <section class="my-3">
-        <ngx-fluent-design-message-bar [actionName]="'Some action'"
-                                       messageBarType="error"
-                                       [canDismiss]="true"
-                                       (actionClicked)="exampleAlert('Message bar action')">
-            This is a message bar with the actions displayed.
-        </ngx-fluent-design-message-bar>
-    </section>
-
-    <section class="my-3">
-        <ngx-fluent-design-message-bar [actionName]="'Some action'"
-                                       messageBarType="success"
-                                       [canDismiss]="true"
-                                       (actionClicked)="exampleAlert('Message bar action')">
-            This is a message bar with the actions displayed.
-        </ngx-fluent-design-message-bar>
-    </section>
-
-    <section class="my-3">
-        <ngx-fluent-design-message-bar [actionName]="'Some action'"
-                                       messageBarType="severe-warning"
-                                       [canDismiss]="true"
-                                       (actionClicked)="exampleAlert('Message bar action')">
-            This is a message bar with the actions displayed.
-        </ngx-fluent-design-message-bar>
-    </section>
-
-    <section class="my-3">
-        <ngx-fluent-design-message-bar [actionName]="'Some action'"
-                                       messageBarType="blocked"
-                                       [canDismiss]="true"
-                                       (actionClicked)="exampleAlert('Message bar action')">
-            This is a message bar with the actions displayed.
-        </ngx-fluent-design-message-bar>
-    </section>
-
-    <section class="my-3">
-        <h3 class="header">No Actions</h3>
-        <ngx-fluent-design-message-bar messageBarType="info"
-                                       [canDismiss]="false">
-            This is a message bar with the actions displayed.
-        </ngx-fluent-design-message-bar>
-    </section>
-
-    <section class="my-3">
-        <ngx-fluent-design-message-bar messageBarType="warning"
-                                       [canDismiss]="false">
-            This is a message bar with the actions displayed.
-        </ngx-fluent-design-message-bar>
-    </section>
-
-    <section class="my-3">
-        <ngx-fluent-design-message-bar messageBarType="error"
-                                       [canDismiss]="false">
-            This is a message bar with the actions displayed.
-        </ngx-fluent-design-message-bar>
-    </section>
-
-    <section class="my-3">
-        <ngx-fluent-design-message-bar messageBarType="success"
-                                       [canDismiss]="false">
-            This is a message bar with the actions displayed.
-        </ngx-fluent-design-message-bar>
-    </section>
-
-    <section class="my-3">
-        <ngx-fluent-design-message-bar messageBarType="severe-warning"
-                                       [canDismiss]="false">
-            This is a message bar with the actions displayed.
-        </ngx-fluent-design-message-bar>
-    </section>
-
-    <section class="my-3">
-        <ngx-fluent-design-message-bar messageBarType="blocked"
-                                       [canDismiss]="true">
-            This is a message bar with the actions displayed.
-        </ngx-fluent-design-message-bar>
-    </section>
-
-    <section class="my-3">
-        <h3>Fixed Message Bar</h3>
-        <ngx-fluent-design-button (clicked)="displayErrorMessageBar.emit(messageBarName.value)">
-            Click here to launch a message bar
-        </ngx-fluent-design-button>
-    </section>
-
-    <div class="d-flex flex-md-row justify-content-between flex-column my-3">
-        <ngx-fluent-design-radio
-            value="info"
-            class="mb-3"
-            [checked]="messageBarName.value === 'info'"
-            [formControl]="messageBarName"
-            [label]="'info'">
-        </ngx-fluent-design-radio>
-        <ngx-fluent-design-radio
-            class="mb-3"
-            value="error"
-            [formControl]="messageBarName"
-            [checked]="messageBarName.value === 'error'"
-            [label]="'error'"
-            [name]="'unchecked-disabled'">
-        </ngx-fluent-design-radio>
-        <ngx-fluent-design-radio
-            value="blocked"
-            class="mb-3"
-            [checked]="messageBarName.value === 'blocked'"
-            [formControl]="messageBarName"
-            [label]="'blocked'"
-            [name]="'unchecked-rest'">
-        </ngx-fluent-design-radio>
-        <ngx-fluent-design-radio
-            value="severe-warning"
-            class="mb-3"
-            [checked]="messageBarName.value === 'severe-warning'"
-            [formControl]="messageBarName"
-            [label]="'severe-warning'"
-            [name]="'unchecked-rest'">
-        </ngx-fluent-design-radio>
-        <ngx-fluent-design-radio
-            value="success"
-            class="mb-3"
-            [checked]="messageBarName.value === 'success'"
-            [formControl]="messageBarName"
-            [label]="'success'"
-            [name]="'unchecked-rest'">
-        </ngx-fluent-design-radio>
-        <ngx-fluent-design-radio
-            value="warning"
-            class="mb-3"
-            [checked]="messageBarName.value === 'warning'"
-            [formControl]="messageBarName"
-            [label]="'warning'"
-            [name]="'unchecked-rest'">
-        </ngx-fluent-design-radio>
-    </div>
-</ngx-fluent-design-card>
-
-<ngx-fluent-design-card>
-    <h1 class="mb-3 pane-header bold">Buttons</h1>
-
-    <h3 class="header">Standard button</h3>
-    <div class="d-flex flex-row w-100 mb-3">
-        <ngx-fluent-design-button class="mr-3">
-            Primary (Default)
-        </ngx-fluent-design-button>
-
-        <ngx-fluent-design-button type="standard">
-            Primary (Standard)
-        </ngx-fluent-design-button>
-    </div>
-
-    <div class="d-flex flex-row w-100">
-        <ngx-fluent-design-button [disabled]="true" class="mr-3">
-            Primary (Default) Disabled
-        </ngx-fluent-design-button>
-
-        <ngx-fluent-design-button [disabled]="true" type="standard">
-            Primary (Standard) Disabled
-        </ngx-fluent-design-button>
-    </div>
-
-    <h3 class="header">compound button</h3>
-    <div class="d-flex flex-row w-100 mb-3">
-        <ngx-fluent-design-compound-button [secondaryText]="'secondary text'" class="mr-3">
-            Default
-        </ngx-fluent-design-compound-button>
-
-        <ngx-fluent-design-compound-button [secondaryText]="'secondary text'" type="standard">
-            Standard
-        </ngx-fluent-design-compound-button>
-    </div>
-
-    <div class="d-flex flex-row w-100">
-        <ngx-fluent-design-compound-button [disabled]="true" class="mr-3">
-            Primary (Default) Disabled
-        </ngx-fluent-design-compound-button>
-
-        <ngx-fluent-design-compound-button [disabled]="true" type="standard">
-            Primary (Standard) Disabled
-        </ngx-fluent-design-compound-button>
-    </div>
-</ngx-fluent-design-card>
-<ngx-fluent-design-card>
-    <div class="pb-3">
-        <h1 class="pane-header bold">Progress</h1>
-        <h3 class="header">Spinner</h3>
-        <div class="d-flex align-items-center pb-3">
-            <ngx-fluent-design-spinner [e2eSuffix]="'xs-with-label'" class="col-3" [size]="'extra-small'" [label]="'Loading...'"></ngx-fluent-design-spinner>
-            <ngx-fluent-design-spinner [e2eSuffix]="'s-with-label'" class="col-3" [size]="'small'" [label]="'Loading...'"></ngx-fluent-design-spinner>
-            <ngx-fluent-design-spinner [e2eSuffix]="'m-with-label'" class="col-3" [size]="'medium'" [label]="'Loading...'"></ngx-fluent-design-spinner>
-            <ngx-fluent-design-spinner [e2eSuffix]="'l-with-label'" class="col-3" [size]="'large'" [label]="'Loading...'"></ngx-fluent-design-spinner>
-        </div>
-        <div class="d-flex justify-content-around align-items-center">
-            <ngx-fluent-design-spinner [e2eSuffix]="'xs-no-label'" class="col-3" [size]="'extra-small'"></ngx-fluent-design-spinner>
-            <ngx-fluent-design-spinner [e2eSuffix]="'s-no-label'" class="col-3" [size]="'small'"></ngx-fluent-design-spinner>
-            <ngx-fluent-design-spinner [e2eSuffix]="'m-no-label'" class="col-3" [size]="'medium'"></ngx-fluent-design-spinner>
-            <ngx-fluent-design-spinner [e2eSuffix]="'l-no-label'" class="col-3" [size]="'large'"></ngx-fluent-design-spinner>
-        </div>
-
-        <h3 class="header">Progress Indicator</h3>
-        <ngx-fluent-design-progress-indicator [e2eSuffix]="'label-and-description'" [label]="'Label'" [description]="'Description'"
-                                              [currentValue]="progressIndicatorCurrentValue"></ngx-fluent-design-progress-indicator>
-
-        <h3 class="header">Indeterminate Progress Indicator</h3>
-        <ngx-fluent-design-progress-indicator-indeterminate [e2eSuffix]="'label-and-description'" [label]="'Label'" [description]="'Description'"></ngx-fluent-design-progress-indicator-indeterminate>
-    </div>
-</ngx-fluent-design-card>
-
-
-<ngx-fluent-design-card>
-    <div class="pb-3">
-        <h1 class="mb-3 pane-header bold">Icons</h1>
-        <ngx-fluent-design-icon [ngxFluentDesignCssVariableName]="tesIconList.iconFill" [icon]="tesIconList.warningIcon"></ngx-fluent-design-icon>
-    </div>
-</ngx-fluent-design-card>
-
-<ngx-fluent-design-card>
+  <form class="d-flex flex-column" [formGroup]="testForm">
+    <h1 class="pane-header bold">Form</h1>
     <div>
-        <h1 class="mb-3 pane-header bold">Inputs</h1>
-
-        <section class="mb-3">
-            <ngx-fluent-design-toggle [label]="'Disable Inputs'"
-                                      [toggled]="inputsDisabled"
-                                      (changeEvent)="toggleInputDisabled()"
-                                      [inlineLabel]="true"
-                                      [disabled]="false">
-            </ngx-fluent-design-toggle>
-        </section>
-
-        <form [formGroup]="testFormStandardInputForm">
-            <h4 class="subject-title">Standard inputs</h4>
-            <ngx-fluent-design-form-field [label]="'A Label'" [disabled]="inputsDisabled">
-                <input ngxFluentDesignInput formControlName="bordered" placeholder="Hello there">
-            </ngx-fluent-design-form-field>
-
-            <ngx-fluent-design-form-field-underlined [label]="'A label that is really long'" [disabled]="inputsDisabled">
-                <input ngxFluentDesignInput formControlName="bottomBorder" placeholder="Bottom Border">
-            </ngx-fluent-design-form-field-underlined>
-
-            <ngx-fluent-design-form-field-borderless [disabled]="inputsDisabled">
-                <input ngxFluentDesignInput formControlName="borderless" placeholder="Borderless">
-            </ngx-fluent-design-form-field-borderless>
-
-            <div class="my-4">
-                <ngx-fluent-design-select-component [options]="['Option 1', 'Option 2']" [label]="'Select Component (in development)'"></ngx-fluent-design-select-component>
-            </div>
-        </form>
-
-        <form [formGroup]="testFormTextAreaForm">
-            <h4 class="subject-title">Standard inputs</h4>
-            <ngx-fluent-design-standard-textarea [label]="'A Label'" [disabled]="inputsDisabled">
-                <textarea ngxFluentDesignInput rows="12" formControlName="bordered" placeholder="Hello there"></textarea>
-            </ngx-fluent-design-standard-textarea>
-
-            <ngx-fluent-design-textarea-underlined [label]="'A Label That is really long 12345'" [disabled]="inputsDisabled">
-                <textarea ngxFluentDesignInput formControlName="bottomBorder" placeholder="Bottom Border"></textarea>
-            </ngx-fluent-design-textarea-underlined>
-
-            <ngx-fluent-design-textarea-borderless [disabled]="inputsDisabled">
-                <textarea ngxFluentDesignInput rows="12" formControlName="borderless" placeholder="Borderless"></textarea>
-            </ngx-fluent-design-textarea-borderless>
-        </form>
+      <h3 class="header">Checkbox</h3>
+      <div class="d-flex justify-content-between px-0">
+        <ngx-fluent-design-checkbox [label]="'Checkbox Enabled'" formControlName="checkboxEnabled" [e2eSuffix]="'form-section-enabled'">
+        </ngx-fluent-design-checkbox>
+        <ngx-fluent-design-checkbox [label]="'Checkbox Enabled, checked'" [checked]="true">
+        </ngx-fluent-design-checkbox>
+        <ngx-fluent-design-checkbox [label]="'Checkbox Disabled'" [disabled]="true">
+        </ngx-fluent-design-checkbox>
+        <ngx-fluent-design-checkbox [label]="'Checkbox Disabled, checked'" [disabled]="true" [e2eSuffix]="'form-section-disabled'"
+          formControlName="checkboxDisabled">
+        </ngx-fluent-design-checkbox>
+      </div>
     </div>
+
+    <div class="pb-3">
+      <h3 class="header">Radio</h3>
+      <div class="d-flex justify-content-between px-0">
+        <ngx-fluent-design-radio [name]="'radio'" formControlName="radio"
+          [label]="'Radio Enabled'"
+        [value]="'Some value'"></ngx-fluent-design-radio>
+        <ngx-fluent-design-radio [name]="'radio'" formControlName="radio"
+          [label]="'Radio Enabled'"
+        [value]="'some value 2'"></ngx-fluent-design-radio>
+        <ngx-fluent-design-radio [name]="'radio'" formControlName="radio"
+          [e2eSuffix]="'form-section-disabled'"
+          [label]="'Disabled'" [value]="'Radio disabled value'"
+        [disabled]="true"></ngx-fluent-design-radio>
+      </div>
+    </div>
+
+    <div class="pb-3">
+      <h3 class="header">Toggle</h3>
+      <div class="d-flex justify-content-between px-0">
+        <ngx-fluent-design-toggle [label]="'Toggle'"
+          [toggled]="isToggled"
+          (toggleOffEvent)="isToggled = false"
+          (toggleOnEvent)="isToggled = true"
+          [disabled]="false">
+        </ngx-fluent-design-toggle>
+        <p>toggle is {{isToggled ? 'on' : 'off'}}</p>
+      </div>
+    </div>
+  </form>
+  @if (testForm) {
+    <div class="pt-3">{{testForm.value | json}}</div>
+  }
+</ngx-fluent-design-card>
+
+<ngx-fluent-design-card>
+  <h1 class="mb-4 pane-header bold">Links</h1>
+
+  <h3 class="header">Button link</h3>
+  <p>But we need to make sure
+    <button [disabled]="buttonLinkDisabled" ngxFluentDesignLinkButton (click)="exampleAlert('button link')">Mar babies oss ay urtin no one!</button>
+  </p>
+
+  <h3 class="header">Action Button</h3>
+  <button [disabled]="buttonLinkDisabled" ngxFluentDesignActionButton (click)="exampleAlert('Action Button')">This is an Action Button</button>
+
+  <ngx-fluent-design-toggle [label]="'Toggle link disabled'"
+    [toggled]="buttonLinkDisabled"
+    (changeEvent)="buttonLinkDisabled = !buttonLinkDisabled"
+    [disabled]="false">
+  </ngx-fluent-design-toggle>
+
+  {{buttonLinkDisabled}}
+</ngx-fluent-design-card>
+
+<ngx-fluent-design-card>
+  <h1 class="mb-4 pane-header bold">Message Bar</h1>
+
+  <section class="my-3">
+    <h3 class="header">With Actions</h3>
+    <ngx-fluent-design-message-bar [actionName]="'Some action'"
+      messageBarType="info"
+      [canDismiss]="true"
+      (actionClicked)="exampleAlert('Message bar action')">
+      This is a message bar with the actions displayed.
+    </ngx-fluent-design-message-bar>
+  </section>
+
+  <section class="my-3">
+    <ngx-fluent-design-message-bar [actionName]="'Some action'"
+      messageBarType="warning"
+      [canDismiss]="true"
+      (actionClicked)="exampleAlert('Message bar action')">
+      This is a message bar with the actions displayed.
+    </ngx-fluent-design-message-bar>
+  </section>
+
+  <section class="my-3">
+    <ngx-fluent-design-message-bar [actionName]="'Some action'"
+      messageBarType="error"
+      [canDismiss]="true"
+      (actionClicked)="exampleAlert('Message bar action')">
+      This is a message bar with the actions displayed.
+    </ngx-fluent-design-message-bar>
+  </section>
+
+  <section class="my-3">
+    <ngx-fluent-design-message-bar [actionName]="'Some action'"
+      messageBarType="success"
+      [canDismiss]="true"
+      (actionClicked)="exampleAlert('Message bar action')">
+      This is a message bar with the actions displayed.
+    </ngx-fluent-design-message-bar>
+  </section>
+
+  <section class="my-3">
+    <ngx-fluent-design-message-bar [actionName]="'Some action'"
+      messageBarType="severe-warning"
+      [canDismiss]="true"
+      (actionClicked)="exampleAlert('Message bar action')">
+      This is a message bar with the actions displayed.
+    </ngx-fluent-design-message-bar>
+  </section>
+
+  <section class="my-3">
+    <ngx-fluent-design-message-bar [actionName]="'Some action'"
+      messageBarType="blocked"
+      [canDismiss]="true"
+      (actionClicked)="exampleAlert('Message bar action')">
+      This is a message bar with the actions displayed.
+    </ngx-fluent-design-message-bar>
+  </section>
+
+  <section class="my-3">
+    <h3 class="header">No Actions</h3>
+    <ngx-fluent-design-message-bar messageBarType="info"
+      [canDismiss]="false">
+      This is a message bar with the actions displayed.
+    </ngx-fluent-design-message-bar>
+  </section>
+
+  <section class="my-3">
+    <ngx-fluent-design-message-bar messageBarType="warning"
+      [canDismiss]="false">
+      This is a message bar with the actions displayed.
+    </ngx-fluent-design-message-bar>
+  </section>
+
+  <section class="my-3">
+    <ngx-fluent-design-message-bar messageBarType="error"
+      [canDismiss]="false">
+      This is a message bar with the actions displayed.
+    </ngx-fluent-design-message-bar>
+  </section>
+
+  <section class="my-3">
+    <ngx-fluent-design-message-bar messageBarType="success"
+      [canDismiss]="false">
+      This is a message bar with the actions displayed.
+    </ngx-fluent-design-message-bar>
+  </section>
+
+  <section class="my-3">
+    <ngx-fluent-design-message-bar messageBarType="severe-warning"
+      [canDismiss]="false">
+      This is a message bar with the actions displayed.
+    </ngx-fluent-design-message-bar>
+  </section>
+
+  <section class="my-3">
+    <ngx-fluent-design-message-bar messageBarType="blocked"
+      [canDismiss]="true">
+      This is a message bar with the actions displayed.
+    </ngx-fluent-design-message-bar>
+  </section>
+
+  <section class="my-3">
+    <h3>Fixed Message Bar</h3>
+    <ngx-fluent-design-button (clicked)="displayErrorMessageBar.emit(messageBarName.value)">
+      Click here to launch a message bar
+    </ngx-fluent-design-button>
+  </section>
+
+  <div class="d-flex flex-md-row justify-content-between flex-column my-3">
+    <ngx-fluent-design-radio
+      value="info"
+      class="mb-3"
+      [checked]="messageBarName.value === 'info'"
+      [formControl]="messageBarName"
+      [label]="'info'">
+    </ngx-fluent-design-radio>
+    <ngx-fluent-design-radio
+      class="mb-3"
+      value="error"
+      [formControl]="messageBarName"
+      [checked]="messageBarName.value === 'error'"
+      [label]="'error'"
+      [name]="'unchecked-disabled'">
+    </ngx-fluent-design-radio>
+    <ngx-fluent-design-radio
+      value="blocked"
+      class="mb-3"
+      [checked]="messageBarName.value === 'blocked'"
+      [formControl]="messageBarName"
+      [label]="'blocked'"
+      [name]="'unchecked-rest'">
+    </ngx-fluent-design-radio>
+    <ngx-fluent-design-radio
+      value="severe-warning"
+      class="mb-3"
+      [checked]="messageBarName.value === 'severe-warning'"
+      [formControl]="messageBarName"
+      [label]="'severe-warning'"
+      [name]="'unchecked-rest'">
+    </ngx-fluent-design-radio>
+    <ngx-fluent-design-radio
+      value="success"
+      class="mb-3"
+      [checked]="messageBarName.value === 'success'"
+      [formControl]="messageBarName"
+      [label]="'success'"
+      [name]="'unchecked-rest'">
+    </ngx-fluent-design-radio>
+    <ngx-fluent-design-radio
+      value="warning"
+      class="mb-3"
+      [checked]="messageBarName.value === 'warning'"
+      [formControl]="messageBarName"
+      [label]="'warning'"
+      [name]="'unchecked-rest'">
+    </ngx-fluent-design-radio>
+  </div>
+</ngx-fluent-design-card>
+
+<ngx-fluent-design-card>
+  <h1 class="mb-3 pane-header bold">Buttons</h1>
+
+  <h3 class="header">Standard button</h3>
+  <div class="d-flex flex-row w-100 mb-3">
+    <ngx-fluent-design-button class="mr-3">
+      Primary (Default)
+    </ngx-fluent-design-button>
+
+    <ngx-fluent-design-button type="standard">
+      Primary (Standard)
+    </ngx-fluent-design-button>
+  </div>
+
+  <div class="d-flex flex-row w-100">
+    <ngx-fluent-design-button [disabled]="true" class="mr-3">
+      Primary (Default) Disabled
+    </ngx-fluent-design-button>
+
+    <ngx-fluent-design-button [disabled]="true" type="standard">
+      Primary (Standard) Disabled
+    </ngx-fluent-design-button>
+  </div>
+
+  <h3 class="header">compound button</h3>
+  <div class="d-flex flex-row w-100 mb-3">
+    <ngx-fluent-design-compound-button [secondaryText]="'secondary text'" class="mr-3">
+      Default
+    </ngx-fluent-design-compound-button>
+
+    <ngx-fluent-design-compound-button [secondaryText]="'secondary text'" type="standard">
+      Standard
+    </ngx-fluent-design-compound-button>
+  </div>
+
+  <div class="d-flex flex-row w-100">
+    <ngx-fluent-design-compound-button [disabled]="true" class="mr-3">
+      Primary (Default) Disabled
+    </ngx-fluent-design-compound-button>
+
+    <ngx-fluent-design-compound-button [disabled]="true" type="standard">
+      Primary (Standard) Disabled
+    </ngx-fluent-design-compound-button>
+  </div>
+</ngx-fluent-design-card>
+<ngx-fluent-design-card>
+  <div class="pb-3">
+    <h1 class="pane-header bold">Progress</h1>
+    <h3 class="header">Spinner</h3>
+    <div class="d-flex align-items-center pb-3">
+      <ngx-fluent-design-spinner [e2eSuffix]="'xs-with-label'" class="col-3" [size]="'extra-small'" [label]="'Loading...'"></ngx-fluent-design-spinner>
+      <ngx-fluent-design-spinner [e2eSuffix]="'s-with-label'" class="col-3" [size]="'small'" [label]="'Loading...'"></ngx-fluent-design-spinner>
+      <ngx-fluent-design-spinner [e2eSuffix]="'m-with-label'" class="col-3" [size]="'medium'" [label]="'Loading...'"></ngx-fluent-design-spinner>
+      <ngx-fluent-design-spinner [e2eSuffix]="'l-with-label'" class="col-3" [size]="'large'" [label]="'Loading...'"></ngx-fluent-design-spinner>
+    </div>
+    <div class="d-flex justify-content-around align-items-center">
+      <ngx-fluent-design-spinner [e2eSuffix]="'xs-no-label'" class="col-3" [size]="'extra-small'"></ngx-fluent-design-spinner>
+      <ngx-fluent-design-spinner [e2eSuffix]="'s-no-label'" class="col-3" [size]="'small'"></ngx-fluent-design-spinner>
+      <ngx-fluent-design-spinner [e2eSuffix]="'m-no-label'" class="col-3" [size]="'medium'"></ngx-fluent-design-spinner>
+      <ngx-fluent-design-spinner [e2eSuffix]="'l-no-label'" class="col-3" [size]="'large'"></ngx-fluent-design-spinner>
+    </div>
+
+    <h3 class="header">Progress Indicator</h3>
+    <ngx-fluent-design-progress-indicator [e2eSuffix]="'label-and-description'" [label]="'Label'" [description]="'Description'"
+    [currentValue]="progressIndicatorCurrentValue"></ngx-fluent-design-progress-indicator>
+
+    <h3 class="header">Indeterminate Progress Indicator</h3>
+    <ngx-fluent-design-progress-indicator-indeterminate [e2eSuffix]="'label-and-description'" [label]="'Label'" [description]="'Description'"></ngx-fluent-design-progress-indicator-indeterminate>
+  </div>
+</ngx-fluent-design-card>
+
+
+<ngx-fluent-design-card>
+  <div class="pb-3">
+    <h1 class="mb-3 pane-header bold">Icons</h1>
+    <ngx-fluent-design-icon [ngxFluentDesignCssVariableName]="tesIconList.iconFill" [icon]="tesIconList.warningIcon"></ngx-fluent-design-icon>
+  </div>
+</ngx-fluent-design-card>
+
+<ngx-fluent-design-card>
+  <div>
+    <h1 class="mb-3 pane-header bold">Inputs</h1>
+
+    <section class="mb-3">
+      <ngx-fluent-design-toggle [label]="'Disable Inputs'"
+        [toggled]="inputsDisabled"
+        (changeEvent)="toggleInputDisabled()"
+        [inlineLabel]="true"
+        [disabled]="false">
+      </ngx-fluent-design-toggle>
+    </section>
+
+    <form [formGroup]="testFormStandardInputForm">
+      <h4 class="subject-title">Standard inputs</h4>
+      <ngx-fluent-design-form-field [label]="'A Label'" [disabled]="inputsDisabled">
+        <input ngxFluentDesignInput formControlName="bordered" placeholder="Hello there">
+      </ngx-fluent-design-form-field>
+
+      <ngx-fluent-design-form-field-underlined [label]="'A label that is really long'" [disabled]="inputsDisabled">
+        <input ngxFluentDesignInput formControlName="bottomBorder" placeholder="Bottom Border">
+      </ngx-fluent-design-form-field-underlined>
+
+      <ngx-fluent-design-form-field-borderless [disabled]="inputsDisabled">
+        <input ngxFluentDesignInput formControlName="borderless" placeholder="Borderless">
+      </ngx-fluent-design-form-field-borderless>
+
+      <div class="my-4">
+        <ngx-fluent-design-select-component [options]="['Option 1', 'Option 2']" [label]="'Select Component (in development)'"></ngx-fluent-design-select-component>
+      </div>
+    </form>
+
+    <form [formGroup]="testFormTextAreaForm">
+      <h4 class="subject-title">Standard inputs</h4>
+      <ngx-fluent-design-standard-textarea [label]="'A Label'" [disabled]="inputsDisabled">
+        <textarea ngxFluentDesignInput rows="12" formControlName="bordered" placeholder="Hello there"></textarea>
+      </ngx-fluent-design-standard-textarea>
+
+      <ngx-fluent-design-textarea-underlined [label]="'A Label That is really long 12345'" [disabled]="inputsDisabled">
+        <textarea ngxFluentDesignInput formControlName="bottomBorder" placeholder="Bottom Border"></textarea>
+      </ngx-fluent-design-textarea-underlined>
+
+      <ngx-fluent-design-textarea-borderless [disabled]="inputsDisabled">
+        <textarea ngxFluentDesignInput rows="12" formControlName="borderless" placeholder="Borderless"></textarea>
+      </ngx-fluent-design-textarea-borderless>
+    </form>
+  </div>
 </ngx-fluent-design-card>
 
 <ngx-fluent-design-card>
 
-    <div class="">
-        <section class="standard mb-5">
-            <h1 class="mb-3 pane-header bold">Typography Standard</h1>
-            <h1 class="xl-numerics">XL Numerics</h1>
-            <h1>Hero Title</h1>
+  <div class="">
+    <section class="standard mb-5">
+      <h1 class="mb-3 pane-header bold">Typography Standard</h1>
+      <h1 class="xl-numerics">XL Numerics</h1>
+      <h1>Hero Title</h1>
 
-            <h2 class="greeting-title">Greeting Title</h2>
-            <h2>Page Title</h2>
+      <h2 class="greeting-title">Greeting Title</h2>
+      <h2>Page Title</h2>
 
-            <h3 class="pane-header">Pane Header</h3>
-            <h3>header</h3>
+      <h3 class="pane-header">Pane Header</h3>
+      <h3>header</h3>
 
-            <h4>subject title</h4>
+      <h4>subject title</h4>
 
-            <p>Body text</p>
+      <p>Body text</p>
 
-            <section>
-                <small>Metadata</small>
-            </section>
-            <small class="metadata-limited">Metadata Limited</small>
+      <section>
+        <small>Metadata</small>
+      </section>
+      <small class="metadata-limited">Metadata Limited</small>
 
-            <section class="my-3">
-                <a href="#" class="fluent-design-link">Action Link</a>
-            </section>
-        </section>
+      <section class="my-3">
+        <a href="#" class="fluent-design-link">Action Link</a>
+      </section>
+    </section>
 
-        <section class="bold">
-            <h1 class="mb-3 pane-header bold">Typography Bold</h1>
-            <h1 class="xl-numerics bold">XL Numerics</h1>
-            <h1 class="bold">Hero Title</h1>
+    <section class="bold">
+      <h1 class="mb-3 pane-header bold">Typography Bold</h1>
+      <h1 class="xl-numerics bold">XL Numerics</h1>
+      <h1 class="bold">Hero Title</h1>
 
-            <h2 class="greeting-title bold">Greeting Title</h2>
-            <h2 class="bold">Page Title</h2>
+      <h2 class="greeting-title bold">Greeting Title</h2>
+      <h2 class="bold">Page Title</h2>
 
-            <h3 class="pane-header bold">Pane Header</h3>
-            <h3 class="bold">header</h3>
+      <h3 class="pane-header bold">Pane Header</h3>
+      <h3 class="bold">header</h3>
 
-            <h4 class="bold">subject title</h4>
+      <h4 class="bold">subject title</h4>
 
-            <p class="bold">Body text</p>
+      <p class="bold">Body text</p>
 
-            <section>
-                <small class="bold">Metadata</small>
-            </section>
-            <small class="metadata-limited bold">Metadata Limited</small>
+      <section>
+        <small class="bold">Metadata</small>
+      </section>
+      <small class="metadata-limited bold">Metadata Limited</small>
 
-            <section class="my-3">
-                <a href="#" class="fluent-design-link bold">Action Link</a>
-            </section>
-        </section>
-    </div>
+      <section class="my-3">
+        <a href="#" class="fluent-design-link bold">Action Link</a>
+      </section>
+    </section>
+  </div>
 </ngx-fluent-design-card>
 
 <ngx-fluent-design-card>
-    <h1 class="mb-3 pane-header bold">Surfaces</h1>
+  <h1 class="mb-3 pane-header bold">Surfaces</h1>
 
-    <h3>Basic Panel</h3>
-    <hr>
+  <h3>Basic Panel</h3>
+  <hr>
     <div class="pt-3">
-        <ngx-fluent-design-button (clicked)="panelHandler.open()">
-            Open Panel
-        </ngx-fluent-design-button>
+      <ngx-fluent-design-button (clicked)="panelHandler.open()">
+        Open Panel
+      </ngx-fluent-design-button>
     </div>
 
     <h3>Panel with Footer</h3>
     <hr>
-    <div class="pt-3">
+      <div class="pt-3">
         <ngx-fluent-design-button (clicked)="panelWithFooterHandler.open()">
+          Open Panel
+        </ngx-fluent-design-button>
+      </div>
+
+      <h3>Panel with "Back" CTA</h3>
+      <hr>
+        <div class="pt-3">
+          <ngx-fluent-design-button (clicked)="panelWithBackCtaHandler.open()">
             Open Panel
-        </ngx-fluent-design-button>
-    </div>
+          </ngx-fluent-design-button>
+        </div>
 
-    <h3>Panel with "Back" CTA</h3>
-    <hr>
-    <div class="pt-3">
-        <ngx-fluent-design-button (clicked)="panelWithBackCtaHandler.open()">
-            Open Panel
-        </ngx-fluent-design-button>
-    </div>
+        <h3>Basic Modal</h3>
+        <hr>
+          <div class="pt-3">
+            <ngx-fluent-design-button (clicked)="modalHandler.open()">
+              Open Modal
+            </ngx-fluent-design-button>
+          </div>
 
-    <h3>Basic Modal</h3>
-    <hr>
-    <div class="pt-3">
-        <ngx-fluent-design-button (clicked)="modalHandler.open()">
-            Open Modal
-        </ngx-fluent-design-button>
-    </div>
-
-    <h3>Dialog</h3>
-    <hr>
-    <div class="pt-3">
-        <ngx-fluent-design-button (clicked)="dialogHandler.open()">
-            Open Dialog
-        </ngx-fluent-design-button>
-    </div>
-
-    <h3>Sheet</h3>
-    <hr>
-    <div class="pt-3">
-        <ngx-fluent-design-button (clicked)="sheetHandler.open()">
-            Open Sheet
-        </ngx-fluent-design-button>
-        <form [formGroup]="sheetAlignmentForm">
-            <h3>Align Sheet Content</h3>
-            <p>Click a radio to align the content within the sheet</p>
-            <div class="d-flex flex-row justify-content-between w-100 my-4">
-                <ngx-fluent-design-radio formControlName="sheetContentAlignment"
-                                         [checked]="sheetAlignmentForm.get('sheetContentAlignment').value === 'left'"
-                                         [label]="'Left Align Content'"
-                                         [value]="'left'"
-                                         [name]="'left'">
-                </ngx-fluent-design-radio>
-                <ngx-fluent-design-radio formControlName="sheetContentAlignment"
-                                         [checked]="sheetAlignmentForm.get('sheetContentAlignment').value === 'middle'"
-                                         [label]="'Middle Align Content'"
-                                         [value]="'middle'"
-                                         [name]="'middle'">
-                </ngx-fluent-design-radio>
-                <ngx-fluent-design-radio formControlName="sheetContentAlignment"
-                                         [checked]="sheetAlignmentForm.get('sheetContentAlignment').value === 'right'"
-                                         [label]="'Right Align Content'"
-                                         [value]="'right'"
-                                         [name]="'right'">
-                </ngx-fluent-design-radio>
+          <h3>Dialog</h3>
+          <hr>
+            <div class="pt-3">
+              <ngx-fluent-design-button (clicked)="dialogHandler.open()">
+                Open Dialog
+              </ngx-fluent-design-button>
             </div>
-        </form>
-    </div>
-</ngx-fluent-design-card>
 
-<ngx-fluent-design-panel [handler]="panelHandler" [header]="'Basic Panel'">
-    Content goes here.
-</ngx-fluent-design-panel>
+            <h3>Sheet</h3>
+            <hr>
+              <div class="pt-3">
+                <ngx-fluent-design-button (clicked)="sheetHandler.open()">
+                  Open Sheet
+                </ngx-fluent-design-button>
+                <form [formGroup]="sheetAlignmentForm">
+                  <h3>Align Sheet Content</h3>
+                  <p>Click a radio to align the content within the sheet</p>
+                  <div class="d-flex flex-row justify-content-between w-100 my-4">
+                    <ngx-fluent-design-radio formControlName="sheetContentAlignment"
+                      [checked]="sheetAlignmentForm.get('sheetContentAlignment').value === 'left'"
+                      [label]="'Left Align Content'"
+                      [value]="'left'"
+                      [name]="'left'">
+                    </ngx-fluent-design-radio>
+                    <ngx-fluent-design-radio formControlName="sheetContentAlignment"
+                      [checked]="sheetAlignmentForm.get('sheetContentAlignment').value === 'middle'"
+                      [label]="'Middle Align Content'"
+                      [value]="'middle'"
+                      [name]="'middle'">
+                    </ngx-fluent-design-radio>
+                    <ngx-fluent-design-radio formControlName="sheetContentAlignment"
+                      [checked]="sheetAlignmentForm.get('sheetContentAlignment').value === 'right'"
+                      [label]="'Right Align Content'"
+                      [value]="'right'"
+                      [name]="'right'">
+                    </ngx-fluent-design-radio>
+                  </div>
+                </form>
+              </div>
+            </ngx-fluent-design-card>
 
-<ngx-fluent-design-panel [handler]="panelWithFooterHandler"
-                         [header]="'Panel with Footer'">
-    Content goes here.
-    <div footer>Footer content goes here</div>
-</ngx-fluent-design-panel>
+            <ngx-fluent-design-panel [handler]="panelHandler" [header]="'Basic Panel'">
+              Content goes here.
+            </ngx-fluent-design-panel>
 
-<ngx-fluent-design-panel [handler]="panelWithBackCtaHandler"
-                         [header]="'Panel with &quot;Back&quot; CTA'"
-                         [includeReturnCta]="true"
-                         [returnCtaLabel]="'Back'">
-    Content goes here.
-</ngx-fluent-design-panel>
+            <ngx-fluent-design-panel [handler]="panelWithFooterHandler"
+              [header]="'Panel with Footer'">
+              Content goes here.
+              <div footer>Footer content goes here</div>
+            </ngx-fluent-design-panel>
 
-<ngx-fluent-design-dialog
-    [handler]="dialogHandler"
-    [header]="'Hello there'"
-    [canDismissWithOuterContent]="true"
-    [displayCloseIcon]="true"
-    (primaryActionClicked)="dialogHandler.close()"
-    (secondaryActionClicked)="exampleAlert('Alert secondary Action')">
-    This is an alert that can be dismissed via the modal content
-</ngx-fluent-design-dialog>
+            <ngx-fluent-design-panel [handler]="panelWithBackCtaHandler"
+              [header]="'Panel with &quot;Back&quot; CTA'"
+              [includeReturnCta]="true"
+              [returnCtaLabel]="'Back'">
+              Content goes here.
+            </ngx-fluent-design-panel>
 
-<ngx-fluent-design-modal [canDismissWithOuterContent]="true" [handler]="modalHandler">
-    <div class="w-100 h-100 d-flex flex-column">
-        <div class="d-flex align-top">
-            <p>Hello</p>
-            <p>You can use the button below to close the modal.</p>
-        </div>
+            <ngx-fluent-design-dialog
+              [handler]="dialogHandler"
+              [header]="'Hello there'"
+              [canDismissWithOuterContent]="true"
+              [displayCloseIcon]="true"
+              (primaryActionClicked)="dialogHandler.close()"
+              (secondaryActionClicked)="exampleAlert('Alert secondary Action')">
+              This is an alert that can be dismissed via the modal content
+            </ngx-fluent-design-dialog>
 
-        <div class="d-flex align-bottom">
-            <ngx-fluent-design-button (clicked)="modalHandler.close()">K Den</ngx-fluent-design-button>
-        </div>
-    </div>
-</ngx-fluent-design-modal>
+            <ngx-fluent-design-modal [canDismissWithOuterContent]="true" [handler]="modalHandler">
+              <div class="w-100 h-100 d-flex flex-column">
+                <div class="d-flex align-top">
+                  <p>Hello</p>
+                  <p>You can use the button below to close the modal.</p>
+                </div>
+
+                <div class="d-flex align-bottom">
+                  <ngx-fluent-design-button (clicked)="modalHandler.close()">K Den</ngx-fluent-design-button>
+                </div>
+              </div>
+            </ngx-fluent-design-modal>

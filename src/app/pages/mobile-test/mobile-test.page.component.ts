@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { MessageBarType } from 'projects/ngx-fluent-design/src/lib/notifications/types/message-bar.type';
 import { NgxFluentDesignMessageBarHandler } from '../../../../projects/ngx-fluent-design/src/lib/notifications/message-bar/message-bar-handler.helper';
+import { NgxFluentDesignMessageBarComponent } from '../../../../projects/ngx-fluent-design/src/lib/notifications/message-bar/ngx-fluent-design-message-bar.component';
+import { AbsoluteStateOfAComponent } from '../../shared/absolute-state-of-a-component/absolute-state-of-a.component';
 
 @Component({
-    standalone: false,
     templateUrl: './mobile-test.page.component.html',
-    styleUrls: ['./mobile-test.page.component.scss']
+    styleUrls: ['./mobile-test.page.component.scss'],
+    imports: [NgxFluentDesignMessageBarComponent, AbsoluteStateOfAComponent]
 })
 export class MobileTestPageComponent {
     public progressIndicatorCurrentValue: number = 0;

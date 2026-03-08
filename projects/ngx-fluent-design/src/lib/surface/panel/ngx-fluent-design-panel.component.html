@@ -1,44 +1,56 @@
 <section class="ngx-fluent-design-container" (click)="handleCloseClickEvent()"
-         [ngStyle]="{ visibility: handler.isOpen ? 'visible' : 'hidden', 'cursor': canDismissWithOuterContent ? 'pointer' : 'default' }">
-    <section (click)="$event.stopPropagation()" class="ngx-fluent-design-panel" [@slideInRight]="!handler.isOpen ? 'hide' : 'show'">
+  [ngStyle]="{ visibility: handler.isOpen ? 'visible' : 'hidden', 'cursor': canDismissWithOuterContent ? 'pointer' : 'default' }">
+  <section (click)="$event.stopPropagation()" class="ngx-fluent-design-panel" [@slideInRight]="!handler.isOpen ? 'hide' : 'show'">
 
-        <section *ngIf="includeReturnCta">
-            <div class="header">
-                <div class="return-cta cursor-pointer" (click)="handler.close()">
-                    <ngx-fluent-design-icon *ngIf="leftArrowIcon && handler.isOpen"
-                                            class="return-icon"
-                                            [icon]="leftArrowIcon"
-                                            [ngxFluentDesignCssVariableName]="leftArrowIconFillColourVariable">
-                    </ngx-fluent-design-icon>
-                    <p *ngIf="returnCtaLabel">{{returnCtaLabel}}</p>
-                </div>
-                <ngx-fluent-design-icon *ngIf="displayCloseIcon && handler.isOpen"
-                                        (click)="handler.close()"
-                                        class="cursor-pointer"
-                                        [icon]="closeIcon"
-                                        [ngxFluentDesignCssVariableName]="closeIconFillColourVariable">
-                </ngx-fluent-design-icon>
-            </div>
-            <h1 class="header-content pane-header bold">{{header}}</h1>
-        </section>
-
-        <section class="header" *ngIf="!includeReturnCta">
-            <h1 class="header-content bold">{{header}}</h1>
-            <ngx-fluent-design-icon *ngIf="displayCloseIcon && handler.isOpen"
-                                    (click)="handler.close()"
-                                    class="cursor-pointer"
-                                    [icon]="closeIcon"
-                                    [ngxFluentDesignCssVariableName]="closeIconFillColourVariable">
+    @if (includeReturnCta) {
+      <section>
+        <div class="header">
+          <div class="return-cta cursor-pointer" (click)="handler.close()">
+            @if (leftArrowIcon && handler.isOpen) {
+              <ngx-fluent-design-icon
+                class="return-icon"
+                [icon]="leftArrowIcon"
+                [ngxFluentDesignCssVariableName]="leftArrowIconFillColourVariable">
+              </ngx-fluent-design-icon>
+            }
+            @if (returnCtaLabel) {
+              <p>{{returnCtaLabel}}</p>
+            }
+          </div>
+          @if (displayCloseIcon && handler.isOpen) {
+            <ngx-fluent-design-icon
+              (click)="handler.close()"
+              class="cursor-pointer"
+              [icon]="closeIcon"
+              [ngxFluentDesignCssVariableName]="closeIconFillColourVariable">
             </ngx-fluent-design-icon>
-        </section>
+          }
+        </div>
+        <h1 class="header-content pane-header bold">{{header}}</h1>
+      </section>
+    }
 
-        <section class="content">
-            <ng-content></ng-content>
-        </section>
+    @if (!includeReturnCta) {
+      <section class="header">
+        <h1 class="header-content bold">{{header}}</h1>
+        @if (displayCloseIcon && handler.isOpen) {
+          <ngx-fluent-design-icon
+            (click)="handler.close()"
+            class="cursor-pointer"
+            [icon]="closeIcon"
+            [ngxFluentDesignCssVariableName]="closeIconFillColourVariable">
+          </ngx-fluent-design-icon>
+        }
+      </section>
+    }
 
-        <section>
-            <ng-content select="[footer]"></ng-content>
-        </section>
+    <section class="content">
+      <ng-content></ng-content>
     </section>
+
+    <section>
+      <ng-content select="[footer]"></ng-content>
+    </section>
+  </section>
 
 </section>

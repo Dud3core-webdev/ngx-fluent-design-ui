@@ -2,12 +2,13 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { INgxFluentDesignCta } from '../types/ngx-fluent-design-cta.interface';
 import { NgxFluentDesignSlotNames } from '../../types/theme-names.type';
 import { NgxFluentDesignCtaType } from '../types/cta.type';
+import { NgClass } from '@angular/common';
 
 @Component({
-    standalone: false,
     selector: 'ngx-fluent-design-compound-button',
     templateUrl: './ngx-fluent-design-compound-button.component.html',
-    styleUrls: ['./ngx-fluent-design-compound-button.component.scss']
+    styleUrls: ['./ngx-fluent-design-compound-button.component.scss'],
+    imports: [NgClass]
 })
 export class NgxFluentDesignCompoundButtonComponent implements INgxFluentDesignCta {
     @Input() public type: NgxFluentDesignCtaType = 'primary';

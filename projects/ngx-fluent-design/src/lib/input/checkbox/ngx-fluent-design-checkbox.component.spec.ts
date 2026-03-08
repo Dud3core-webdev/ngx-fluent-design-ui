@@ -8,7 +8,7 @@ describe('NgxFluentDesignCheckboxComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [NgxFluentDesignCheckboxComponent]
+            imports: [NgxFluentDesignCheckboxComponent]
         })
             .compileComponents();
     });

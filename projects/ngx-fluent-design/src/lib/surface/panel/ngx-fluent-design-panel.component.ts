@@ -3,18 +3,20 @@ import { INgxFluentDesignIcon } from '../../icons/shared/types/ngx-fluent-design
 import { NgxFluentDesignIconArrowLeft, NgxFluentDesignIconClearClose } from '../../icons/shared/constants/ngx-fluent-design-icons-list';
 import { NgxFluentDesignPanelHandler } from './panel-handler.helper';
 import { NgxFluentDesignSurfaceHandlerBodyStylesOrchestrator } from '../orchestrators/ngx-fluent-design-surface-handler-body-styles.orchestrator';
-import { DOCUMENT } from '@angular/common';
-import { NgxFluentDesignCommonAnimations } from '../animations/ngx-fluent-design.animations';
+import { DOCUMENT, NgStyle } from '@angular/common';
+import { ngxFluentDesignSlideInRightTrigger } from '../animations/ngx-fluent-design.animations';
 import { INgxFluentDesignPanel } from './ngx-fluent-design-panel.interface';
+import { NgxFluentDesignIconComponent } from '../../icons/icon-component/icon.component';
+
 
 @Component({
-    standalone: false,
     selector: 'ngx-fluent-design-panel',
     templateUrl: './ngx-fluent-design-panel.component.html',
     styleUrls: ['./ngx-fluent-design-panel.component.scss'],
     animations: [
-        NgxFluentDesignCommonAnimations.SlideInFromRightAnimation('150ms', '150ms'),
-    ]
+        ngxFluentDesignSlideInRightTrigger
+    ],
+    imports: [NgStyle]
 })
 export class NgxFluentDesignPanelComponent implements INgxFluentDesignPanel, OnInit, OnDestroy {
     @Input() public handler: NgxFluentDesignPanelHandler;

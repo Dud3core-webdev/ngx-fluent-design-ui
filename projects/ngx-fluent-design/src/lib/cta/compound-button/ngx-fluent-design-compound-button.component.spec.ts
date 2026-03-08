@@ -11,7 +11,7 @@ describe('NgxFluentDesignCompoundButtonComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [NgxFluentDesignCompoundButtonComponent]
+            imports: [NgxFluentDesignCompoundButtonComponent]
         })
             .compileComponents();
     });

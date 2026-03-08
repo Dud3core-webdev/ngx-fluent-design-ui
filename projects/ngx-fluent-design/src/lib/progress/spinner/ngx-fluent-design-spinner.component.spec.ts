@@ -8,7 +8,7 @@ describe('NgxFluentDesignSpinnerComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [NgxFluentDesignSpinnerComponent]
+            imports: [NgxFluentDesignSpinnerComponent]
         })
             .compileComponents();
     });

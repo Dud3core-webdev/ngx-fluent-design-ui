@@ -28,7 +28,7 @@ export { NgxFluentDesignToggleComponent } from './lib/input/toggle/ngx-fluent-de
 export { NgxFluentDesignInputClassValidatorDirective } from './lib/input/shared/directives/ngx-fluent-design-input-class-validator.directive';
 export { NgxFluentDesignCheckboxComponent } from './lib/input/checkbox/ngx-fluent-design-checkbox.component';
 export { NgxFluentDesignSelectComponent } from './lib/input/select/ngx-fluent-design-select.component';
-export { NgxFluentDesignRadioComponent} from './lib/input/radio/ngx-fluent-design-radio.component';
+export { NgxFluentDesignRadioComponent } from './lib/input/radio/ngx-fluent-design-radio.component';
 
 /** CTA */
 export { NgxFluentDesignButtonComponent } from './lib/cta/standard-button/ngx-fluent-design-button.component';
@@ -61,12 +61,4 @@ export { NgxFluentDesignCommandStackComponent } from './lib/command/command-stac
 export { NgxFluentDesignPivotComponent } from './lib/command/pivot/ngx-fluent-design-pivot.component';
 export { NgxFluentDesignTabComponent } from './lib/command/tab/ngx-fluent-design-tab.component';
 
-/** Modules */
-export { NgxFluentDesignCardModule } from './lib/card/ngx-fluent-design-card.module';
-export { NgxFluentDesignCtaModule } from './lib/cta/ngx-fluent-design-cta.module';
-export { NgxFluentDesignInputModule } from './lib/input/ngx-fluent-design-input.module';
-export { NgxFluentDesignNotificationModule } from './lib/notifications/ngx-fluent-design-notification.module';
-export { NgxFluentDesignProgressModule } from './lib/progress/ngx-fluent-design-progress.module';
-export { NgxFluentDesignIconModule } from './lib/icons/ngx-fluent-design-icon.module';
-export { NgxFluentDesignSurfaceModule } from './lib/surface/ngx-fluent-design-surface.module';
-export { NgxFluentDesignCommandModule } from './lib/command/ngx-fluent-design-command.module';
+

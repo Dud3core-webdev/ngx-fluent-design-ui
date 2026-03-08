@@ -1,9 +1,6 @@
 import { Directive, ElementRef, ViewChild } from '@angular/core';
 
-@Directive({
-    standalone: false,
-    selector: '[ngxFluentDesignActionButton]'
-})
+@Directive({ selector: '[ngxFluentDesignActionButton]' })
 export class NgxFluentDesignActionButtonDirective {
     @ViewChild('fluentActionLinkButton', { static: false })
     private readonly _elementReference: ElementRef;

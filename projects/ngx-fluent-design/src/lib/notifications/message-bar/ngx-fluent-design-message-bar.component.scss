@@ -1,7 +1,7 @@
-@import "../../styles/variables";
+@use "../../styles/variables";
 
 .ngx-fluent-design-message-bar {
-    padding: $ngx-fluent-design-padding-base / 3;
+    padding: variables.$ngx-fluent-design-padding-base / 3;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -11,29 +11,29 @@
         top: 0;
         z-index: 9000;
         width: 100vw;
-        padding-left: $ngx-fluent-design-padding-base / 2;
-        padding-right: $ngx-fluent-design-padding-base / 2;
+        padding-left: variables.$ngx-fluent-design-padding-base / 2;
+        padding-right: variables.$ngx-fluent-design-padding-base / 2;
     }
 
     &.info {
-        background-color: $ngx-fluent-design-background-neutral-lighter;
-        color: $ngx-fluent-design-foreground-neutral-primary;
+        background-color: variables.$ngx-fluent-design-background-neutral-lighter;
+        color: variables.$ngx-fluent-design-foreground-neutral-primary;
     }
 
     &.warning {
-        background-color: $ngx-fluent-design-warning-background-fill;
+        background-color: variables.$ngx-fluent-design-warning-background-fill;
     }
 
     &.severe-warning {
-        background-color: $ngx-fluent-design-severe-background-fill;
+        background-color: variables.$ngx-fluent-design-severe-background-fill;
     }
 
     &.error, &.blocked {
-        background-color: $ngx-fluent-design-error-background-fill;
+        background-color: variables.$ngx-fluent-design-error-background-fill;
     }
 
     &.success {
-        background-color: $ngx-fluent-design-success-background-fill;
+        background-color: variables.$ngx-fluent-design-success-background-fill;
     }
 
     &.action-bar-active {
@@ -54,7 +54,7 @@
         }
 
         .message {
-            font-size: $ngx-fluent-design-metadata-font-size !important;
+            font-size: variables.$ngx-fluent-design-metadata-font-size !important;
             line-height: normal;
         }
     }

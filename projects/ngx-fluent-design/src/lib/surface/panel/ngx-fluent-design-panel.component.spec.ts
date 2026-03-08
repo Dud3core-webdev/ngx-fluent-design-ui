@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NgxFluentDesignPanelComponent } from './ngx-fluent-design-panel.component';
-import { NgxFluentDesignIconModule } from '../../icons/ngx-fluent-design-icon.module';
+
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxFluentDesignSheetComponent } from '../sheet/ngx-fluent-design-sheet.component';
 import { NgxFluentDesignPanelHandler } from './panel-handler.helper';
@@ -11,12 +11,11 @@ describe('PanelComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [
+            imports: [
                 NgxFluentDesignPanelComponent,
                 NgxFluentDesignSheetComponent
             ],
             imports: [
-                NgxFluentDesignIconModule,
                 NoopAnimationsModule
             ]
         })

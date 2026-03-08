@@ -1,13 +1,13 @@
-@import "../../styles/variables";
-@import "../../styles/variables/inputs";
+@use "../../styles/variables";
+@use "../../styles/variables/inputs";
 
 .checkbox-container {
     position: relative;
     display: inline-block;
     padding-left: 30px;
     user-select: none;
-    font-size: $ngx-fluent-design-body-text-font-size;
-    color: $ngx-fluent-design-foreground-neutral-primary;
+    font-size: variables.$ngx-fluent-design-body-text-font-size;
+    color: variables.$ngx-fluent-design-foreground-neutral-primary;
 
     input {
         position: absolute;
@@ -17,17 +17,17 @@
 
         &.disabled {
             label {
-                color: $ngx-fluent-design-background-neutral-quaternary-alt;
+                color: variables.$ngx-fluent-design-background-neutral-quaternary-alt;
             }
         }
 
         &:not(:checked):disabled ~ .checkmark {
-            border-color: $foreground-disabled;
+            border-color: inputs.$foreground-disabled;
         }
 
         &:checked {
             ~ .checkmark {
-                background-color: $ngx-fluent-design-theme-primary;
+                background-color: variables.$ngx-fluent-design-theme-primary;
                 border: none;
 
                 &:after {
@@ -37,7 +37,7 @@
 
             &:disabled {
                 ~ .checkmark {
-                    background-color: $foreground-disabled;
+                    background-color: inputs.$foreground-disabled;
                     border: none;
 
                     &:after {
@@ -53,7 +53,7 @@
         top: 2px;
         width: 6px;
         height: 12px;
-        border: solid $ngx-fluent-design-foreground-white;
+        border: solid variables.$ngx-fluent-design-foreground-white;
         border-width: 0 1px 1px 0;
         transform: rotate(45deg);
     }
@@ -64,8 +64,8 @@
     left: 0;
     height: 20px;
     width: 20px;
-    border: 1px solid $ngx-fluent-design-foreground-neutral-secondary;
-    border-radius: $ngx-fluent-design-border-radius-base;
+    border: 1px solid variables.$ngx-fluent-design-foreground-neutral-secondary;
+    border-radius: variables.$ngx-fluent-design-border-radius-base;
     top: 50%;
     transform: translateY(-50%);
 
@@ -83,17 +83,17 @@
         top: 1px;
         width: 6px;
         height: 12px;
-        border: solid $ngx-fluent-design-foreground-neutral-secondary;
+        border: solid variables.$ngx-fluent-design-foreground-neutral-secondary;
         border-width: 0 1px 1px 0;
         transform: rotate(45deg);
     }
 
     input:checked:not(:disabled) ~ .checkmark {
-        background-color: $ngx-fluent-design-theme-dark-alt;
+        background-color: variables.$ngx-fluent-design-theme-dark-alt;
         border: none;
     }
 }
 
 .disabled-state {
-    color: $foreground-disabled;
+    color: inputs.$foreground-disabled;
 }
