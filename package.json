@@ -39,5 +39,8 @@
         "ng-packagr": "^21.0.0",
         "typescript": "~5.9.0",
         "cypress": "^13.10.0"
+    },
+    "overrides": {
+        "serialize-javascript": "^7.0.4"
     }
 }
